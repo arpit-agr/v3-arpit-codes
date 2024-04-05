@@ -7,16 +7,24 @@
 			"value": 1
 		},
 		{
-			"name": "Fine",
-			"value": 1.15
+			"name": "Tight",
+			"value": 1.25
 		},
 		{
-			"name": "Standard",
+			"name": "Snug",
+			"value": 1.375
+		},
+		{
+			"name": "Normal",
 			"value": 1.5
 		},
 		{
+			"name": "Relaxed",
+			"value": 1.625
+		},
+		{
 			"name": "Loose",
-			"value": 1.7
+			"value": 2
 		}
 	]
 }
