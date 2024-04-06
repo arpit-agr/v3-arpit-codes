@@ -6,6 +6,7 @@
 			"name": "Base",
 			"description": "System fonts for body copy and globally set text.",
 			"value": [
+				"Giest",
 				"ui-sans-serif",
 				"system-ui",
 				"Helvetica Neue",
@@ -14,6 +15,11 @@
 				"Arial",
 				"sans-serif"
 			]
+		},
+		{
+			"name": "Mono",
+			"description": "System fonts for code",
+			"value": ["ui-monospace", "monospace"]
 		}
 	]
 }
