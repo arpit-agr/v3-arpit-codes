@@ -12,15 +12,15 @@
 		},
 		{
 			"name": "Snug",
-			"value": 1.375
+			"value": 1.4375
 		},
 		{
 			"name": "Normal",
-			"value": 1.5
+			"value": 1.625
 		},
 		{
 			"name": "Relaxed",
-			"value": 1.625
+			"value": 1.725
 		},
 		{
 			"name": "Loose",

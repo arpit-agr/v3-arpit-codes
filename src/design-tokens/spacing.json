@@ -2,13 +2,23 @@
 	"title": "Spacing",
 	"description": "Consistent spacing sizes, based on a ratio, with min and max sizes. This allows you to set spacing based on the context size. For example, min for mobile and max for desktop browsers.",
 	"meta": {
-		"scaleGenerator": "https://utopia.fyi/space/calculator/?c=320,18,1.2,1280,20,1.25,5,2,&s=0.75%7C0.5%7C0.25%7C0.025,1.5%7C2%7C3%7C4%7C6%7C8,s-l%7Cs-xl&g=s,l,xl,12"
+		"scaleGenerator": "https://utopia.fyi/space/calculator/?c=320,18,1.2,1280,20,1.25,5,2,&s=0.75%7C0.5%7C0.25%7C0.125%7C0.0625%7C0.025,1.5%7C2%7C3%7C4%7C6%7C8,s-l%7Cs-xl%7C4xs-m%7C4xl-2xl%7C3xl-2xl%7Cxl-3xl&g=s,l,xl,12"
 	},
 	"items": [
 		{
 			"name": "Zero",
 			"min": 0,
 			"max": 1
+		},
+		{
+			"name": "5XS",
+			"min": 0.99,
+			"max": 1
+		},
+		{
+			"name": "4XS",
+			"min": 2,
+			"max": 3
 		},
 		{
 			"name": "3XS",
@@ -59,6 +69,16 @@
 			"name": "4XL",
 			"min": 144,
 			"max": 160
+		},
+		{
+			"name": "5XS - 4XS",
+			"min": 1,
+			"max": 3
+		},
+		{
+			"name": "4XS - 3XS",
+			"min": 2,
+			"max": 5
 		},
 		{
 			"name": "3XS - 2XS",
@@ -114,6 +134,21 @@
 			"name": "S - XL",
 			"min": 18,
 			"max": 60
+		},
+		{
+			"name": "4XS - M",
+			"min": 2,
+			"max": 30
+		},
+		{
+			"name": "3XL - 2XL",
+			"min": 108,
+			"max": 80
+		},
+		{
+			"name": "XL - 3XL",
+			"min": 54,
+			"max": 120
 		}
 	]
 }
