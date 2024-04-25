@@ -1,0 +1,49 @@
+[
+	{
+		"title": "Arpit Agrawal",
+		"description": "Explore the website of Arpit Agrawal, a web designer and front-end developer from India. He designs and builds beautiful, fast websites.",
+		"linkLabel": "Home",
+		"linkURL": "/"
+	},
+	{
+		"title": "Blog Archive",
+		"description": "Explore my blog, covering everything I'm learning and excited about in web design and development",
+		"linkLabel": "Blog",
+		"linkURL": "/blog/"
+	},
+	{
+		"title": "Projects",
+		"description": "View a curated selection of my past projects, showcasing expertise and capabilities in web development",
+		"linkLabel": "Projects",
+		"linkURL": "/projects/"
+	},
+	{
+		"title": "More on This Site",
+		"linkLabel": "More",
+		"linkURL": "#more"
+	},
+	{
+		"title": "Questionnaire",
+		"description": "A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process",
+		"linkLabel": "Questionnaire",
+		"linkURL": "/questionnaire/"
+	},
+	{
+		"title": "Design Principles",
+		"description": "Discover a collection of principles that inspire and influence my approach to web design and development",
+		"linkLabel": "Design Principles",
+		"linkURL": "/design-principles/"
+	},
+	{
+		"title": "Bookshelf",
+		"description": "Browse through my collection of books, offering insights into my interests and inspirations",
+		"linkLabel": "Bookshelf",
+		"linkURL": "/bookshelf/"
+	},
+	{
+		"title": "Tag Index",
+		"description": "Explore a comprehensive list of tags covering a wide range of topics and discover related posts",
+		"linkLabel": "Tag Index",
+		"linkURL": "/tags/"
+	}
+]
