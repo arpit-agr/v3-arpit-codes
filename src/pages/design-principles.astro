@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {findMatchingItem} from '../utils/findMatchingItem.js';
+import pageData from '../data/pages.json';
+import HeroSection from '../components/HeroSection.astro';
+import {getCollection} from 'astro:content';
+
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+const allDesignPrinciples = await getCollection('designPrinciples');
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<main>
+		<HeroSection>
+			<h1>{pageTitle}</h1>
+			<p class="text-balance">{pageDesc}</p>
+		</HeroSection>
+		<article class="flow region wrapper">
+			<dl class="design-principles-list flow flow-space-l" role="list">
+				{
+					allDesignPrinciples.map(async entry => {
+						const {Content} = await entry.render();
+
+						return (
+							<div class="flow">
+								<dt class="heading-4">
+									<a href={entry.data.url}>{entry.data.title}</a>
+								</dt>
+								<dd class="text-balance">{entry.data.description}</dd>
+								<dd class="flow text-step-00">
+									<Content />
+								</dd>
+							</div>
+						);
+					})
+				}
+			</dl>
+		</article>
+	</main>
+</Layout>
+
+<style is:global>
+	.design-principles-list {
+		dd {
+			--flow-space: var(--space-2xs);
+		}
+	}
+</style>
