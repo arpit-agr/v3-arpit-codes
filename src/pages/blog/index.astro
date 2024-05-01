@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {findMatchingItem} from '../../utils/findMatchingItem.js';
+import pageData from '../../data/pages.json';
+import HeroSection from '../../components/HeroSection.astro';
+import PostList from '../../components/PostList.astro';
+import {reversedBlogPosts} from '../../data/blogPostSorter.js';
+
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+const displayedPosts = reversedBlogPosts;
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<main>
+		<HeroSection>
+			<h1>{pageTitle}</h1>
+			<p class="text-balance">{pageDesc}</p>
+		</HeroSection>
+		<article class="region wrapper">
+			<PostList postsCollection={displayedPosts}>
+				<h2 class="heading-3 leading-flat">All Posts</h2>
+			</PostList>
+		</article>
+	</main>
+</Layout>
