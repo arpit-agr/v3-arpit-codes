@@ -1,0 +1,28 @@
+{
+	"list": [
+		"What is the goal of your website? What do you want users to achieve when they visit?",
+		"Do you plan to sell products or services on your site? This is important information as it affects various decisions.",
+		"Is this going to be a completely new website, or do you already have one?",
+		"Do you need me to handle the entire process, from design to launch, or do you already have designers or other partners lined up and only need me for development?",
+		"Do you have any rough designs or ideas for the site? Are there any websites similar to what you're envisioning?",
+		"Do you have the logo, content and images ready, or will you need help with those?",
+		"Do you have hosting and a domain name?",
+		"How much money have you set aside for this project?",
+		"What is the project timeline? Is there anything driving it to be done by a certain date?",
+		"Is there any other information I should know?"
+	],
+	"acknowledgement": [
+		{
+			"label": "Dan Mall",
+			"url": "https://gist.github.com/danmall/87e4a93fa83f09e4ed18"
+		},
+		{
+			"label": "Chris Coyier",
+			"url": "https://chriscoyier.net/2023/06/09/so-a-buddy-of-yours-wants-to-pick-your-brain-because-they-need-to-build-a-website-for-something/"
+		},
+		{
+			"label": "Geoff Graham",
+			"url": "https://geoffgraham.me/hey-will-you-build-me-a-website/"
+		}
+	]
+}
