@@ -42,6 +42,9 @@ const bookList = await getCollection('books');
 									<p class="text-step-00 leading-snug text-2 font-medium text-balance">
 										{book.data.title}
 									</p>
+									{book.data.subtitle && (
+										<p class="visually-hidden">{book.data.subtitle}</p>
+									)}
 									<p class="text-step-00 leading-snug text-3 text-balance">
 										{book.data.author}
 									</p>
