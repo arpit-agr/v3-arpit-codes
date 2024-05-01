@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {findMatchingItem} from '../utils/findMatchingItem.js';
+import pageData from '../data/pages.json';
+import HeroSection from '../components/HeroSection.astro';
+import {getCollection} from 'astro:content';
+import BookCover from '../components/BookCover.astro';
+
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+const bookList = await getCollection('books');
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<!-- <link rel="preload" href="/images/cover-edge.png" as="image" slot="preloads" />
+	<link rel="preload" href="/images/spine-1.png" as="image" slot="preloads" />
+	<link rel="preload" href="/images/spine-2.png" as="image" slot="preloads" />
+	<link rel="preload" href="/images/spine-3.png" as="image" slot="preloads" /> -->
+	<main>
+		<HeroSection>
+			<h1>{pageTitle}</h1>
+			<p class="text-balance">{pageDesc}</p>
+		</HeroSection>
+		<div class="flow region wrapper">
+			<ul class="book-list grid" role="list">
+				{
+					bookList.map((book, index) => {
+						let loadingValue: 'eager' | 'lazy';
+						if (index < 12) {
+							loadingValue = 'eager';
+						} else {
+							loadingValue = 'lazy';
+						}
+						return (
+							<li>
+								<BookCover
+									imagePath={`/src/images/book-covers/${book.data.bookCover}`}
+									loading={loadingValue}
+								/>
+								<div class="flow flow-space-4xs">
+									<p class="text-step-00 leading-snug text-2 font-medium text-balance">
+										{book.data.title}
+									</p>
+									<p class="text-step-00 leading-snug text-3 text-balance">
+										{book.data.author}
+									</p>
+								</div>
+							</li>
+						);
+					})
+				}
+			</ul>
+		</div>
+	</main>
+</Layout>
