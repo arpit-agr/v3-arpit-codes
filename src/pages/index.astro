@@ -1,47 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import {findMatchingItem} from '../utils/findMatchingItem.js';
+import pageData from '../data/pages.json';
+import HeroSection from '../components/HeroSection.astro';
+import {Picture} from 'astro:assets';
+import heroImg from '../images/qutub-minar.png';
+import PostList from '../components/PostList.astro';
+import {reversedBlogPosts} from '../data/blogPostSorter.js';
 
-const docsList = [
-	{
-		label: 'Astro Docs',
-		href: 'https://docs.astro.build/'
-	},
-	{
-		label: 'Tailwind Docs',
-		href: 'https://tailwindcss.com/docs/installation'
-	},
-	{
-		label: 'Utopia',
-		href: 'https://utopia.fyi/'
-	},
-	{
-		label: 'Every Layout',
-		href: 'https://every-layout.dev/'
-	},
-	{
-		label: 'Partytown Docs',
-		href: 'https://partytown.builder.io/'
-	},
-	{
-		label: 'Cube CSS',
-		href: 'https://cube.fyi/'
-	}
-];
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+const hindiTranslation = 'अर्पित अग्रवाल';
+const urduTranslation = 'اَرپِت اگروال';
+const intro =
+	"Hi, I'm a web designer and front-end developer from India. I design and build beautiful, fast websites.";
+const heroImgAlt =
+	'Illustration of Qutub Minar, a minaret located in Delhi, India by artist Samuel Prout.';
+const displayedPosts = reversedBlogPosts.slice(0, 4);
 ---
 
-<Layout title="🚨🚨🚨">
-	<article class="flow">
-		<h1>Hello World</h1>
-		<ul class="flow flow-space-2xs">
-			{
-				docsList.map(item => {
-					return (
-						<li>
-							<a href={item.href}>{item.label}</a>
-						</li>
-					);
-				})
-			}
-		</ul>
-	</article>
+<Layout title={pageTitle} description={pageDesc}>
+	<main>
+		<HeroSection>
+			<div class="homepage-heading stack">
+				<h1>{pageTitle}</h1>
+				<p
+					class="translations cluster text-step-000 leading-snug tracking-wide"
+					aria-hidden="true"
+				>
+					<span lang="hi">{hindiTranslation}</span>
+					<span>/</span>
+					<span lang="ur" dir="rtl">{urduTranslation}</span>
+				</p>
+			</div>
+			<p class="intro text-step-1 leading-snug text-balance">
+				{intro}
+			</p>
+			<p>
+				You can reach me at
+				<a href="mailto:hello@arpit.codes">hello@arpit.codes</a>
+			</p>
+			<Picture
+				class="homepage-hero-img"
+				src={heroImg}
+				alt={heroImgAlt}
+				formats={['avif', 'webp', heroImg.format]}
+				widths={[360, 540]}
+				sizes={`18vw`}
+				loading={'eager'}
+			/>
+		</HeroSection>
+		<article class="region wrapper">
+			<PostList postsCollection={displayedPosts}>
+				<div class="repel">
+					<h2 class="heading-3 leading-flat">Latest Posts</h2>
+					<a class="inline-block button text-step-00" href="/blog/">
+						View All <span class="visually-hidden">posts</span>
+					</a>
+				</div>
+			</PostList>
+		</article>
+	</main>
 </Layout>
