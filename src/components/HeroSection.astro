@@ -1,0 +1,21 @@
+---
+import GodRays from '../components/GodRays.astro';
+---
+
+<header class="inverted relative region">
+	<div class="flow relative wrapper">
+		<slot />
+	</div>
+	<GodRays />
+</header>
+
+<style>
+	header {
+		--_primary-nav-height: calc(
+			(2 * var(--primary-nav-padding-block)) +
+				(var(--primary-nav-leading) * var(--primary-nav-font-size))
+		);
+		--region-start-space: calc(var(--region-end-space) + var(--_primary-nav-height));
+		--region-end-space: var(--space-xl-2xl);
+	}
+</style>
