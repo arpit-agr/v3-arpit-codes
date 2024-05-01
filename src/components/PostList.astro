@@ -1,0 +1,27 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+
+interface Post {
+	slug: string;
+	data: {
+		title: string;
+		pubDate: Date;
+	};
+}
+
+const {postsCollection} = Astro.props;
+---
+
+<div class="post-list-wrapper flow">
+	<slot />
+	<ul class="post-list flow flow-space-l" role="list">
+		{
+			postsCollection.map((post: Post) => (
+				<li class="post-entry grid">
+					<a href={`/blog/${post.slug}`}>{post.data.title}</a>
+					<FormattedDate date={post.data.pubDate} />
+				</li>
+			))
+		}
+	</ul>
+</div>
