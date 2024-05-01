@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {findMatchingItem} from '../utils/findMatchingItem.js';
+import pageData from '../data/pages.json';
+import HeroSection from '../components/HeroSection.astro';
+import questions from '../data/questionnaire.json';
+
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+const questionsList = questions.list;
+const acknowledgment = questions.acknowledgement;
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<main>
+		<HeroSection>
+			<h1>{pageTitle}</h1>
+			<p class="text-balance">{pageDesc}</p>
+		</HeroSection>
+		<article class="questionnaire-wrapper grid region wrapper">
+			<ul class="question-list flow" role="list">
+				{
+					questionsList.map(question => {
+						return <li>{question}</li>;
+					})
+				}
+			</ul>
+			<div>
+				<h2 class="visually-hidden">Acknowledgement</h2>
+				<p class="text-step-000 leading-snug tracking-wide text-balance">
+					Special thanks to
+					<a href={acknowledgment[0].url}>{acknowledgment[0].label}</a>,
+					<a href={acknowledgment[1].url}>{acknowledgment[1].label}</a>, and
+					<a href={acknowledgment[2].url}>{acknowledgment[2].label}</a>. I created my
+					questionnaire by borrowing and adapting questions from their questionnaires.
+				</p>
+			</div>
+		</article>
+	</main>
+</Layout>
