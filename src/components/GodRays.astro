@@ -1,0 +1,50 @@
+<div class="god-rays" aria-hidden="true"></div>
+
+<style is:global>
+	.god-rays {
+		--god-ray-color: var(--color-text-inverted-2);
+		--rainbow: repeating-linear-gradient(
+			100deg,
+			var(--god-ray-color) 10%,
+			var(--god-ray-color) 20%,
+			var(--god-ray-color) 30%
+		);
+		--stripes: repeating-linear-gradient(
+			100deg,
+			#000 0%,
+			#000 7%,
+			transparent 10%,
+			transparent 12%,
+			#000 16%
+		);
+		--ray-filter: blur(var(--space-2xs)) opacity(50%) saturate(200%);
+		display: unset;
+		position: absolute;
+		inline-size: 75%;
+		block-size: 100%;
+		inset-block-start: 0;
+		inset-inline-end: 0;
+		margin: 0;
+		/* z-index: -1; */
+		pointer-events: none;
+		background-image: var(--stripes), var(--rainbow);
+		filter: var(--ray-filter);
+		pointer-events: none;
+		opacity: 0.25;
+		background-position: 50%, 50%;
+		background-size: 0%, 100%;
+		overflow: hidden;
+		-webkit-mask-image: radial-gradient(at 100% 0, #000 40%, #0000 70%);
+		mask-image: radial-gradient(at 100% 0, #000 40%, #0000 70%);
+	}
+
+	.god-rays:after {
+		content: '';
+		background-image: var(--stripes), var(--rainbow);
+		mix-blend-mode: difference;
+		background-size: 200%, 100%;
+		background-attachment: fixed;
+		position: absolute;
+		inset: 0;
+	}
+</style>
