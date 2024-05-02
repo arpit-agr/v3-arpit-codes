@@ -1,0 +1,10 @@
+/*
+WRAPPER COMPOSITION 
+A common wrapper/container
+*/
+.wrapper {
+	margin-inline: auto;
+	max-inline-size: min(var(--wrapper-max-width, 80rem), 100vw);
+	padding-inline-start: var(--page-gutter);
+	padding-inline-end: var(--page-gutter);
+}
