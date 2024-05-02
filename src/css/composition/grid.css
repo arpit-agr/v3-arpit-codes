@@ -42,7 +42,7 @@ to change how empty grid tracks are handled */
 }
 
 /* Special layout for larger devices. Used on home page intro */
-.grid[data-layout='lg:10/2'] {
+.grid[data-layout='md:10/2'] {
 	grid-template-columns: 100%;
 }
 
@@ -52,14 +52,8 @@ The screen function allows you to create media queries that reference your break
 
 Source: https://tailwindcss.com/docs/functions-and-directives#screen
 */
-@media screen(md) {
-	.grid[data-layout='lg:10/2'] {
-		grid-template-columns: clamp(40rem, 80vw, 60rem);
-	}
-}
-
-@media screen(lg) {
-	.grid[data-layout='lg:10/2'] {
+@media (--md-n-above) {
+	.grid[data-layout='md:10/2'] {
 		grid-template-columns: 10fr 2fr;
 	}
 }
