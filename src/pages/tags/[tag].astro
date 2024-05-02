@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import PostList from '../../components/PostList.astro';
+import {uniqueTags} from '../../data/uniqueTags.js';
+import {reversedBlogPosts} from '../../data/reversedBlogPosts.js';
+
+export async function getStaticPaths() {
+	return uniqueTags.map(tag => {
+		const filteredPosts = reversedBlogPosts.filter(entry =>
+			entry.data.tags.includes(tag)
+		);
+		return {
+			params: {tag},
+			props: {filteredPosts}
+		};
+	});
+}
+
+const {tag} = Astro.params;
+const {filteredPosts} = Astro.props;
+const filteredPostsCount = `${filteredPosts.length} ${filteredPosts.length > 1 ? 'posts' : 'post'}`;
+const pageTitle = `${tag}`;
+const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'.`;
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<main>
+		<HeroSection>
+			<h1>
+				Tag: {pageTitle}
+			</h1>
+			<p class="text-balance">
+				Alternatively, you can <a href="/tags/">view all tags</a>
+			</p>
+		</HeroSection>
+		<article class="flow flow-space-l region wrapper">
+			<p class="text-2 text-step-000 leading-tight tracking-wide uppercase font-medium">
+				{filteredPostsCount}
+			</p>
+			<PostList postsCollection={filteredPosts} />
+		</article>
+	</main>
+</Layout>
