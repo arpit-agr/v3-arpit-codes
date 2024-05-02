@@ -6,7 +6,7 @@ import HeroSection from '../components/HeroSection.astro';
 import {Picture} from 'astro:assets';
 import heroImg from '../images/qutub-minar.png';
 import PostList from '../components/PostList.astro';
-import {reversedBlogPosts} from '../data/blogPostSorter.js';
+import {reversedBlogPosts} from '../data/reversedBlogPosts.js';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;

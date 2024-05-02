@@ -4,7 +4,7 @@ import {findMatchingItem} from '../../utils/findMatchingItem.js';
 import pageData from '../../data/pages.json';
 import HeroSection from '../../components/HeroSection.astro';
 import PostList from '../../components/PostList.astro';
-import {reversedBlogPosts} from '../../data/blogPostSorter.js';
+import {reversedBlogPosts} from '../../data/reversedBlogPosts.js';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
