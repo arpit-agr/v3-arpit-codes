@@ -2,6 +2,14 @@
 REGION UTILITY
 Consistent block padding for page sections
 */
-.region {
+/* .region {
 	padding-block: var(--region-space, var(--space-xl-2xl));
+} */
+
+.region {
+	padding-block-start: var(
+		--region-start-space,
+		var(--region-space, var(--space-xl-2xl))
+	);
+	padding-block-end: var(--region-end-space, var(--region-space, var(--space-xl-2xl)));
 }
