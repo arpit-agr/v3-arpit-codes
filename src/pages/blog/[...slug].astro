@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import {publishedBlogPosts} from '../../data/publishedBlogPosts';
 import HeroSection from '../../components/HeroSection.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
+import DraftSticker from '../../components/DraftSticker.astro';
 
 export async function getStaticPaths() {
 	const blogEntries = publishedBlogPosts;
@@ -22,6 +23,7 @@ const {Content} = await entry.render();
 				<h1>{entry.data.title}</h1>
 				<p>{entry.data.description}</p>
 				<FormattedDate date={entry.data.pubDate} />
+				{entry.data.draft && <DraftSticker />}
 			</HeroSection>
 			<div class="region">
 				<div class="post-body flow wrapper">

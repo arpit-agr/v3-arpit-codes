@@ -1,0 +1,37 @@
+.draft {
+	position: absolute;
+	max-inline-size: fit-content;
+	padding: var(--space-3xs) var(--space-xs);
+	border: var(--space-3xs) double var(--color-text-inverted-2);
+	border-radius: var(--border-radius);
+	background: hsl(0deg 100% 45%);
+	color: var(--color-text-inverted-2);
+	-webkit-mask-image: url('/images/grunge-mask-sm.png');
+	mask-image: url('/images/grunge-mask-sm.png');
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	pointer-events: none;
+
+	.post-list & {
+		inset-inline-start: 0;
+		inset-block-end: -1ex;
+		rotate: -3deg;
+
+		@media (--md-n-above) {
+			inset-inline-start: unset;
+			inset-block-end: unset;
+			inset-inline-end: 0;
+			inset-block-start: 0;
+			rotate: -10deg;
+		}
+	}
+
+	.post & {
+		--flow-space: 0;
+
+		inset-inline-start: 0;
+		inset-block-start: 0;
+		rotate: -22.5deg;
+		translate: calc(-1 / 2 * var(--page-gutter)) 0;
+	}
+}

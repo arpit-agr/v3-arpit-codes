@@ -1,11 +1,13 @@
 ---
 import FormattedDate from '../components/FormattedDate.astro';
+import DraftSticker from './DraftSticker.astro';
 
 interface Post {
 	slug: string;
 	data: {
 		title: string;
 		pubDate: Date;
+		draft: boolean;
 	};
 }
 
@@ -20,6 +22,7 @@ const {postsCollection} = Astro.props;
 				<li class="post-entry grid">
 					<a href={`/blog/${post.slug}`}>{post.data.title}</a>
 					<FormattedDate date={post.data.pubDate} />
+					{post.data.draft && <DraftSticker />}
 				</li>
 			))
 		}
