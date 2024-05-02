@@ -2,15 +2,15 @@
 import GodRays from '../components/GodRays.astro';
 ---
 
-<header class="inverted relative region">
+<div class="hero inverted relative region">
 	<div class="flow relative wrapper">
 		<slot />
 	</div>
 	<GodRays />
-</header>
+</div>
 
 <style>
-	header {
+	.hero {
 		--_primary-nav-height: calc(
 			(2 * var(--primary-nav-padding-block)) +
 				(var(--primary-nav-leading) * var(--primary-nav-font-size))
