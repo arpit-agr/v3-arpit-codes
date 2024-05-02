@@ -3,12 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import {findMatchingItem} from '../../utils/findMatchingItem.js';
 import pageData from '../../data/pages.json';
 import HeroSection from '../../components/HeroSection.astro';
-import {reversedBlogPosts} from '../../data/blogPostSorter.js';
+import {uniqueTags} from '../../data/uniqueTags.js';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
 const pageDesc = pageInfo.description;
-const tags = [...new Set(reversedBlogPosts.map(entry => entry.data.tags).flat())].sort();
+const sortedTags = uniqueTags.sort();
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
@@ -23,7 +23,7 @@ const tags = [...new Set(reversedBlogPosts.map(entry => entry.data.tags).flat())
 			</p>
 			<ul class="tags-list grid flow-space-l">
 				{
-					tags.map(tag => (
+					sortedTags.map(tag => (
 						<li>
 							<a href={`/tags/${tag}`}>{tag}</a>
 						</li>
