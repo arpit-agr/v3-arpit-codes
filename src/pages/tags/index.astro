@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {findMatchingItem} from '../../utils/findMatchingItem.js';
+import pageData from '../../data/pages.json';
+import HeroSection from '../../components/HeroSection.astro';
+import {reversedBlogPosts} from '../../data/blogPostSorter.js';
+
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+const tags = [...new Set(reversedBlogPosts.map(entry => entry.data.tags).flat())].sort();
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<main>
+		<HeroSection>
+			<h1>{pageTitle}</h1>
+			<p class="text-balance">{pageDesc}</p>
+		</HeroSection>
+		<article class="flow region wrapper">
+			<p class="text-2 text-step-000 leading-tight tracking-wide uppercase font-medium">
+				↓ Sorted Alphabetically
+			</p>
+			<ul class="tags-list grid flow-space-l">
+				{
+					tags.map(tag => (
+						<li>
+							<a href={`/tags/${tag}`}>{tag}</a>
+						</li>
+					))
+				}
+			</ul>
+		</article>
+	</main>
+</Layout>
+
+<style is:global>
+	.tags-list {
+		--gutter: var(--space-3xs) var(--space-xl);
+	}
+</style>
