@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {publishedBlogPosts} from '../../data/publishedBlogPosts';
+import HeroSection from '../../components/HeroSection.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+export async function getStaticPaths() {
+	const blogEntries = publishedBlogPosts;
+	return blogEntries.map(entry => ({
+		params: {slug: entry.slug},
+		props: {entry}
+	}));
+}
+const {entry} = Astro.props;
+const {Content} = await entry.render();
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+	<main class="post">
+		<article>
+			<HeroSection>
+				<h1>{entry.data.title}</h1>
+				<p>{entry.data.description}</p>
+				<FormattedDate date={entry.data.pubDate} />
+			</HeroSection>
+			<div class="region">
+				<div class="post-body flow wrapper">
+					<Content />
+					<hr class="flow-space-l-xl" />
+					<p class="post-tag-list flow-space-l-xl">
+						Tagged:
+						{
+							entry.data.tags.map(tag => {
+								return (
+									<>
+										<a href={`/tags/${tag}`}>{tag}</a>
+									</>
+								);
+							})
+						}
+					</p>
+				</div>
+			</div>
+		</article>
+	</main>
+</Layout>
