@@ -1,0 +1,9 @@
+.inverted {
+	background: var(--color-bg-inverted-1);
+	color: var(--color-text-inverted-1);
+	-webkit-font-smoothing: antialiased;
+
+	a:hover {
+		color: var(--color-text-inverted-2);
+	}
+}
