@@ -35,7 +35,9 @@ const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'.`;
 			</p>
 		</HeroSection>
 		<article class="flow flow-space-l region wrapper">
-			<p class="text-2 text-step-000 leading-tight tracking-wide uppercase font-medium">
+			<p
+				class="text-color-2 text-step-000 leading-tight tracking-wide uppercase font-medium"
+			>
 				{filteredPostsCount}
 			</p>
 			<PostList postsCollection={filteredPosts} />

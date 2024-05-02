@@ -35,13 +35,13 @@ const bookList = await getCollection('books');
 									loading={loadingValue}
 								/>
 								<div class="flow flow-space-4xs">
-									<p class="text-step-00 leading-snug text-2 font-medium text-balance">
+									<p class="text-step-00 leading-snug text-color-2 font-medium text-balance">
 										{book.data.title}
 									</p>
 									{book.data.subtitle && (
 										<p class="visually-hidden">{book.data.subtitle}</p>
 									)}
-									<p class="text-step-00 leading-snug text-3 text-balance">
+									<p class="text-step-00 leading-snug text-color-3 text-balance">
 										{book.data.author}
 									</p>
 								</div>
