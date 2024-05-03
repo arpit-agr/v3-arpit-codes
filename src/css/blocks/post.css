@@ -1,0 +1,76 @@
+.post {
+	h1 {
+		font-size: var(--size-step-3);
+		line-height: var(--leading-tight);
+		text-wrap: pretty;
+	}
+
+	h2 {
+		font-size: var(--size-step-2);
+	}
+
+	h3 {
+		font-size: var(--size-step-1);
+	}
+
+	pre {
+		padding: var(--space-2xs) var(--space-s);
+		border-radius: var(--border-radius-1);
+		tab-size: 2;
+		-webkit-font-smoothing: antialiased;
+
+		&:focus-visible {
+			outline: var(--border-thickness-2) solid var(--color-brand);
+			outline-offset: calc(3 * var(--focus-ring-offset));
+		}
+	}
+
+	code {
+		font-family: var(--font-monospace);
+		font-size: var(--size-step-00);
+	}
+
+	:not(pre) > code {
+		padding: var(--space-4xs) var(--space-3xs);
+		border-radius: var(--border-radius-1);
+		background-color: var(--color-bg-4);
+	}
+}
+
+.post .hero-inner,
+.post-body {
+	display: grid;
+	grid-template-columns:
+		[main-start] minmax(0, 1fr) [text-start] minmax(0, var(--measure))
+		[text-end] minmax(0, 1fr) [main-end];
+
+	> * {
+		grid-column: text;
+	}
+}
+
+.post-body > p:has(img) {
+	grid-column: main;
+	min-inline-size: calc(100% + (2 * var(--page-gutter)));
+	margin-inline-start: calc(-1 * var(--page-gutter));
+	border-radius: var(--radius-conditional-1);
+}
+
+.post-body img {
+	margin-inline: auto;
+	border-radius: inherit;
+}
+
+.post-tag-list a {
+	padding-inline: var(--space-4xs);
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+	.post-body > :first-child::first-letter {
+		margin-inline-end: var(--space-3xs-2xs);
+		-webkit-initial-letter: 2;
+		initial-letter: 2;
+		color: var(--color-text-2);
+		font-weight: var(--font-bold);
+	}
+}
