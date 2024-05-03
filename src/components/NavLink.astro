@@ -1,13 +1,19 @@
 ---
-import type {HTMLAttributes} from 'astro/types';
-
-type Props = HTMLAttributes<'a'>;
+interface Props {
+	href: string;
+}
 
 const {href} = Astro.props;
 const {pathname} = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, '');
+const isCurrent = href === pathname || href === pathname.replace(/\/$/, '');
+const isActive = href.length > 1 && pathname.indexOf(href) === 0;
 ---
 
-<a class="tracking-wide" href={href} aria-current={isActive ? 'page' : null}>
+<a
+	class="tracking-wide no-underline uppercase"
+	href={href}
+	aria-current={isCurrent ? 'page' : null}
+	data-state={isActive ? 'active' : null}
+>
 	<slot />
 </a>
