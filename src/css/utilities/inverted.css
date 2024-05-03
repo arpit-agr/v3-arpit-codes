@@ -6,4 +6,8 @@
 	a:hover {
 		color: var(--color-text-inverted-2);
 	}
+
+	:focus-visible {
+		outline-color: var(--color-brand-inverted);
+	}
 }
