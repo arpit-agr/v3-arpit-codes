@@ -1,0 +1,33 @@
+.homepage-heading {
+	--gutter: var(--space-3xs);
+	font-size-adjust: cap-height from-font;
+
+	.translations {
+		order: -1;
+	}
+}
+
+/* FIXME: temporary hack for Safari */
+@supports not (text-wrap: balance) {
+	.intro {
+		--measure: 42rem;
+	}
+}
+
+.homepage-hero-img {
+	display: none;
+
+	@media (--md-n-above) {
+		display: block;
+		block-size: auto;
+		inline-size: 18vw;
+		max-block-size: 125%;
+		object-fit: contain;
+		object-position: right;
+
+		position: absolute;
+		inset-inline-end: var(--page-gutter);
+		inset-block-start: 50%;
+		translate: 0 -50%;
+	}
+}
