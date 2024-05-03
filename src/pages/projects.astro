@@ -4,7 +4,6 @@ import {findMatchingItem} from '../utils/findMatchingItem.js';
 import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import projects from '../data/projects.json';
-import RightArrowVector from '../components/RightArrowVector.astro';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
@@ -23,15 +22,12 @@ const pageDesc = pageInfo.description;
 				I'm currently working on enhancing this page to provide a better experience. In
 				the meantime, here's a list of links to some of my recent work:
 			</p>
-			<ul class="project-list flow" role="list">
+			<ul class="project-list flow">
 				{
 					projects.map(entry => {
 						return (
 							<li>
-								<a class="grid" href={entry.url}>
-									<RightArrowVector />
-									{entry.label}
-								</a>
+								<a href={entry.url}>{entry.label}</a>
 							</li>
 						);
 					})
@@ -44,19 +40,5 @@ const pageDesc = pageInfo.description;
 <style is:global>
 	.project-list li {
 		--flow-space: var(--space-xs);
-
-		a {
-			--gutter: var(--space-2xs);
-			grid-template-columns: auto 1fr;
-			align-items: center;
-
-			svg {
-				block-size: 0.75ex;
-			}
-
-			path {
-				stroke: currentColor;
-			}
-		}
 	}
 </style>
