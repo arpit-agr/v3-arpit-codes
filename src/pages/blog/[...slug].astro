@@ -6,33 +6,33 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import DraftSticker from '../../components/DraftSticker.astro';
 
 export async function getStaticPaths() {
-	const blogEntries = publishedBlogPosts;
-	return blogEntries.map(entry => ({
-		params: {slug: entry.slug},
-		props: {entry}
+	const blogPosts = publishedBlogPosts;
+	return blogPosts.map(post => ({
+		params: {slug: post.slug},
+		props: {post}
 	}));
 }
-const {entry} = Astro.props;
-const {Content} = await entry.render();
+const {post} = Astro.props;
+const {Content} = await post.render();
 ---
 
-<Layout title={entry.data.title} description={entry.data.description}>
+<Layout title={post.data.title} description={post.data.description}>
 	<main class="post" id="main">
 		<article>
 			<HeroSection>
-				<h1>{entry.data.title}</h1>
-				<p>{entry.data.description}</p>
-				<FormattedDate date={entry.data.pubDate} />
-				{entry.data.draft && <DraftSticker />}
+				<h1>{post.data.title}</h1>
+				<p>{post.data.description}</p>
+				<FormattedDate date={post.data.pubDate} />
+				{post.data.draft && <DraftSticker />}
 			</HeroSection>
 			<div class="region">
-				<div class="post-body flow wrapper">
+				<div class="post-body prose flow wrapper">
 					<Content />
 					<hr class="flow-space-l-xl" />
 					<p class="post-tag-list flow-space-l-xl">
 						Tagged:
 						{
-							entry.data.tags.map(tag => {
+							post.data.tags.map(tag => {
 								return (
 									<>
 										<a href={`/tags/${tag}`}>{tag}</a>
