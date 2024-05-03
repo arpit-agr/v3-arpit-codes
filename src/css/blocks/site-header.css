@@ -1,0 +1,107 @@
+.site-header {
+	--_header-border: var(--border-thickness-1);
+	position: absolute;
+	inline-size: 100%;
+	inset-inline: 0;
+	inset-block-start: 0;
+	border-block-end: var(--_header-border) solid var(--color-border-1);
+	-webkit-font-smoothing: antialiased;
+	z-index: 999;
+
+	@media (--md-n-above) {
+		border-block-end: unset;
+		border-width: 0 0 var(--_header-border) 0;
+		border-style: solid;
+		border-image: linear-gradient(to right, transparent, var(--color-border-1)) 30;
+	}
+}
+
+[href='#main'] {
+	--_padding-block: 0.5em;
+	--_padding-inline: 0.75em;
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: var(--page-gutter);
+
+	padding: var(--_padding-block) var(--_padding-inline);
+	border-radius: var(--border-radius-1);
+	font-size: var(--primary-nav-font-size);
+	opacity: 0;
+	transform: translateY(calc(-100% - var(--border-thickness-2)));
+	z-index: 1000;
+	transition:
+		transform var(--transition-base),
+		opacity var(--transition-base);
+
+	&:focus-visible {
+		opacity: 1;
+		inset-block-start: calc(var(--primary-nav-padding-block) - var(--_padding-block));
+		outline-color: var(--color-brand-inverted);
+		transform: translateY(0);
+	}
+}
+
+.site-nav ul {
+	--gutter: var(--space-5xs);
+	margin-inline-start: calc(-1 * var(--primary-nav-padding-inline));
+	color: var(--color-text-inverted-1);
+
+	@media (--md-n-above) {
+		margin-inline-start: auto;
+		margin-inline-end: calc(-1 * var(--primary-nav-padding-inline));
+		/* inline-size: fit-content; */
+		justify-content: end;
+	}
+
+	a {
+		position: relative;
+		display: inline-block;
+		padding: var(--primary-nav-padding-block) var(--primary-nav-padding-inline);
+		font-size: var(--primary-nav-font-size);
+		line-height: var(--primary-nav-leading);
+
+		&:before {
+			content: '';
+			position: absolute;
+			inset: calc(0.75 * var(--primary-nav-padding-block))
+				calc(0.5 * var(--primary-nav-padding-inline));
+			border-radius: var(--border-radius-1);
+			transition: outline-offset 145ms var(--ease-2);
+		}
+
+		&:after {
+			--text-decoration-size: var(--border-thickness-1);
+			content: '';
+			position: absolute;
+			inset-inline-start: var(--primary-nav-padding-inline);
+			inset-block-end: calc(
+				-1 / 2 * (var(--text-decoration-size) + var(--_header-border))
+			);
+			inline-size: calc(100% - (2 * var(--primary-nav-padding-inline)));
+			block-size: var(--text-decoration-size);
+
+			transition: background-color var(--transition-base);
+		}
+
+		&:hover {
+			color: var(--color-text-inverted-2);
+		}
+
+		&:hover:after {
+			background-color: currentColor;
+		}
+
+		&:focus-visible {
+			outline: none;
+		}
+
+		&:focus-visible:before {
+			outline: var(--border-thickness-2) solid var(--color-brand-inverted);
+			outline-offset: var(--focus-ring-offset);
+		}
+	}
+}
+
+.site-nav :where([aria-current='page'], [data-state='active']):after {
+	background-color: var(--color-underline);
+}
