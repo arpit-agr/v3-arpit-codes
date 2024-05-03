@@ -24,12 +24,14 @@ const allDesignPrinciples = await getCollection('designPrinciples');
 						const {Content} = await entry.render();
 
 						return (
-							<div class="flow">
+							<div class="principle-entry grid">
 								<dt class="heading-4">
 									<a href={entry.data.url}>{entry.data.title}</a>
 								</dt>
-								<dd class="text-balance">{entry.data.description}</dd>
-								<dd class="flow text-step-00">
+								<dd class="principle-description text-step-1 leading-snug text-balance">
+									{entry.data.description}
+								</dd>
+								<dd class="principle-content flow flow-space-s">
 									<Content />
 								</dd>
 							</div>
@@ -40,11 +42,3 @@ const allDesignPrinciples = await getCollection('designPrinciples');
 		</article>
 	</main>
 </Layout>
-
-<style is:global>
-	.design-principles-list {
-		dd {
-			--flow-space: var(--space-2xs);
-		}
-	}
-</style>

@@ -1,0 +1,25 @@
+.design-principles-list > * + * {
+	padding-block-start: var(--space-l);
+	border-block-start: var(--border-thickness-1) solid var(--color-border-1);
+}
+
+.principle-entry {
+	--gutter: var(--space-s) var(--space-xl);
+	grid-template-columns: 1fr;
+
+	@media (--md-n-above) {
+		grid-template-columns: auto 1fr;
+
+		.principle-content {
+			grid-column: 2;
+		}
+	}
+
+	@media (--lg-n-above) {
+		grid-template-columns: auto 1fr 1fr;
+
+		.principle-content {
+			grid-column: unset;
+		}
+	}
+}
