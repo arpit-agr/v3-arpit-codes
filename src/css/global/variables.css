@@ -16,6 +16,7 @@
 	--color-text-inverted-1: var(--stone-4);
 	--color-text-inverted-2: var(--stone-0);
 	--color-border-1: hsl(var(--stone-5-hsl) / 50%);
+	--color-underline: color-mix(in srgb, currentColor 90%, transparent);
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
