@@ -85,7 +85,7 @@ li {
 a {
 	color: inherit;
 	text-decoration-thickness: var(--border-thickness-1);
-	text-decoration-color: color-mix(in srgb, currentColor 90%, transparent);
+	text-decoration-color: var(--color-underline);
 	transition:
 		color var(--transition-base),
 		text-decoration-color var(--transition-base),
