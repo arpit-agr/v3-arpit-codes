@@ -1,13 +1,67 @@
+/* color variables */
 :root {
-	--measure: 60ch;
-	--gutter: var(--space-s-l);
+	--color-brand: var(--indigo-7);
+	--color-brand-inverted: var(--indigo-5);
+	--color-bg-1: var(--stone-0);
+	--color-bg-2: var(--stone-1);
+	--color-bg-3: var(--stone-2);
+	--color-bg-4: var(--stone-3);
+	--color-bg-5: var(--stone-4);
+	--color-bg-inverted-1: var(--stone-12);
+	--color-bg-inverted-2: var(--stone-11);
+	--color-bg-inverted-3: var(--stone-10);
+	--color-text-1: var(--stone-10);
+	--color-text-2: var(--stone-12);
+	--color-text-3: var(--stone-9);
+	--color-text-inverted-1: var(--stone-4);
+	--color-text-inverted-2: var(--stone-0);
+	--color-border-1: hsl(var(--stone-5-hsl) / 50%);
+
+	@media (--HDcolor) {
+		--color-brand: oklch(46.76% 0.2845 262.81);
+		--color-brand-inverted: oklch(66.47% 0.191 269.5);
+	}
+}
+
+:root {
+	--measure: 53ch;
+	--page-gutter: var(--space-s-l);
+
+	--border-thickness-1: max(1px, 0.066em);
+	--border-thickness-2: 2px;
+	--border-radius-1: var(--space-4xs);
+	--border-radius-2: var(--space-3xs);
+
+	--underline-offset: var(--space-4xs);
+	--focus-ring-offset: var(--space-5xs);
+}
+
+/* transitions variables */
+:root {
 	--transition-base: 250ms ease;
 	--transition-movement: 200ms linear;
 	--transition-fade: 300ms ease;
 	--transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
 }
 
+/* primary nav variables */
+:root {
+	--primary-nav-padding-block: var(--space-s);
+	--primary-nav-padding-inline: var(--space-2xs);
+	--primary-nav-font-size: var(--size-step-000);
+	--primary-nav-leading: var(--leading-flat);
+}
+
 /* https://open-props.style/#media-queries */
+/* Viewport Vars */
+@custom-media --sm-n-above (min-width: 30em);
+@custom-media --md-n-above (min-width: 48em);
+@custom-media --lg-n-above (min-width: 80em);
+
+@custom-media --sm-n-below (max-width: 29.9375em);
+@custom-media --md-n-below (max-width: 47.9375em);
+@custom-media --lg-n-below (max-width: 79.9375em);
+
 /* Capability Vars */
 @custom-media --mouse (hover) and (pointer: fine);
 @custom-media --touch (hover: none) and (pointer: coarse);
