@@ -3,7 +3,7 @@
 	max-inline-size: fit-content;
 	padding: var(--space-3xs) var(--space-xs);
 	border: var(--space-3xs) double var(--color-text-inverted-2);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-1);
 	background: hsl(0deg 100% 45%);
 	color: var(--color-text-inverted-2);
 	-webkit-mask-image: url('/images/grunge-mask-sm.png');

@@ -2,7 +2,7 @@
 	padding: 0.5em 0.75em;
 	background-color: var(--color-bg-4);
 	color: var(--color-text-1);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius-1);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
 
