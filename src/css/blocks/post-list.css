@@ -1,0 +1,27 @@
+.post-list-wrapper {
+	max-inline-size: var(--measure);
+}
+
+.post-entry {
+	--flow-space: var(--space-s);
+	--gutter: var(--space-3xs) var(--space-s-m);
+	position: relative;
+	grid-template-columns: 1fr;
+	border-radius: var(--border-radius-1);
+
+	@media (--md-n-above) {
+		grid-template-columns: minmax(0, var(--measure)) auto;
+		align-items: first baseline;
+
+		/* .pub-date {
+			justify-self: end;
+			text-align: end;
+		} */
+	}
+
+	a:after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+}
