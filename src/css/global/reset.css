@@ -37,7 +37,7 @@
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-:where(body, h1, h2, h3, h4, p, ol, ul, figure, blockquote, dl, dd, hr) {
+:where(body, h1, h2, h3, h4, p, ol, ul, figure, blockquote, pre, dl, dd, hr) {
 	margin: 0;
 }
 
