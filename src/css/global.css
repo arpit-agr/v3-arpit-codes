@@ -23,17 +23,34 @@ Any custom styles you add to the base, components, or utilities layers will only
 
 Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom-css
 */
+
+@import 'blocks/site-header.css' layer(components);
+@import 'blocks/site-footer.css' layer(components);
 @import 'blocks/prose.css' layer(components);
-@import 'components/box.css' layer(components);
-@import 'components/cluster.css' layer(components);
-@import 'components/flow.css' layer(components);
-@import 'components/grid.css' layer(components);
-@import 'components/icon.css' layer(components);
-@import 'components/repel.css' layer(components);
-@import 'components/sidebar.css' layer(components);
-@import 'components/switcher.css' layer(components);
-@import 'components/wrapper.css' layer(components);
-@import 'utilities/region.css' layer(components);
-@import 'utilities/visually-hidden.css' layer(components);
+@import 'blocks/draft-sticker.css' layer(components);
 
 @import 'tailwindcss/utilities';
+
+@import 'composition/box.css' layer(utilities);
+@import 'composition/cluster.css' layer(utilities);
+@import 'composition/stack.css' layer(utilities);
+@import 'composition/flow.css' layer(utilities);
+@import 'composition/grid.css' layer(utilities);
+@import 'composition/icon.css' layer(utilities);
+@import 'composition/repel.css' layer(utilities);
+@import 'composition/sidebar.css' layer(utilities);
+@import 'composition/switcher.css' layer(utilities);
+@import 'composition/wrapper.css' layer(utilities);
+@import 'utilities/button.css' layer(utilities);
+@import 'utilities/inverted.css' layer(utilities);
+@import 'utilities/region.css' layer(utilities);
+@import 'utilities/text-color.css' layer(utilities);
+@import 'utilities/visually-hidden.css' layer(utilities);
+
+/* Exceptions */
+@import 'blocks/home-page.css';
+@import 'blocks/post-list.css';
+@import 'blocks/post.css';
+@import 'blocks/questionnaire.css';
+@import 'blocks/design-principles.css';
+@import 'blocks/bookshelf.css';
