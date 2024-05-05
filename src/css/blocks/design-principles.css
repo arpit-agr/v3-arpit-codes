@@ -4,7 +4,7 @@
 }
 
 .principle-entry {
-	--gutter: var(--space-2xs) var(--space-l);
+	--gutter: var(--space-xs) var(--space-l);
 	grid-template-columns: 1fr;
 
 	@media (--md-n-above) {

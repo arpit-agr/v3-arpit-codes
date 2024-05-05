@@ -101,6 +101,18 @@ a {
 	}
 }
 
+a[href$='pdf' i]:after {
+	content: '';
+	display: inline-block;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMzYTNhMzciIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1maWxlLXRleHQiPjxwYXRoIGQ9Ik0xNSAySDZhMiAyIDAgMCAwLTIgMnYxNmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyLTJWN1oiLz48cGF0aCBkPSJNMTQgMnY0YTIgMiAwIDAgMCAyIDJoNCIvPjxwYXRoIGQ9Ik0xMCA5SDgiLz48cGF0aCBkPSJNMTYgMTNIOCIvPjxwYXRoIGQ9Ik0xNiAxN0g4Ii8+PC9zdmc+);
+	inline-size: 2ch;
+	block-size: 0.6lh;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	vertical-align: text-top;
+}
+
 button {
 	border: none;
 }
@@ -135,7 +147,7 @@ blockquote {
 		block-size: 1ex;
 
 		background-color: var(--color-bg-1);
-		color: currentColor;
+		color: var(--color-underline);
 		font-size: 4em;
 		font-weight: 200;
 		line-height: var(--leading-flat);
@@ -149,9 +161,9 @@ blockquote {
 		grid-column: 1/2;
 		justify-self: center;
 		inline-size: var(--_width);
-		block-size: 98.5%;
+		block-size: 100%;
 		transform: translateY(calc(var(--_width) * -1 / 2));
-		background-color: currentColor;
+		background-color: var(--color-underline);
 		z-index: -1;
 	}
 }

@@ -65,7 +65,7 @@
 	padding-inline: var(--space-4xs);
 }
 
-@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+/* @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
 	.post-body > :first-child::first-letter {
 		margin-inline-end: var(--space-3xs-2xs);
 		-webkit-initial-letter: 2;
@@ -73,4 +73,4 @@
 		color: var(--color-text-2);
 		font-weight: var(--font-bold);
 	}
-}
+} */

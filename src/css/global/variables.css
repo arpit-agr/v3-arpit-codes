@@ -13,6 +13,7 @@
 	--color-text-1: var(--stone-10);
 	--color-text-2: var(--stone-12);
 	--color-text-3: var(--stone-9);
+	--color-text-4: var(--stone-8);
 	--color-text-inverted-1: var(--stone-4);
 	--color-text-inverted-2: var(--stone-0);
 	--color-border-1: hsl(var(--stone-5-hsl) / 50%);

@@ -1,7 +1,8 @@
 .prose {
-	--flow-space: var(--space-m);
+	/* --flow-space: var(--space-m); */
+	--flow-space: 1em;
 
-	blockquote > * {
+	/* blockquote > * {
 		--flow-space: var(--space-s);
-	}
+	} */
 }

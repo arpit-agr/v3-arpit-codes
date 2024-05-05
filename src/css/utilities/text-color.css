@@ -9,3 +9,7 @@
 .text-color-3 {
 	color: var(--color-text-3);
 }
+
+.text-color-4 {
+	color: var(--color-text-4);
+}
