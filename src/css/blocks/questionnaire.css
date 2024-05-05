@@ -7,7 +7,7 @@
 		grid-template-columns: auto 1fr;
 
 		.acknowledgment {
-			align-self: end;
+			place-self: end;
 			text-align: end;
 		}
 	}
@@ -51,4 +51,11 @@
 	color: var(--color-text-inverted-1);
 	font-size: var(--size-step-000);
 	translate: 0 -10%;
+}
+
+/* temporary hack for Safari */
+@supports not (text-wrap: balance) {
+	.acknowledgment {
+		--measure: 40ch;
+	}
 }
