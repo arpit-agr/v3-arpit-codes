@@ -23,3 +23,15 @@
 		fill: var(--color-text-1);
 	}
 }
+
+.socials {
+	--gutter: var(--space-xs);
+
+	svg {
+		block-size: 1em;
+	}
+
+	path {
+		fill: currentColor;
+	}
+}
