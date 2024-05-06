@@ -3,7 +3,7 @@
 }
 
 .post-entry {
-	--flow-space: var(--space-m);
+	--flow-space: var(--space-m-s);
 	--gutter: var(--space-3xs) var(--space-s-m);
 	position: relative;
 	grid-template-columns: 1fr;
