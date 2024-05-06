@@ -19,6 +19,8 @@
 }
 
 .cat-gang {
+	max-inline-size: max(20rem, 40%);
+
 	path {
 		fill: var(--color-text-1);
 	}
