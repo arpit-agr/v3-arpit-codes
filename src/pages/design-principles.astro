@@ -18,14 +18,14 @@ const allDesignPrinciples = await getCollection('designPrinciples');
 			<p class="text-balance">{pageDesc}</p>
 		</HeroSection>
 		<article class="flow region wrapper">
-			<dl class="design-principles-list flow flow-space-l" role="list">
+			<dl class="design-principles-list grid" role="list">
 				{
 					allDesignPrinciples.map(async entry => {
 						const {Content} = await entry.render();
 
 						return (
 							<div class="principle-entry grid">
-								<dt class="heading-4">
+								<dt class="heading-5">
 									<a href={entry.data.url}>{entry.data.title}</a>
 								</dt>
 								<dd class="principle-description text-balance">
