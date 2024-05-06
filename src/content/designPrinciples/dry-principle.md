@@ -1,5 +1,5 @@
 ---
-title: 'The DRY Principle'
+title: "Don't Repeat Yourself (DRY)"
 url: 'https://en.wikipedia.org/wiki/Don%27t_repeat_yourself'
 description: 'Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.'
 ---
