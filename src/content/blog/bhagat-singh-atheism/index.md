@@ -29,7 +29,7 @@ Here are some of my favourite passages from Bhagat Singh's essay, which I find n
 
 ## Further Reading
 
-Published posthmously on 27 September 1931 in [The People](/docs/why-i-am-an-atheist.pdf), the essay can be accessed in its entirety on [marxists.org](https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm).
+The essay can be accessed in its entirety on [marxists.org](https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm). It was published posthmously on 27 September 1931 in [The People](/docs/why-i-am-an-atheist.pdf).
 
 ## Attribution
 
