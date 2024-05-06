@@ -6,11 +6,11 @@
 	}
 
 	h2 {
-		font-size: var(--size-step-2);
+		font-size: var(--size-step-1);
 	}
 
 	h3 {
-		font-size: var(--size-step-1);
+		font-size: var(--size-step-0);
 	}
 
 	pre {

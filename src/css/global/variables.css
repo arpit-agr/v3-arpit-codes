@@ -27,7 +27,7 @@
 }
 
 :root {
-	--measure: 53ch;
+	--measure: 53.4ch;
 	--page-gutter: var(--space-s-l);
 
 	--border-thickness-1: max(1px, 0.066em);
