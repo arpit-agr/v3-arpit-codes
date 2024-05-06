@@ -1,11 +1,11 @@
 .button {
 	padding: 0.5em 0.75em;
 	/* background-color: var(--color-bg-4); */
+	border: var(--border-thickness-1) solid;
+	border-radius: var(--border-radius-2);
 	color: var(--color-text-1);
-	border-radius: var(--border-radius-1);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
-	border: var(--border-thickness-1) solid;
 
 	transition:
 		background-color var(--transition-base),
