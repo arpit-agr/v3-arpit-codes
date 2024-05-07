@@ -140,7 +140,7 @@
 		[tabindex]:not([tabindex*='-'])
 	) {
 	touch-action: manipulation;
-	-webkit-tap-highlight-color: transparent;
+	/* -webkit-tap-highlight-color: transparent; */
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
