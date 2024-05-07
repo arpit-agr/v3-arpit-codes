@@ -10,8 +10,7 @@
 			grid-column: 1;
 		}
 
-		.principle-content,
-		.principle-metadata {
+		.principle-content {
 			grid-column: 2;
 		}
 	}
@@ -60,8 +59,4 @@
 		inline-size: 100%;
 		background-color: var(--color-brand);
 	}
-}
-
-.principle-metadata {
-	--gutter: var(--space-xs);
 }
