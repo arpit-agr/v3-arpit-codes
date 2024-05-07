@@ -22,17 +22,36 @@ const allDesignPrinciples = await getCollection('designPrinciples');
 				{
 					allDesignPrinciples.map(async entry => {
 						const {Content} = await entry.render();
+						const origin = entry.data.origin;
+						const authorData = entry.data.author;
 
 						return (
 							<div class="principle-entry grid">
-								<dt class="heading-5">
-									<a href={entry.data.url}>{entry.data.title}</a>
+								<dt class="heading-5 relative">
+									<a class="relative inline-block no-underline" href={entry.data.url}>
+										{entry.data.title}
+									</a>
 								</dt>
-								<dd class="principle-description text-balance">
+								<dd class="principle-description text-pretty">
 									{entry.data.description}
 								</dd>
 								<dd class="principle-content flow flow-space-s">
 									<Content />
+								</dd>
+								<dd class="principle-metadata cluster text-step-000 leading-snug tracking-wide uppercase text-balance">
+									{origin && (
+										<>
+											<span class="visually-hidden">Published in</span> {origin} by
+										</>
+									)}
+									{authorData &&
+										authorData.map((item, index) => {
+											if (index + 1 < authorData.length) {
+												return `${item}, `;
+											} else {
+												return `${item}`;
+											}
+										})}
 								</dd>
 							</div>
 						);
