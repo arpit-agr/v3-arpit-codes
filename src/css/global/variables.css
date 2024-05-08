@@ -2,6 +2,8 @@
 :root {
 	--color-brand: var(--indigo-7);
 	--color-brand-inverted: var(--indigo-5);
+	--color-draft: hsl(0deg 100% 45%);
+	--color-draft-inverted: hsl(0deg 100% 30%);
 	--color-bg-1: var(--stone-0);
 	--color-bg-2: var(--stone-1);
 	--color-bg-3: var(--stone-2);

@@ -1,6 +1,5 @@
 ---
 import FormattedDate from '../components/FormattedDate.astro';
-import DraftSticker from './DraftSticker.astro';
 
 interface Post {
 	slug: string;
@@ -19,10 +18,12 @@ const {postsCollection} = Astro.props;
 	<ul class="post-list flow flow-space-l" role="list">
 		{
 			postsCollection.map((post: Post) => (
-				<li class="post-entry grid">
+				<li
+					class="post-entry grid"
+					{...(post.data.draft && {style: {color: 'var(--color-draft)'}})}
+				>
 					<a href={`/blog/${post.slug}`}>{post.data.title}</a>
 					<FormattedDate date={post.data.pubDate} />
-					{post.data.draft && <DraftSticker />}
 				</li>
 			))
 		}

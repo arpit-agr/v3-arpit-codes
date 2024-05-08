@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import {publishedBlogPosts} from '../../data/publishedBlogPosts';
 import HeroSection from '../../components/HeroSection.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
-import DraftSticker from '../../components/DraftSticker.astro';
 
 export async function getStaticPaths() {
 	const blogPosts = publishedBlogPosts;
@@ -16,14 +15,21 @@ const {post} = Astro.props;
 const {Content} = await post.render();
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout
+	title={post.data.title}
+	description={post.data.description}
+	{...post.data.draft && {themeColor: '#990000'}}
+>
 	<main class="post" id="main">
-		<article>
+		<article
+			{...post.data.draft && {
+				style: {'--color-bg-inverted-1': 'var(--color-draft-inverted)'}
+			}}
+		>
 			<HeroSection>
 				<h1>{post.data.title}</h1>
 				<p>{post.data.description}</p>
 				<FormattedDate date={post.data.pubDate} />
-				{post.data.draft && <DraftSticker />}
 			</HeroSection>
 			<div class="region">
 				<div class="post-body prose flow wrapper">

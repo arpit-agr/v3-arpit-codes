@@ -27,7 +27,6 @@ Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom
 @import 'blocks/site-header.css' layer(components);
 @import 'blocks/site-footer.css' layer(components);
 @import 'blocks/prose.css' layer(components);
-@import 'blocks/draft-sticker.css' layer(components);
 
 @import 'tailwindcss/utilities';
 
