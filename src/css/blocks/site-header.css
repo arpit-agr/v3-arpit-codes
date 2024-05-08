@@ -73,18 +73,18 @@
 			--text-decoration-size: var(--border-thickness-1);
 			content: '';
 			position: absolute;
-			/* inset-inline-start: var(--primary-nav-padding-inline);
+			inset-inline-start: var(--primary-nav-padding-inline);
 			inset-block-end: calc(
 				-1 / 2 * (var(--text-decoration-size) + var(--_header-border))
 			);
 			inline-size: calc(100% - (2 * var(--primary-nav-padding-inline)));
-			block-size: var(--text-decoration-size); */
+			block-size: var(--text-decoration-size);
 
-			inset-inline-start: 50%;
+			/* inset-inline-start: 50%;
 			inset-block-end: 0;
 			inline-size: var(--border-thickness-1);
 			block-size: calc(0.5 * var(--primary-nav-padding-block));
-			translate: -50% 0;
+			translate: -50% 0; */
 
 			transition: background-color var(--transition-base);
 		}

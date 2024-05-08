@@ -23,7 +23,7 @@ main {
 	flex-grow: 999;
 }
 
-:where(h1, .heading-1, h2, .heading-2, h3, .heading-3, h4, .heading-4, h5, .heading-5) {
+:where(h1, .heading-1, h2, .heading-2, h3, .heading-3, h4, .heading-4) {
 	color: var(--color-text-2);
 
 	.inverted & {
@@ -36,18 +36,8 @@ h2,
 h3,
 .heading-3,
 h4,
-.heading-4,
-h5,
-.heading-5 {
-	font-weight: var(--font-medium);
-}
-
-h2,
-.heading-2,
-h3,
-.heading-3,
-h4,
 .heading-4 {
+	font-weight: var(--font-medium);
 	line-height: var(--leading-tight);
 }
 
@@ -72,12 +62,6 @@ h3,
 h4,
 .heading-4 {
 	font-size: var(--size-step-1);
-}
-
-h5,
-.heading-5 {
-	font-size: var(--size-step-0);
-	line-height: var(--leading-snug);
 }
 
 p,

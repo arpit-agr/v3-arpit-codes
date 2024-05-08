@@ -1,5 +1,5 @@
 .design-principles-list {
-	--_term-padding-block: var(--space-3xs);
+	--_term-padding-block: var(--underline-offset);
 	--gutter: calc(var(--space-l) - var(--_term-padding-block)) var(--space-l);
 	grid-template-columns: 1fr;
 
