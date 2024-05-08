@@ -8,7 +8,13 @@ import {getCollection} from 'astro:content';
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
 const pageDesc = pageInfo.description;
-const allDesignPrinciples = await getCollection('designPrinciples');
+const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => {
+	if (import.meta.env.PROD) {
+		return data.draft !== true;
+	} else {
+		return data;
+	}
+});
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
@@ -26,8 +32,11 @@ const allDesignPrinciples = await getCollection('designPrinciples');
 						const authorData = entry.data.author;
 
 						return (
-							<div class="principle-entry grid">
-								<dt class="heading-5 relative">
+							<div
+								class="principle-entry grid"
+								{...(entry.data.draft && {style: {color: 'var(--color-draft)'}})}
+							>
+								<dt class="font-medium relative">
 									<a class="relative inline-block no-underline" href={entry.data.url}>
 										{entry.data.title}
 									</a>
@@ -41,7 +50,7 @@ const allDesignPrinciples = await getCollection('designPrinciples');
 										<cite class="block text-step-000 leading-snug tracking-wide uppercase text-balance">
 											{origin && (
 												<>
-													<span class="visually-hidden">Published in</span> {origin} by
+													<span class="visually-hidden">Published in</span> '{origin}' by
 												</>
 											)}
 											{authorData &&
