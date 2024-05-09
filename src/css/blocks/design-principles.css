@@ -25,14 +25,21 @@
 
 	dt {
 		grid-column: 1/-1;
-		border-block-end: var(--border-thickness-1) solid var(--color-border-1);
+		border-block-end: var(--border-thickness-1) solid var(--color-underline);
 
 		a {
+			--gutter: var(--space-xs);
+			grid-template-columns: 1fr auto;
+			align-items: center;
+			inline-size: 100%;
 			padding-block: var(--_term-padding-block);
+
+			svg {
+				block-size: 1em;
+			}
 		}
 
-		&:after,
-		a:after {
+		&:after {
 			--text-decoration-size: var(--border-thickness-1);
 			content: '';
 			position: absolute;
@@ -40,19 +47,11 @@
 			inset-block-end: calc(
 				-1 / 2 * (var(--text-decoration-size) + var(--border-thickness-1))
 			);
-			block-size: var(--text-decoration-size);
-		}
-
-		&:after {
 			inline-size: 10%;
+			block-size: var(--text-decoration-size);
 			transition:
 				background-color var(--transition-base),
 				inline-size var(--transition-base);
-		}
-
-		a:after {
-			inline-size: 100%;
-			background-color: currentColor;
 		}
 	}
 

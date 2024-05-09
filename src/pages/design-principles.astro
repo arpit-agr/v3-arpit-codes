@@ -4,6 +4,7 @@ import {findMatchingItem} from '../utils/findMatchingItem.js';
 import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import {getCollection} from 'astro:content';
+import ExternalLinkVector from '../components/ExternalLinkVector.astro';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
@@ -37,8 +38,9 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								{...(entry.data.draft && {style: {color: 'var(--color-draft)'}})}
 							>
 								<dt class="font-medium text-color-2 relative">
-									<a class="relative inline-block no-underline" href={entry.data.url}>
-										{entry.data.title}
+									<a class="relative grid no-underline" href={entry.data.url}>
+										<span>{entry.data.title}</span>
+										<ExternalLinkVector />
 									</a>
 								</dt>
 								<dd class="principle-description text-pretty">
