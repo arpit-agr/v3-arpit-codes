@@ -10,7 +10,8 @@
 			grid-column: 1;
 		}
 
-		.principle-content {
+		.principle-content,
+		.principle-citation {
 			grid-column: 2;
 		}
 	}
