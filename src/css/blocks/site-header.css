@@ -94,6 +94,7 @@
 		}
 
 		&:hover:after {
+			--text-decoration-size: var(--border-thickness-2);
 			background-color: var(--color-underline);
 		}
 
@@ -109,6 +110,5 @@
 }
 
 .site-nav :where([aria-current='page'], [data-state='active']):after {
-	/* background-color: var(--color-underline); */
-	background-color: var(--color-border-1);
+	background-color: var(--color-underline);
 }

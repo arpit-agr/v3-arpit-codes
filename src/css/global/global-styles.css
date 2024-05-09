@@ -86,6 +86,7 @@ a {
 
 	&:hover {
 		color: var(--color-brand);
+		text-decoration-thickness: var(--border-thickness-2);
 	}
 
 	&:focus-visible {
