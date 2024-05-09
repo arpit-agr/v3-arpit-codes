@@ -1,10 +1,9 @@
 ---
-title: 'Consistency'
-description: 'By providing a sense of stability, consistency makes the interface familiar and predictable.'
-url: 'https://ics.uci.edu/~kobsa/courses/ICS104/course-notes/Microsoft_WindowsGuidelines.pdf'
-origin: 'The Windows Interface Guidelines'
-author: ['Microsoft Press']
-draft: true
+title: 'Consistency matters'
+description: 'Screen elements should not appear consistent with each other unless they behave consistently with each other.'
+url: 'http://bokardo.com/principles-of-user-interface-design/'
+origin: 'Principles of User Interface Design'
+author: ['Joshua Porter']
 ---
 
-Consistency allows users to transfer existing knowledge to new tasks, learn new things more quickly, and focus more on tasks because they need not spend time trying to remember the differences in interaction.
+Elements that behave the same should look the same. But it is just as important for unlike elements to appear unlike (be inconsistent) as it is for like elements to appear consistent.

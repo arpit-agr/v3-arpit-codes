@@ -1,5 +1,5 @@
 ---
-title: 'Principle of Least Surprise'
+title: 'Principle of least surprise'
 description: 'In interface design, always do the least surprising thing.'
 url: 'https://en.wikipedia.org/wiki/Principle_of_least_astonishment'
 ---
