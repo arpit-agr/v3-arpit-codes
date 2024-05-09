@@ -15,6 +15,7 @@
 	a {
 		max-inline-size: fit-content;
 		word-break: break-word;
+		text-decoration-thickness: var(--border-thickness-2);
 	}
 }
 

@@ -50,9 +50,10 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 										<cite class="block text-step-000 leading-snug tracking-wide uppercase text-balance">
 											{origin && (
 												<>
-													<span class="visually-hidden">Published in</span> '{origin}' by
+													<span class="visually-hidden">Published in</span> {origin}
 												</>
 											)}
+											{origin && authorData && ' by'}
 											{authorData &&
 												authorData.map((item, index) => {
 													if (index + 1 < authorData.length) {
