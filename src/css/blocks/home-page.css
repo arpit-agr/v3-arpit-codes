@@ -31,3 +31,7 @@
 		translate: 0 -50%;
 	}
 }
+
+.homepage-post-list-header {
+	--repel-vertical-alignment: baseline;
+}
