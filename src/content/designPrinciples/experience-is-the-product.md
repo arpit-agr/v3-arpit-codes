@@ -1,6 +1,6 @@
 ---
 title: 'The experience is the product'
-description: "There is your product and then there is the experience someone has using your product. It's easy to see the difference from afar, but to the person using your product they are one in the same."
+description: "There is your product and then there is the experience someone has using your product. It's easy to see the difference from afar, but to the person using your product they are one and the same."
 url: 'http://bokardo.com/principles-of-product-design/'
 origin: 'Principles of Product Design'
 author: ['Joshua Porter']
