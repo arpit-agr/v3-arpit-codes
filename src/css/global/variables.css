@@ -77,3 +77,4 @@
 @custom-media --OSlight (prefers-color-scheme: light);
 @custom-media --motionOK (prefers-reduced-motion: no-preference);
 @custom-media --motionNotOK (prefers-reduced-motion: reduce);
+@custom-media --forcedColors (forced-colors: active);

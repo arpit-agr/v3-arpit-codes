@@ -23,6 +23,12 @@ main {
 	flex-grow: 999;
 }
 
+main > * + * {
+	@media (--forcedColors) {
+		border-block-start: var(--border-thickness-1) solid transparent;
+	}
+}
+
 :where(h1, .heading-1, h2, .heading-2, h3, .heading-3, h4, .heading-4) {
 	color: var(--color-text-2);
 

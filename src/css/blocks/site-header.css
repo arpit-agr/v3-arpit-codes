@@ -112,3 +112,19 @@
 .site-nav :where([aria-current='page'], [data-state='active']):after {
 	background-color: var(--color-underline);
 }
+
+@media (--forcedColors) {
+	.site-header {
+		border: unset;
+		border-block-end: var(--_header-border) solid transparent;
+	}
+
+	.site-nav ul a:after,
+	.site-nav ul a:hover:after {
+		background-color: canvasText;
+	}
+
+	.site-nav ul :is([aria-current='page'], [data-state='active']):after {
+		--text-decoration-size: var(--border-thickness-2);
+	}
+}

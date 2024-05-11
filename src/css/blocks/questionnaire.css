@@ -51,6 +51,7 @@
 	color: var(--color-text-inverted-1);
 	font-size: var(--size-step-000);
 	translate: 0 -10%;
+	outline: var(--border-thickness-1) solid transparent;
 }
 
 /* temporary hack for Safari */

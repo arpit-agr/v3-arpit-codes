@@ -6,10 +6,14 @@
 	}
 }
 
-#more a:after {
-	content: '';
-	position: absolute;
-	inset: 0;
+#more {
+	border-block-start: var(--border-thickness-1) solid transparent;
+
+	a:after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
 }
 
 #get-in-touch {

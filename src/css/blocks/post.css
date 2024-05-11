@@ -15,6 +15,7 @@
 
 	pre {
 		padding: var(--space-2xs) var(--space-s);
+		border: var(--border-thickness-1) solid transparent;
 		border-radius: var(--border-radius-1);
 		tab-size: 2;
 		-webkit-font-smoothing: antialiased;
@@ -34,6 +35,12 @@
 		padding: var(--space-4xs) var(--space-3xs);
 		border-radius: var(--border-radius-1);
 		background-color: var(--color-bg-4);
+	}
+}
+
+.post .hero {
+	@media (--forcedColors) {
+		border-block-end: var(--border-thickness-1) solid transparent;
 	}
 }
 
