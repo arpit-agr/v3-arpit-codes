@@ -12,11 +12,6 @@
 	@media (--md-n-above) {
 		grid-template-columns: minmax(0, var(--measure)) auto;
 		align-items: first baseline;
-
-		/* .pub-date {
-			justify-self: end;
-			text-align: end;
-		} */
 	}
 
 	a:after {
