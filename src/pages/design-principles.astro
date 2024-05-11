@@ -24,7 +24,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 			<h1>{pageTitle}</h1>
 			<p class="text-balance">{pageDesc}</p>
 		</HeroSection>
-		<article class="flow region wrapper">
+		<article class="flow wrapper">
 			<dl class="design-principles-list grid" role="list">
 				{
 					allDesignPrinciples.map(async entry => {
@@ -37,10 +37,9 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								class="principle-entry grid"
 								{...(entry.data.draft && {style: {color: 'var(--color-draft)'}})}
 							>
-								<dt class="font-medium text-color-2 relative">
-									<a class="relative grid no-underline" href={entry.data.url}>
-										<span>{entry.data.title}</span>
-										<ExternalLinkVector />
+								<dt>
+									<a class="heading-4" href={entry.data.url}>
+										{entry.data.title}
 									</a>
 								</dt>
 								<dd class="principle-description text-pretty">
@@ -48,9 +47,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								</dd>
 								<dd class="principle-content flow flow-space-xs">
 									<Content />
-								</dd>
-								{(origin || authorData) && (
-									<dd class="principle-citation">
+									{(origin || authorData) && (
 										<cite class="block text-step-000 leading-snug tracking-wide uppercase text-balance">
 											{origin && (
 												<>
@@ -67,8 +64,8 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 													}
 												})}
 										</cite>
-									</dd>
-								)}
+									)}
+								</dd>
 							</div>
 						);
 					})
