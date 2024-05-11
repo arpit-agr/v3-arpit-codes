@@ -1,5 +1,6 @@
 ---
 import '../css/global.css';
+import {ViewTransitions} from 'astro:transitions';
 import SiteHeader from '../components/SiteHeader.astro';
 import Footer from '../components/Footer.astro';
 
@@ -27,7 +28,7 @@ const {title, description, themeColor} = Astro.props;
 		<meta property="og:image:alt" content="Site image for Arpit Agrawal" />
 		<meta name="theme-color" content={themeColor || '#121210'} />
 		<link rel="me" href="https://indieweb.social/@arpit" />
-		<meta name="view-transition" content="same-origin" />
+		<ViewTransitions />
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
