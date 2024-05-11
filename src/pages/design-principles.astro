@@ -38,7 +38,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								{...(entry.data.draft && {style: {color: 'var(--color-draft)'}})}
 							>
 								<dt>
-									<a class="heading-4" href={entry.data.url}>
+									<a class="heading-4 text-color-2" href={entry.data.url}>
 										{entry.data.title}
 									</a>
 								</dt>
