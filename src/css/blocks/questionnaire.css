@@ -46,7 +46,7 @@
 	place-items: center;
 	inline-size: var(--counter-size);
 	block-size: var(--counter-size);
-	border-radius: 100vmin;
+	border-radius: var(--border-radius-round);
 	background: var(--color-bg-inverted-3);
 	color: var(--color-text-inverted-1);
 	font-size: var(--size-step-000);

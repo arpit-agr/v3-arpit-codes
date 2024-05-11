@@ -1,9 +1,9 @@
 .button {
 	padding: 0.5em 0.75em;
 	/* background-color: var(--color-bg-4); */
-	border: var(--border-thickness-1) solid;
+	border: var(--border-thickness-1) solid var(--color-text-2);
 	border-radius: var(--border-radius-2);
-	color: var(--color-text-1);
+	color: var(--color-text-2);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
 
@@ -13,8 +13,8 @@
 		outline-offset 145ms var(--ease-2);
 
 	&:hover {
-		background-color: var(--color-bg-3);
-		color: var(--color-text-2);
+		background-color: var(--color-bg-inverted-1);
+		color: var(--color-text-inverted-2);
 	}
 
 	&:focus-visible {
