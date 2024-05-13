@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import {findMatchingItem} from '../../utils/findMatchingItem.js';
 import pageData from '../../data/pages.json';
 import HeroSection from '../../components/HeroSection.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
 import {uniqueTags} from '../../data/uniqueTags.js';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
@@ -18,11 +19,7 @@ const sortedTags = uniqueTags.sort();
 			<p class="text-balance">{pageDesc}</p>
 		</HeroSection>
 		<article class="flow region wrapper">
-			<p
-				class="text-color-2 text-step-000 leading-tight tracking-wide uppercase font-medium"
-			>
-				↓ Sorted Alphabetically
-			</p>
+			<Eyebrow>↓ Sorted Alphabetically</Eyebrow>
 			<ul class="tags-list grid flow-space-l">
 				{
 					sortedTags.map(tag => (

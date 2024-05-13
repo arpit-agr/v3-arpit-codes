@@ -4,6 +4,7 @@ import HeroSection from '../../components/HeroSection.astro';
 import PostList from '../../components/PostList.astro';
 import {uniqueTags} from '../../data/uniqueTags.js';
 import {reversedBlogPosts} from '../../data/reversedBlogPosts.js';
+import Eyebrow from '../../components/Eyebrow.astro';
 
 export async function getStaticPaths() {
 	return uniqueTags.map(tag => {
@@ -35,11 +36,7 @@ const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'.`;
 			</p>
 		</HeroSection>
 		<article class="flow flow-space-l region wrapper">
-			<p
-				class="text-color-2 text-step-000 leading-tight tracking-wide uppercase font-medium"
-			>
-				{filteredPostsCount}
-			</p>
+			<Eyebrow>{filteredPostsCount}</Eyebrow>
 			<PostList postsCollection={filteredPosts} />
 		</article>
 	</main>
