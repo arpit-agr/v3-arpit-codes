@@ -4,7 +4,6 @@ import {findMatchingItem} from '../utils/findMatchingItem.js';
 import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import {getCollection} from 'astro:content';
-import ExternalLinkVector from '../components/ExternalLinkVector.astro';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
