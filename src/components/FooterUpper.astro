@@ -3,24 +3,26 @@ import pageData from '../data/pages.json';
 const secondaryNavItems = pageData.slice(4);
 ---
 
-<div id="more" class="flow wrapper region">
-	<h2 class="heading-3 leading-flat">{pageData[3].title}</h2>
-	<nav class="flow-space-l" aria-label="Secondary">
-		<dl class="grid" data-layout="50-50">
-			{
-				secondaryNavItems.map(item => {
-					return (
-						<div class="flow relative">
-							<dt>
-								<a class="text-color-2 font-medium" href={item.linkURL}>
-									{item.linkLabel}
-								</a>
-							</dt>
-							<dd class="text-balance flow-space-3xs">{item.description}</dd>
-						</div>
-					);
-				})
-			}
-		</dl>
-	</nav>
+<div id="more" class="wrapper">
+	<div class="flow region">
+		<h2 class="heading-3 leading-flat">{pageData[3].title}</h2>
+		<nav class="flow-space-l" aria-label="Secondary">
+			<dl class="grid" data-layout="50-50">
+				{
+					secondaryNavItems.map(item => {
+						return (
+							<div class="flow relative">
+								<dt>
+									<a class="text-color-2 font-medium" href={item.linkURL}>
+										{item.linkLabel}
+									</a>
+								</dt>
+								<dd class="text-balance flow-space-3xs">{item.description}</dd>
+							</div>
+						);
+					})
+				}
+			</dl>
+		</nav>
+	</div>
 </div>
