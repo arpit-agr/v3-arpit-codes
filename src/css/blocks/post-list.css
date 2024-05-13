@@ -4,7 +4,7 @@
 
 .post-entry {
 	--flow-space: var(--space-m-s);
-	--gutter: var(--space-3xs) var(--space-s-l);
+	--gutter: var(--space-2xs) var(--space-s-l);
 	position: relative;
 	grid-template-columns: 1fr;
 	border-radius: var(--border-radius-1);

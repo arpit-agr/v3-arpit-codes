@@ -2,7 +2,6 @@
 	h1 {
 		font-size: var(--size-step-3);
 		line-height: var(--leading-tight);
-		text-wrap: pretty;
 	}
 
 	h2 {

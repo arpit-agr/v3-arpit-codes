@@ -149,7 +149,7 @@ blockquote {
 		grid-column: 1/2;
 		justify-self: center;
 		inline-size: var(--_width);
-		block-size: 100%;
+		block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));
 		background-color: var(--color-underline);
 		z-index: -1;

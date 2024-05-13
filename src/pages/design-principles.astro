@@ -24,7 +24,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 			<h1>{pageTitle}</h1>
 			<p class="text-balance">{pageDesc}</p>
 		</HeroSection>
-		<article class="flow wrapper">
+		<article class="flow region region-space-m-l wrapper">
 			<dl class="design-principles-list grid" role="list">
 				{
 					allDesignPrinciples.map(async entry => {
