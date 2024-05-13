@@ -38,12 +38,16 @@ const {Content} = await post.render();
 					<p class="post-tag-list flow-space-xs">
 						Tagged:
 						{
-							post.data.tags.map(tag => {
-								return (
-									<>
-										<a href={`/tags/${tag}`}>{tag}</a>
-									</>
-								);
+							post.data.tags.map((tag, index) => {
+								if (index + 1 < post.data.tags.length) {
+									return (
+										<>
+											<a href={`/tags/${tag}`}>{tag}</a>,
+										</>
+									);
+								} else {
+									return <a href={`/tags/${tag}`}>{tag}</a>;
+								}
 							})
 						}
 					</p>
