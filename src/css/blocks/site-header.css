@@ -1,19 +1,17 @@
 .site-header {
-	--_header-border-thickness: var(--border-thickness-1);
-	--_header-border-color: var(--color-border-2);
 	position: absolute;
 	inline-size: 100%;
 	inset-inline: 0;
 	inset-block-start: 0;
-	border-block-end: var(--_header-border-thickness) solid var(--_header-border-color);
+	border-block-end: var(--site-header-border-thickness) solid var(--site-header-color);
 	-webkit-font-smoothing: antialiased;
 	z-index: 999;
 
 	@media (--md-n-above) {
 		border-block-end: unset;
-		border-width: 0 0 var(--_header-border-thickness) 0;
+		border-width: 0 0 var(--site-header-border-thickness) 0;
 		border-style: solid;
-		border-image: linear-gradient(to right, transparent, var(--_header-border-color)) 30;
+		border-image: linear-gradient(to right, transparent, var(--site-header-color)) 30;
 	}
 }
 
@@ -76,7 +74,7 @@
 			position: absolute;
 			inset-inline-start: var(--primary-nav-padding-inline);
 			inset-block-end: calc(
-				-1 / 2 * (var(--text-decoration-size) + var(--_header-border-thickness))
+				-1 / 2 * (var(--text-decoration-size) + var(--site-header-border-thickness))
 			);
 			inline-size: calc(100% - (2 * var(--primary-nav-padding-inline)));
 			block-size: var(--text-decoration-size);
@@ -117,7 +115,7 @@
 @media (--forcedColors) {
 	.site-header {
 		border: unset;
-		border-block-end: var(--_header-border-thickness) solid transparent;
+		border-block-end: var(--site-header-border-thickness) solid transparent;
 	}
 
 	.site-nav ul a:after,

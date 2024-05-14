@@ -135,9 +135,9 @@ blockquote {
 		block-size: 1ex;
 
 		background-color: var(--color-bg-1);
-		color: var(--color-underline);
+		color: currentColor;
 		font-size: 4em;
-		font-weight: 200;
+		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
 		translate: 0 -5%;
 	}
@@ -151,7 +151,7 @@ blockquote {
 		inline-size: var(--_width);
 		block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));
-		background-color: var(--color-underline);
+		background-color: currentColor;
 		z-index: -1;
 	}
 }
