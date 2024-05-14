@@ -28,28 +28,40 @@ const {Content} = await post.render();
 		>
 			<HeroSection>
 				<h1>{post.data.title}</h1>
-				<p class="text-balance">{post.data.description}</p>
-				<FormattedDate date={post.data.pubDate} />
+				{
+					post.data.description && (
+						<>
+							<p class="text-step-1 leading-snug flow-space-xs text-balance">
+								{post.data.description}
+							</p>
+							<hr class="flow-space-s" />
+						</>
+					)
+				}
+				<p class="text-step-00 tracking-wide flow-space-s">
+					Published on
+					<FormattedDate date={post.data.pubDate} />
+				</p>
+				<p class="post-tag-list text-step-00 tracking-wide text-balance flow-space-3xs">
+					Tagged:
+					{
+						post.data.tags.map((tag, index) => {
+							if (index + 1 < post.data.tags.length) {
+								return (
+									<>
+										<a href={`/tags/${tag}`}>{tag}</a>,
+									</>
+								);
+							} else {
+								return <a href={`/tags/${tag}`}>{tag}</a>;
+							}
+						})
+					}
+				</p>
 			</HeroSection>
 			<div class="region">
 				<div class="post-body prose flow wrapper">
 					<Content />
-					<p class="post-tag-list text-step-00 text-balance flow-space-m-l">
-						Tagged:
-						{
-							post.data.tags.map((tag, index) => {
-								if (index + 1 < post.data.tags.length) {
-									return (
-										<>
-											<a href={`/tags/${tag}`}>{tag}</a>,
-										</>
-									);
-								} else {
-									return <a href={`/tags/${tag}`}>{tag}</a>;
-								}
-							})
-						}
-					</p>
 				</div>
 			</div>
 		</article>
