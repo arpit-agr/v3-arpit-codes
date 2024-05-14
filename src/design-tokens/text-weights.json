@@ -4,6 +4,10 @@
 	"meta": {},
 	"items": [
 		{
+			"name": "Ultra Light",
+			"value": 200
+		},
+		{
 			"name": "Light",
 			"value": 300
 		},

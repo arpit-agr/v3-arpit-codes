@@ -8,7 +8,7 @@
 		},
 		{
 			"name": "Tight",
-			"value": 1.3
+			"value": 1.25
 		},
 		{
 			"name": "Snug",
@@ -24,7 +24,7 @@
 		},
 		{
 			"name": "Loose",
-			"value": 1.8
+			"value": 1.85
 		}
 	]
 }
