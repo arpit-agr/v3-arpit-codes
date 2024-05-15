@@ -5,6 +5,10 @@
   project: https://cube.fyi/css.html
 */
 
+:root {
+	color-scheme: light dark;
+}
+
 body {
 	display: flex;
 	flex-direction: column;

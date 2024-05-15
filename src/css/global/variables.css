@@ -26,6 +26,19 @@
 		--color-brand: oklch(46.76% 0.2845 262.81);
 		--color-brand-inverted: oklch(66.47% 0.191 269.5);
 	}
+
+	@media (--OSdark) {
+		--color-brand: var(--color-brand-inverted);
+		--color-bg-1: var(--color-bg-inverted-1);
+		--color-bg-2: var(--color-bg-inverted-2);
+		--color-bg-3: var(--color-bg-inverted-3);
+		--color-bg-4: var(--color-bg-inverted-4);
+		--color-text-1: var(--color-text-inverted-1);
+		--color-text-2: var(--color-text-inverted-2);
+		--color-text-3: var(--color-text-inverted-3);
+		--color-border-1: var(--color-border-2);
+		-webkit-font-smoothing: antialiased;
+	}
 }
 
 :root {
