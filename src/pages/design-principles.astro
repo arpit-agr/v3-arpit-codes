@@ -32,12 +32,13 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 						const authorData = entry.data.author;
 
 						return (
-							<div
-								class="principle-entry grid"
-								{...(entry.data.draft && {style: {color: 'var(--color-draft)'}})}
-							>
-								<dt>
-									<a class="heading-4 text-color-2" href={entry.data.url}>
+							<div class="principle-entry grid">
+								<dt class="text-pretty">
+									<a
+										class="heading-4 text-color-2"
+										href={entry.data.url}
+										{...(entry.data.draft && {'data-draft': true})}
+									>
 										{entry.data.title}
 									</a>
 								</dt>
@@ -47,7 +48,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								<dd class="principle-content flow flow-space-xs">
 									<Content />
 									{(origin || authorData) && (
-										<cite class="block text-step-000 leading-snug tracking-wide uppercase text-balance">
+										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance">
 											{origin && (
 												<>
 													<span class="visually-hidden">Published in</span> {origin}

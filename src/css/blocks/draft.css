@@ -1,0 +1,25 @@
+[data-draft]:after {
+	content: 'Draft';
+	display: inline-block;
+	margin-inline-start: 1ch;
+	padding-inline: 0.5ch;
+	border-radius: var(--border-radius-1);
+	color: red;
+	font-weight: var(--font-medium);
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+:is(.post-entry, .principle-entry) [data-draft]:after {
+	outline: var(--border-thickness-1) solid var(--color-underline);
+	font-size: var(--size-step-000);
+	line-height: var(--leading-normal);
+	letter-spacing: 0.05em;
+}
+
+.post [data-draft]:after {
+	outline: var(--border-thickness-2) solid var(--color-underline);
+	font-size: var(--size-step-0);
+	line-height: var(--leading-normal);
+	letter-spacing: normal;
+}

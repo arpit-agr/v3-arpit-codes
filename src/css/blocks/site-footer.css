@@ -1,8 +1,12 @@
-.site-footer {
+.site-footer > * {
 	border-block-start: var(--border-thickness-1) solid var(--color-border-1);
 }
 
 #more {
+	dl {
+		--gutter: var(--space-m-l);
+	}
+
 	a:after {
 		content: '';
 		position: absolute;
@@ -11,24 +15,26 @@
 }
 
 #get-in-touch {
-	> div {
-		--gutter: var(--space-xl-2xl) var(--space-s-l);
-		border-block: var(--border-thickness-1) dashed var(--color-border-1);
-	}
+	--gutter: var(--space-xl-2xl) var(--space-s-l);
 
 	a {
 		max-inline-size: fit-content;
+		font-size: var(--size-step-4-5);
 		word-break: break-word;
 		text-decoration-thickness: var(--border-thickness-2);
 	}
 }
 
-.cat-gang {
-	max-inline-size: max(20rem, 40%);
+#get-in-touch svg {
+	max-inline-size: max(28rem, 40%);
 	inline-size: 100%;
 
 	path {
-		fill: var(--color-text-1);
+		fill: var(--color-text-2);
+
+		@media (--OSdark) {
+			fill: var(--color-text-1);
+		}
 	}
 }
 

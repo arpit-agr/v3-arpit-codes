@@ -27,7 +27,7 @@
 	inset-inline-start: calc(0.5 * var(--counter-size));
 	/* block-size: calc(100% - (var(--leading-normal) - 1) * 1lh); */
 	block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
-	border-inline-start: var(--border-thickness-1) dashed var(--color-bg-inverted-3);
+	border-inline-start: var(--border-thickness-1) dotted var(--color-bg-inverted-3);
 	z-index: -1;
 }
 

@@ -3,7 +3,7 @@
 	grid-template-columns: 1fr;
 
 	> * + * {
-		border-block-start: var(--border-thickness-1) dashed var(--color-border-1);
+		border-block-start: var(--border-thickness-1) dotted var(--color-border-1);
 	}
 
 	@media (--md-n-above) {
@@ -21,7 +21,7 @@
 }
 
 .principle-entry {
-	--gutter: var(--space-xs-3xs) var(--space-l);
+	--gutter: var(--space-2xs) var(--space-l);
 	display: grid;
 	grid-template-columns: subgrid;
 	grid-template-rows: auto 1fr;

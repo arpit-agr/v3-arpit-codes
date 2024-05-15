@@ -27,6 +27,10 @@
 	border-radius: var(--_book-cover-radius);
 	box-shadow: var(--_box-shadow);
 
+	@media (--OSdark) {
+		box-shadow: none;
+	}
+
 	&:before,
 	&:after {
 		content: '';

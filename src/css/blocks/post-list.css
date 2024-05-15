@@ -14,7 +14,7 @@
 		align-items: first baseline;
 	}
 
-	a:after {
+	a:before {
 		content: '';
 		position: absolute;
 		inset: 0;

@@ -10,11 +10,14 @@
 	transition:
 		background-color var(--transition-base),
 		color var(--transition-base),
-		outline-offset 145ms var(--ease-2);
+		outline var(--transition-base),
+		outline-offset var(--transition-base);
 
 	&:hover {
 		background-color: var(--color-bg-inverted-1);
 		color: var(--color-text-inverted-2);
+		outline-offset: 0;
+		outline: var(--border-thickness-3) solid var(--color-border-2);
 	}
 
 	&:focus-visible {

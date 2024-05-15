@@ -1,0 +1,44 @@
+---
+interface Props {
+	postTags: string[];
+}
+
+const {postTags} = Astro.props;
+const hasManyTags = postTags.length > 6;
+---
+
+{
+	hasManyTags ? (
+		<details class="relative text-step-00 tracking-wide flow-space-s">
+			<summary> Tagged: {postTags.slice(0, 2).join(', ')} and others</summary>
+			<p class="post-tag-list leading-relaxed">
+				{postTags.map((tag, index) => {
+					if (index + 1 < postTags.length) {
+						return (
+							<>
+								<a href={`/tags/${tag}`}>{tag}</a>,
+							</>
+						);
+					} else {
+						return <a href={`/tags/${tag}`}>{tag}</a>;
+					}
+				})}
+			</p>
+		</details>
+	) : (
+		<p class="post-tag-list text-step-00 tracking-wide flow-space-xs">
+			Tagged:
+			{postTags.map((tag, index) => {
+				if (index + 1 < postTags.length) {
+					return (
+						<>
+							<a href={`/tags/${tag}`}>{tag}</a>,
+						</>
+					);
+				} else {
+					return <a href={`/tags/${tag}`}>{tag}</a>;
+				}
+			})}
+		</p>
+	)
+}

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import {publishedBlogPosts} from '../../data/publishedBlogPosts';
 import HeroSection from '../../components/HeroSection.astro';
+import PostTagsList from '../../components/PostTagsList.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 
 export async function getStaticPaths() {
@@ -15,52 +16,26 @@ const {post} = Astro.props;
 const {Content} = await post.render();
 ---
 
-<Layout
-	title={post.data.title}
-	description={post.data.description}
-	{...post.data.draft && {themeColor: '#990000'}}
->
+<Layout title={post.data.title} description={post.data.description}>
 	<main class="post" id="main">
-		<article
-			{...post.data.draft && {
-				style: {'--color-bg-inverted-1': 'var(--color-draft-inverted)'}
-			}}
-		>
+		<article>
 			<HeroSection>
-				<h1>{post.data.title}</h1>
+				<h1 {...post.data.draft && {'data-draft': true}}>{post.data.title}</h1>
 				{
 					post.data.description && (
-						<>
-							<p class="text-step-1 leading-snug flow-space-xs">
-								{post.data.description}
-							</p>
-							<hr class="flow-space-s" />
-						</>
+						<p class="text-step-1 leading-snug flow-space-xs text-balance">
+							{post.data.description}
+						</p>
 					)
 				}
-				<p class="text-step-00 tracking-wide flow-space-s">
+				<PostTagsList postTags={post.data.tags} />
+				<p class="text-step-00 tracking-wide flow-space-2xs">
 					Published on
 					<FormattedDate date={post.data.pubDate} />
 				</p>
-				<p class="post-tag-list text-step-00 tracking-wide flow-space-3xs">
-					Tagged:
-					{
-						post.data.tags.map((tag, index) => {
-							if (index + 1 < post.data.tags.length) {
-								return (
-									<>
-										<a href={`/tags/${tag}`}>{tag}</a>,
-									</>
-								);
-							} else {
-								return <a href={`/tags/${tag}`}>{tag}</a>;
-							}
-						})
-					}
-				</p>
 			</HeroSection>
-			<div class="region">
-				<div class="post-body prose flow wrapper">
+			<div class="region wrapper">
+				<div class="post-body prose flow">
 					<Content />
 				</div>
 			</div>

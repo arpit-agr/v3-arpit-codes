@@ -1,7 +1,7 @@
 .prose {
-	--flow-space: var(--space-m);
+	--flow-space: 1lh;
 
 	:is(h2 + *, h3 + *, h4 + *, blockquote > *) {
-		--flow-space: var(--space-s);
+		--flow-space: 1em;
 	}
 }

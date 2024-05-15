@@ -88,11 +88,11 @@ a {
 	transition:
 		color var(--transition-base),
 		text-decoration-color var(--transition-base),
-		outline-offset 145ms var(--ease-2);
+		outline-offset var(--transition-base);
 
 	&:hover {
 		color: var(--color-brand);
-		text-decoration-thickness: var(--border-thickness-2);
+		text-decoration-style: dotted;
 	}
 
 	&:focus-visible {
@@ -143,7 +143,7 @@ blockquote {
 	}
 
 	&:after {
-		--_width: var(--border-thickness-2);
+		--_width: var(--border-thickness-1);
 		content: '';
 		position: absolute;
 		grid-column: 1/2;
@@ -153,6 +153,21 @@ blockquote {
 		transform: translateY(calc(var(--_width) * -1 / 2));
 		background-color: currentColor;
 		z-index: -1;
+	}
+
+	@media (--forcedColors) {
+		&:before,
+		:after {
+			color: canvasText;
+		}
+
+		&:before {
+			background-color: canvas;
+		}
+
+		&:after {
+			background-color: canvasText;
+		}
 	}
 }
 
