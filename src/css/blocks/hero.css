@@ -1,0 +1,24 @@
+.hero {
+	--_primary-nav-height: calc(
+		(2 * var(--primary-nav-padding-block)) +
+			(var(--primary-nav-leading) * var(--primary-nav-font-size))
+	);
+	--region-start-space: calc(var(--region-end-space) + var(--_primary-nav-height));
+	--region-end-space: var(--space-xl-2xl);
+}
+
+.hero + * {
+	border-block-start: var(--site-header-border-thickness) solid var(--site-header-color);
+
+	@media (--md-n-above) {
+		border-block-start: unset;
+		border-width: var(--site-header-border-thickness) 0 0 0;
+		border-style: solid;
+		border-image: linear-gradient(to right, var(--site-header-color), transparent) 30;
+	}
+
+	@media (--forcedColors) {
+		border: unset;
+		border-block-start: var(--site-header-border-thickness) solid transparent;
+	}
+}
