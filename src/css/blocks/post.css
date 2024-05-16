@@ -33,11 +33,11 @@
 
 	code {
 		font-family: var(--font-monospace);
-		font-size: var(--size-step-00);
+		font-size: 0.9em;
 	}
 
 	:not(pre) > code {
-		padding: var(--space-4xs) var(--space-3xs);
+		padding: var(--space-5xs) var(--space-3xs);
 		border-radius: var(--border-radius-1);
 		background-color: var(--color-bg-4);
 	}
