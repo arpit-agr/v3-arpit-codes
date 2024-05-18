@@ -4,27 +4,27 @@
 	"items": [
 		{
 			"name": "Flat",
-			"value": 1
+			"value": 1.1
 		},
 		{
 			"name": "Tight",
-			"value": 1.25
+			"value": 1.3
 		},
 		{
 			"name": "Snug",
-			"value": 1.45
+			"value": 1.4
 		},
 		{
 			"name": "Normal",
-			"value": 1.5
+			"value": 1.6
 		},
 		{
 			"name": "Relaxed",
-			"value": 1.65
+			"value": 1.7
 		},
 		{
 			"name": "Loose",
-			"value": 1.85
+			"value": 1.9
 		}
 	]
 }
