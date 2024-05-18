@@ -24,7 +24,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
 		<article class="flow region region-space-m-l wrapper">
-			<dl class="design-principles-list grid" role="list">
+			<dl class="design-principles-list grid" data-layout="thirds" role="list">
 				{
 					allDesignPrinciples.map(async entry => {
 						const {Content} = await entry.render();
@@ -48,7 +48,7 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								<dd class="principle-content flow flow-space-xs">
 									<Content />
 									{(origin || authorData) && (
-										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance">
+										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance flow-space-xs-2xs">
 											{origin && (
 												<>
 													<span class="visually-hidden">Published in</span> {origin}
