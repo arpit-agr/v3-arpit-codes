@@ -1,21 +1,7 @@
 {
 	"title": "Fonts",
-	"description": "Each array of fonts creates a priority-based order. The first font in the array should be the ideal font, followed by sensible, web-safe fallbacks",
+	"description": "Each array of fonts creates a priority-based order.",
 	"items": [
-		{
-			"name": "Base",
-			"description": "Fonts for body copy and globally set text.",
-			"value": [
-				"Giest",
-				"ui-sans-serif",
-				"system-ui",
-				"Helvetica Neue",
-				"Segoe UI",
-				"Roboto",
-				"Arial",
-				"sans-serif"
-			]
-		},
 		{
 			"name": "Monospace",
 			"description": "System fonts for code",

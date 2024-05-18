@@ -17,7 +17,6 @@ body {
 	background: var(--color-bg-1);
 	color: var(--color-text-1);
 	font-size: var(--size-step-0);
-	font-family: var(--font-base);
 	font-weight: var(--font-regular);
 	line-height: var(--leading-normal);
 	-webkit-font-smoothing: unset;
@@ -78,6 +77,7 @@ p,
 dd,
 li {
 	max-inline-size: var(--measure);
+	text-wrap: pretty;
 }
 
 /* Sets the offset distance of an underline */

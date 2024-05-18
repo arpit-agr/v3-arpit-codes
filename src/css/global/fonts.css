@@ -1,8 +1,0 @@
-/* https://css-irl.info/how-i-solved-my-font-rendering-problem/ */
-
-@font-face {
-	font-family: 'Giest';
-	src: url('/fonts/GeistVF.woff2') format('woff2-variations');
-	font-display: swap;
-	font-weight: 100 900;
-}
