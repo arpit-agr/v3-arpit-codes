@@ -114,7 +114,9 @@
 .post-body > p:has(img) {
 	min-inline-size: calc(100% + (2 * var(--page-gutter)));
 	margin-inline-start: calc(-1 * var(--page-gutter));
+	padding: var(--space-s);
 	border-radius: var(--radius-conditional-2);
+	overflow: hidden;
 
 	@media (--sm-n-above) {
 		grid-column: 1/3;
@@ -125,7 +127,9 @@
 
 .post-body img {
 	margin-inline: auto;
-	border-radius: inherit;
+	box-shadow:
+		var(--shadow-4),
+		0px 0px 0px var(--space-s) var(--color-bg-2);
 
 	@media (--sm-n-above) {
 		margin-inline: unset;
