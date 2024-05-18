@@ -21,5 +21,5 @@ function announceAndSetVisibility(data) {
 		announce.setAttribute('aria-label', '');
 		notice.hidden = true;
 		copyLabel.hidden = false;
-	}, 1000);
+	}, 1500);
 }
