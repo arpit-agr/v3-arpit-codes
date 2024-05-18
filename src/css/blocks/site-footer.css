@@ -4,6 +4,7 @@
 
 #more {
 	dl {
+		--grid-min-item-size: clamp(26ch, (50vw - (2 * var(--page-gutter))), 33rem);
 		--gutter: var(--space-m-l);
 	}
 
@@ -26,8 +27,13 @@
 }
 
 #get-in-touch svg {
-	max-inline-size: max(28rem, 40%);
+	display: none;
+	max-inline-size: min(33vw, 37.5rem);
 	inline-size: 100%;
+
+	@media (--md-n-above) {
+		display: unset;
+	}
 
 	path {
 		fill: var(--color-text-2);

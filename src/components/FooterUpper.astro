@@ -12,12 +12,12 @@ const secondaryNavItems = pageData.slice(4);
 					secondaryNavItems.map(item => {
 						return (
 							<div class="flow relative">
-								<dt>
+								<dt class="leading-flat">
 									<a class="text-color-2 font-medium" href={item.linkURL}>
 										{item.linkLabel}
 									</a>
 								</dt>
-								<dd class="text-balance flow-space-2xs">{item.description}</dd>
+								<dd class="flow-space-2xs">{item.description}</dd>
 							</div>
 						);
 					})
