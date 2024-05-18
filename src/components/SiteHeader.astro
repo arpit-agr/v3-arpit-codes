@@ -17,7 +17,7 @@ import NavLink from './NavLink.astro';
 				primaryNavItems.map(item => {
 					return (
 						<li>
-							<NavLink href={item.linkURL}>{item.linkLabel}</NavLink>
+							<NavLink href={item.linkURL} label={item.linkLabel} />
 						</li>
 					);
 				})
