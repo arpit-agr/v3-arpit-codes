@@ -8,17 +8,16 @@
 	font-weight: var(--font-medium);
 	text-transform: uppercase;
 	vertical-align: middle;
+	outline: var(--border-thickness-2) solid var(--color-underline);
 }
 
 :is(.post-entry, .principle-entry) [data-draft]:after {
-	outline: var(--border-thickness-1) solid var(--color-underline);
 	font-size: var(--size-step-000);
 	line-height: var(--leading-normal);
 	letter-spacing: 0.05em;
 }
 
 .post [data-draft]:after {
-	outline: var(--border-thickness-2) solid var(--color-underline);
 	font-size: var(--size-step-0);
 	line-height: var(--leading-normal);
 	letter-spacing: normal;
