@@ -13,9 +13,9 @@ In high contrast mode, removing the default border of an interactive element lik
 
 [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transparent-not-border-none/) explains the purpose of the default border:
 
-> In the case of interactive form controls (inputs, textareas, buttons, etc.), those pesky borders were put there because they have an accessibility benefit when using High Contrast Mode, a feature used by 30.6% of low-vision users.
+> In the case of interactive form controls (inputs, textareas, buttons, etc.), those pesky borders were put there because they have an accessibility benefit when using High Contrast Mode, a feature [used by 30.6% of low-vision users](https://webaim.org/projects/lowvisionsurvey2/#at).
 
-Instead of removing the border or outline, Dave recommends setting it to transparent.
+To maintain clear delineation, Dave suggests making the border or outline transparent instead of removing it.
 
 ```css
 button {

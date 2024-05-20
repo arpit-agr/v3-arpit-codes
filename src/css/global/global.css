@@ -96,7 +96,7 @@ a {
 
 	&:hover {
 		color: var(--color-brand);
-		text-decoration-style: dotted;
+		/* text-decoration-style: dotted; */
 	}
 
 	&:focus-visible {
