@@ -23,7 +23,7 @@ const {Content} = await post.render();
 				<h1 {...post.data.draft && {'data-draft': true}}>{post.data.title}</h1>
 				{
 					post.data.description && (
-						<p class="text-step-1 leading-snug flow-space-xs text-balance">
+						<p class="post-description text-step-1 leading-snug flow-space-xs">
 							{post.data.description}
 						</p>
 					)
