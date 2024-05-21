@@ -65,3 +65,8 @@
 	block-size: auto;
 	border-radius: var(--_book-cover-radius);
 }
+
+.book-title,
+.book-author {
+	word-break: break-word;
+}

@@ -126,3 +126,15 @@
 		--text-decoration-size: var(--border-thickness-2);
 	}
 }
+
+/* WCAG 1.4.4 Resize Text (Level AA) */
+@media (max-width: 20rem) {
+	.site-header {
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+	.site-nav ul {
+		flex-wrap: nowrap;
+	}
+}

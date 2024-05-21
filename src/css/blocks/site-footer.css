@@ -4,7 +4,6 @@
 
 #more {
 	dl {
-		--grid-min-item-size: clamp(26ch, (50vw - (2 * var(--page-gutter))), 33rem);
 		--gutter: var(--space-m-l);
 	}
 

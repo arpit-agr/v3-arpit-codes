@@ -34,16 +34,12 @@ const bookList = await getCollection('books');
 									imagePath={`/src/images/book-covers/${book.data.bookCover}`}
 									loading={loadingValue}
 								/>
-								<div class="flow flow-space-4xs">
-									<p class="text-step-00 tracking-wide leading-snug text-color-2 font-medium text-balance">
-										{book.data.title}
-									</p>
+								<div class="flow flow-space-4xs text-step-00 tracking-wide leading-snug text-balance">
+									<p class="book-title text-color-2 font-medium">{book.data.title}</p>
 									{book.data.subtitle && (
 										<p class="visually-hidden">{book.data.subtitle}</p>
 									)}
-									<p class="text-step-00 tracking-wide leading-snug text-color-3 text-balance">
-										{book.data.author}
-									</p>
+									<p class="book-author text-color-3">{book.data.author}</p>
 								</div>
 							</li>
 						);

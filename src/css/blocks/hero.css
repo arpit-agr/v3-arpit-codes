@@ -5,7 +5,6 @@
 	);
 	--region-start-space: calc(var(--region-end-space) + var(--_primary-nav-height));
 	--region-end-space: var(--space-2xl);
-
 }
 
 .hero + * {

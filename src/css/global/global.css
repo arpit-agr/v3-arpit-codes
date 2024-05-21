@@ -56,6 +56,7 @@ h1,
 	font-weight: var(--font-bold);
 	line-height: var(--leading-flat);
 	letter-spacing: -0.0125em;
+	word-break: break-word;
 }
 
 h2,
