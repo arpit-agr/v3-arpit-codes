@@ -45,10 +45,10 @@ const allDesignPrinciples = await getCollection('designPrinciples', ({data}) => 
 								<dd class="principle-description text-pretty">
 									{entry.data.description}
 								</dd>
-								<dd class="principle-content flow flow-space-xs">
+								<dd class="principle-content flow">
 									<Content />
 									{(origin || authorData) && (
-										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance flow-space-xs-2xs">
+										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance">
 											{origin && (
 												<>
 													<span class="visually-hidden">Published in</span> {origin}

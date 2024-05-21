@@ -1,5 +1,5 @@
 .design-principles-list {
-	--_entry-row-gap: var(--space-xs-2xs);
+	--_entry-row-gap: var(--space-s-3xs);
 	--_entry-column-gap: var(--space-m-l);
 
 	--gutter: 0 var(--_entry-column-gap);

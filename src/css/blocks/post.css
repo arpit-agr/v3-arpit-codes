@@ -6,6 +6,11 @@
 		line-height: var(--leading-tight);
 	}
 
+	h2,
+	h3 {
+		line-height: var(--leading-snug);
+	}
+
 	h2 {
 		font-size: var(--size-step-1);
 	}
