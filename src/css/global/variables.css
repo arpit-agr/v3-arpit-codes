@@ -17,7 +17,7 @@
 	--color-text-4: var(--stone-8);
 	--color-text-inverted-1: var(--stone-4);
 	--color-text-inverted-2: var(--stone-2);
-	--color-text-inverted-3: var(--stone-6);
+	--color-text-inverted-3: var(--stone-5);
 	--color-border-1: var(--stone-4);
 	--color-border-2: hsl(var(--stone-5-hsl) / 25%);
 	--color-underline: color-mix(in srgb, currentColor, transparent 12.5%);

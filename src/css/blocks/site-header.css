@@ -43,7 +43,7 @@
 .site-nav ul {
 	--gutter: var(--space-5xs);
 	margin-inline-start: calc(-1 * var(--primary-nav-padding-inline));
-	color: var(--color-text-inverted-1);
+	color: var(--color-text-inverted-3);
 
 	@media (--md-n-above) {
 		margin-inline-start: auto;
