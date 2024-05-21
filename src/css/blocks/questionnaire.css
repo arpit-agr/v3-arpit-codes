@@ -27,7 +27,7 @@
 	inset-inline-start: calc(0.5 * var(--counter-size));
 	/* block-size: calc(100% - (var(--leading-normal) - 1) * 1lh); */
 	block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
-	border-inline-start: var(--border-thickness-1) dotted var(--color-bg-inverted-3);
+	border-inline-start: var(--border-thickness-1) solid var(--color-bg-inverted-2);
 	z-index: -1;
 }
 
@@ -47,11 +47,11 @@
 	inline-size: var(--counter-size);
 	block-size: var(--counter-size);
 	border-radius: var(--border-radius-round);
-	background: var(--color-bg-inverted-3);
+	background: var(--color-bg-inverted-2);
 	color: var(--color-text-inverted-1);
 	font-size: var(--size-step-000);
 	translate: 0 -10%;
-	outline: var(--border-thickness-1) solid transparent;
+	outline: var(--border-thickness-1) solid var(--color-bg-inverted-2);
 }
 
 /* temporary hack for Safari */
