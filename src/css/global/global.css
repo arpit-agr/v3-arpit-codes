@@ -176,7 +176,8 @@ blockquote {
 }
 
 strong {
-	font-weight: var(--font-medium);
+	color: var(--color-text-2);
+	font-weight: var(--font-bold);
 
 	.inverted & {
 		color: var(--color-text-inverted-2);

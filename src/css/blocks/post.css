@@ -91,6 +91,14 @@
 	}
 }
 
+.post-description {
+	text-wrap: pretty;
+
+	@media (--md-n-above) {
+		text-wrap: balance;
+	}
+}
+
 .post .hero-inner,
 .post-body {
 	display: grid;
