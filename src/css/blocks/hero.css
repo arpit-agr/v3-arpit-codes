@@ -1,10 +1,6 @@
 .hero {
-	--_primary-nav-height: calc(
-		(2 * var(--primary-nav-padding-block)) +
-			(var(--primary-nav-leading) * var(--primary-nav-font-size))
-	);
-	--region-start-space: calc(var(--region-end-space) + var(--_primary-nav-height));
-	--region-end-space: var(--space-2xl);
+	--region-start-space: calc(var(--region-end-space) + var(--primary-nav-height));
+	--region-end-space: var(--space-xl-2xl);
 }
 
 .hero + *:not(.post-featured-img) {

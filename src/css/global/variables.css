@@ -80,6 +80,10 @@
 	--primary-nav-padding-inline: var(--space-2xs);
 	--primary-nav-font-size: var(--size-step-000);
 	--primary-nav-leading: var(--leading-flat);
+	--primary-nav-height: calc(
+		(2 * var(--primary-nav-padding-block)) +
+			(var(--primary-nav-leading) * var(--primary-nav-font-size))
+	);
 }
 
 /* https://open-props.style/#media-queries */
