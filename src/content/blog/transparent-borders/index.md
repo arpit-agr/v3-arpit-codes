@@ -9,7 +9,7 @@ tags: ['accessibility', 'css', 'dave-rupert', 'design-system', 'high-contrast-mo
 
 In [high contrast mode](/blog/testing-in-forced-colors-mode), removing the default border of an interactive element like a button by using `border: none` could cause the button to appear as floating text on the page.
 
-![Side-by-side comparison of the contact form on Slae.app. The left image shows the contact form with forced colors disabled, displaying the default color scheme. The right image shows the contact form with forced colors enabled.](./slae-before-after-high-contrast-mode.webp)
+![Side-by-side comparison of the contact form on Slae.app. The left image shows the contact form with forced colors disabled, displaying the default color scheme. The right image shows the contact form with forced colors enabled.](./slae-before-after-high-contrast-mode.webp)<!--rehype:loading=eager-->
 
 [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transparent-not-border-none/) explains the purpose of the default border:
 
