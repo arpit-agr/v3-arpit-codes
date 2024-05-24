@@ -20,6 +20,7 @@
 	--color-text-inverted-3: var(--stone-5);
 	--color-border-1: var(--stone-4);
 	--color-border-2: hsl(var(--stone-5-hsl) / 25%);
+	--color-border-3: hsl(var(--stone-5-hsl) / 12.5%);
 	--color-underline: color-mix(in srgb, currentColor, transparent 12.5%);
 
 	@media (--HDcolor) {

@@ -60,10 +60,15 @@
 		inset-block-start: 0;
 		inline-size: var(--border-thickness-1);
 		block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
-		background: var(--color-underline);
+		background-image: linear-gradient(
+			to bottom,
+			transparent 1lh,
+			var(--color-underline) 1lh
+		);
 	}
 
 	summary {
+		padding-block: var(--space-4xs);
 		border-radius: var(--border-radius-1);
 	}
 
@@ -83,11 +88,10 @@
 
 	[open] summary::before {
 		rotate: 180deg;
-		translate: 0 -20%;
+		translate: 0 -15%;
 	}
 
 	summary + * {
-		margin-block-start: var(--space-3xs);
 		margin-inline-start: 1em;
 	}
 
@@ -166,7 +170,7 @@
 	margin-inline: auto;
 	box-shadow:
 		var(--shadow-4),
-		0px 0px 0px var(--space-s) var(--color-bg-2);
+		0px 0px 0px var(--space-s) var(--color-bg-3);
 
 	@media (--sm-n-above) {
 		margin-inline: unset;
