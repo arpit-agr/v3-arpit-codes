@@ -6,4 +6,9 @@
 	h4 {
 		--flow-space: 1lh;
 	}
+
+	/* p:has(img),
+	p:has(img) + * {
+		--flow-space: var(--space-s-m);
+	} */
 }
