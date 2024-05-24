@@ -49,6 +49,12 @@ const {title, description} = Astro.props;
 		<meta name="theme-color" content="#121210" />
 		<link rel="me" href="https://indieweb.social/@arpit" />
 		<ViewTransitions />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Arpit Agrawal"
+			href={`${Astro.site}rss.xml`}
+		/>
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
