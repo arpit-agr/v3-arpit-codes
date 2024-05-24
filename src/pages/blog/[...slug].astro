@@ -4,6 +4,7 @@ import {publishedBlogPosts} from '../../data/publishedBlogPosts';
 import HeroSection from '../../components/HeroSection.astro';
 import PostTagsList from '../../components/PostTagsList.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
+import PostFeaturedImg from '../../components/PostFeaturedImg.astro';
 
 export async function getStaticPaths() {
 	const blogPosts = publishedBlogPosts;
@@ -29,11 +30,20 @@ const {Content} = await post.render();
 					)
 				}
 				<PostTagsList postTags={post.data.tags} />
-				<p class="text-step-00 tracking-wide flow-space-2xs">
+				<p class="text-step-00 tracking-wide flow-space-zero">
 					Published on
 					<FormattedDate date={post.data.pubDate} />
 				</p>
 			</HeroSection>
+			{
+				post.data.featuredImg && (
+					<PostFeaturedImg
+						imagePath={`/src/content/blog/${post.slug}/${post.data.featuredImg.url}`}
+						caption={post.data.featuredImg.caption}
+					/>
+				)
+			}
+
 			<div class="region wrapper">
 				<div class="post-body prose flow">
 					<Content />

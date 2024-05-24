@@ -7,7 +7,7 @@
 	--region-end-space: var(--space-2xl);
 }
 
-.hero + * {
+.hero + *:not(.post-featured-img) {
 	border-block-start: var(--site-header-border-thickness) solid var(--site-header-color);
 
 	@media (--md-n-above) {

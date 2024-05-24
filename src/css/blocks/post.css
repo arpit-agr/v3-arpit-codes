@@ -104,6 +104,30 @@
 	}
 }
 
+.post-featured-img {
+	margin-block-start: calc(-1 * var(--space-2xs-xs));
+
+	&:before {
+		content: '';
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		block-size: var(--space-3xl);
+		inline-size: 100%;
+		background: var(--color-bg-inverted-1);
+		z-index: -1;
+	}
+
+	img {
+		box-shadow: var(--shadow-2);
+		outline: var(--border-thickness-1) solid var(--color-border-3);
+	}
+
+	+ * {
+		--region-start-space: var(--space-l-xl);
+	}
+}
+
 .post .hero-inner,
 .post-body {
 	display: grid;
