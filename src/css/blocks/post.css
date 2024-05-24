@@ -30,10 +30,6 @@
 			outline: var(--border-thickness-2) solid var(--color-brand);
 			outline-offset: calc(3 * var(--focus-ring-offset));
 		}
-
-		@media (--OSdark) {
-			border-color: var(--color-border-1);
-		}
 	}
 
 	code {

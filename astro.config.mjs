@@ -9,7 +9,7 @@ export default defineConfig({
 		'/notes/[...slug]': '/blog/[...slug]'
 	},
 	markdown: {
-		shikiConfig: {theme: 'vesper'}
+		shikiConfig: {theme: 'material-theme-darker'}
 	},
 	integrations: [
 		tailwind({
