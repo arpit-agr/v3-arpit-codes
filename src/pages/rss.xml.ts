@@ -26,8 +26,12 @@ export async function GET(context: AstroGlobal) {
 	const feed: RSSFeedItem[] = [];
 
 	for (const post of reversedBlogPosts) {
+		// remove rehype attributes
+		const postMarkdown = post.body.replace(/<!--rehype:[\s\S]*?-->/g, '');
+
 		// convert markdown to html string
-		const body = parser.render(post.body);
+		const body = parser.render(postMarkdown);
+
 		// convert html string to DOM-like structure
 		const html = htmlParser.parse(body);
 		// hold all img tags in variable images

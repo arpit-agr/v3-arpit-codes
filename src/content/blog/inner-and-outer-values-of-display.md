@@ -37,7 +37,7 @@ As simply put by Rachel:
 
 ## Browser Support
 
-As per [Can I Use](https://caniuse.com/?search=display%20multi) and [Web Platform Dashboard](https://webstatus.dev/features/two-value-display?q=display), browsers do support the two-value syntax for the display property since <time datetime="2023-07-21T00:00:00.000Z">21 July 2023</time>.
+As per [Can I Use](https://caniuse.com/?search=display%20multi) and [Web Platform Dashboard](https://webstatus.dev/features/two-value-display?q=display), browsers do support the two-value syntax for the display property since 21 July 2023.
 
 ## More on the `display` property
 

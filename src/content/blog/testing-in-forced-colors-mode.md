@@ -42,7 +42,7 @@ As [Kilian Valkhof](https://polypane.app/blog/forced-colors-explained-a-practica
 
 ## So why should we test in forced colors mode?
 
-As [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transparent-not-border-none/#testing-forced-colors) mentions, <q>it’s worthwhile to test High-Contrast Mode just to support low-vision users.</q> Additionally, since forced colors mode <q>aggressively flattens and removes colors it has a knock-on effect of showing places where you’ve over-relied on color to make elements or states distinct, which is another accessibility error in itself ([§1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)).</q>
+As [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transparent-not-border-none/#testing-forced-colors) mentions, “it’s worthwhile to test High-Contrast Mode just to support low-vision users.” Additionally, since forced colors mode “aggressively flattens and removes colors it has a knock-on effect of showing places where you’ve over-relied on color to make elements or states distinct, which is another accessibility error in itself ([§1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)).”
 
 ## CSS Properties affected by forced-color mode
 
