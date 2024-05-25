@@ -1,0 +1,55 @@
+.project-list {
+	--gutter: var(--space-l-xl) var(--space-l-2xl);
+
+	picture {
+		display: block;
+	}
+
+	img {
+		filter: drop-shadow(0px 0px var(--space-xs) var(--color-text-inverted-3));
+		transition: scale var(--transition-movement);
+
+		@media (prefers-color-scheme: dark) {
+			filter: unset;
+		}
+	}
+}
+
+.project-item {
+	container: project-item / inline-size;
+
+	&:has(a:hover) img {
+		scale: 1.0125;
+	}
+}
+
+.project-title {
+	--gutter: 0 var(--space-m);
+	--repel-vertical-alignment: baseline;
+}
+
+.project-link {
+	margin-inline-end: 7.5%;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+	}
+}
+
+/* visually hide the text "website" when space is limited */
+@container project-item (max-width: 20.3125rem) {
+	.project-link span:nth-child(2) {
+		position: absolute;
+		block-size: 0;
+		inline-size: 1px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}

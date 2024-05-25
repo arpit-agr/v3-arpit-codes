@@ -1,22 +1,32 @@
 [
 	{
-		"label": "SustEarn",
-		"url": "https://slae.app"
+		"title": "SustEarn",
+		"url": "https://slae.app",
+		"image": "sustearn.png"
 	},
 	{
-		"label": "Ambco Hygiene",
-		"url": "https://ambcohygiene.com/"
+		"title": "CG21 EXIM",
+		"url": "https://cg21.in",
+		"image": "cg21.png"
 	},
 	{
-		"label": "CG21 EXIM",
-		"url": "https://cg21.in"
+		"title": "Das Oncocare",
+		"url": "https://dasoncocare.com/",
+		"image": "dasoncocare.png"
 	},
 	{
-		"label": "Das Oncocare",
-		"url": "https://dasoncocare.com/"
+		"title": "Ambco Hygiene",
+		"url": "https://ambcohygiene.com/",
+		"image": "ambco.png"
 	},
 	{
-		"label": "Code Squad",
-		"url": "https://www.codesquadedu.com/"
+		"title": "Mundial Pharma",
+		"url": "https://mundial-pharma.com/",
+		"image": "mundial-pharma.png"
+	},
+	{
+		"title": "Code Squad",
+		"url": "https://www.codesquadedu.com/",
+		"image": "codesquad.png"
 	}
 ]

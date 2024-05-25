@@ -4,6 +4,7 @@ import {findMatchingItem} from '../utils/findMatchingItem.js';
 import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import projects from '../data/projects.json';
+import ProjectMockup from '../components/ProjectMockup.astro';
 
 const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
 const pageTitle = pageInfo.title;
@@ -17,17 +18,33 @@ const pageDesc = pageInfo.description;
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
 		<article class="flow region wrapper">
-			<p class="font-medium leading-flat">🚧 Work in Progress 🚧</p>
-			<p class="text-balance">
-				I'm currently working on enhancing this page to provide a better experience. In
-				the meantime, here's a list of links to some of my recent work:
-			</p>
-			<ul class="project-list flow">
+			<ul class="project-list grid" data-layout="halves" role="list">
 				{
-					projects.map(entry => {
+					projects.map((project, index) => {
+						let loadingValue: 'eager' | 'lazy';
+						if (index < 4) {
+							loadingValue = 'eager';
+						} else {
+							loadingValue = 'lazy';
+						}
 						return (
-							<li>
-								<a href={entry.url}>{entry.label}</a>
+							<li class="project-item relative flow flow-space-xs">
+								<div class="project-title repel">
+									<h2 class="heading-4">{project.title}</h2>
+									<a 
+										class="project-link text-step-00 tracking-wide text-color-2" 
+										href={project.url}
+									>
+										<span>Visit</span>
+										<span>website</span>
+										<span class="visually-hidden">of {project.title}</span>
+									</a>
+								</div>
+								<ProjectMockup
+									imagePath={`/src/images/projects/${project.image}`}
+									alt=`Mockup of ${project.title}'s website displayed on an iPad Pro and an iPhone.`
+									loading={loadingValue}
+								/>
 							</li>
 						);
 					})
@@ -36,9 +53,3 @@ const pageDesc = pageInfo.description;
 		</article>
 	</main>
 </Layout>
-
-<style is:global>
-	.project-list li {
-		--flow-space: var(--space-xs);
-	}
-</style>

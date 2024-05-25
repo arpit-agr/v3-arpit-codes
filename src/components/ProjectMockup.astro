@@ -1,0 +1,28 @@
+---
+import type {ImageMetadata} from 'astro';
+import {Picture} from 'astro:assets';
+
+interface Props {
+	imagePath: string;
+	alt: string;
+	loading: 'eager' | 'lazy';
+}
+
+const {imagePath, alt, loading} = Astro.props;
+const images = import.meta.glob<{default: ImageMetadata}>(
+	'/src/images/projects/*.{jpeg,jpg,png,webp}'
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "src/images/projects/*.{jpeg,jpg,png,webp}"`
+	);
+---
+
+<Picture
+	src={images[imagePath]()}
+	alt={alt}
+	formats={['avif', 'webp']}
+	widths={[640, 960, 1120, 1280]}
+	sizes={`(max-width: 38.125rem) 100vw, 50vw`}
+	loading={loading}
+/>
