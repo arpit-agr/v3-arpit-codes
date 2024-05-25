@@ -16,12 +16,14 @@ const pages = Object.fromEntries(
 );
 
 // Generate pages for blog posts
-const posts = Object.fromEntries(reversedBlogPosts.map(({slug, data}) => [slug, data]));
+const posts = Object.fromEntries(
+	reversedBlogPosts.map(({slug, data}) => [`blog/${slug}`, data])
+);
 
 // Generate pages for individual tag pages
 const tags = Object.fromEntries(
 	uniqueTags.map(tag => [
-		`${tag}`,
+		`tags/${tag}`,
 		{
 			title: `Tag: ${tag}`,
 			description: `Explore posts tagged '${tag}'`
@@ -30,6 +32,7 @@ const tags = Object.fromEntries(
 );
 
 const opengraphPages = {...pages, ...posts, ...tags};
+// const opengraphPages = {...pages, ...posts};
 
 export const {getStaticPaths, GET} = OGImageRoute({
 	param: 'route',

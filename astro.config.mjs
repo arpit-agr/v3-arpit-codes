@@ -6,6 +6,7 @@ import rehypeAttrs from 'rehype-attr';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://arpit.codes',
+	trailingSlash: 'always',
 	redirects: {
 		'/notes/[...slug]': '/blog/[...slug]'
 	},

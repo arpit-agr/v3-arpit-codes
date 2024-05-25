@@ -16,27 +16,17 @@ const {title, description} = Astro.props;
 const currentUrl = Astro.url;
 const currentPathname = currentUrl.pathname;
 
+const isDynamicRoute =
+	(currentPathname.startsWith('/blog/') && currentPathname !== '/blog/') ||
+	(currentPathname.startsWith('/tags/') && currentPathname !== '/tags/');
+
 // Determine the OG image path
-let ogImagePath: string;
+let ogImagePath;
 
-// Function to extract slug
-const getSlugFromPath = (path: string, base: string): string | null => {
-	return path.startsWith(base) && path !== base ? path.split('/').pop() || null : null;
-};
-
-// Check for dynamic routes
-const blogSlug = getSlugFromPath(currentPathname, '/blog/');
-const tagSlug = getSlugFromPath(currentPathname, '/tags/');
-
-if (blogSlug) {
-	ogImagePath = `/open-graph/${blogSlug}.png`;
-} else if (tagSlug) {
-	ogImagePath = `/open-graph/${tagSlug}.png`;
+if (isDynamicRoute) {
+	ogImagePath = `/open-graph${Astro.url.pathname.slice(0, -1)}.png`;
 } else {
-	// For static pages like /blog/, /tags/, or others
-	const pageTitle = (Astro.props.title ||
-		currentPathname.slice(1).replace(/\/$/, '')) as string;
-	const slugifiedTitle = slugify(pageTitle, {lower: true});
+	const slugifiedTitle = slugify(title, {lower: true});
 	ogImagePath = `/open-graph/${slugifiedTitle}.png`;
 }
 ---
