@@ -14,22 +14,28 @@ const {title, description} = Astro.props;
 
 // Get the current URL object
 const currentUrl = Astro.url;
-// Define a regular expression to match dynamic routes
-const dynamicRoutePattern = /^\/(?:blog|tags)\/.+$/;
+const currentPathname = currentUrl.pathname;
+
 // Determine the OG image path
-let ogImagePath;
+let ogImagePath: string;
 
-// For dynamic routes like /blog/foo or /tags/dave
-if (dynamicRoutePattern.test(currentUrl.pathname)) {
-	// Extract the slug part after /blog/ or /tags/
-	const slug = currentUrl.pathname.split('/').pop();
-	ogImagePath = `/open-graph/${slug}.png`;
+// Function to extract slug
+const getSlugFromPath = (path: string, base: string): string | null => {
+	return path.startsWith(base) && path !== base ? path.split('/').pop() || null : null;
+};
+
+// Check for dynamic routes
+const blogSlug = getSlugFromPath(currentPathname, '/blog/');
+const tagSlug = getSlugFromPath(currentPathname, '/tags/');
+
+if (blogSlug) {
+	ogImagePath = `/open-graph/${blogSlug}.png`;
+} else if (tagSlug) {
+	ogImagePath = `/open-graph/${tagSlug}.png`;
 } else {
-	// For static pages like /blog/ or /tags/ or others
-	const pageTitle =
-		Astro.props.title || currentUrl.pathname.slice(1).replace(/\/$/, '');
-	// Fallback to pathname if no title
-
+	// For static pages like /blog/, /tags/, or others
+	const pageTitle = (Astro.props.title ||
+		currentPathname.slice(1).replace(/\/$/, '')) as string;
 	const slugifiedTitle = slugify(pageTitle, {lower: true});
 	ogImagePath = `/open-graph/${slugifiedTitle}.png`;
 }
@@ -69,7 +75,7 @@ if (dynamicRoutePattern.test(currentUrl.pathname)) {
 		<meta property="og:site_name" content="Arpit Agrawal" />
 		<meta property="og:title" content={title} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={currentUrl} />
+		<meta property="og:url" content={Astro.url} />
 		<meta property="og:image" content={ogImagePath} />
 		<meta property="og:image:alt" content=`Page image for ${title}` />
 		<meta name="theme-color" content="#121210" />
