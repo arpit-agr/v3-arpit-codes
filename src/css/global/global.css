@@ -5,6 +5,10 @@
   project: https://cube.fyi/css.html
 */
 
+@view-transition {
+	navigation: auto;
+}
+
 :root {
 	color-scheme: light dark;
 }
