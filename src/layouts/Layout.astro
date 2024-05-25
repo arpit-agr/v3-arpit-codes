@@ -1,4 +1,5 @@
 ---
+import slugify from 'slugify';
 import {AstroFont} from 'astro-font';
 import '../css/style.css';
 import SiteHeader from '../components/SiteHeader.astro';
@@ -10,6 +11,28 @@ interface Props {
 }
 
 const {title, description} = Astro.props;
+
+// Get the current URL object
+const currentUrl = Astro.url;
+// Define a regular expression to match dynamic routes
+const dynamicRoutePattern = /^\/(?:blog|tags)\/.+$/;
+// Determine the OG image path
+let ogImagePath;
+
+// For dynamic routes like /blog/foo or /tags/dave
+if (dynamicRoutePattern.test(currentUrl.pathname)) {
+	// Extract the slug part after /blog/ or /tags/
+	const slug = currentUrl.pathname.split('/').pop();
+	ogImagePath = `/open-graph/${slug}.png`;
+} else {
+	// For static pages like /blog/ or /tags/ or others
+	const pageTitle =
+		Astro.props.title || currentUrl.pathname.slice(1).replace(/\/$/, '');
+	// Fallback to pathname if no title
+
+	const slugifiedTitle = slugify(pageTitle, {lower: true});
+	ogImagePath = `/open-graph/${slugifiedTitle}.png`;
+}
 ---
 
 <!doctype html>
@@ -43,8 +66,12 @@ const {title, description} = Astro.props;
 		{description && <meta name="description" content={description} />}
 		<link rel="icon" href="/favicon.ico" sizes="any" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-		<meta property="og:image" content="/og.jpeg" />
-		<meta property="og:image:alt" content="Site image for Arpit Agrawal" />
+		<meta property="og:site_name" content="Arpit Agrawal" />
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={currentUrl} />
+		<meta property="og:image" content={ogImagePath} />
+		<meta property="og:image:alt" content=`Page image for ${title}` />
 		<meta name="theme-color" content="#121210" />
 		<link rel="me" href="https://indieweb.social/@arpit" />
 		<link
