@@ -32,36 +32,44 @@ const tags = Object.fromEntries(
 );
 
 const opengraphPages = {...pages, ...posts, ...tags};
-// const opengraphPages = {...pages, ...posts};
 
 export const {getStaticPaths, GET} = OGImageRoute({
 	param: 'route',
 	pages: opengraphPages,
 
-	getImageOptions: (_path, page) => ({
-		title: page.title,
-		description: page.description,
-		bgImage: {
-			path: './public/images/arpit-codes-og-bg.png',
-			fit: 'cover'
-		},
-		padding: 74,
-		font: {
-			title: {
-				color: [235, 237, 239],
-				size: 74,
-				weight: 'SemiBold',
-				lineHeight: 1.3,
-				families: ['Geist', 'Arial']
+	getImageOptions: (_path, page) => {
+		let titleSize = 93; // Default size for pages and tags
+		let descriptionSize = 48;
+		if (_path.startsWith('blog/') && _path !== '/blog/') {
+			titleSize = 60; // Different size for blog collection entries
+			descriptionSize = 48;
+		}
+
+		return {
+			title: page.title,
+			description: page.description,
+			bgImage: {
+				path: './public/images/arpit-codes-og-bg.png',
+				fit: 'cover'
 			},
-			description: {
-				color: [235, 237, 239],
-				size: 38,
-				weight: 'Normal',
-				lineHeight: 1.6,
-				families: ['Geist', 'Arial']
-			}
-		},
-		fonts: ['./public/fonts/GeistVF.woff2']
-	})
+			padding: 60,
+			font: {
+				title: {
+					color: [235, 237, 239],
+					size: titleSize,
+					weight: 'SemiBold',
+					lineHeight: 1.4,
+					families: ['Geist', 'Arial']
+				},
+				description: {
+					color: [209, 214, 216],
+					size: descriptionSize,
+					weight: 'Normal',
+					lineHeight: 1.6,
+					families: ['Geist', 'Arial']
+				}
+			},
+			fonts: ['./public/fonts/GeistVF.woff2']
+		};
+	}
 });
