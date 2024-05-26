@@ -2,7 +2,7 @@
 title: 'The `text-underline-offset` CSS Property'
 description: '`text-underline-offset` controls the position of the underline and not other possible line decoration options such as `overline` or `line-through`.'
 pubDate: 2024-01-19
-tags: ['css', 'underline', 'offset']
+tags: ['underline', 'css', 'kevin-powell']
 ---
 
 The `text-underline-offset` CSS property sets how far you want the underline to be from its default position.

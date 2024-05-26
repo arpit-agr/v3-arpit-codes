@@ -2,7 +2,7 @@
 title: 'Inner And Outer Values Of `display`'
 description: 'Rachel Andrew explains what really happens when we change the value of `display` on an element in light of the two-value syntax.'
 pubDate: 2024-05-13
-tags: ['css', 'display', 'rachel-andrew']
+tags: ['display', 'css', 'rachel-andrew']
 ---
 
 Recently, [Stefan Judis](https://front-end.social/@stefan/112426743422409016) posted on Mastodon:

@@ -4,12 +4,13 @@ description: 'Testing in forced colors mode improves accessibility for users and
 pubDate: 2024-05-21
 tags:
   [
+    'forced-colors',
+    'test',
+    'high-contrast-mode',
     'accessibility',
     'css',
     'dave-rupert',
     'design',
-    'forced-colors',
-    'high-contrast-mode',
     'kilian-valkhof',
     'low-vision',
 		'media-query'
