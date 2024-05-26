@@ -24,13 +24,13 @@ const {Content} = await post.render();
 				<h1 {...post.data.draft && {'data-draft': true}}>{post.data.title}</h1>
 				{
 					post.data.description && (
-						<p class="post-description text-step-1 leading-snug flow-space-xs">
+						<p class="post-description text-step-1 leading-snug">
 							{post.data.description}
 						</p>
 					)
 				}
 				<PostTagsList postTags={post.data.tags} />
-				<p class="text-step-00 tracking-wide flow-space-zero">
+				<p class="text-step-00 tracking-wide">
 					Published on
 					<FormattedDate date={post.data.pubDate} />
 				</p>

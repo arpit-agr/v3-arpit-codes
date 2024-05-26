@@ -9,9 +9,9 @@ const hasManyTags = postTags.length > 3;
 
 {
 	hasManyTags ? (
-		<details class="relative text-step-00 tracking-wide flow-space-s">
+		<details class="post-tag-list relative text-step-00 tracking-wide flow-space-xs">
 			<summary> Tagged: {postTags.slice(0, 2).join(', ')} and others</summary>
-			<p class="post-tag-list">
+			<p>
 				{postTags.map((tag, index) => {
 					if (index + 1 < postTags.length) {
 						return (

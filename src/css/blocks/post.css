@@ -64,7 +64,7 @@
 	}
 
 	summary {
-		padding-block: var(--space-4xs);
+		/* padding-block: var(--space-4xs); */
 		border-radius: var(--border-radius-1);
 	}
 
@@ -90,13 +90,18 @@
 	summary + * {
 		margin-inline-start: 1em;
 	}
+}
 
-	[open] + * {
-		--flow-space: var(--space-s);
-	}
+.post-tag-list + * {
+	--flow-space: var(--space-3xs);
+}
+
+.post-tag-list[open] + * {
+	--flow-space: var(--space-xs);
 }
 
 .post-description {
+	--flow-space: 1ex;
 	text-wrap: pretty;
 
 	@media (--md-n-above) {
