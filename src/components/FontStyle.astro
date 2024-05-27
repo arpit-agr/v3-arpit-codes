@@ -1,0 +1,24 @@
+---
+import {AstroFont} from 'astro-font';
+---
+
+<AstroFont
+	config={[
+		{
+			name: 'Geist',
+			src: [
+				{
+					style: '',
+					weight: '100 900',
+					path: './public/fonts/GeistVF.woff2'
+				}
+			],
+			preload: true,
+			display: 'swap',
+			selector: 'body',
+			cssVariable: 'font-base',
+			fallback: 'sans-serif',
+			fallbackName: 'Geist Fallback'
+		}
+	]}
+/>

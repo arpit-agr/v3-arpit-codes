@@ -1,6 +1,6 @@
 ---
 import slugify from 'slugify';
-import {AstroFont} from 'astro-font';
+import FontStyle from '../components/FontStyle.astro';
 import '../css/style.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import Footer from '../components/Footer.astro';
@@ -38,26 +38,7 @@ if (isDynamicRoute) {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{title}</title>
-		<AstroFont
-			config={[
-				{
-					name: 'Geist',
-					src: [
-						{
-							style: '',
-							weight: '100 900',
-							path: './public/fonts/GeistVF.woff2'
-						}
-					],
-					preload: true,
-					display: 'swap',
-					selector: 'body',
-					cssVariable: 'font-base',
-					fallback: 'sans-serif',
-					fallbackName: 'Geist Fallback'
-				}
-			]}
-		/>
+		<FontStyle />
 		<slot name="preloads" />
 		{description && <meta name="description" content={description} />}
 		<link rel="icon" href="/favicon.ico" sizes="any" />
