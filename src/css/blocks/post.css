@@ -4,6 +4,10 @@
 	h1 {
 		font-size: var(--size-step-3-4);
 		line-height: var(--leading-tight);
+
+		@media (--lg-n-above) {
+			line-height: var(--leading-flat);
+		}
 	}
 
 	h2,
