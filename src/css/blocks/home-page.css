@@ -14,24 +14,6 @@
 	}
 }
 
-.homepage-hero-img {
-	display: none;
-
-	@media (--md-n-above) {
-		display: block;
-		block-size: auto;
-		inline-size: 18vw;
-		max-block-size: 125%;
-		object-fit: contain;
-		object-position: right;
-
-		position: absolute;
-		inset-inline-end: var(--page-gutter);
-		inset-block-start: 50%;
-		translate: 0 -50%;
-	}
-}
-
 .homepage-post-list-header {
 	--repel-vertical-alignment: baseline;
 }
