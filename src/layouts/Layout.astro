@@ -2,6 +2,7 @@
 import slugify from 'slugify';
 import FontStyle from '../components/FontStyle.astro';
 import '../css/style.css';
+import SkipToMain from '../components/SkipToMain.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import Footer from '../components/Footer.astro';
 
@@ -60,6 +61,7 @@ if (isDynamicRoute) {
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body>
+		<SkipToMain />
 		<SiteHeader />
 		<slot />
 		<Footer />
