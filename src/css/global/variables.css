@@ -86,8 +86,7 @@
 	--primary-nav-leading: var(--leading-flat);
 	--primary-nav-height: calc(
 		(2 * var(--primary-nav-padding-block)) +
-			(var(--primary-nav-leading) * var(--primary-nav-font-size)) +
-			var(--border-thickness-1)
+			(var(--primary-nav-leading) * var(--primary-nav-font-size))
 	);
 }
 
