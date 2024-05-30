@@ -29,6 +29,7 @@
 }
 
 .project-item {
+	position: relative;
 	max-inline-size: unset;
 	scroll-snap-align: center;
 
@@ -36,13 +37,31 @@
 		padding-inline-end: calc(2 * var(--page-gutter));
 	}
 
-	img {
-		min-inline-size: 74vmin;
-		object-fit: contain;
+	picture {
+		display: block;
 		transition: scale var(--transition-movement);
 	}
 
-	a:hover img {
-		scale: 0.987654321;
+	img {
+		min-inline-size: 74vmin;
+		object-fit: contain;
 	}
+}
+
+.project-link:after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.project-link:hover + picture {
+	scale: 0.987654321;
+}
+
+.project-item:focus-within picture {
+	outline: var(--border-thickness-2) solid currentColor;
+	outline-color: var(--color-brand);
+	outline-offset: calc(-1 * var(--border-thickness-2));
+	border-radius: var(--border-radius-1);
 }
