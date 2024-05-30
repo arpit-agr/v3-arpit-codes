@@ -17,25 +17,26 @@ const acknowledgment = questions.acknowledgement;
 		<HeroSection>
 			<h1>{pageTitle}</h1>
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
-			<div class="questionnaire-wrapper grid">
-				<ul class="question-list flow isolate" role="list">
-					{
-						questionsList.map(question => {
-							return <li>{question}</li>;
-						})
-					}
-				</ul>
-				<div class="acknowledgment">
-					<h2 class="visually-hidden">Acknowledgement</h2>
-					<p class="text-step-00 tracking-wide text-balance">
-						Special thanks to
-						<a href={acknowledgment[0].url}>{acknowledgment[0].label}</a>,
-						<a href={acknowledgment[1].url}>{acknowledgment[1].label}</a>, and
-						<a href={acknowledgment[2].url}>{acknowledgment[2].label}</a>. I created my
-						questionnaire by borrowing and adapting questions from their questionnaires.
-					</p>
-				</div>
-			</div>
 		</HeroSection>
+		<article class="questionnaire-wrapper grid region wrapper">
+			<ul class="question-list flow isolate" role="list">
+				{
+					questionsList.map(question => {
+						return <li>{question}</li>;
+					})
+				}
+			</ul>
+			<div class="acknowledgment">
+				<h2 class="visually-hidden">Acknowledgement</h2>
+				<p class="text-step-00 tracking-wide text-balance">
+					Special thanks to
+					<a href={acknowledgment[0].url}>{acknowledgment[0].label}</a>,
+					<a href={acknowledgment[1].url}>{acknowledgment[1].label}</a>, and
+					<a href={acknowledgment[2].url}>{acknowledgment[2].label}</a>. I
+					created my questionnaire by borrowing and adapting questions from
+					their questionnaires.
+				</p>
+			</div>
+		</article>
 	</main>
 </Layout>
