@@ -15,7 +15,7 @@
 		"title": "Projects",
 		"description": "Browse a selection of my past projects, showcasing my web design and development capabilities",
 		"linkLabel": "Projects",
-		"linkURL": "/projects/"
+		"linkURL": "/#projects"
 	},
 	{
 		"title": "Contact",

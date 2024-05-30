@@ -1,55 +1,48 @@
+.project-showcase {
+	display: grid;
+	grid-template-columns:
+		[fullbleed-start] minmax(var(--page-gutter), 1fr)
+		[content-start]
+		min(
+			var(--wrapper-max-width, calc(80rem - (2 * var(--page-gutter)))),
+			calc(100vw - (2 * var(--page-gutter)))
+		)
+		[content-end]
+		minmax(var(--page-gutter), 1fr) [fullbleed-end];
+}
+
+.project-showcase > * {
+	grid-column: fullbleed;
+	display: grid;
+	grid-template-columns: inherit;
+	overflow-x: scroll;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+}
+
 .project-list {
-	--gutter: var(--space-l-xl) var(--space-l-2xl);
-
-	picture {
-		display: block;
-	}
-
-	img {
-		filter: drop-shadow(0px 0px var(--space-xs) var(--color-text-inverted-3));
-		transition: scale var(--transition-movement);
-
-		@media (prefers-color-scheme: dark) {
-			filter: unset;
-		}
-	}
+	grid-column: content;
+	display: flex;
+	align-items: center;
+	gap: var(--page-gutter);
 }
 
 .project-item {
-	container: project-item / inline-size;
+	max-inline-size: unset;
+	scroll-snap-align: center;
 
-	&:has(a:hover) img {
-		scale: 1.0125;
+	&:last-child {
+		padding-inline-end: calc(2 * var(--page-gutter));
 	}
-}
 
-.project-title {
-	--gutter: 0 var(--space-m);
-	--repel-vertical-alignment: baseline;
-}
-
-.project-link {
-	margin-inline-end: 7.5%;
-
-	&::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		z-index: 1;
+	img {
+		min-inline-size: 74vmin;
+		object-fit: contain;
+		transition: scale var(--transition-movement);
 	}
-}
 
-/* visually hide the text "website" when space is limited */
-@container project-item (max-width: 20.3125rem) {
-	.project-link span:nth-child(2) {
-		position: absolute;
-		block-size: 0;
-		inline-size: 1px;
-		margin: 0;
-		padding: 0;
-		border: 0;
-		clip: rect(0 0 0 0);
-		white-space: nowrap;
-		overflow: hidden;
+	a:hover img {
+		scale: 0.987654321;
 	}
 }

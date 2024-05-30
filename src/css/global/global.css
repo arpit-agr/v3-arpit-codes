@@ -37,7 +37,18 @@ main > * + * {
 	}
 }
 
-:where(h1, .heading-1, h2, .heading-2, h3, .heading-3, h4, .heading-4) {
+:where(
+		h1,
+		.heading-1,
+		h2,
+		.heading-2,
+		h3,
+		.heading-3,
+		h4,
+		.heading-4,
+		h5,
+		.heading-5
+	) {
 	color: var(--color-text-2);
 
 	.inverted & {
@@ -50,7 +61,9 @@ h2,
 h3,
 .heading-3,
 h4,
-.heading-4 {
+.heading-4,
+h5,
+.heading-5 {
 	font-weight: var(--font-medium);
 	line-height: var(--leading-tight);
 }
@@ -77,6 +90,11 @@ h3,
 h4,
 .heading-4 {
 	font-size: var(--size-step-1);
+}
+
+h5,
+.heading-5 {
+	font-size: var(--size-step-0);
 }
 
 p,
@@ -155,7 +173,7 @@ blockquote {
 	}
 
 	&:after {
-		--_width: var(--border-thickness-1);
+		--_width: var(--border-thickness-2);
 		content: '';
 		position: absolute;
 		grid-column: 1/2;

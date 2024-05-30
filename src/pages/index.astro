@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import {findMatchingItem} from '../utils/findMatchingItem.js';
 import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
+import ProjectsShowcase from '../components/ProjectsShowcase.astro';
 import PostList from '../components/PostList.astro';
 import {reversedBlogPosts} from '../data/reversedBlogPosts.js';
 
@@ -36,6 +37,15 @@ const displayedPosts = reversedBlogPosts.slice(0, 4);
 				<a href="mailto:hello@arpit.codes">hello@arpit.codes</a>
 			</p>
 		</HeroSection>
+		<article id="projects" class="flow region">
+			<div class="flow relative wrapper">
+				<h2 class="heading-3 leading-flat">{pageData[2].title}</h2>
+				<p class="text-balance flow-space-xs">
+					{pageData[2].description}
+				</p>
+			</div>
+			<ProjectsShowcase />
+		</article>
 		<article class="region wrapper">
 			<PostList postsCollection={displayedPosts}>
 				<div class="homepage-post-list-header repel">

@@ -1,0 +1,32 @@
+---
+import projects from '../data/projects.json';
+import ProjectMockup from '../components/ProjectMockup.astro';
+---
+
+<div class="project-showcase flow-space-l">
+  <div>
+    <ul class="project-list" role="list">
+      {
+        projects.map((project, index) => {
+          let loadingValue: 'eager' | 'lazy';
+          if (index < 3) {
+            loadingValue = 'eager';
+          } else {
+            loadingValue = 'lazy';
+          }
+          return (
+            <li class="project-item">
+              <a href={project.url} aria-label={project.title}>
+                <ProjectMockup
+                  imagePath={`/src/images/projects/${project.image}`}
+                  alt=`Mockup of ${project.title}'s website displayed on an iPad Pro and an iPhone.`
+                  loading={loadingValue}
+                />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>
