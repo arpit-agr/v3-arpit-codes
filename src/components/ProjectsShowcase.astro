@@ -16,8 +16,8 @@ import ProjectMockup from './ProjectMockup.astro';
           }
           return (
             <li class="project-item">
-              <a class="project-link visually-hidden" href={project.url}>
-                {project.title}
+              <a class="project-link" href={project.url}>
+                <span class="visually-hidden">{project.title}</span>
               </a>
               <ProjectMockup
                 imagePath={`/src/images/projects/${project.image}`}
