@@ -1,12 +1,12 @@
-.hero + *:not(.post-featured-img) {
-	border-block-start: var(--site-header-border-thickness) solid transparent;
+.hero:has(+ *:not(.post-featured-img)) {
+	border-block-end: var(--site-header-border-thickness) solid transparent;
 
 	@media (--OSdark) {
 		border-color: var(--color-border-1);
 
 		@media (--md-n-above) {
-			border-block-start: unset;
-			border-width: var(--site-header-border-thickness) 0 0 0;
+			border-block-end: unset;
+			border-width: 0 0 var(--site-header-border-thickness) 0;
 			border-style: solid;
 			border-image: linear-gradient(
 					to right,
@@ -18,7 +18,7 @@
 
 		@media (--forcedColors) {
 			border: unset;
-			border-block-start: var(--site-header-border-thickness) solid transparent;
+			border-block-end: var(--site-header-border-thickness) solid transparent;
 		}
 	}
 }
