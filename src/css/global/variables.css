@@ -18,10 +18,10 @@
 	--color-text-inverted-1: var(--stone-4);
 	--color-text-inverted-2: var(--stone-2);
 	--color-text-inverted-3: var(--stone-5);
-	--color-border-1: var(--stone-4);
+	--color-border-1: var(--stone-6);
 	--color-border-2: hsl(var(--stone-5-hsl) / 25%);
 	--color-border-3: hsl(var(--stone-5-hsl) / 12.5%);
-	--color-underline: color-mix(in srgb, currentColor, transparent 12.5%);
+	--color-underline: hsl(var(--stone-12-hsl) / 87.5%);
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
@@ -29,6 +29,7 @@
 	}
 
 	@media (--OSdark) {
+		-webkit-font-smoothing: antialiased;
 		--color-brand: var(--color-brand-inverted);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
@@ -37,8 +38,11 @@
 		--color-text-1: var(--color-text-inverted-1);
 		--color-text-2: var(--color-text-inverted-2);
 		--color-text-3: var(--color-text-inverted-3);
-		--color-border-1: var(--color-border-2);
-		-webkit-font-smoothing: antialiased;
+		--color-underline: hsl(var(--stone-2-hsl) / 87.5%);
+	}
+
+	@supports (background: color-mix(in srgb, red 50%, blue)) {
+		--color-underline: color-mix(in srgb, currentColor, transparent 12.5%);
 	}
 }
 
@@ -76,14 +80,14 @@
 /* site header variables */
 :root {
 	--site-header-border-thickness: var(--border-thickness-1);
-	--site-header-color: var(--color-border-2);
 	--primary-nav-padding-block: var(--space-s);
 	--primary-nav-padding-inline: var(--space-2xs);
 	--primary-nav-font-size: var(--size-step-000);
 	--primary-nav-leading: var(--leading-flat);
 	--primary-nav-height: calc(
 		(2 * var(--primary-nav-padding-block)) +
-			(var(--primary-nav-leading) * var(--primary-nav-font-size))
+			(var(--primary-nav-leading) * var(--primary-nav-font-size)) +
+			var(--border-thickness-1)
 	);
 }
 

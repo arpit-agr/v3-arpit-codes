@@ -1,7 +1,6 @@
 .button {
 	padding: 0.5em 0.75em;
-	/* background-color: var(--color-bg-4); */
-	border: var(--border-thickness-1) solid var(--color-text-2);
+	border: var(--border-thickness-1) solid var(--color-underline);
 	border-radius: var(--border-radius-2);
 	color: var(--color-text-2);
 	line-height: var(--leading-flat);

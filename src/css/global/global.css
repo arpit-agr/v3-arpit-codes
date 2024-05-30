@@ -27,6 +27,7 @@ body {
 }
 
 main {
+	order: 1;
 	flex-grow: 999;
 }
 
@@ -94,6 +95,8 @@ a {
 	color: inherit;
 	text-decoration-thickness: var(--border-thickness-1);
 	text-decoration-color: var(--color-underline);
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 	transition:
 		color var(--transition-base),
 		text-decoration-color var(--transition-base),
