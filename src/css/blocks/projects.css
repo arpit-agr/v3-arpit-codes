@@ -55,11 +55,11 @@
 	z-index: 1;
 }
 
-.project-link:hover + picture {
-	scale: 0.987654321;
+.project-link:is(:hover, :focus-visible) + picture {
+	scale: 0.985;
 }
 
-.project-item:focus-within picture {
+.project-item:focus-within {
 	outline: var(--border-thickness-2) solid currentColor;
 	outline-color: var(--color-brand);
 	outline-offset: calc(-1 * var(--border-thickness-2));
