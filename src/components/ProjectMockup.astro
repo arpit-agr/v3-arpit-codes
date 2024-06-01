@@ -4,11 +4,9 @@ import {Picture} from 'astro:assets';
 
 interface Props {
 	imagePath: string;
-	alt: string;
-	loading: 'eager' | 'lazy';
 }
 
-const {imagePath, alt, loading} = Astro.props;
+const {imagePath} = Astro.props;
 const images = import.meta.glob<{default: ImageMetadata}>(
 	'/src/images/projects/*.{jpeg,jpg,png,webp}'
 );
@@ -20,9 +18,9 @@ if (!images[imagePath])
 
 <Picture
 	src={images[imagePath]()}
-	alt={alt}
+	alt=""
 	formats={['avif', 'webp']}
 	widths={[640, 960, 1120, 1280]}
 	sizes={`74vmin`}
-	loading={loading}
+	loading="eager"
 />

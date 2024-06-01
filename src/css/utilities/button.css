@@ -1,12 +1,15 @@
 .button {
 	padding: 0.5em 0.75em;
-	border: var(--border-thickness-1) solid var(--color-underline);
-	border-radius: var(--border-radius-2);
+	background-color: var(--color-bg-4);
+	border: unset;
+	border-radius: var(--border-radius-round);
+	outline: var(--border-thickness-1) solid transparent;
 	color: var(--color-text-2);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
 
 	transition:
+		opacity var(--transition-base),
 		background-color var(--transition-base),
 		color var(--transition-base),
 		outline var(--transition-base),
@@ -21,6 +24,11 @@
 
 	&:focus-visible {
 		outline-offset: calc(3 * var(--focus-ring-offset));
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
 	}
 }
 

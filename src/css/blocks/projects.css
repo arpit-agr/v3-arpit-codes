@@ -1,4 +1,4 @@
-.project-showcase {
+.project-showcase-wrapper {
 	display: grid;
 	grid-template-columns:
 		[fullbleed-start] minmax(var(--page-gutter), 1fr)
@@ -11,7 +11,7 @@
 		minmax(var(--page-gutter), 1fr) [fullbleed-end];
 }
 
-.project-showcase > * {
+.project-showcase {
 	grid-column: fullbleed;
 	display: grid;
 	grid-template-columns: inherit;
@@ -64,4 +64,33 @@
 	outline-color: var(--color-brand);
 	outline-offset: calc(-1 * var(--border-thickness-2));
 	border-radius: var(--border-radius-1);
+}
+
+.project-showcase-controls {
+	--gutter: var(--space-xs);
+	--cluster-horizontal-alignment: end;
+
+	button {
+		padding: 0.25em 0.375em;
+		display: inline-grid;
+		place-items: center;
+		aspect-ratio: 1;
+
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	svg {
+		block-size: 1lh;
+		inline-size: auto;
+	}
+
+	path {
+		stroke-width: 2.5px;
+	}
+}
+
+:where(.has-js) .project-showcase-controls button:not(:disabled) {
+	opacity: 1;
+	cursor: pointer;
 }

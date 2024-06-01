@@ -1,33 +1,44 @@
 ---
 import projects from '../data/projects.json';
 import ProjectMockup from './ProjectMockup.astro';
+import ChevronRightVector from './ChevronRightVector.astro';
+import ChevronLeftVector from './ChevronLeftVector.astro';
 ---
 
-<div class="project-showcase flow-space-l">
-  <div>
-    <ul class="project-list" role="list">
-      {
-        projects.map((project, index) => {
-          let loadingValue: 'eager' | 'lazy';
-          if (index < 3) {
-            loadingValue = 'eager';
-          } else {
-            loadingValue = 'lazy';
-          }
-          return (
-            <li class="project-item">
-              <a class="project-link" href={project.url}>
-                <span class="visually-hidden">{project.title}</span>
-              </a>
-              <ProjectMockup
-                imagePath={`/src/images/projects/${project.image}`}
-                alt=`Mockup of ${project.title}'s website displayed on an iPad Pro and an iPhone.`
-                loading={loadingValue}
-              />
-            </li>
-          );
-        })
-      }
-    </ul>
-  </div>
+<div class="project-showcase-wrapper flow-space-l">
+	<div class="project-showcase">
+		<ul class="project-list" role="list">
+			{
+				projects.map(project => {
+					return (
+						<li class="project-item">
+							<a class="project-link" href={project.url}>
+								<span class="visually-hidden">
+									Visit {project.title}'s site
+								</span>
+							</a>
+							<ProjectMockup
+								imagePath={`/src/images/projects/${project.image}`}
+							/>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</div>
 </div>
+
+<div class="project-showcase-controls-wrapper wrapper">
+	<div class="project-showcase-controls cluster">
+		<button class="button" data-direction="prev" aria-label="Previous">
+			<ChevronLeftVector />
+		</button>
+		<button class="button" data-direction="next" aria-label="Next">
+			<ChevronRightVector />
+		</button>
+	</div>
+</div>
+
+<script>
+	import '../scripts/showcase-controls';
+</script>
