@@ -7,6 +7,7 @@
 	--color-bg-3: var(--stone-2);
 	--color-bg-4: var(--stone-3);
 	--color-bg-5: var(--stone-4);
+	--color-bg-6: var(--stone-5);
 	--color-bg-inverted-1: var(--stone-12);
 	--color-bg-inverted-2: var(--stone-11);
 	--color-bg-inverted-3: var(--stone-10);
@@ -38,12 +39,24 @@
 		--color-text-1: var(--color-text-inverted-1);
 		--color-text-2: var(--color-text-inverted-2);
 		--color-text-3: var(--color-text-inverted-3);
-		--color-border-1: var(--stone-8);
+		--color-border-1: var(--stone-10);
 		--color-underline: hsl(var(--stone-2-hsl) / 87.5%);
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
 		--color-underline: color-mix(in srgb, currentColor, transparent 12.5%);
+	}
+}
+
+/* 2nd order variables */
+:root {
+	--color-text-button: var(--color-text-2);
+	--color-bg-button: var(--color-bg-4);
+	--color-bg-button-hover: var(--color-bg-6);
+
+	@media (--OSdark) {
+		--color-bg-button: var(--stone-11);
+		--color-bg-button-hover: var(--stone-10);
 	}
 }
 
@@ -53,7 +66,6 @@
 
 	--border-thickness-1: 1px;
 	--border-thickness-2: 2px;
-	--border-thickness-3: var(--space-3xs);
 	--border-radius-1: var(--space-3xs);
 	--border-radius-2: var(--space-s);
 	--border-radius-round: 100vmin;

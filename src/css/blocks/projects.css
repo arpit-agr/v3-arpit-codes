@@ -81,11 +81,12 @@
 	}
 
 	svg {
-		block-size: 1lh;
+		block-size: 1.25rlh;
 		inline-size: auto;
 	}
 
 	path {
+		stroke: currentColor;
 		stroke-width: 2.5px;
 	}
 }

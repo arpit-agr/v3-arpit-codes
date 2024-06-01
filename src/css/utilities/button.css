@@ -1,10 +1,10 @@
 .button {
 	padding: 0.5em 0.75em;
-	background-color: var(--color-bg-4);
+	background-color: var(--color-bg-button);
 	border: unset;
 	border-radius: var(--border-radius-round);
 	outline: var(--border-thickness-1) solid transparent;
-	color: var(--color-text-2);
+	color: var(--color-text-button);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
 
@@ -16,18 +16,16 @@
 		outline-offset var(--transition-base);
 
 	&:hover {
-		background-color: var(--color-bg-inverted-1);
-		color: var(--color-text-inverted-2);
-		outline-offset: 0;
-		outline: var(--border-thickness-3) solid var(--color-border-2);
+		background-color: var(--color-bg-button-hover);
 	}
 
 	&:focus-visible {
+		outline: var(--border-thickness-2) solid var(--color-brand);
 		outline-offset: calc(3 * var(--focus-ring-offset));
 	}
 
 	&:disabled {
-		opacity: 0.5;
+		opacity: 0.42;
 		cursor: not-allowed;
 	}
 }

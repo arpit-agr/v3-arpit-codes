@@ -165,7 +165,7 @@ blockquote {
 		block-size: 1ex;
 
 		background-color: var(--color-bg-1);
-		color: currentColor;
+		color: var(--color-underline);
 		font-size: 4em;
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
@@ -181,7 +181,7 @@ blockquote {
 		inline-size: var(--_width);
 		block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));
-		background-color: currentColor;
+		background-color: var(--color-underline);
 		z-index: -1;
 	}
 
@@ -218,8 +218,7 @@ hr {
 
 /* Set foucs visible style */
 :where(:focus-visible) {
-	outline: var(--border-thickness-2) solid currentColor;
-	outline-color: var(--color-brand);
+	outline: var(--border-thickness-2) solid var(--color-brand);
 	outline-offset: var(--focus-ring-offset);
 }
 
