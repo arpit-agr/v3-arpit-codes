@@ -12,10 +12,9 @@
 		"linkURL": "/blog/"
 	},
 	{
-		"title": "Projects",
-		"description": "Browse a selection of my past projects, showcasing my web design and development capabilities",
-		"linkLabel": "Projects",
-		"linkURL": "/#projects"
+		"title": "More",
+		"linkLabel": "More",
+		"linkURL": "#more"
 	},
 	{
 		"title": "Contact",

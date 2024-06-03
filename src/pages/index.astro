@@ -12,6 +12,9 @@ const pageTitle = pageInfo.title;
 const pageDesc = pageInfo.description;
 const hindiTranslation = 'अर्पित अग्रवाल';
 const urduTranslation = 'اَرپِت اگروال';
+const projectsTitle = 'Projects';
+const projectsDescription =
+	"Explore my blog, a place for me to write and collect what I'm learning across different topics that pique my curiosity";
 const displayedPosts = reversedBlogPosts.slice(0, 4);
 ---
 
@@ -39,9 +42,9 @@ const displayedPosts = reversedBlogPosts.slice(0, 4);
 		</HeroSection>
 		<article id="projects" class="flow region">
 			<div class="flow relative wrapper">
-				<h2 class="heading-3 leading-flat">{pageData[2].title}</h2>
+				<h2 class="heading-3 leading-flat">{projectsTitle}</h2>
 				<p class="text-balance flow-space-xs">
-					{pageData[2].description}
+					{projectsDescription}
 				</p>
 			</div>
 			<ProjectsShowcase />
