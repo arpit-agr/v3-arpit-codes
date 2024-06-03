@@ -1,0 +1,25 @@
+#get-in-touch {
+	--gutter: var(--space-xl-2xl) var(--space-s-l);
+	order: 3;
+
+	a {
+		max-inline-size: fit-content;
+		font-size: var(--size-step-4-5);
+		word-break: break-word;
+		text-decoration-thickness: var(--border-thickness-2);
+	}
+
+	svg {
+		display: none;
+		max-inline-size: min(33vw, 37.5rem);
+		inline-size: 100%;
+
+		@media (--md-n-above) {
+			display: unset;
+		}
+
+		path {
+			fill: var(--color-bird-icon-path);
+		}
+	}
+}

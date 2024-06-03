@@ -26,6 +26,7 @@
 }
 
 .site-header {
+	order: 4;
 	position: sticky;
 	inset-block-end: 0;
 	-webkit-backdrop-filter: blur(0.75rem);
@@ -34,7 +35,6 @@
 	outline: var(--site-header-border-thickness) solid var(--color-border-1);
 	overflow-x: auto;
 	overflow-y: hidden;
-	order: 2;
 	z-index: 999;
 	transition: background var(--transition-base);
 }

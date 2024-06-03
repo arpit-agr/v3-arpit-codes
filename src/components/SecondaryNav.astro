@@ -1,0 +1,32 @@
+---
+import pageData from '../data/pages.json';
+const secondaryNavItems = pageData.slice(4);
+---
+
+<div id="secondary-nav">
+	<div class="wrapper">
+		<div class="flow region">
+			<h2 class="heading-3 leading-flat">More on This Site</h2>
+			<nav class="flow-space-l" aria-label="Secondary">
+				<dl class="grid" data-layout="halves">
+					{
+						secondaryNavItems.map(item => {
+							return (
+								<div class="flow relative">
+									<dt class="leading-flat">
+										<a class="text-color-2 font-medium" href={item.linkURL}>
+											{item.linkLabel}
+										</a>
+									</dt>
+									<dd class="flow-space-2xs text-balance">
+										{item.description}
+									</dd>
+								</div>
+							);
+						})
+					}
+				</dl>
+			</nav>
+		</div>
+	</div>
+</div>

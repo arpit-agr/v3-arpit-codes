@@ -4,7 +4,9 @@ import FontStyle from '../components/FontStyle.astro';
 import '../css/style.css';
 import SkipToMain from '../components/SkipToMain.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import Footer from '../components/Footer.astro';
+import SecondaryNav from '../components/SecondaryNav.astro';
+import GetInTouch from '../components/GetInTouch.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
 interface Props {
 	title: string;
@@ -72,6 +74,8 @@ if (isDynamicRoute) {
 		<SkipToMain />
 		<SiteHeader />
 		<slot />
-		<Footer />
+		<SecondaryNav />
+		<GetInTouch />
+		<SiteFooter />
 	</body>
 </html>

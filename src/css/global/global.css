@@ -24,6 +24,10 @@ body {
 	font-weight: var(--font-regular);
 	line-height: var(--leading-normal);
 	-webkit-font-smoothing: unset;
+
+	> * + *:not(.site-header, main) > * {
+		border-block-start: var(--border-thickness-1) solid var(--color-border-1);
+	}
 }
 
 main {
@@ -31,10 +35,8 @@ main {
 	flex-grow: 999;
 }
 
-main > * + * {
-	@media (--forcedColors) {
-		border-block-start: var(--border-thickness-1) solid transparent;
-	}
+main > *:not(.hero) + * {
+	border-block-start: var(--border-thickness-1) solid var(--color-border-1);
 }
 
 :where(

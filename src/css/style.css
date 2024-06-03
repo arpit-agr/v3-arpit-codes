@@ -24,6 +24,8 @@ Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom
 */
 
 @import 'blocks/site-header.css' layer(components);
+@import 'blocks/secondary-nav.css' layer(components);
+@import 'blocks/get-in-touch.css' layer(components);
 @import 'blocks/site-footer.css' layer(components);
 @import 'blocks/prose.css' layer(components);
 

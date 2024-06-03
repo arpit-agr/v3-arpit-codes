@@ -1,50 +1,5 @@
 .site-footer {
-	order: 3;
-}
-
-.site-footer > * + * {
-	border-block-start: var(--border-thickness-1) solid var(--color-border-1);
-}
-
-#more {
-	dl {
-		--gutter: var(--space-m-l);
-	}
-
-	a:after {
-		content: '';
-		position: absolute;
-		inset: 0;
-	}
-}
-
-#get-in-touch {
-	--gutter: var(--space-xl-2xl) var(--space-s-l);
-
-	a {
-		max-inline-size: fit-content;
-		font-size: var(--size-step-4-5);
-		word-break: break-word;
-		text-decoration-thickness: var(--border-thickness-2);
-	}
-}
-
-#get-in-touch svg {
-	display: none;
-	max-inline-size: min(33vw, 37.5rem);
-	inline-size: 100%;
-
-	@media (--md-n-above) {
-		display: unset;
-	}
-
-	path {
-		fill: var(--color-text-2);
-
-		@media (--OSdark) {
-			fill: var(--color-text-1);
-		}
-	}
+	order: 5;
 }
 
 .socials {

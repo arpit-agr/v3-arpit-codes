@@ -1,0 +1,13 @@
+#secondary-nav {
+	order: 2;
+
+	dl {
+		--gutter: var(--space-m-l);
+	}
+
+	a:after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+}
