@@ -27,13 +27,16 @@
 
 .site-header {
 	position: sticky;
-	inset-block-end: 0;
-	background: var(--color-bg-1);
+	inset-block-end: calc(-1 * var(--site-header-border-thickness));
+	-webkit-backdrop-filter: blur(0.75rem);
+	backdrop-filter: blur(0.75rem);
+	background: var(--color-bg-site-header);
 	outline: var(--site-header-border-thickness) solid var(--color-border-1);
 	overflow-x: auto;
 	overflow-y: hidden;
 	order: 2;
 	z-index: 999;
+	transition: background var(--transition-base);
 }
 
 .site-nav ul {

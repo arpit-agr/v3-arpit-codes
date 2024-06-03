@@ -23,6 +23,7 @@
 	--color-border-2: hsl(var(--stone-5-hsl) / 25%);
 	--color-border-3: hsl(var(--stone-5-hsl) / 12.5%);
 	--color-underline: hsl(var(--stone-12-hsl) / 87.5%);
+	--color-bg-site-header: hsl(var(--stone-0-hsl) / 75%);
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
@@ -41,6 +42,7 @@
 		--color-text-3: var(--color-text-inverted-3);
 		--color-border-1: var(--stone-10);
 		--color-underline: hsl(var(--stone-2-hsl) / 87.5%);
+		--color-bg-site-header: hsl(var(--stone-12-hsl) / 75%);
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
@@ -93,7 +95,7 @@
 /* site header variables */
 :root {
 	--site-header-border-thickness: var(--border-thickness-1);
-	--primary-nav-padding-block: var(--space-s);
+	--primary-nav-padding-block: 3ex;
 	--primary-nav-padding-inline: var(--space-2xs);
 	--primary-nav-font-size: var(--size-step-000);
 	--primary-nav-leading: var(--leading-flat);

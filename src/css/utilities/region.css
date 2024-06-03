@@ -11,5 +11,8 @@ Consistent block padding for page sections
 		--region-start-space,
 		var(--region-space, var(--space-xl-2xl))
 	);
-	padding-block-end: var(--region-end-space, var(--region-space, var(--space-xl-2xl)));
+	padding-block-end: var(
+		--region-end-space,
+		var(--region-space, var(--space-xl-2xl))
+	);
 }
