@@ -77,8 +77,10 @@
 			transition: background-color var(--transition-base);
 		}
 
-		&:hover:after {
-			background-color: var(--color-underline);
+		@media (--mouse) {
+			&:hover:after {
+				background-color: var(--color-underline);
+			}
 		}
 
 		&:focus-visible {
