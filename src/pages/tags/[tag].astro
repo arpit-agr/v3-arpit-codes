@@ -35,9 +35,9 @@ const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'.`;
 				Alternatively, you can <a href="/tags/">view all tags</a>
 			</p>
 		</HeroSection>
-		<article class="flow flow-space-l region wrapper">
+		<div class="flow flow-space-l region wrapper">
 			<Eyebrow>{filteredPostsCount}</Eyebrow>
 			<PostList postsCollection={filteredPosts} />
-		</article>
+		</div>
 	</main>
 </Layout>
