@@ -27,7 +27,7 @@
 
 .site-header {
 	position: sticky;
-	inset-block-end: calc(-1 * var(--site-header-border-thickness));
+	inset-block-end: 0;
 	-webkit-backdrop-filter: blur(0.75rem);
 	backdrop-filter: blur(0.75rem);
 	background: var(--color-bg-site-header);
