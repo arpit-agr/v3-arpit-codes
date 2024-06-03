@@ -48,6 +48,7 @@
 		position: relative;
 		display: inline-block;
 		padding: var(--primary-nav-padding-block) var(--primary-nav-padding-inline);
+		color: var(--color-text-2);
 		font-size: var(--primary-nav-font-size);
 		line-height: var(--primary-nav-leading);
 		/* z-index: 1; */
