@@ -20,7 +20,7 @@ const {postsCollection} = Astro.props;
 			postsCollection.map((post: Post) => (
 				<li class="post-entry grid">
 					<a
-						class="text-pretty text-color-2"
+						class="text-pretty"
 						href={`/blog/${post.slug}/`}
 						{...(post.data.draft && {'data-draft': true})}
 					>

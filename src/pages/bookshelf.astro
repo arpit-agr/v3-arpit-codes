@@ -37,9 +37,7 @@ const bookList = await getCollection('books');
 									loading={loadingValue}
 								/>
 								<div class="flow flow-space-4xs text-step-00 tracking-wide leading-snug text-balance">
-									<p class="book-title text-color-2 font-medium">
-										{book.data.title}
-									</p>
+									<p class="book-title font-medium">{book.data.title}</p>
 									{book.data.subtitle && (
 										<p class="visually-hidden">{book.data.subtitle}</p>
 									)}

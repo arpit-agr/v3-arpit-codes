@@ -1,6 +1,10 @@
 .questionnaire-wrapper {
 	--flow-space: var(--space-l);
 	--gutter: var(--space-l);
+	--_region-padding-block: var(
+		--region-start-space,
+		var(--region-space, var(--space-xl-2xl))
+	);
 	grid-template-columns: 1fr;
 
 	@media (--lg-n-above) {
@@ -15,43 +19,41 @@
 
 .question-list {
 	--flow-space: var(--space-s);
-	--counter-size: var(--space-m);
+	--counter-size: var(--space-s);
 	position: relative;
 }
 
 .question-list:before {
 	content: '';
 	position: absolute;
-	/* inset-block-start: calc((var(--leading-normal) - 1) * 0.5lh); */
 	inset-block-start: 0;
 	inset-inline-start: calc(0.5 * var(--counter-size));
-	/* block-size: calc(100% - (var(--leading-normal) - 1) * 1lh); */
-	block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
-	border-inline-start: var(--border-thickness-1) solid var(--color-bg-inverted-2);
+	block-size: calc(100% + var(--_region-padding-block));
+	border-inline-start: var(--border-thickness-1) solid
+		var(--color-border-questionnaire);
+	translate: -50% calc(-1 * var(--_region-padding-block));
 	z-index: -1;
+
+	@media (--lg-n-above) {
+		block-size: calc(100% + (2 * var(--_region-padding-block)));
+	}
 }
 
 .question-list li {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	gap: var(--space-xs);
-	align-items: baseline;
+	align-items: start;
 	text-wrap: pretty;
-	counter-increment: questions;
 }
 
 .question-list li:before {
-	content: counter(questions);
+	content: '●';
 	display: grid;
 	place-items: center;
 	inline-size: var(--counter-size);
 	block-size: var(--counter-size);
-	border-radius: var(--border-radius-round);
-	background: var(--color-bg-inverted-2);
-	color: var(--color-text-inverted-1);
-	font-size: var(--size-step-000);
-	translate: 0 -10%;
-	outline: var(--border-thickness-1) solid var(--color-bg-inverted-2);
+	color: var(--color-counter-questionnaire);
 }
 
 /* temporary hack for Safari */

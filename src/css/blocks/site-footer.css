@@ -1,5 +1,9 @@
 .site-footer {
 	order: 5;
+
+	a {
+		padding-block: var(--space-s);
+	}
 }
 
 .socials {
