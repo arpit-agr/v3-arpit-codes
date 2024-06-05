@@ -72,14 +72,16 @@
 			inset-block-start: 0;
 			inline-size: var(--text-decoration-size);
 			block-size: calc(0.5 * var(--primary-nav-padding-block));
+			background-color: var(--color-underline);
+			transform: scaleY(0);
+			transform-origin: top;
 			translate: -50% 0;
-			/* z-index: 2; */
-			transition: background-color var(--transition-base);
+			transition: transform var(--transition-base);
 		}
 
 		@media (--mouse) {
 			&:hover:after {
-				background-color: var(--color-underline);
+				transform: scaleY(1);
 			}
 		}
 
@@ -94,8 +96,8 @@
 	}
 }
 
-.site-nav :where([aria-current='page'], [data-state='active']):after {
-	background-color: var(--color-underline);
+.site-nav :is([aria-current='page'], [data-state='active']):after {
+	transform: scaleY(1);
 }
 
 @media (--forcedColors) {
