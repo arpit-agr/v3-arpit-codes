@@ -26,7 +26,7 @@ button {
 
 ### But why transparent, you ask?
 
-First, sighted users will not notice the difference. Second, as [Kilian Valkhof](https://polypane.app/blog/forced-colors-explained-a-practical-guide/) explains, the border color and outline color “will be overwritten with the current text color, making it nicely visible again without needing any special adaption or re-styling for forced color mode.”
+First, sighted users will not notice the difference. Second, as [Kilian Valkhof](https://polypane.app/blog/forced-colors-explained-a-practical-guide/) explains, the border color and outline color "will be overwritten with the current text color, making it nicely visible again without needing any special adaption or re-styling for forced color mode."
 
 ## To avoid jank
 

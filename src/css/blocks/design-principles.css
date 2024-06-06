@@ -32,6 +32,7 @@
 		inline-size: var(--counter-size);
 		block-size: var(--counter-size);
 		color: var(--color-counter);
+		translate: 0 20%;
 	}
 
 	> :not(:first-child) {

@@ -23,7 +23,6 @@ const designPrinciplesCollection = defineCollection({
 	type: 'content',
 	schema: z.object({
 		title: z.string(),
-		description: z.string(),
 		url: z.string(),
 		origin: z.string().optional(),
 		author: z.array(z.string()).optional(),

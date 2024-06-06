@@ -25,7 +25,7 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors
 
 Regarding Windows High Contrast mode, as highlighted on the [Microsoft Edge Blog](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/):
 
-> The name “high contrast” is actually a misnomer—users can set their theme colors to whatever they prefer, including themes that result in _lower_ than common contrast levels.
+> The name "high contrast" is actually a misnomer—users can set their theme colors to whatever they prefer, including themes that result in _lower_ than common contrast levels.
 
 ```css
 @media (forced-colors: active) {
@@ -43,7 +43,7 @@ As [Kilian Valkhof](https://polypane.app/blog/forced-colors-explained-a-practica
 
 ## So why should we test in forced colors mode?
 
-As [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transparent-not-border-none/#testing-forced-colors) mentions, “it’s worthwhile to test High-Contrast Mode just to support low-vision users.” Additionally, since forced colors mode “aggressively flattens and removes colors it has a knock-on effect of showing places where you’ve over-relied on color to make elements or states distinct, which is another accessibility error in itself ([§1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)).”
+As [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transparent-not-border-none/#testing-forced-colors) mentions, "it’s worthwhile to test High-Contrast Mode just to support low-vision users." Additionally, since forced colors mode "aggressively flattens and removes colors it has a knock-on effect of showing places where you’ve over-relied on color to make elements or states distinct, which is another accessibility error in itself ([§1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html))."
 
 ## CSS Properties affected by forced-color mode
 

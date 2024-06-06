@@ -36,25 +36,22 @@ const allDesignPrinciples = await getCollection(
 
 						return (
 							<div class="principle-entry">
-								<dt class="text-balance">
+								<dt>
 									<a
-										class="heading-4"
+										class="heading-3 leading-tight text-pretty block"
 										href={entry.data.url}
 										{...(entry.data.draft && {'data-draft': true})}
 									>
 										{entry.data.title}
 									</a>
 								</dt>
-								<dd class="principle-description text-pretty">
-									{entry.data.description}
-								</dd>
 								<dd class="principle-content flow">
 									<Content />
 									{(origin || authorData) && (
 										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance">
 											{origin && (
 												<>
-													<span class="visually-hidden">Published in</span>{' '}
+													― <span class="visually-hidden">Published in</span>{' '}
 													{origin}
 												</>
 											)}

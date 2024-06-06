@@ -1,6 +1,5 @@
 ---
-title: 'Design dictates behavior'
-description: 'The behavior you’re seeing is the behavior you’ve designed for.'
+title: 'The behavior you’re seeing is the behavior you’ve designed for'
 url: 'http://bokardo.com/principles-of-product-design/'
 origin: 'Principles of Product Design'
 author: ['Joshua Porter']

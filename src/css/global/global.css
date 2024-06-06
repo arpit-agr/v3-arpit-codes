@@ -170,7 +170,7 @@ blockquote {
 		font-size: 4em;
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
-		translate: 0 -15%;
+		translate: 0 -25%;
 	}
 
 	&:after {
