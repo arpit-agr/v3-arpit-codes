@@ -26,8 +26,8 @@ const allDesignPrinciples = await getCollection(
 			<h1>{pageTitle}</h1>
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
-		<article class="flow region region-space-m-l wrapper">
-			<dl class="design-principles-list grid" data-layout="thirds" role="list">
+		<article class="flow region wrapper">
+			<dl class="design-principles-list flow flow-space-xl" role="list">
 				{
 					allDesignPrinciples.map(async entry => {
 						const {Content} = await entry.render();
@@ -35,7 +35,7 @@ const allDesignPrinciples = await getCollection(
 						const authorData = entry.data.author;
 
 						return (
-							<div class="principle-entry grid">
+							<div class="principle-entry">
 								<dt class="text-balance">
 									<a
 										class="heading-4"
