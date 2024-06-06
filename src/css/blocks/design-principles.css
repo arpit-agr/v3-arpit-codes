@@ -38,4 +38,8 @@
 	> :not(:first-child) {
 		grid-column: 2/-1;
 	}
+
+	a {
+		max-inline-size: fit-content;
+	}
 }

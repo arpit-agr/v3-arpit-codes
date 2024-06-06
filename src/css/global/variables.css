@@ -34,12 +34,13 @@
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
-		--color-brand-inverted: oklch(66.47% 0.191 269.5);
+		--color-brand-inverted: oklch(76.47% 0.191 269.5);
 	}
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
-		--color-brand: var(--color-brand-inverted);
+		--color-brand: hsl(10.59deg 80% 70%);
+		--color-brand-inverted: var(--color-brand);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
 		--color-bg-3: var(--color-bg-inverted-3);

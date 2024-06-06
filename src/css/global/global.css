@@ -148,7 +148,7 @@ button {
 blockquote {
 	position: relative;
 	display: grid;
-	gap: 0 1ch;
+	gap: 0 var(--space-2xs);
 	grid-template-columns: auto 1fr;
 
 	> * {
@@ -170,7 +170,8 @@ blockquote {
 		font-size: 4em;
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
-		translate: 0 -25%;
+		translate: 0 -39%; /* magic number */
+		max-block-size: 0.3lh; /* magic number */
 	}
 
 	&:after {
@@ -180,7 +181,9 @@ blockquote {
 		grid-column: 1/2;
 		justify-self: center;
 		inline-size: var(--_width);
-		block-size: calc(100% - (var(--leading-normal) - 1) * 0.5lh);
+		block-size: calc(100% - 1lh - ((var(--leading-normal) - 1) * 0.5lh));
+		align-self: end;
+		inset-block-end: calc((var(--leading-normal) - 1) * 0.5lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));
 		background-color: var(--color-underline);
 		z-index: -1;

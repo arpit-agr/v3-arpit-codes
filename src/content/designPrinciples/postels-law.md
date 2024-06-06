@@ -1,13 +1,11 @@
 ---
-title: 'Postel’s Law, AKA the robustness principle'
+title: 'Postel’s Law, aka the robustness principle'
 url: 'https://adactio.com/journal/14327'
 origin: 'An early specification of TCP'
 author: ['Jon Postel']
 ---
 
-An extended excerpt from [Jeremy Keith's](https://adactio.com/) post "Robustness and Least Power":
-
-[…] Postel’s Law, AKA the robustness principle:
+From [Jeremy Keith's](https://adactio.com/) post "Robustness and Least Power":
 
 > Be conservative in what you send, be liberal in what you accept.
 

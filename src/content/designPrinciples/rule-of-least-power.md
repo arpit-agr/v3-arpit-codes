@@ -3,7 +3,7 @@ title: 'Rule of least power'
 url: 'https://adactio.com/journal/14327'
 ---
 
-An extended excerpt from [Jeremy Keith's](https://adactio.com/) post "Robustness and Least Power":
+From [Jeremy Keith's](https://adactio.com/) post "Robustness and Least Power":
 
 When it comes to figuring out _what_ specific tools or technologies to use, there’s an equally useful principle: the rule of least power:
 

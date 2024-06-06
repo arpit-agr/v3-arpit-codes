@@ -38,7 +38,7 @@ const allDesignPrinciples = await getCollection(
 							<div class="principle-entry">
 								<dt>
 									<a
-										class="heading-3 leading-tight text-pretty block"
+										class="heading-4 text-pretty block"
 										href={entry.data.url}
 										{...(entry.data.draft && {'data-draft': true})}
 									>
@@ -48,14 +48,8 @@ const allDesignPrinciples = await getCollection(
 								<dd class="principle-content flow">
 									<Content />
 									{(origin || authorData) && (
-										<cite class="block text-step-000 leading-snug tracking-wider uppercase text-balance">
-											{origin && (
-												<>
-													― <span class="visually-hidden">Published in</span>{' '}
-													{origin}
-												</>
-											)}
-											{origin && authorData && ' by'}
+										<cite class="block text-step-00 tracking-wide not-italic text-balance">
+											― <span class="visually-hidden">Formulated by</span>
 											{authorData &&
 												authorData.map((item, index) => {
 													if (index + 1 < authorData.length) {
@@ -64,6 +58,8 @@ const allDesignPrinciples = await getCollection(
 														return `${item}`;
 													}
 												})}
+											{origin && authorData && ' in'}
+											{origin && `'${origin}'`}
 										</cite>
 									)}
 								</dd>
