@@ -3,12 +3,9 @@
 
 	h2,
 	h3,
-	h4 {
+	h4,
+	p:has(img),
+	p:has(img) + * {
 		--flow-space: 1lh;
 	}
-
-	/* p:has(img),
-	p:has(img) + * {
-		--flow-space: var(--space-s-m);
-	} */
 }

@@ -39,7 +39,7 @@
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
-		--color-brand: hsl(10.59deg 80% 70%);
+		--color-brand: hsl(30.59deg 90% 70%);
 		--color-brand-inverted: var(--color-brand);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
