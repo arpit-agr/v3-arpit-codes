@@ -81,6 +81,7 @@
 
 	summary::before {
 		content: '▲';
+		content: '▲' / '';
 		display: inline-block;
 		background-color: var(--color-bg-inverted-1);
 		font-size: var(--size-step-000);

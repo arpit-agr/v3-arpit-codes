@@ -27,6 +27,7 @@
 
 	&:before {
 		content: '●';
+		content: '●' / '';
 		display: grid;
 		place-items: center;
 		inline-size: var(--counter-size);
