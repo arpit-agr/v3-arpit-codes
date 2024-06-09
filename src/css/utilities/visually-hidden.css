@@ -2,7 +2,7 @@
 VISUALLY HIDDEN UTILITY
 Info: https://piccalil.li/quick-tip/visually-hidden/ 
 */
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
 	position: absolute;
 	block-size: 0;
 	inline-size: 1px;
