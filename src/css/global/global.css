@@ -25,7 +25,7 @@ body {
 	line-height: var(--leading-normal);
 	-webkit-font-smoothing: unset;
 
-	> * + *:not(.site-header, main) > * {
+	> * + *:not(.site-header, main, .site-footer) > * {
 		border-block-start: var(--border-thickness-1) solid var(--color-border-1);
 	}
 }
