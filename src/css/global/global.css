@@ -23,6 +23,7 @@ body {
 	font-size: var(--size-step-0);
 	font-weight: var(--font-regular);
 	line-height: var(--leading-normal);
+	font-feature-settings: var(--geist-tnum);
 	-webkit-font-smoothing: unset;
 
 	> * + *:not(.site-header, main, .site-footer) > * {

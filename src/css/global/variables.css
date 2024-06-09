@@ -109,6 +109,16 @@
 	);
 }
 
+/* OpenType feature variables */
+:root {
+	--geist-tnum: 'tnum' on;
+
+	@supports (font-variant-numeric: tabular-nums) {
+		--geist-tnum: '____';
+		font-variant-numeric: tabular-nums;
+	}
+}
+
 /* https://open-props.style/#media-queries */
 /* Viewport Vars */
 @custom-media --sm-n-above (min-width: 30em);
