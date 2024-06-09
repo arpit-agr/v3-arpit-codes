@@ -100,7 +100,7 @@
 :root {
 	--site-header-border-thickness: var(--border-thickness-1);
 	--primary-nav-padding-block: 3ex;
-	--primary-nav-padding-inline: var(--space-2xs);
+	--primary-nav-padding-inline: var(--space-xs);
 	--primary-nav-font-size: var(--size-step-000);
 	--primary-nav-leading: var(--leading-flat);
 	--primary-nav-height: calc(
