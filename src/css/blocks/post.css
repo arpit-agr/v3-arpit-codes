@@ -129,7 +129,6 @@
 		grid-column: 1/2;
 		outline: var(--border-thickness-1) solid transparent;
 		border-radius: var(--border-radius-1);
-		overflow: hidden;
 	}
 
 	&:has(> [open]) {
