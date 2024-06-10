@@ -11,40 +11,25 @@ const hasManyTags = postTags.length > 3;
 	hasManyTags ? (
 		<details class="post-tag-list">
 			<summary class="button">
-				Tagged: {postTags.slice(0, 2).join(', ')} and others
+				Tagged: {postTags.slice(0, 2).join(', ')} and {postTags.length - 2}{' '}
+				others
 			</summary>
 			<p>
-				{postTags.map((tag, index) => {
-					if (index + 1 < postTags.length) {
-						return (
-							<>
-								<a href={`/tags/${tag}/`}>{tag}</a>,
-							</>
-						);
-					} else {
-						return <a href={`/tags/${tag}/`}>{tag}</a>;
-					}
-				})}
+				{postTags.map(tag => (
+					<a href={`/tags/${tag}/`} rel="tag">
+						{tag}
+					</a>
+				))}
 			</p>
 		</details>
 	) : (
 		<p class="post-tag-list text-step-00 tracking-wide flow-space-xs">
 			Tagged:
-			{postTags.map((tag, index) => {
-				if (index + 1 < postTags.length) {
-					return (
-						<>
-							<a href={`/tags/${tag}/`}>{tag}</a>,
-						</>
-					);
-				} else {
-					return (
-						<a href={`/tags/${tag}/`} rel="tag">
-							{tag}
-						</a>
-					);
-				}
-			})}
+			{postTags.map(tag => (
+				<a href={`/tags/${tag}/`} rel="tag">
+					{tag}
+				</a>
+			))}
 		</p>
 	)
 }

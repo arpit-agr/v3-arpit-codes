@@ -174,5 +174,5 @@
 
 .post-tag-list a {
 	display: inline-block;
-	padding-block: var(--space-3xs);
+	padding: var(--space-3xs);
 }
