@@ -1,7 +1,7 @@
 /* color variables */
 :root {
 	--color-brand: var(--indigo-7);
-	--color-brand-inverted: var(--indigo-5);
+	--color-brand-inverted: var(--indigo-3);
 	--color-bg-1: var(--stone-0);
 	--color-bg-2: var(--stone-1);
 	--color-bg-3: var(--stone-2);
@@ -33,12 +33,12 @@
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
-		--color-brand-inverted: oklch(66.47% 0.191 261.81);
+		/* --color-brand-inverted: oklch(66.47% 0.191 261.81); */
 	}
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
-		--color-brand-inverted: #6b9fff;
+		--color-brand-inverted: #ffea87;
 		--color-brand: var(--color-brand-inverted);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
@@ -59,7 +59,7 @@
 		--color-bird-icon-path: var(--color-text-1);
 
 		@media (--HDcolor) {
-			--color-brand-inverted: oklch(70.88% 0.1641 261.81);
+			--color-brand-inverted: oklch(93.38% 0.1252 97.71);
 		}
 	}
 
