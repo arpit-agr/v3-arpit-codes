@@ -43,7 +43,7 @@
 	}
 
 	img {
-		min-inline-size: 74vmin;
+		min-inline-size: 73vmin;
 		object-fit: contain;
 	}
 }
@@ -77,7 +77,7 @@
 		aspect-ratio: 1;
 		border-radius: var(--border-radius-round);
 
-		opacity: 0.5;
+		opacity: 0.42;
 		cursor: not-allowed;
 	}
 
