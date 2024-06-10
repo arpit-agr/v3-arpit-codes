@@ -34,10 +34,7 @@ const hasManyTags = postTags.length > 3;
 				if (index + 1 < postTags.length) {
 					return (
 						<>
-							<a href={`/tags/${tag}/`} rel="tag">
-								{tag}
-							</a>
-							,
+							<a href={`/tags/${tag}/`}>{tag}</a>,
 						</>
 					);
 				} else {
