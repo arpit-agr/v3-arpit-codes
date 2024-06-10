@@ -14,10 +14,9 @@
 	--color-bg-inverted-4: var(--stone-9);
 	--color-text-1: var(--stone-11);
 	--color-text-2: var(--stone-12);
-	--color-text-3: var(--stone-9);
-	--color-text-4: var(--stone-8);
+	--color-text-3: var(--stone-10);
 	--color-text-inverted-1: var(--stone-4);
-	--color-text-inverted-2: var(--stone-2);
+	--color-text-inverted-2: var(--stone-3);
 	--color-text-inverted-3: var(--stone-5);
 	--color-border-1: var(--stone-4);
 	--color-border-2: hsl(var(--stone-5-hsl) / 25%);
@@ -34,13 +33,13 @@
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
-		--color-brand-inverted: oklch(76.47% 0.191 269.5);
+		--color-brand-inverted: oklch(66.47% 0.191 261.81);
 	}
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
-		--color-brand: hsl(30.59deg 90% 70%);
-		--color-brand-inverted: var(--color-brand);
+		--color-brand-inverted: #6b9fff;
+		--color-brand: var(--color-brand-inverted);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
 		--color-bg-3: var(--color-bg-inverted-3);
@@ -58,6 +57,10 @@
 		--color-bg-button: var(--stone-11);
 		--color-bg-button-hover: var(--stone-10);
 		--color-bird-icon-path: var(--color-text-1);
+
+		@media (--HDcolor) {
+			--color-brand-inverted: oklch(70.88% 0.1641 261.81);
+		}
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
