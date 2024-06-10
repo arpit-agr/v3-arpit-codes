@@ -1,7 +1,7 @@
 /* color variables */
 :root {
 	--color-brand: var(--indigo-7);
-	--color-brand-inverted: var(--indigo-3);
+	--color-brand-inverted: var(--indigo-5);
 	--color-bg-1: var(--stone-0);
 	--color-bg-2: var(--stone-1);
 	--color-bg-3: var(--stone-2);
@@ -33,7 +33,7 @@
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
-		/* --color-brand-inverted: oklch(66.47% 0.191 261.81); */
+		--color-brand-inverted: oklch(66.47% 0.191 261.81);
 	}
 
 	@media (--OSdark) {
