@@ -1,11 +1,9 @@
 [href='#main'] {
-	--_padding-block: 0.5em;
-	--_padding-inline: 0.75em;
 	position: absolute;
 	inset-block-start: 0;
 	inset-inline-start: var(--page-gutter);
 
-	padding: var(--_padding-block) var(--_padding-inline);
+	padding: var(--button-padding-block) var(--button-padding-inline);
 	border-radius: var(--border-radius-1);
 	font-size: var(--primary-nav-font-size);
 	opacity: 0;
@@ -18,7 +16,7 @@
 	&:focus-visible {
 		opacity: 1;
 		inset-block-start: calc(
-			var(--primary-nav-padding-block) - var(--_padding-block)
+			var(--primary-nav-padding-block) - var(--button-padding-block)
 		);
 		outline-color: var(--color-brand-inverted);
 		transform: translateY(0);

@@ -29,7 +29,7 @@
 	--color-counter-connector: var(--color-border-1);
 	--color-text-button: var(--color-text-2);
 	--color-bg-button: var(--color-bg-4);
-	--color-bg-button-hover: var(--color-bg-6);
+	--color-bg-button-hover: var(--color-bg-5);
 	--color-bird-icon-path: var(--color-text-2);
 
 	@media (--HDcolor) {
@@ -71,13 +71,16 @@
 
 	--border-thickness-1: 1px;
 	--border-thickness-2: 2px;
-	--border-radius-1: var(--space-3xs);
+	--border-radius-1: var(--space-4xs);
 	--border-radius-2: var(--space-s);
 	--border-radius-round: 100vmin;
 
 	--underline-offset: var(--space-4xs);
 	--focus-ring-offset: var(--space-5xs);
 	--counter-size: var(--space-s);
+
+	--button-padding-block: 0.5em;
+	--button-padding-inline: 0.75em;
 }
 
 /* custom text sizes */

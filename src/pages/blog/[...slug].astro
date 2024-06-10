@@ -29,9 +29,8 @@ const {Content} = await post.render();
 						</p>
 					)
 				}
-				<PostTagsList postTags={post.data.tags} />
-				<p class="text-step-00 tracking-wide">
-					Published on
+				<p class="post-pubdate text-step-00 tracking-wide">
+					<span class="visually-hidden">Published on</span>
 					<FormattedDate date={post.data.pubDate} />
 				</p>
 			</HeroSection>
@@ -47,6 +46,11 @@ const {Content} = await post.render();
 			<div class="region wrapper">
 				<div class="post-body prose flow">
 					<Content />
+					<div
+						class="post-tag-list-wrapper text-step-00 tracking-wide flow-space-m"
+					>
+						<PostTagsList postTags={post.data.tags} />
+					</div>
 				</div>
 			</div>
 		</article>

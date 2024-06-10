@@ -9,8 +9,10 @@ const hasManyTags = postTags.length > 3;
 
 {
 	hasManyTags ? (
-		<details class="post-tag-list relative text-step-00 tracking-wide flow-space-xs">
-			<summary> Tagged: {postTags.slice(0, 2).join(', ')} and others</summary>
+		<details class="post-tag-list">
+			<summary class="button">
+				Tagged: {postTags.slice(0, 2).join(', ')} and others
+			</summary>
 			<p>
 				{postTags.map((tag, index) => {
 					if (index + 1 < postTags.length) {
@@ -32,11 +34,18 @@ const hasManyTags = postTags.length > 3;
 				if (index + 1 < postTags.length) {
 					return (
 						<>
-							<a href={`/tags/${tag}/`}>{tag}</a>,
+							<a href={`/tags/${tag}/`} rel="tag">
+								{tag}
+							</a>
+							,
 						</>
 					);
 				} else {
-					return <a href={`/tags/${tag}/`}>{tag}</a>;
+					return (
+						<a href={`/tags/${tag}/`} rel="tag">
+							{tag}
+						</a>
+					);
 				}
 			})}
 		</p>
