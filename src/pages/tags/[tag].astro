@@ -22,7 +22,7 @@ const {tag} = Astro.params;
 const {filteredPosts} = Astro.props;
 const filteredPostsCount = `${filteredPosts.length} ${filteredPosts.length > 1 ? 'posts' : 'post'}`;
 const pageTitle = `Tag: ${tag}`;
-const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'.`;
+const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'`;
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
@@ -32,11 +32,11 @@ const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'.`;
 				{pageTitle}
 			</h1>
 			<p class="text-balance flow-space-xs">
-				Alternatively, you can <a href="/tags/">view all tags</a>
+				{pageDesc}. Alternatively,
+				<a href="/tags/">view all the tags</a>.
 			</p>
 		</HeroSection>
 		<div class="flow flow-space-l region wrapper">
-			<Eyebrow>{filteredPostsCount}</Eyebrow>
 			<PostList postsCollection={filteredPosts} />
 		</div>
 	</main>
