@@ -35,6 +35,15 @@
 	overflow-y: hidden;
 	z-index: 999;
 	transition: background var(--transition-base);
+
+	@media (--motionOK) {
+		animation: --slidein 0.8s;
+		animation-timing-function: var(--ease-1);
+
+		@supports (animation-timing-function: linear(0, 1)) {
+			animation-timing-function: var(--ease-spring-1);
+		}
+	}
 }
 
 .site-nav ul {
@@ -104,5 +113,15 @@
 
 	.site-nav ul :is([aria-current='page'], [data-state='active']):after {
 		--text-decoration-size: var(--border-thickness-2);
+	}
+}
+
+@keyframes --slidein {
+	from {
+		translate: 0 100%;
+	}
+
+	to {
+		translate: 0 0%;
 	}
 }
