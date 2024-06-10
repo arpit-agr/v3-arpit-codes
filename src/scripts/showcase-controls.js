@@ -14,6 +14,11 @@ const showcaseControls = document.querySelector('.project-showcase-controls');
 const prevButton = showcaseControls.querySelector('[data-direction="prev"]');
 const nextButton = showcaseControls.querySelector('[data-direction="next"]');
 
+// Check for reduced motion preference
+const prefersReducedMotion = window.matchMedia(
+	'(prefers-reduced-motion: reduce)'
+).matches;
+
 // Set up event listeners for the prev/next buttons to handle scrolling
 nextButton.addEventListener('click', scrollToNextPage);
 prevButton.addEventListener('click', scrollToPrevPage);
@@ -22,7 +27,7 @@ prevButton.addEventListener('click', scrollToPrevPage);
 function scrollToNextPage() {
 	showcaseScroller.scrollTo({
 		left: showcaseScroller.scrollLeft + showcaseItemSize,
-		behavior: 'smooth'
+		behavior: prefersReducedMotion ? 'auto' : 'smooth' // Smooth scrolling if no preference for reduced motion
 	});
 }
 
