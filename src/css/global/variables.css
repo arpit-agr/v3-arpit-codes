@@ -34,7 +34,7 @@
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
 		/* TODO: check contrast and fix if necessary */
-		--color-brand-inverted: oklch(from var(--color-brand) calc(l * 2) c h);
+		--color-brand-inverted: oklch(66.47% 0.191 261.81);
 	}
 
 	@media (--OSdark) {
