@@ -1,7 +1,7 @@
 /* color variables */
 :root {
-	--color-brand: var(--indigo-7);
-	--color-brand-inverted: var(--indigo-5);
+	--color-brand: #0045d8;
+	--color-brand-inverted: #99adff;
 	--color-bg-1: var(--stone-0);
 	--color-bg-2: var(--stone-1);
 	--color-bg-3: var(--stone-2);
@@ -33,13 +33,11 @@
 
 	@media (--HDcolor) {
 		--color-brand: oklch(46.76% 0.2845 262.81);
-		/* TODO: check contrast and fix if necessary */
-		--color-brand-inverted: oklch(66.47% 0.191 261.81);
+		--color-brand-inverted: oklch(76.53% 0.13 272.52);
 	}
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
-		--color-brand-inverted: #ffea87;
 		--color-brand: var(--color-brand-inverted);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
@@ -58,10 +56,6 @@
 		--color-bg-button: var(--stone-11);
 		--color-bg-button-hover: var(--stone-10);
 		--color-bird-icon-path: var(--color-text-1);
-
-		@media (--HDcolor) {
-			--color-brand-inverted: oklch(93.38% 0.1252 97.71);
-		}
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
