@@ -166,6 +166,10 @@
 .post-tag-list[open] summary {
 	border-radius: unset;
 
+	&:focus-visible {
+		border-radius: var(--border-radius-1);
+	}
+
 	&::before {
 		content: '▼';
 		content: '▼' / '';
@@ -173,6 +177,24 @@
 }
 
 .post-tag-list a {
+	position: relative;
 	display: inline-block;
 	padding: var(--space-3xs);
+
+	&:before {
+		content: '';
+		position: absolute;
+		inset: var(--space-3xs);
+		border-radius: var(--border-radius-1);
+		transition: outline-offset var(--transition-base);
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+
+	&:focus-visible:before {
+		outline: var(--border-thickness-2) solid var(--color-brand);
+		outline-offset: var(--focus-ring-offset);
+	}
 }
