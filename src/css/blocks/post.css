@@ -157,6 +157,7 @@
 	}
 
 	& + * {
+		max-inline-size: unset;
 		padding: var(--button-padding-block) var(--button-padding-inline)
 			calc(var(--button-padding-block) + var(--underline-offset));
 		line-height: var(--leading-snug);

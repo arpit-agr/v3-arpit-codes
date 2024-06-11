@@ -8,9 +8,13 @@
 </clipboard-copy>
 
 <style>
-	clipboard-copy:not(:defined) {
-		opacity: 0.42;
-		cursor: not-allowed;
+	clipboard-copy {
+		border-radius: var(--border-radius-round);
+
+		&:not(:defined) {
+			opacity: 0.42;
+			cursor: not-allowed;
+		}
 	}
 </style>
 
