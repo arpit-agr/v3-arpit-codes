@@ -70,7 +70,6 @@
 	--border-thickness-1: 1px;
 	--border-thickness-2: 2px;
 	--border-radius-1: var(--space-4xs);
-	--border-radius-2: var(--space-s);
 	--border-radius-round: 100vmin;
 
 	--underline-offset: var(--space-4xs);

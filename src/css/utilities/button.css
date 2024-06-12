@@ -2,7 +2,7 @@
 	padding: var(--button-padding-block) var(--button-padding-inline);
 	background-color: var(--color-bg-button);
 	border: unset;
-	border-radius: var(--border-radius-1);
+	border-radius: var(--border-radius-round);
 	outline: var(--border-thickness-1) solid transparent;
 	color: var(--color-text-button);
 	line-height: var(--leading-flat);

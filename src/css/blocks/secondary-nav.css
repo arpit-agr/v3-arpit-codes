@@ -5,9 +5,21 @@
 		--gutter: var(--space-m-l);
 	}
 
+	a:before,
 	a:after {
 		content: '';
 		position: absolute;
-		inset: 0;
+		inset: calc(-1 * var(--space-xs));
+		background-color: transparent;
+		border-radius: var(--border-radius-1);
+	}
+
+	a:before {
+		z-index: -1;
+		transition: background var(--transition-base);
+	}
+
+	a:hover:before {
+		background-color: var(--color-bg-2);
 	}
 }
