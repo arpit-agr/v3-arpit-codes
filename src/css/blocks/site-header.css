@@ -27,23 +27,12 @@
 	order: 4;
 	position: sticky;
 	inset-block-end: 0;
-	-webkit-backdrop-filter: blur(0.75rem);
-	backdrop-filter: blur(0.75rem);
-	background: var(--color-bg-site-header);
+	background-color: var(--color-bg-1);
 	outline: var(--site-header-border-thickness) solid var(--color-border-1);
 	overflow-x: auto;
 	overflow-y: hidden;
 	z-index: 999;
 	transition: background var(--transition-base);
-
-	@media (--motionOK) {
-		animation: --slidein 0.8s;
-		animation-timing-function: var(--ease-1);
-
-		@supports (animation-timing-function: linear(0, 1)) {
-			animation-timing-function: var(--ease-spring-1);
-		}
-	}
 }
 
 .site-nav ul {
@@ -65,29 +54,17 @@
 				calc(0.5 * var(--primary-nav-padding-inline));
 			border-radius: var(--border-radius-1);
 			transition: outline-offset var(--transition-base);
-			/* z-index: -1; */
 		}
 
 		&:after {
 			--text-decoration-size: var(--border-thickness-1);
 			content: '';
 			position: absolute;
-
 			inset-inline-start: 50%;
 			inset-block-start: 0;
 			inline-size: var(--text-decoration-size);
 			block-size: calc(0.5 * var(--primary-nav-padding-block));
-			background-color: var(--color-underline);
-			transform: scaleY(0);
-			transform-origin: top;
 			translate: -50% 0;
-			transition: transform var(--transition-base);
-		}
-
-		@media (--mouse) {
-			&:hover:after {
-				transform: scaleY(1);
-			}
 		}
 
 		&:focus-visible {
@@ -102,7 +79,7 @@
 }
 
 .site-nav :is([aria-current='page'], [data-state='active']):after {
-	transform: scaleY(1);
+	background-color: var(--color-border-1);
 }
 
 @media (--forcedColors) {
@@ -113,15 +90,5 @@
 
 	.site-nav ul :is([aria-current='page'], [data-state='active']):after {
 		--text-decoration-size: var(--border-thickness-2);
-	}
-}
-
-@keyframes --slidein {
-	from {
-		translate: 0 100%;
-	}
-
-	to {
-		translate: 0 0%;
 	}
 }

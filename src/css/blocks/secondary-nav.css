@@ -16,7 +16,6 @@
 
 	a:before {
 		z-index: -1;
-		transition: background var(--transition-base);
 	}
 
 	a:hover:before {
