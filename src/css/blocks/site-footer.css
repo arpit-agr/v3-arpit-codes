@@ -2,12 +2,37 @@
 	order: 5;
 
 	a {
+		position: relative;
 		padding-block: var(--space-s);
+
+		&:focus-visible {
+			outline: none;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			inset: calc(1 / 1.5 * var(--space-s)) calc(-1 / 4 * var(--space-s));
+		}
+
+		&:focus-visible:before {
+			outline: var(--border-thickness-2) solid var(--color-text-2);
+			border-radius: var(--border-radius-1);
+		}
 	}
 }
 
+.repel {
+	--gutter: 0 var(--space-xs);
+}
+
 .socials {
-	--gutter: var(--space-xs);
+	--gutter: 0 var(--space-xs);
+
+	a {
+		display: inline-flex;
+		gap: var(--space-3xs);
+	}
 
 	svg {
 		block-size: 1em;

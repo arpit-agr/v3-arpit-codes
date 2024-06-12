@@ -4,10 +4,12 @@
 	-webkit-font-smoothing: antialiased;
 
 	a:hover {
-		color: var(--color-brand-inverted);
+		color: var(--color-text-inverted-2);
+		text-decoration-color: var(--color-underline-hover-inverted);
 	}
 
 	:focus-visible {
-		outline-color: var(--color-brand-inverted);
+		color: var(--color-text-inverted-2);
+		outline-color: var(--color-text-inverted-2);
 	}
 }

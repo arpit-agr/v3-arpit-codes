@@ -14,11 +14,12 @@
 		opacity var(--transition-base);
 
 	&:focus-visible {
+		color: var(--color-text-inverted-2);
 		opacity: 1;
 		inset-block-start: calc(
 			var(--primary-nav-padding-block) - var(--button-padding-block)
 		);
-		outline-color: var(--color-brand-inverted);
+		outline-color: var(--color-text-inverted-2);
 		transform: translateY(0);
 	}
 }
@@ -27,7 +28,7 @@
 	order: 4;
 	position: sticky;
 	inset-block-end: 0;
-	background-color: var(--color-bg-1);
+	background-color: var(--color-bg-site-header);
 	outline: var(--site-header-border-thickness) solid var(--color-border-1);
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -72,7 +73,7 @@
 		}
 
 		&:focus-visible:before {
-			outline: var(--border-thickness-2) solid var(--color-brand);
+			outline: var(--border-thickness-2) solid var(--color-text-2);
 			outline-offset: var(--focus-ring-offset);
 		}
 	}

@@ -1,29 +1,13 @@
 ---
-import MastodonVector from './MastodonVector.astro';
-import GithubVector from './GithubVector.astro';
-import RSSVector from './RSSVector.astro';
+import Socials from './Socials.astro';
+import FooterLink from './FooterLink.astro';
 ---
 
 <footer class="site-footer">
 	<div class="wrapper">
 		<div class="repel">
-			<a
-				class="text-step-000 leading-snug tracking-wider uppercase font-medium"
-				href="#top"
-			>
-				Back to Top ↑
-			</a>
-			<div class="socials cluster">
-				<a href="https://indieweb.social/@arpit">
-					<MastodonVector />
-				</a>
-				<a href="https://github.com/arpit-agr">
-					<GithubVector />
-				</a>
-				<a href="https://arpit.codes/rss.xml">
-					<RSSVector />
-				</a>
-			</div>
+			<Socials />
+			<FooterLink href="#top">↑ Back to Top</FooterLink>
 		</div>
 	</div>
 </footer>

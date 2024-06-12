@@ -27,7 +27,7 @@ body {
 	-webkit-font-smoothing: unset;
 
 	> * + *:not(.site-header, main, .site-footer) > * {
-		border-block-start: var(--border-thickness-1) solid var(--color-border-1);
+		border-block-start: var(--border-thickness-1) dashed var(--color-border-1);
 	}
 }
 
@@ -37,7 +37,7 @@ main {
 }
 
 main > *:not(.hero) + * {
-	border-block-start: var(--border-thickness-1) solid var(--color-border-1);
+	border-block-start: var(--border-thickness-1) dashed var(--color-border-1);
 }
 
 :where(
@@ -109,25 +109,30 @@ li {
 
 /* Sets the offset distance of an underline */
 :where(a, u, ins, abbr) {
+	text-decoration-thickness: max(0.05em, var(--border-thickness-1));
 	text-underline-offset: var(--underline-offset);
 }
 
 a {
 	color: inherit;
-	text-decoration-thickness: var(--border-thickness-1);
 	text-decoration-color: var(--color-underline);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
-	transition:
-		color var(--transition-base),
-		text-decoration-color var(--transition-base),
-		outline-offset var(--transition-base);
+	transition: outline-offset var(--transition-base);
 
 	&:hover {
-		color: var(--color-brand);
+		color: var(--color-text-2);
+		text-decoration-color: var(--color-underline-hover);
+
+		@media not (--forcedColors) {
+			text-decoration-skip-ink: none;
+			text-decoration-thickness: 0.5em;
+			text-underline-offset: -0.25em;
+		}
 	}
 
 	&:focus-visible {
+		color: var(--color-text-2);
 		text-decoration-line: none;
 		border-radius: var(--border-radius-1);
 	}
@@ -167,7 +172,7 @@ blockquote {
 		block-size: 1ex;
 
 		background-color: var(--color-bg-1);
-		color: var(--color-underline);
+		color: var(--color-blockquote);
 		font-size: 4em;
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
@@ -184,9 +189,9 @@ blockquote {
 		inline-size: var(--_width);
 		block-size: calc(100% - 1lh - ((var(--leading-normal) - 1) * 0.5lh));
 		align-self: end;
-		inset-block-end: calc((var(--leading-normal) - 1) * 0.5lh);
+		inset-block-end: calc((var(--leading-normal) - 1) * 0.25lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));
-		background-color: var(--color-underline);
+		background-color: var(--color-blockquote);
 		z-index: -1;
 	}
 
@@ -223,7 +228,7 @@ hr {
 
 /* Set foucs visible style */
 :where(:focus-visible) {
-	outline: var(--border-thickness-2) solid var(--color-brand);
+	outline: var(--border-thickness-2) solid var(--color-text-2);
 	outline-offset: var(--focus-ring-offset);
 }
 

@@ -1,0 +1,14 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+interface Props extends HTMLAttributes<'a'> {
+	href: string;
+}
+const {href} = Astro.props;
+---
+
+<a
+	class="text-step-000 leading-flat tracking-wider uppercase font-medium"
+	href={href}
+>
+	<slot />
+</a>

@@ -20,8 +20,8 @@
 	}
 
 	&:focus-visible {
-		outline: var(--border-thickness-2) solid var(--color-brand);
-		outline-offset: calc(3 * var(--focus-ring-offset));
+		outline: var(--border-thickness-2) solid var(--color-text-2);
+		outline-offset: var(--focus-ring-offset);
 	}
 
 	&:disabled {

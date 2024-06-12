@@ -23,7 +23,7 @@ const hasManyTags = postTags.length > 3;
 			</p>
 		</details>
 	) : (
-		<p class="post-tag-list text-step-00 tracking-wide flow-space-xs">
+		<p class="post-tag-list">
 			Tagged:
 			{postTags.map(tag => (
 				<a href={`/tags/${tag}/`} rel="tag">

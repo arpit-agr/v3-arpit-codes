@@ -1,40 +1,45 @@
+/* brand color variables */
+:root {
+	--color-brand: #ffdb2b;
+	--color-brand-inverted: #1f25ff;
+
+	@media (--HDcolor) {
+		--color-brand: oklch(89.56% 0.2111 96.25204535218742);
+		--color-brand-inverted: oklch(47.65% 0.313 266.82);
+	}
+}
+
 /* color variables */
 :root {
-	--color-brand: #0045d8;
-	--color-brand-inverted: #99adff;
-	--color-bg-1: var(--stone-0);
-	--color-bg-2: var(--stone-1);
-	--color-bg-3: var(--stone-2);
-	--color-bg-4: var(--stone-3);
-	--color-bg-5: var(--stone-4);
-	--color-bg-6: var(--stone-5);
-	--color-bg-inverted-1: var(--stone-12);
-	--color-bg-inverted-2: var(--stone-11);
-	--color-bg-inverted-3: var(--stone-10);
-	--color-bg-inverted-4: var(--stone-9);
-	--color-text-1: var(--stone-11);
-	--color-text-2: var(--stone-12);
-	--color-text-3: var(--stone-10);
-	--color-text-inverted-1: var(--stone-4);
-	--color-text-inverted-2: var(--stone-3);
-	--color-text-inverted-3: var(--stone-5);
-	--color-border-1: var(--stone-4);
-	--color-border-2: hsl(var(--stone-5-hsl) / 25%);
-	--color-border-3: hsl(var(--stone-5-hsl) / 12.5%);
-	--color-underline: hsl(var(--stone-12-hsl) / 87.5%);
-	--color-bg-site-header: hsl(var(--stone-0-hsl) / 75%);
+	--color-bg-1: var(--gray-0);
+	--color-bg-2: var(--gray-1);
+	--color-bg-3: var(--gray-2);
+	--color-bg-4: var(--gray-3);
+	--color-bg-5: var(--gray-4);
+	--color-bg-inverted-1: var(--gray-11);
+	--color-bg-inverted-2: var(--gray-10);
+	--color-bg-inverted-3: var(--gray-9);
+	--color-bg-inverted-4: var(--gray-8);
+	--color-text-1: var(--gray-11);
+	--color-text-2: var(--gray-12);
+	--color-text-3: var(--gray-10);
+	--color-text-inverted-1: var(--gray-3);
+	--color-text-inverted-2: var(--gray-2);
+	--color-text-inverted-3: var(--gray-4);
+	--color-border-1: var(--gray-4);
+	--color-border-2: var(--gray-6);
+	--color-underline: var(--color-border-2);
+	--color-underline-hover: var(--color-brand);
+	--color-underline-hover-inverted: var(--color-brand-inverted);
 	--color-border-hero: transparent;
+	--color-blockquote: var(--gray-8);
 	--color-counter: var(--color-text-2);
 	--color-counter-connector: var(--color-border-1);
 	--color-text-button: var(--color-text-2);
 	--color-bg-button: var(--color-bg-4);
 	--color-bg-button-hover: var(--color-bg-5);
 	--color-bird-icon-path: var(--color-text-2);
-
-	@media (--HDcolor) {
-		--color-brand: oklch(46.76% 0.2845 262.81);
-		--color-brand-inverted: oklch(76.53% 0.13 272.52);
-	}
+	--color-bg-site-header: var(--color-bg-1);
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
@@ -46,20 +51,19 @@
 		--color-text-1: var(--color-text-inverted-1);
 		--color-text-2: var(--color-text-inverted-2);
 		--color-text-3: var(--color-text-inverted-3);
-		--color-text-inverted-2: var(--stone-4);
-		--color-border-1: var(--stone-10);
-		--color-underline: hsl(var(--stone-2-hsl) / 87.5%);
-		--color-bg-site-header: hsl(var(--stone-12-hsl) / 75%);
+		--color-border-1: var(--gray-8);
+		--color-underline-hover: var(--color-underline-hover-inverted);
 		--color-border-hero: var(--color-border-1);
+		--color-blockquote: var(--gray-5);
 		--color-counter: var(--color-text-3);
 		--color-counter-connector: var(--color-border-hero);
-		--color-bg-button: var(--stone-10);
-		--color-bg-button-hover: var(--stone-9);
+		--color-bg-button: var(--gray-9);
+		--color-bg-button-hover: var(--gray-8);
 		--color-bird-icon-path: var(--color-text-1);
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
-		--color-underline: color-mix(in srgb, currentColor, transparent 12.5%);
+		--color-blockquote: color-mix(in srgb, currentColor, transparent 20%);
 	}
 }
 
@@ -73,7 +77,7 @@
 	--border-radius-round: 100vmin;
 
 	--underline-offset: var(--space-4xs);
-	--focus-ring-offset: var(--space-5xs);
+	--focus-ring-offset: var(--space-4xs);
 	--counter-size: var(--space-s);
 
 	--button-padding-block: 0.5em;
@@ -84,6 +88,7 @@
 /* @link https://utopia.fyi/clamp/calculator?a=320,1280,31.1—48.83|37.32—61.04&p=size-step */
 
 :root {
+	--size-step-00-0: clamp(0.9375rem, 0.8333rem + 0.5208vi, 1.25rem);
 	--size-step-3-4: clamp(1.9438rem, 1.5744rem + 1.8469vi, 3.0519rem);
 	--size-step-4-5: clamp(2.3325rem, 1.8383rem + 2.4708vi, 3.815rem);
 }

@@ -6,7 +6,6 @@
 		max-inline-size: fit-content;
 		font-size: var(--size-step-4-5);
 		word-break: break-word;
-		text-decoration-thickness: var(--border-thickness-2);
 	}
 
 	svg {

@@ -4,7 +4,10 @@ A common wrapper/container
 */
 .wrapper {
 	margin-inline: auto;
-	max-inline-size: min(var(--wrapper-max-width, 80rem), 100vw);
-	padding-inline-start: var(--page-gutter);
-	padding-inline-end: var(--page-gutter);
+	max-inline-size: min(
+		var(--wrapper-max-width, 80rem),
+		calc(100vw - (2 * var(--page-gutter)))
+	);
+	/* padding-inline-start: var(--page-gutter);
+	padding-inline-end: var(--page-gutter); */
 }

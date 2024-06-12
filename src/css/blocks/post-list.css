@@ -14,6 +14,10 @@
 		align-items: first baseline;
 	}
 
+	a {
+		max-inline-size: fit-content;
+	}
+
 	a:before {
 		content: '';
 		position: absolute;

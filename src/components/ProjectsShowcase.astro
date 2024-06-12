@@ -5,17 +5,19 @@ import ChevronRightVector from './ChevronRightVector.astro';
 import ChevronLeftVector from './ChevronLeftVector.astro';
 ---
 
-<div class="project-showcase-wrapper flow-space-l">
+<div class="project-showcase-wrapper flow-space-s">
 	<div class="project-showcase">
 		<ul class="project-list" role="list">
 			{
 				projects.map(project => {
 					return (
 						<li class="project-item">
-							<a class="project-link" href={project.url}>
-								<span class="visually-hidden">
-									Visit {project.title}'s site
-								</span>
+							<a
+								class="project-link leading-snug font-medium"
+								href={project.url}
+							>
+								{project.title}
+								<span class="visually-hidden">project site</span>
 							</a>
 							<ProjectMockup
 								imagePath={`/src/images/projects/${project.image}`}
@@ -28,7 +30,7 @@ import ChevronLeftVector from './ChevronLeftVector.astro';
 	</div>
 </div>
 
-<div class="project-showcase-controls-wrapper wrapper">
+<div class="project-showcase-controls-wrapper wrapper flow-space-zero">
 	<div class="project-showcase-controls cluster">
 		<button class="button" data-direction="prev" aria-label="Previous">
 			<ChevronLeftVector />

@@ -1,4 +1,4 @@
 .hero:has(+ *:not(.post-featured-img)) > :first-child {
-	border-block-end: var(--site-header-border-thickness) solid
+	border-block-end: var(--site-header-border-thickness) dashed
 		var(--color-border-hero);
 }
