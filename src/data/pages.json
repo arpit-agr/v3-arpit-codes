@@ -7,7 +7,7 @@
 	},
 	{
 		"title": "Blog Archive",
-		"description": "Explore my blog, a place for me to write and collect what I'm learning across different topics that pique my curiosity",
+		"description": "Explore my blog, a place for me to write and collect what I'm learning across different topics that pique my curiosity.",
 		"linkLabel": "Blog",
 		"linkURL": "/blog/"
 	},
@@ -23,25 +23,25 @@
 	},
 	{
 		"title": "Design Principles",
-		"description": "Explore a compilation of principles crafted by experts that shape my approach to web design and development",
+		"description": "Explore a compilation of principles crafted by experts that shape my approach to web design and development.",
 		"linkLabel": "Design Principles",
 		"linkURL": "/design-principles/"
 	},
 	{
 		"title": "Bookshelf",
-		"description": "Browse through my collection of books, offering insights into my interests and inspirations",
+		"description": "Browse through my collection of books, offering insights into my interests and inspirations.",
 		"linkLabel": "Bookshelf",
 		"linkURL": "/bookshelf/"
 	},
 	{
 		"title": "Questionnaire",
-		"description": "A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process",
+		"description": "A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process.",
 		"linkLabel": "Questionnaire",
 		"linkURL": "/questionnaire/"
 	},
 	{
 		"title": "Tag Index",
-		"description": "Explore a comprehensive list of tags covering a wide range of topics and discover related posts",
+		"description": "Explore a comprehensive list of tags covering a wide range of topics and discover related posts.",
 		"linkLabel": "Tag Index",
 		"linkURL": "/tags/"
 	}
