@@ -1,6 +1,6 @@
 ---
 title: 'Inner And Outer Values Of `display`'
-description: 'Rachel Andrew explains what really happens when we change the value of `display` on an element in light of the two-value syntax.'
+standfirst: 'Rachel Andrew explains what really happens when we change the value of `display` on an element in light of the two-value syntax.'
 pubDate: 2024-05-13
 tags: ['display', 'css', 'rachel-andrew']
 ---

@@ -49,12 +49,12 @@
 	}
 }
 
-.post-description,
-.post-pubdate {
+.standfirst,
+.pubdate {
 	--flow-space: var(--space-xs);
 }
 
-.post-description {
+.standfirst {
 	text-wrap: pretty;
 
 	@media (--md-n-above) {

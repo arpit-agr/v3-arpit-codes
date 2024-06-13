@@ -1,6 +1,6 @@
 ---
 title: "Interviewing the Prime Minister: Karan Thapar's Guidelines"
-description: 'Karan Thapar lays out a set of guidelines for how journalists should hold power to account and give voice to the concerns of the public.'
+standfirst: 'Karan Thapar lays out a set of guidelines for how journalists should hold power to account and give voice to the concerns of the public.'
 pubDate: 2024-05-26
 tags:
   [

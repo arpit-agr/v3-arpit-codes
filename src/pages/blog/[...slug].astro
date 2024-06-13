@@ -17,19 +17,19 @@ const {post} = Astro.props;
 const {Content} = await post.render();
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.standfirst}>
 	<main class="post" id="main">
 		<article>
 			<HeroSection>
 				<h1 {...post.data.draft && {'data-draft': true}}>{post.data.title}</h1>
 				{
-					post.data.description && (
-						<p class="post-description text-step-1 leading-snug">
-							{post.data.description}
+					post.data.standfirst && (
+						<p class="standfirst text-step-1 leading-snug">
+							{post.data.standfirst}
 						</p>
 					)
 				}
-				<p class="post-pubdate text-step-00 tracking-wide">
+				<p class="pubdate text-step-00 tracking-wide">
 					<span class="visually-hidden">Published on</span>
 					<FormattedDate date={post.data.pubDate} />
 				</p>
