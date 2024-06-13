@@ -48,12 +48,17 @@ export async function GET(context: AstroGlobal) {
 				const imagePathPrefix = `/src/content/blog/${post.slug}/${prefixRemoved}`;
 
 				// call the dynamic import and return the module
-				const imagePath = await imagesGlob[imagePathPrefix]?.()?.then(res => res.default);
+				const imagePath = await imagesGlob[imagePathPrefix]?.()?.then(
+					res => res.default
+				);
 
 				if (imagePath) {
 					const optimizedImg = await getImage({src: imagePath});
 					// set the correct path to the optimized image
-					img.setAttribute('src', context.site + optimizedImg.src.replace('/', ''));
+					img.setAttribute(
+						'src',
+						context.site + optimizedImg.src.replace('/', '')
+					);
 				}
 			} else if (src.startsWith('/images')) {
 				// images starting with `/images/` is the public dir
@@ -65,7 +70,7 @@ export async function GET(context: AstroGlobal) {
 
 		feed.push({
 			title: post.data.title,
-			description: post.data.description,
+			description: post.data.standfirst,
 			pubDate: post.data.pubDate,
 			categories: post.data.tags,
 			link: `/blog/${post.slug}`,
