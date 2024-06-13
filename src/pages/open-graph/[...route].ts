@@ -17,7 +17,13 @@ const pages = Object.fromEntries(
 
 // Generate pages for blog posts
 const posts = Object.fromEntries(
-	reversedBlogPosts.map(({slug, data}) => [`blog/${slug}`, data])
+	reversedBlogPosts.map(({slug, data}) => [
+		`blog/${slug}`,
+		{
+			title: data.title,
+			description: data.standfirst
+		}
+	])
 );
 
 // Generate pages for individual tag pages
