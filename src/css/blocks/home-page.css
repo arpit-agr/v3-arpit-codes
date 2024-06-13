@@ -26,6 +26,10 @@
 	&:hover .circle {
 		--offset: 180px;
 	}
+
+	&:focus-visible {
+		--color-circle-stroke: transparent;
+	}
 }
 
 .circle {

@@ -121,18 +121,11 @@ a {
 	transition: outline-offset var(--transition-base);
 
 	&:hover {
-		color: var(--color-text-2);
-		text-decoration-color: var(--color-underline-hover);
-
-		@media not (--forcedColors) {
-			text-decoration-skip-ink: none;
-			text-decoration-thickness: 0.5em;
-			text-underline-offset: -0.25em;
-		}
+		color: var(--color-brand);
+		text-decoration-color: currentColor;
 	}
 
 	&:focus-visible {
-		color: var(--color-text-2);
 		text-decoration-line: none;
 		border-radius: var(--border-radius-1);
 	}
