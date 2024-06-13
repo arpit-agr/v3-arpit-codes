@@ -1,3 +1,7 @@
+a[data-draft]:hover {
+	color: red;
+}
+
 [data-draft]:after {
 	content: 'Draft';
 	display: inline-block;
@@ -8,7 +12,7 @@
 	font-weight: var(--font-medium);
 	text-transform: uppercase;
 	vertical-align: middle;
-	outline: var(--border-thickness-2) solid var(--color-underline);
+	outline: 0.1em solid;
 }
 
 :is(.post-entry, .principle-entry) [data-draft]:after {
