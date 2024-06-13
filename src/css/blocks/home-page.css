@@ -17,3 +17,41 @@
 .homepage-post-list-header {
 	--repel-vertical-alignment: baseline;
 }
+
+.hero-email {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+
+	&:hover .circle {
+		--offset: 180px;
+	}
+}
+
+.circle {
+	max-inline-size: unset;
+
+	position: absolute;
+	inset-inline-start: 50%;
+	inset-block-start: 50%;
+	translate: -50% -55%;
+	block-size: 133%;
+	inline-size: calc(100% + 3ch);
+	fill: none;
+	stroke-linecap: round;
+	stroke-dasharray: var(--offset, 69px) 278px;
+	stroke-dashoffset: 361px;
+
+	@media (--mouse) {
+		@media (--motionOK) {
+			transition-property: stroke-dasharray;
+			transition-duration: 0.5s;
+			transition-timing-function: linear;
+			pointer-events: none;
+		}
+	}
+
+	path {
+		stroke: var(--color-circle-stroke);
+	}
+}
