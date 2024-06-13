@@ -27,7 +27,7 @@
 }
 
 .socials {
-	--gutter: 0 var(--space-xs);
+	--gutter: 0 var(--space-s);
 
 	a {
 		display: inline-flex;

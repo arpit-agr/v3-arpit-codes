@@ -23,9 +23,9 @@
 	--color-text-1: var(--gray-11);
 	--color-text-2: var(--gray-12);
 	--color-text-3: var(--gray-10);
-	--color-text-inverted-1: var(--gray-3);
-	--color-text-inverted-2: var(--gray-2);
-	--color-text-inverted-3: var(--gray-4);
+	--color-text-inverted-1: var(--gray-1);
+	--color-text-inverted-2: var(--gray-0);
+	--color-text-inverted-3: var(--gray-2);
 	--color-border-1: var(--gray-4);
 	--color-border-2: var(--gray-6);
 	--color-underline: var(--color-border-2);
@@ -40,6 +40,7 @@
 	--color-bg-button-hover: var(--color-bg-5);
 	--color-bird-icon-path: var(--color-text-2);
 	--color-bg-site-header: var(--color-bg-1);
+	--color-circle-stroke: var(--gray-6);
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
@@ -64,6 +65,7 @@
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
 		--color-blockquote: color-mix(in srgb, currentColor, transparent 20%);
+		--color-circle-stroke: color-mix(in srgb, currentColor, transparent 50%);
 	}
 }
 
@@ -105,7 +107,7 @@
 :root {
 	--site-header-border-thickness: var(--border-thickness-1);
 	--primary-nav-padding-block: 3ex;
-	--primary-nav-padding-inline: var(--space-xs);
+	--primary-nav-padding-inline: var(--space-2xs);
 	--primary-nav-font-size: var(--size-step-000);
 	--primary-nav-leading: var(--leading-flat);
 	--primary-nav-height: calc(
