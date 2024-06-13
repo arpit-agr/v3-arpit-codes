@@ -55,14 +55,14 @@ export const {getStaticPaths, GET} = OGImageRoute({
 			padding: 60,
 			font: {
 				title: {
-					color: [235, 237, 239],
+					color: [248, 249, 250],
 					size: titleSize,
 					weight: 'SemiBold',
 					lineHeight: 1.4,
 					families: ['Geist', 'Arial']
 				},
 				description: {
-					color: [209, 214, 216],
+					color: [241, 243, 245],
 					size: descriptionSize,
 					weight: 'Normal',
 					lineHeight: 1.6,
