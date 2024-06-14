@@ -68,6 +68,7 @@
 .project-link {
 	order: 3;
 	text-decoration-line: none;
+	text-align: end;
 
 	&:after {
 		content: '';
