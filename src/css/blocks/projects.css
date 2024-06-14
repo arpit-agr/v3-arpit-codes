@@ -3,7 +3,10 @@
 	grid-template-columns:
 		[fullbleed-start] minmax(var(--page-gutter), 1fr)
 		[content-start]
-		min(var(--wrapper-max-width, 75rem), calc(100vw - (2 * var(--page-gutter))))
+		min(
+			var(--wrapper-max-width, calc(80rem - (2 * var(--page-gutter)))),
+			(100vw - (2 * var(--page-gutter)))
+		)
 		[content-end]
 		minmax(var(--page-gutter), 1fr) [fullbleed-end];
 }

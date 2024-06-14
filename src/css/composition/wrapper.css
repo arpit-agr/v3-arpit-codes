@@ -4,8 +4,6 @@ A common wrapper/container
 */
 .wrapper {
 	margin-inline: auto;
-	max-inline-size: min(
-		var(--wrapper-max-width, 75rem),
-		calc(100vw - (2 * var(--page-gutter)))
-	);
+	max-inline-size: min(var(--wrapper-max-width, 80rem), 100vw);
+	padding-inline: var(--page-gutter);
 }
