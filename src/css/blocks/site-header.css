@@ -24,18 +24,25 @@
 	}
 }
 
+.site-header,
+.site-footer {
+	background-image: linear-gradient(
+		to right,
+		var(--color-bg-2),
+		50%,
+		var(--color-bg-site-header)
+	);
+}
+
 .site-header {
 	order: 4;
 	position: sticky;
 	inset-block-end: 0;
-	background-color: var(--color-bg-site-header);
 
 	border-width: var(--site-header-border-thickness) 0 0 0;
 	border-style: solid;
 	border-image: linear-gradient(
-			45deg,
-			var(--color-border-1),
-			var(--page-gutter),
+			to right,
 			var(--color-border-site-header),
 			var(--color-border-1)
 		)
