@@ -15,22 +15,24 @@ const {postsCollection} = Astro.props;
 
 <div class="post-list-wrapper flow">
 	<slot />
-	<ul class="post-list flow flow-space-l" role="list">
+	<ol class="post-list flow flow-space-l" reversed>
 		{
 			postsCollection.map((post: Post) => (
-				<li class="post-entry grid">
-					<a
-						class="text-pretty"
-						href={`/blog/${post.slug}/`}
-						{...(post.data.draft && {'data-draft': true})}
-					>
-						{post.data.title}
-					</a>
-					<div class="text-step-00 tracking-wide">
-						<FormattedDate date={post.data.pubDate} />
+				<li>
+					<div class="post-entry grid">
+						<a
+							class="text-pretty"
+							href={`/blog/${post.slug}/`}
+							{...(post.data.draft && {'data-draft': true})}
+						>
+							{post.data.title}
+						</a>
+						<div class="text-step-00 tracking-wide">
+							<FormattedDate date={post.data.pubDate} />
+						</div>
 					</div>
 				</li>
 			))
 		}
-	</ul>
+	</ol>
 </div>
