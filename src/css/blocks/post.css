@@ -81,7 +81,7 @@
 	}
 
 	+ * {
-		--region-start-space: var(--space-l-xl);
+		--region-start-space: var(--space-l);
 	}
 }
 

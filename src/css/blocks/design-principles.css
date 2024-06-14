@@ -1,5 +1,5 @@
 .design-principles-list {
-	--_region-padding: var(--region-space, var(--space-xl-2xl));
+	--_region-padding: var(--region-space, var(--space-xl));
 	position: relative;
 
 	&::before {

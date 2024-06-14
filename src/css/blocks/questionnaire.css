@@ -1,5 +1,5 @@
 .questionnaire-wrapper {
-	--_region-padding: var(--region-space, var(--space-xl-2xl));
+	--_region-padding: var(--region-space, var(--space-xl));
 	--flow-space: var(--space-l);
 	--gutter: var(--space-l);
 	grid-template-columns: 1fr;

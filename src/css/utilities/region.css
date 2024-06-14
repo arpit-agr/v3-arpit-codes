@@ -9,10 +9,10 @@ Consistent block padding for page sections
 .region {
 	padding-block-start: var(
 		--region-start-space,
-		var(--region-space, var(--space-xl-2xl))
+		var(--region-space, var(--space-xl))
 	);
 	padding-block-end: var(
 		--region-end-space,
-		var(--region-space, var(--space-xl-2xl))
+		var(--region-space, var(--space-xl))
 	);
 }
