@@ -122,12 +122,7 @@ a {
 
 	&:hover {
 		color: var(--color-brand);
-		text-decoration-color: currentColor;
-	}
-
-	&:focus-visible {
-		text-decoration-line: none;
-		border-radius: var(--border-radius-1);
+		text-decoration-color: var(--color-underline-hover);
 	}
 }
 
@@ -221,8 +216,10 @@ hr {
 
 /* Set foucs visible style */
 :where(:focus-visible) {
+	text-decoration-line: none;
 	outline: var(--border-thickness-2) solid var(--color-text-2);
 	outline-offset: var(--focus-ring-offset);
+	border-radius: var(--border-radius-1);
 }
 
 :target {

@@ -9,18 +9,20 @@ const hasManyTags = postTags.length > 3;
 
 {
 	hasManyTags ? (
-		<details class="post-tag-list">
-			<summary class="button">
+		<details class="post-tag-list flow flow-space-2xs">
+			<summary>
 				Tagged: {postTags.slice(0, 2).join(', ')} and {postTags.length - 2}{' '}
 				others
 			</summary>
-			<p>
+			<ul class="cluster" role="list">
 				{postTags.map(tag => (
-					<a href={`/tags/${tag}/`} rel="tag">
-						{tag}
-					</a>
+					<li>
+						<a href={`/tags/${tag}/`} rel="tag">
+							{tag}
+						</a>
+					</li>
 				))}
-			</p>
+			</ul>
 		</details>
 	) : (
 		<p class="post-tag-list">

@@ -63,7 +63,7 @@
 		order: 2;
 		flex-grow: 1;
 		block-size: var(--border-thickness-1);
-		background: currentColor;
+		background: var(--color-underline);
 		align-self: center;
 	}
 }
@@ -91,6 +91,10 @@
 
 .project-item:has(:hover) {
 	color: var(--color-brand);
+
+	.project-item-header:before {
+		background: var(--color-underline-hover);
+	}
 
 	picture {
 		scale: 1.0125;
