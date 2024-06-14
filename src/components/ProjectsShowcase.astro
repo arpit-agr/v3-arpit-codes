@@ -9,16 +9,18 @@ import ChevronLeftVector from './ChevronLeftVector.astro';
 	<div class="project-showcase">
 		<ul class="project-list" role="list">
 			{
-				projects.map(project => {
+				projects.map((project, index) => {
 					return (
 						<li class="project-item">
-							<a
-								class="project-link leading-snug font-medium"
-								href={project.url}
-							>
-								{project.title}
-								<span class="visually-hidden">project site</span>
-							</a>
+							<div class="project-item-header text-step-000 leading-flat tracking-wider uppercase font-medium">
+								<p class="project-index" aria-hidden="true">
+									0{index + 1}
+								</p>
+								<a class="project-link" href={project.url}>
+									<span class="project-title">{project.title}</span>
+									<span class="visually-hidden">project site</span>
+								</a>
+							</div>
 							<ProjectMockup
 								imagePath={`/src/images/projects/${project.image}`}
 							/>
