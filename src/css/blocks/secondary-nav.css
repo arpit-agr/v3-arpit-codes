@@ -5,13 +5,22 @@
 		--gutter: var(--space-m-l);
 	}
 
+	dd {
+		text-wrap: pretty;
+
+		@media (--md-n-above) {
+			text-wrap: balance;
+		}
+	}
+
 	a:before,
 	a:after {
 		content: '';
 		position: absolute;
 		inset: calc(-1 * var(--space-xs));
 		background-color: transparent;
-		border-radius: var(--border-radius-1);
+		border-radius: var(--border-radius-2);
+		transition: background-color var(--transition-base);
 	}
 
 	a:before {

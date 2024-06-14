@@ -23,6 +23,12 @@
 	}
 }
 
-.post-tag-list ul {
-	--gutter: 1ex 1ch;
+.post-tag-list {
+	ul {
+		--gutter: 1ex 0;
+	}
+
+	a {
+		padding: var(--space-3xs);
+	}
 }

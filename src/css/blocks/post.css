@@ -26,7 +26,7 @@
 	pre {
 		padding: var(--space-xs) var(--space-s);
 		border: var(--border-thickness-1) solid transparent;
-		border-radius: var(--border-radius-1);
+		border-radius: var(--border-radius-2);
 		tab-size: 2;
 		-webkit-font-smoothing: antialiased;
 
@@ -77,7 +77,7 @@
 	}
 
 	img {
-		outline: var(--border-thickness-1) solid var(--color-bg-inverted-1);
+		outline: var(--border-thickness-1) solid var(--color-border-1);
 	}
 
 	+ * {

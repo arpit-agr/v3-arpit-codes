@@ -39,6 +39,7 @@
 	--color-bg-button-hover: var(--color-bg-5);
 	--color-bird-icon-path: var(--color-text-2);
 	--color-bg-site-header: var(--color-bg-1);
+	--color-border-site-header: var(--gray-5);
 	--color-circle-stroke: var(--gray-6);
 
 	@media (--OSdark) {
@@ -60,6 +61,7 @@
 		--color-bg-button: var(--gray-9);
 		--color-bg-button-hover: var(--gray-8);
 		--color-bird-icon-path: var(--color-text-1);
+		--color-border-site-header: var(--gray-7);
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
@@ -75,6 +77,7 @@
 	--border-thickness-1: 1px;
 	--border-thickness-2: 2px;
 	--border-radius-1: var(--space-4xs);
+	--border-radius-2: var(--space-2xs);
 	--border-radius-round: 100vmin;
 
 	--underline-offset: var(--space-3xs);
@@ -92,6 +95,15 @@
 	--size-step-00-0: clamp(0.9375rem, 0.8333rem + 0.5208vi, 1.25rem);
 	--size-step-3-4: clamp(1.9438rem, 1.5744rem + 1.8469vi, 3.0519rem);
 	--size-step-4-5: clamp(2.3325rem, 1.8383rem + 2.4708vi, 3.815rem);
+}
+
+/* shadow variables */
+:root {
+	/* open-props var(--shadow-2) */
+	--site-header-shadow: 0 -3px 5px -2px
+			hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+		0 -7px 14px -5px
+			hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
 }
 
 /* transitions variables */

@@ -29,7 +29,18 @@
 	position: sticky;
 	inset-block-end: 0;
 	background-color: var(--color-bg-site-header);
-	outline: var(--site-header-border-thickness) solid var(--color-border-2);
+
+	border-width: var(--site-header-border-thickness) 0 0 0;
+	border-style: solid;
+	border-image: linear-gradient(
+			45deg,
+			var(--color-border-1),
+			var(--page-gutter),
+			var(--color-border-site-header),
+			var(--color-border-1)
+		)
+		30;
+	box-shadow: var(--site-header-shadow);
 	overflow-x: auto;
 	overflow-y: hidden;
 	z-index: 999;
@@ -80,7 +91,7 @@
 }
 
 .site-nav :is([aria-current='page'], [data-state='active']):after {
-	background-color: var(--color-border-2);
+	background-color: var(--color-border-site-header);
 }
 
 @media (--forcedColors) {
