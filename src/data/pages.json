@@ -22,6 +22,12 @@
 		"linkURL": "#get-in-touch"
 	},
 	{
+		"title": "Questionnaire",
+		"description": "A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process.",
+		"linkLabel": "Questionnaire",
+		"linkURL": "/questionnaire/"
+	},
+	{
 		"title": "Design Principles",
 		"description": "Explore a compilation of principles crafted by experts that shape my approach to web design and development.",
 		"linkLabel": "Design Principles",
@@ -32,12 +38,6 @@
 		"description": "Browse through my collection of books, offering insights into my interests and inspirations.",
 		"linkLabel": "Bookshelf",
 		"linkURL": "/bookshelf/"
-	},
-	{
-		"title": "Questionnaire",
-		"description": "A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process.",
-		"linkLabel": "Questionnaire",
-		"linkURL": "/questionnaire/"
 	},
 	{
 		"title": "Tag Index",
