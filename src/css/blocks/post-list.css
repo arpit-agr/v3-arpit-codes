@@ -17,7 +17,7 @@
 		}
 
 		li {
-			padding-inline-start: var(--space-2xs);
+			padding-inline-start: var(--space-3xs);
 			list-style-type: decimal;
 		}
 	}

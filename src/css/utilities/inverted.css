@@ -3,11 +3,16 @@
 	color: var(--color-text-inverted-1);
 	-webkit-font-smoothing: antialiased;
 
+	a {
+		text-decoration-color: var(--color-underline-inverted);
+	}
+
 	a:hover {
+		--color-underline-inverted: currentColor;
 		color: var(--color-brand-inverted);
 	}
 
 	:focus-visible {
-		outline-color: var(--color-text-inverted-2);
+		outline-color: var(--color-brand-inverted);
 	}
 }

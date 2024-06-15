@@ -29,6 +29,7 @@
 	--color-border-1: var(--gray-3);
 	--color-border-2: var(--gray-9);
 	--color-underline: var(--color-border-2);
+	--color-underline-inverted: var(--color-border-1);
 	--color-underline-hover: currentColor;
 	--color-border-hero: transparent;
 	--color-blockquote: var(--gray-8);
@@ -40,7 +41,6 @@
 	--color-bird-icon-path: var(--color-text-2);
 	--color-bg-site-header: var(--color-bg-1);
 	--color-border-site-header: var(--gray-5);
-	--color-circle-stroke: var(--gray-6);
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
@@ -54,6 +54,7 @@
 		--color-text-3: var(--color-text-inverted-3);
 		--color-border-1: var(--gray-9);
 		--color-border-2: var(--gray-3);
+		--color-underline-inverted: var(--color-border-2);
 		--color-border-hero: var(--color-border-1);
 		--color-blockquote: var(--gray-5);
 		--color-counter: var(--color-text-3);
@@ -66,7 +67,6 @@
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
 		--color-blockquote: color-mix(in srgb, currentColor, transparent 20%);
-		--color-circle-stroke: color-mix(in srgb, currentColor, transparent 50%);
 	}
 }
 
@@ -81,7 +81,6 @@
 	--border-radius-round: 100vmin;
 
 	--underline-offset: var(--space-3xs);
-	--focus-ring-offset: var(--space-4xs);
 	--counter-size: var(--space-s);
 
 	--button-padding-block: 0.5em;
@@ -112,6 +111,12 @@
 	--transition-movement: 200ms linear;
 	--transition-fade: 300ms ease;
 	--transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+}
+
+/* focus ring */
+:root {
+	--focus-ring: var(--border-thickness-2) solid var(--color-brand);
+	--focus-ring-offset: var(--space-5xs);
 }
 
 /* site header variables */

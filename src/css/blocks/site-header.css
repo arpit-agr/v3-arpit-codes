@@ -19,7 +19,7 @@
 		inset-block-start: calc(
 			var(--primary-nav-padding-block) - var(--button-padding-block)
 		);
-		outline-color: var(--color-text-inverted-2);
+		outline-color: var(--color-brand-inverted);
 		transform: translateY(0);
 	}
 }
@@ -91,7 +91,7 @@
 		}
 
 		&:focus-visible:before {
-			outline: var(--border-thickness-2) solid var(--color-text-2);
+			outline: var(--focus-ring);
 			outline-offset: var(--focus-ring-offset);
 		}
 	}

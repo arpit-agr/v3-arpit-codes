@@ -220,7 +220,7 @@ hr {
 /* Set foucs visible style */
 :where(:focus-visible) {
 	text-decoration-line: none;
-	outline: var(--border-thickness-2) solid var(--color-text-2);
+	outline: var(--focus-ring);
 	outline-offset: var(--focus-ring-offset);
 	border-radius: var(--border-radius-1);
 }

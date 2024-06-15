@@ -32,7 +32,7 @@
 
 		&:focus-visible {
 			--focus-ring-offset: var(--space-3xs);
-			outline: var(--border-thickness-2) solid var(--color-text-2);
+			outline: var(--focus-ring);
 		}
 	}
 

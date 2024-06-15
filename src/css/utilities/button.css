@@ -3,7 +3,7 @@
 	background-color: var(--color-bg-button);
 	border: unset;
 	border-radius: var(--border-radius-round);
-	outline: var(--border-thickness-1) solid transparent;
+	outline: var(--border-thickness-1) solid transparent; /* For a11y in high contrast */
 	color: var(--color-text-button);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
@@ -20,8 +20,8 @@
 	}
 
 	&:focus-visible {
-		outline: var(--border-thickness-2) solid var(--color-text-2);
-		outline-offset: var(--focus-ring-offset);
+		--focus-ring-offset: var(--space-4xs);
+		outline: var(--focus-ring);
 	}
 
 	&:disabled {

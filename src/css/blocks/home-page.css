@@ -24,11 +24,12 @@
 	text-decoration: none;
 
 	&:hover .circle {
-		--offset: 180px;
+		/* --offset: 180px; */
+		--offset: 162px;
 	}
 
-	&:focus-visible {
-		--color-circle-stroke: transparent;
+	&:focus-visible .circle {
+		--color-underline-inverted: transparent;
 	}
 }
 
@@ -38,7 +39,7 @@
 	position: absolute;
 	inset-inline-start: 50%;
 	inset-block-start: 50%;
-	translate: -50% -55%;
+	translate: -48% -56%;
 	block-size: 133%;
 	inline-size: calc(100% + 3ch);
 	fill: none;
@@ -48,14 +49,13 @@
 
 	@media (--mouse) {
 		@media (--motionOK) {
-			transition-property: stroke-dasharray;
-			transition-duration: 0.5s;
-			transition-timing-function: linear;
+			--color-underline-inverted: currentColor;
+			transition: stroke-dasharray var(--transition-base);
 			pointer-events: none;
 		}
 	}
 
 	path {
-		stroke: var(--color-circle-stroke);
+		stroke: var(--color-underline-inverted);
 	}
 }
