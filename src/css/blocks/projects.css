@@ -8,11 +8,6 @@
 	overscroll-behavior-x: contain;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
-
-	scroll-padding-inline: max(
-		var(--page-gutter),
-		calc((100vw - var(--_max-content-width)) / 2)
-	);
 }
 
 .project-showcase [href='#latest-posts'] {
@@ -37,6 +32,13 @@
 	align-items: center;
 	gap: var(--page-gutter);
 	transition: opacity var(--transition-base);
+
+	> :last-child {
+		scroll-margin-inline-end: max(
+			var(--page-gutter),
+			calc((100vw - var(--_max-content-width)) / 2)
+		);
+	}
 
 	&:after {
 		content: '';
