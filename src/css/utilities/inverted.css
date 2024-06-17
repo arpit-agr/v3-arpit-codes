@@ -3,16 +3,24 @@
 	color: var(--color-text-inverted-1);
 	-webkit-font-smoothing: antialiased;
 
-	a {
-		text-decoration-color: var(--color-underline-inverted);
-	}
-
-	a:hover {
-		--color-underline-inverted: currentColor;
-		color: var(--color-brand-inverted);
-	}
-
 	:focus-visible {
 		outline-color: var(--color-brand-inverted);
+	}
+
+	@media (--forcedColors) {
+		-webkit-font-smoothing: auto;
+
+		@media (--OSdark) {
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+}
+
+.inverted a {
+	text-decoration-color: var(--color-underline-inverted);
+
+	&:hover {
+		--color-underline-inverted: currentColor;
+		color: var(--color-brand-inverted);
 	}
 }

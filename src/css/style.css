@@ -42,6 +42,7 @@ Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom
 @import 'composition/switcher.css' layer(utilities);
 @import 'composition/wrapper.css' layer(utilities);
 @import 'utilities/btn.css' layer(utilities);
+@import 'utilities/fullbleed-grid.css' layer(utilities);
 @import 'utilities/inverted.css' layer(utilities);
 @import 'utilities/region.css' layer(utilities);
 @import 'utilities/text-styles.css' layer(utilities);

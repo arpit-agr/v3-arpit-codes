@@ -2,11 +2,12 @@
 	padding: var(--button-padding-block) var(--button-padding-inline);
 	background-color: var(--color-bg-button);
 	border: unset;
-	border-radius: var(--border-radius-round);
+	border-radius: var(--border-radius-2);
 	outline: var(--border-thickness-1) solid transparent; /* For a11y in high contrast */
 	color: var(--color-text-button);
 	line-height: var(--leading-flat);
 	text-decoration-line: none;
+	-webkit-font-smoothing: antialiased;
 
 	transition:
 		opacity var(--transition-base),
@@ -17,10 +18,11 @@
 
 	&:hover {
 		background-color: var(--color-bg-button-hover);
+		color: var(--color-text-button-hover);
 	}
 
 	&:focus-visible {
-		/* --focus-ring-offset: var(--space-4xs); */
+		--focus-ring-offset: var(--space-4xs);
 		outline: var(--focus-ring);
 	}
 
@@ -28,14 +30,19 @@
 		opacity: 0.42;
 		cursor: not-allowed;
 	}
+
+	@media (--forcedColors) {
+		-webkit-font-smoothing: auto;
+
+		@media (--OSdark) {
+			-webkit-font-smoothing: antialiased;
+		}
+	}
 }
 
-.inverted.btn {
-	background-color: var(--color-bg-inverted-2);
-	color: var(--color-text-inverted-1);
-
-	&:hover {
-		background-color: var(--color-bg-inverted-3);
-		color: var(--color-text-inverted-2);
-	}
+[data-btn='secondary'] {
+	--color-text-button: var(--color-text-2);
+	--color-text-button-hover: var(--color-text-1);
+	--color-bg-button: var(--color-bg-4);
+	--color-bg-button-hover: var(--color-bg-5);
 }

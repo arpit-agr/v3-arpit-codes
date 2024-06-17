@@ -1,6 +1,33 @@
-<a
-	href="#main"
-	class="inverted tracking-wide leading-flat text-uppercase-medium"
->
-	Skip to main
-</a>
+<div class="fullbleed-grid">
+	<a href="#main" class="btn small-text" data-btn="inverted">Skip to main</a>
+</div>
+
+<style>
+	div {
+		position: absolute;
+		inline-size: 100vw;
+
+		opacity: 0;
+		transform: translateY(-100%);
+		transition:
+			transform var(--transition-base),
+			opacity var(--transition-base);
+		z-index: 1000;
+
+		&:focus-within {
+			opacity: 1;
+			transform: translateY(0);
+			inset-block-start: calc(1 / 4 * var(--space-xl));
+		}
+	}
+
+	a {
+		max-inline-size: fit-content;
+		grid-column: content;
+
+		&:focus-visible {
+			--focus-ring-offset: calc(-1 * var(--space-4xs));
+			outline-color: var(--color-brand-inverted);
+		}
+	}
+</style>
