@@ -12,6 +12,7 @@
 }
 
 .project-showcase {
+	position: relative;
 	grid-column: fullbleed;
 	display: grid;
 	grid-template-columns: inherit;
@@ -25,6 +26,22 @@
 		var(--page-gutter),
 		calc((100vw - var(--_max-content-width)) / 2)
 	);
+}
+
+.project-showcase [href='#latest-posts'] {
+	position: absolute;
+	inset-block-start: 1ex;
+	grid-column: content;
+	z-index: 1;
+	opacity: 0;
+
+	&:focus-visible {
+		opacity: 1;
+	}
+}
+
+.project-showcase [href='#latest-posts']:focus-visible + .project-list {
+	opacity: 0.1;
 }
 
 .project-list {
@@ -71,8 +88,6 @@
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	gap: 1em;
-	/* padding-inline-start: var(--_iPad-bezel);
-	padding-inline-end: calc(var(--_iphone-inset) + var(--_iPad-bezel)); */
 	padding-inline-end: var(--_iphone-inset);
 
 	&:before {
@@ -137,6 +152,7 @@
 		display: inline-grid;
 		place-items: center;
 		aspect-ratio: 1;
+		border-radius: var(--border-radius-round);
 
 		opacity: 0.42;
 		cursor: not-allowed;
