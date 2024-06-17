@@ -44,7 +44,7 @@ Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom
 @import 'utilities/button.css' layer(utilities);
 @import 'utilities/inverted.css' layer(utilities);
 @import 'utilities/region.css' layer(utilities);
-@import 'utilities/text-color.css' layer(utilities);
+@import 'utilities/text-styles.css' layer(utilities);
 @import 'utilities/visually-hidden.css' layer(utilities);
 
 /* Exceptions */

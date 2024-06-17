@@ -6,9 +6,6 @@ interface Props extends HTMLAttributes<'a'> {
 const {href} = Astro.props;
 ---
 
-<a
-	class="text-step-000 leading-flat tracking-wider uppercase font-medium"
-	href={href}
->
+<a class="tiny-text leading-flat text-uppercase-medium" href={href}>
 	<slot />
 </a>

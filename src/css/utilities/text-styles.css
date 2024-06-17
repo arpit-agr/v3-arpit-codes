@@ -1,0 +1,26 @@
+/* color styles */
+.text-color-1 {
+	color: var(--color-text-1);
+}
+
+.text-color-2 {
+	color: var(--color-text-2);
+}
+
+.text-color-3 {
+	color: var(--color-text-3);
+}
+
+/* size styles */
+.small-text {
+	@apply text-step-00 tracking-wide;
+}
+
+.tiny-text {
+	@apply text-step-000 tracking-wider;
+}
+
+/* other styles*/
+.text-uppercase-medium {
+	@apply uppercase font-medium;
+}

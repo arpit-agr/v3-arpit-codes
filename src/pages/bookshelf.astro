@@ -36,7 +36,7 @@ const bookList = await getCollection('books');
 									imagePath={`/src/images/book-covers/${book.data.bookCover}`}
 									loading={loadingValue}
 								/>
-								<div class="flow flow-space-4xs text-step-00 tracking-wide leading-snug text-balance">
+								<div class="flow flow-space-4xs small-text leading-snug text-balance">
 									<p class="book-title font-medium">{book.data.title}</p>
 									{book.data.subtitle && (
 										<p class="visually-hidden">{book.data.subtitle}</p>
