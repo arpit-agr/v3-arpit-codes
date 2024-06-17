@@ -1,4 +1,4 @@
-.button {
+.btn {
 	padding: var(--button-padding-block) var(--button-padding-inline);
 	background-color: var(--color-bg-button);
 	border: unset;
@@ -20,7 +20,7 @@
 	}
 
 	&:focus-visible {
-		--focus-ring-offset: var(--space-4xs);
+		/* --focus-ring-offset: var(--space-4xs); */
 		outline: var(--focus-ring);
 	}
 
@@ -30,7 +30,7 @@
 	}
 }
 
-.inverted.button {
+.inverted.btn {
 	background-color: var(--color-bg-inverted-2);
 	color: var(--color-text-inverted-1);
 
