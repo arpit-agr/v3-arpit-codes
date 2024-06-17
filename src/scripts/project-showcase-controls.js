@@ -28,16 +28,16 @@ prevButton.addEventListener('click', scrollToPrevItem);
 
 // Scroll to the next item in the scroller
 function scrollToNextItem() {
-	showcaseScroller.scrollBy({
-		left: showcaseItemSize,
+	showcaseScroller.scrollTo({
+		left: showcaseScroller.scrollLeft + showcaseItemSize,
 		behavior: prefersReducedMotion ? 'auto' : 'smooth'
 	});
 }
 
 // Scroll to the previous item in the scroller
 function scrollToPrevItem() {
-	showcaseScroller.scrollBy({
-		left: -showcaseItemSize,
+	showcaseScroller.scrollTo({
+		left: showcaseScroller.scrollLeft - showcaseItemSize,
 		behavior: prefersReducedMotion ? 'auto' : 'smooth'
 	});
 }
@@ -68,5 +68,19 @@ updateButtonState();
 // Update button state after each scroll event
 showcaseScroller.addEventListener('scroll', updateButtonState);
 
+// Debounce function to optimize performance
+function debounce(func, wait) {
+	let timeout;
+	return function (...args) {
+		clearTimeout(timeout);
+		timeout = setTimeout(() => {
+			func.apply(this, args);
+		}, wait);
+	};
+}
+
+// Create a debounced version of updateButtonState
+const debouncedUpdateButtonState = debounce(updateButtonState, 200);
+
 // Update button state when window is resized
-window.addEventListener('resize', updateButtonState);
+window.addEventListener('resize', debouncedUpdateButtonState);
