@@ -36,6 +36,7 @@
 	display: flex;
 	align-items: center;
 	gap: var(--page-gutter);
+	transition: opacity var(--transition-base);
 
 	&:after {
 		content: '';
