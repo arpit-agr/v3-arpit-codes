@@ -27,7 +27,11 @@ nextButton.addEventListener('click', scrollToNextItem);
 prevButton.addEventListener('click', scrollToPrevItem);
 
 // Scroll to the next item in the scroller
-function scrollToNextItem() {
+function scrollToNextItem(event) {
+	if (nextButton.getAttribute('aria-disabled') === 'true') {
+		event.preventDefault();
+		return;
+	}
 	showcaseScroller.scrollTo({
 		left: showcaseScroller.scrollLeft + showcaseItemSize,
 		behavior: prefersReducedMotion ? 'auto' : 'smooth'
@@ -35,7 +39,11 @@ function scrollToNextItem() {
 }
 
 // Scroll to the previous item in the scroller
-function scrollToPrevItem() {
+function scrollToPrevItem(event) {
+	if (prevButton.getAttribute('aria-disabled') === 'true') {
+		event.preventDefault();
+		return;
+	}
 	showcaseScroller.scrollTo({
 		left: showcaseScroller.scrollLeft - showcaseItemSize,
 		behavior: prefersReducedMotion ? 'auto' : 'smooth'
@@ -56,10 +64,20 @@ function isFullyVisible(element, container) {
 // Update the state of the prev/next buttons based on the scroll position
 function updateButtonState() {
 	// Disable the prev button if we're at the start
-	prevButton.disabled = showcaseScroller.scrollLeft === 0;
+	const scrollerAtStart = showcaseScroller.scrollLeft === 0;
+	if (scrollerAtStart) {
+		prevButton.setAttribute('aria-disabled', 'true');
+	} else {
+		prevButton.removeAttribute('aria-disabled');
+	}
 
 	// Disable the next button if the last item is fully visible
-	nextButton.disabled = isFullyVisible(lastItem, showcaseWrapper);
+	const lastItemFullyVisible = isFullyVisible(lastItem, showcaseWrapper);
+	if (lastItemFullyVisible) {
+		nextButton.setAttribute('aria-disabled', 'true');
+	} else {
+		nextButton.removeAttribute('aria-disabled');
+	}
 }
 
 // Initial check to set the correct button state when the page loads

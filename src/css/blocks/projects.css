@@ -159,7 +159,7 @@
 	}
 }
 
-:where(.has-js) .project-showcase-controls button:not(:disabled) {
+:where(.has-js) .project-showcase-controls button:not([aria-disabled='true']) {
 	opacity: 1;
 	cursor: pointer;
 }

@@ -26,7 +26,7 @@
 		outline: var(--focus-ring);
 	}
 
-	&:disabled {
+	&[aria-disabled='true'] {
 		opacity: 0.42;
 		cursor: not-allowed;
 	}
