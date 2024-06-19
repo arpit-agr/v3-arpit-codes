@@ -39,8 +39,12 @@
 	--color-counter-connector: var(--color-border-1);
 	--color-text-button: var(--color-text-inverted-3);
 	--color-text-button-hover: var(--color-text-inverted-2);
+	--color-text-button-secondary: var(--color-text-2);
+	--color-text-button-hover-secondary: var(--color-text-1);
 	--color-bg-button: var(--color-bg-inverted-3);
 	--color-bg-button-hover: var(--color-bg-inverted-1);
+	--color-bg-button-secondary: var(--color-bg-4);
+	--color-bg-button-hover-secondary: var(--color-bg-5);
 	--color-bird-icon-path: var(--color-text-2);
 	--color-bg-site-header: var(--color-bg-1);
 	--color-border-site-header: var(--gray-5);
@@ -55,6 +59,8 @@
 		--color-text-2: var(--color-text-inverted-2);
 		--color-text-3: var(--color-text-inverted-3);
 		--color-text-4: var(--color-text-inverted-4);
+		--color-text-button-secondary: var(--color-text-inverted-3);
+		--color-text-button-hover-secondary: var(--color-text-inverted-2);
 		--color-border-1: var(--gray-9);
 		--color-border-2: var(--gray-3);
 		--color-underline-inverted: var(--color-border-2);
@@ -62,8 +68,10 @@
 		--color-blockquote: var(--gray-5);
 		--color-counter: var(--color-text-3);
 		--color-counter-connector: var(--color-border-hero);
-		--color-bg-button: var(--gray-9);
-		--color-bg-button-hover: var(--gray-8);
+		--color-bg-button: var(--gray-8);
+		--color-bg-button-hover: var(--gray-7);
+		--color-bg-button-secondary: var(--gray-8);
+		--color-bg-button-hover-secondary: var(--gray-7);
 		--color-bird-icon-path: var(--color-text-1);
 		--color-border-site-header: var(--gray-7);
 	}
