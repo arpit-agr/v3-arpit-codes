@@ -52,6 +52,10 @@
 	overscroll-behavior-x: contain;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
+	scroll-padding-inline: max(
+		var(--page-gutter),
+		calc((100vw - var(--_max-content-width)) / 2)
+	);
 }
 
 .project-list {
@@ -59,13 +63,6 @@
 	display: flex;
 	align-items: center;
 	gap: var(--page-gutter);
-
-	> :last-child {
-		scroll-margin-inline-end: max(
-			var(--page-gutter),
-			calc((100vw - var(--_max-content-width)) / 2)
-		);
-	}
 
 	&:after {
 		content: '';
@@ -82,7 +79,7 @@
 	display: grid;
 	gap: var(--space-xs);
 	max-inline-size: unset;
-	scroll-snap-align: center;
+	scroll-snap-align: start;
 
 	&:last-child {
 		scroll-snap-align: end;
@@ -94,7 +91,7 @@
 	}
 
 	img {
-		max-inline-size: 78vmin;
+		max-inline-size: 83vmin;
 		object-fit: contain;
 	}
 }
