@@ -229,6 +229,10 @@ hr {
 	border-radius: var(--border-radius-1);
 }
 
+[tabindex='-1']:focus {
+	outline: none;
+}
+
 :target {
 	scroll-margin-block: 0;
 }
