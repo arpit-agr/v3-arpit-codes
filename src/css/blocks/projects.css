@@ -3,9 +3,10 @@
 }
 
 [href='#latest-posts'] {
-	grid-column: content;
 	position: absolute;
-
+	inset-inline-start: calc(
+		var(--focus-ring-width) + var(--focus-ring-offset) + var(--dynamic-gutter)
+	);
 	/* used IKEA's skip listing styles becasue visually hidden styles
 	 were not working on Safari for some reason */
 	block-size: 1px;
@@ -16,13 +17,10 @@
 	clip: rect(1px, 1px, 1px, 1px);
 	white-space: nowrap;
 	overflow: hidden;
+	opacity: 0;
+	transition: opacity var(--transition-base);
 
 	&:focus-visible {
-		inset-block-start: calc(
-			var(--border-thickness-2) + var(--focus-ring-offset)
-		);
-		z-index: 1;
-
 		block-size: unset;
 		inline-size: unset;
 		margin: unset;
@@ -31,6 +29,13 @@
 		clip: unset;
 		white-space: normal;
 		overflow: auto;
+
+		inset-block-start: calc(
+			var(--focus-ring-width) + var(--focus-ring-offset) +
+				var(--button-padding-block)
+		);
+		opacity: 1;
+		z-index: 1;
 	}
 }
 
@@ -44,34 +49,27 @@
 }
 
 .project-showcase {
-	grid-column: fullbleed;
-	display: grid;
-	grid-template-columns: inherit;
-	padding-block: var(--space-s) var(--space-m);
+	padding-block: var(--space-s);
 	overflow-x: scroll;
-	overscroll-behavior-x: contain;
 	scroll-snap-type: x mandatory;
+	scroll-padding-inline: var(--dynamic-gutter);
 	scrollbar-width: none;
-	scroll-padding-inline: max(
-		var(--page-gutter),
-		calc((100vw - var(--_max-content-width)) / 2)
-	);
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .project-list {
-	grid-column: content;
-	display: flex;
+	--image-width: 83vmin;
+
+	display: grid;
+	grid-auto-flow: column;
 	align-items: center;
 	gap: var(--page-gutter);
-
-	&:after {
-		content: '';
-		align-self: stretch;
-		padding-inline-end: max(
-			var(--page-gutter),
-			calc(((100vw - var(--_max-content-width)) / 2) - var(--page-gutter))
-		);
-	}
+	inline-size: fit-content;
+	padding-inline-start: var(--dynamic-gutter);
+	padding-inline-end: calc(100% - var(--dynamic-gutter) - var(--image-width));
 }
 
 .project-item {
@@ -91,7 +89,7 @@
 	}
 
 	img {
-		max-inline-size: 83vmin;
+		max-inline-size: var(--image-width);
 		object-fit: contain;
 	}
 }
@@ -160,7 +158,6 @@
 .project-showcase-controls {
 	--gutter: var(--space-xs);
 	--cluster-horizontal-alignment: end;
-	grid-column: content;
 
 	button {
 		padding: 0.25em 0.375em;

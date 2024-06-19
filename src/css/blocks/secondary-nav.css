@@ -1,6 +1,4 @@
 #secondary-nav {
-	order: 2;
-
 	dl {
 		--gutter: var(--space-m-l);
 	}

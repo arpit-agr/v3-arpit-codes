@@ -1,6 +1,4 @@
 .site-footer {
-	order: 5;
-
 	a {
 		position: relative;
 		padding-block: var(--space-s);

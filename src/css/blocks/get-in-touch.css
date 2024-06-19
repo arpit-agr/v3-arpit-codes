@@ -1,6 +1,5 @@
 #get-in-touch {
 	--gutter: var(--space-xl-2xl) var(--space-s-l);
-	order: 3;
 
 	a {
 		max-inline-size: fit-content;

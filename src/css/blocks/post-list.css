@@ -17,9 +17,13 @@
 		}
 
 		li {
-			padding-inline-start: var(--space-3xs);
+			padding-inline-start: var(--space-3xs-2xs);
 			list-style-type: decimal;
 		}
+	}
+
+	li::marker {
+		color: var(--color-text-4);
 	}
 }
 

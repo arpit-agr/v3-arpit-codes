@@ -23,15 +23,17 @@
 	--color-text-1: var(--gray-11);
 	--color-text-2: var(--gray-12);
 	--color-text-3: var(--gray-10);
+	--color-text-4: var(--gray-7);
 	--color-text-inverted-1: var(--gray-1);
 	--color-text-inverted-2: var(--gray-0);
 	--color-text-inverted-3: var(--gray-2);
+	--color-text-inverted-4: var(--gray-5);
 	--color-border-1: var(--gray-3);
 	--color-border-2: var(--gray-9);
 	--color-underline: var(--color-border-2);
 	--color-underline-inverted: var(--color-border-1);
 	--color-underline-hover: currentColor;
-	--color-border-hero: transparent;
+	--color-border-hero: var(--gray-9);
 	--color-blockquote: var(--gray-8);
 	--color-counter: var(--color-text-2);
 	--color-counter-connector: var(--color-border-1);
@@ -44,7 +46,6 @@
 	--color-border-site-header: var(--gray-5);
 
 	@media (--OSdark) {
-		-webkit-font-smoothing: antialiased;
 		--color-brand: var(--color-brand-inverted);
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
@@ -53,6 +54,7 @@
 		--color-text-1: var(--color-text-inverted-1);
 		--color-text-2: var(--color-text-inverted-2);
 		--color-text-3: var(--color-text-inverted-3);
+		--color-text-4: var(--color-text-inverted-4);
 		--color-border-1: var(--gray-9);
 		--color-border-2: var(--gray-3);
 		--color-underline-inverted: var(--color-border-2);
@@ -68,12 +70,20 @@
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
 		--color-blockquote: color-mix(in srgb, currentColor, transparent 20%);
+		--color-underline: color-mix(in srgb, currentColor, transparent 20%);
 	}
 }
 
 :root {
 	--measure: 53.4ch;
+	--content-box-max-width: calc(
+		var(--border-box-max-width, 80rem) - (2 * var(--page-gutter))
+	);
 	--page-gutter: var(--space-s-l);
+	--dynamic-gutter: max(
+		var(--page-gutter),
+		calc((100% - var(--content-box-max-width)) / 2)
+	);
 
 	--border-thickness-1: 1px;
 	--border-thickness-2: 2px;
@@ -116,16 +126,17 @@
 
 /* focus ring */
 :root {
-	--focus-ring: var(--border-thickness-2) solid var(--color-brand);
+	--focus-ring-width: var(--border-thickness-2);
+	--focus-ring: var(--focus-ring-width) solid var(--color-brand);
 	--focus-ring-offset: var(--space-5xs);
 }
 
 /* site header variables */
 :root {
 	--site-header-border-thickness: var(--border-thickness-1);
-	--primary-nav-padding-block: 3ex;
+	--primary-nav-padding-block: var(--space-s);
 	--primary-nav-padding-inline: var(--space-2xs);
-	--primary-nav-font-size: var(--size-step-000);
+	--primary-nav-font-size: var(--size-step-00);
 	--primary-nav-leading: var(--leading-flat);
 	--primary-nav-height: calc(
 		(2 * var(--primary-nav-padding-block)) +

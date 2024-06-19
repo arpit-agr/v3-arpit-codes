@@ -1,33 +1,62 @@
-<div class="fullbleed-grid">
-	<a href="#main" class="btn small-text" data-btn="inverted">Skip to main</a>
-</div>
+<a href="#main" class="btn small-text">Skip to main</a>
 
 <style>
-	div {
+	[href='#main'] {
+		--_shadow-color: 220 40% 2%;
+		--_shadow-strength: 100%;
+		--_shadow: 0 -1px 2px 0 hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 2%)),
+			0 3px 2px -2px hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 3%)),
+			0 7px 5px -2px hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 3%)),
+			0 12px 10px -2px hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 4%)),
+			0 22px 18px -2px hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 5%)),
+			0 41px 33px -2px hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 6%)),
+			0 100px 80px -2px hsl(var(--_shadow-color) /
+						calc(var(--_shadow-strength) + 7%));
+
 		position: absolute;
-		inline-size: 100vw;
+		inset-inline-start: calc(
+			var(--focus-ring-width) + var(--focus-ring-offset) + var(--dynamic-gutter)
+		);
+		/* used IKEA's skip listing styles becasue visually hidden styles
+	 were not working on Safari for some reason */
+		block-size: 1px;
+		inline-size: 1px;
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		white-space: nowrap;
+		overflow: hidden;
 
 		opacity: 0;
 		transform: translateY(-100%);
 		transition:
-			transform var(--transition-base),
-			opacity var(--transition-base);
+			opacity var(--transition-base),
+			inset-block-start var(--transition-base),
+			transform var(--transition-base);
 		z-index: 1000;
 
-		&:focus-within {
-			opacity: 1;
-			transform: translateY(0);
-			inset-block-start: calc(1 / 4 * var(--space-xl));
-		}
-	}
-
-	a {
-		max-inline-size: fit-content;
-		grid-column: content;
-
 		&:focus-visible {
-			--focus-ring-offset: calc(-1 * var(--space-4xs));
+			block-size: unset;
+			inline-size: unset;
+			margin: unset;
+			padding: var(--button-padding-block) var(--button-padding-inline);
+			border: unset;
+			clip: unset;
+			white-space: normal;
+			overflow: auto;
+
+			opacity: 1;
+			inset-block-start: calc(1 / 2 * var(--primary-nav-padding-block));
+			transform: translateY(0);
 			outline-color: var(--color-brand-inverted);
+			box-shadow: var(--_shadow);
 		}
 	}
 </style>

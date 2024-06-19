@@ -31,7 +31,7 @@
 		-webkit-font-smoothing: antialiased;
 
 		&:focus-visible {
-			--focus-ring-offset: var(--space-3xs);
+			--focus-ring-offset: var(--space-4xs);
 			outline: var(--focus-ring);
 		}
 	}

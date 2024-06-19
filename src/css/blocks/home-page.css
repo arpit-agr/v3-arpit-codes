@@ -22,6 +22,7 @@
 	position: relative;
 	display: inline-block;
 	text-decoration: none;
+	line-height: var(--leading-tight);
 
 	&:hover .circle {
 		/* --offset: 180px; */
@@ -40,7 +41,7 @@
 	inset-inline-start: 50%;
 	inset-block-start: 50%;
 	translate: -48% -56%;
-	block-size: 133%;
+	block-size: 175%;
 	inline-size: calc(100% + 3ch);
 	fill: none;
 	stroke-linecap: round;

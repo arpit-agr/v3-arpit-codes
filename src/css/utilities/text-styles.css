@@ -11,6 +11,14 @@
 	color: var(--color-text-3);
 }
 
+.text-color-4 {
+	color: var(--color-text-4);
+}
+
+.text-color-inverted-4 {
+	color: var(--color-text-inverted-4);
+}
+
 /* size styles */
 .small-text {
 	@apply text-step-00 tracking-wide;
