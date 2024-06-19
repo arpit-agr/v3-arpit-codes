@@ -6,8 +6,8 @@ import ChevronLeftVector from './ChevronLeftVector.astro';
 ---
 
 <div class="project-showcase-wrapper fullbleed-grid flow-space-s">
+	<a href="#latest-posts" class="btn small-text">Skip listing</a>
 	<div class="project-showcase">
-		<a href="#latest-posts" class="btn small-text">Skip listing</a>
 		<ul class="project-list" role="list">
 			{
 				projects.map((project, index) => {
@@ -31,9 +31,6 @@ import ChevronLeftVector from './ChevronLeftVector.astro';
 			}
 		</ul>
 	</div>
-</div>
-
-<div class="project-showcase-controls-wrapper wrapper flow-space-zero">
 	<div class="project-showcase-controls cluster">
 		<button
 			class="btn"

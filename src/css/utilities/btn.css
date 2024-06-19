@@ -22,7 +22,7 @@
 	}
 
 	&:focus-visible {
-		--focus-ring-offset: var(--space-4xs);
+		--focus-ring-offset: calc(2 * var(--space-5xs));
 		outline: var(--focus-ring);
 	}
 
