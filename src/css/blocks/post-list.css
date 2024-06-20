@@ -1,30 +1,5 @@
 .post-list-wrapper {
 	max-inline-size: var(--measure);
-
-	ol,
-	li {
-		padding-inline-start: 0;
-	}
-
-	li {
-		--flow-space: var(--space-m-s);
-		list-style-type: '';
-	}
-
-	@media (--md-n-above) {
-		ol {
-			padding-inline-start: var(--space-s);
-		}
-
-		li {
-			padding-inline-start: var(--space-3xs-2xs);
-			list-style-type: decimal;
-		}
-	}
-
-	li::marker {
-		color: var(--color-text-4);
-	}
 }
 
 .post-entry {
