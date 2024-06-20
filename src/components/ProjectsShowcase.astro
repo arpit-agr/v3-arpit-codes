@@ -5,50 +5,47 @@ import ChevronRightVector from './ChevronRightVector.astro';
 import ChevronLeftVector from './ChevronLeftVector.astro';
 ---
 
-<div class="project-showcase-wrapper flow-space-s">
-	<a href="#latest-posts" class="btn small-text">Skip listing</a>
-	<div class="project-showcase">
-		<ul class="project-list" role="list">
-			{
-				projects.map((project, index) => {
-					return (
-						<li class="project-item">
-							<div class="project-item-header tiny-text leading-flat text-uppercase-medium">
-								<p class="project-index" aria-hidden="true">
-									0{index + 1}
-								</p>
-								<a class="project-link" href={project.url}>
-									<span class="project-title">{project.title}</span>
-									<span class="visually-hidden">project site</span>
-								</a>
-							</div>
-							<ProjectMockup
-								imagePath={`/src/images/projects/${project.image}`}
-							/>
-						</li>
-					);
-				})
-			}
-		</ul>
-	</div>
-	<div class="project-showcase-controls cluster wrapper">
-		<button
-			class="btn"
-			data-direction="prev"
-			data-btn="secondary"
-			aria-label="Previous"
-		>
-			<ChevronLeftVector />
-		</button>
-		<button
-			class="btn"
-			data-direction="next"
-			data-btn="secondary"
-			aria-label="Next"
-		>
-			<ChevronRightVector />
-		</button>
-	</div>
+<div class="projects-scroll-container">
+	<ul class="project-list" role="list">
+		{
+			projects.map((project, index) => {
+				return (
+					<li class="project-item">
+						<div class="project-item-header tiny-text leading-flat text-uppercase-medium">
+							<a class="project-link" href={project.url}>
+								<span class="project-title">{project.title}</span>
+								<span class="visually-hidden">project site</span>
+							</a>
+							<span class="project-index" aria-hidden="true">
+								0{index + 1}
+							</span>
+						</div>
+						<ProjectMockup
+							imagePath={`/src/images/projects/${project.image}`}
+						/>
+					</li>
+				);
+			})
+		}
+	</ul>
+</div>
+<div class="project-showcase-controls cluster wrapper">
+	<button
+		class="btn"
+		data-direction="prev"
+		data-btn="secondary"
+		aria-label="Previous"
+	>
+		<ChevronLeftVector />
+	</button>
+	<button
+		class="btn"
+		data-direction="next"
+		data-btn="secondary"
+		aria-label="Next"
+	>
+		<ChevronRightVector />
+	</button>
 </div>
 
 <script>

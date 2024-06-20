@@ -1,54 +1,4 @@
-.project-showcase-wrapper {
-	position: relative;
-}
-
-[href='#latest-posts'] {
-	position: absolute;
-	inset-inline-start: calc(
-		var(--focus-ring-width) + var(--focus-ring-offset) + var(--dynamic-gutter)
-	);
-	/* used IKEA's skip listing styles becasue visually hidden styles
-	 were not working on Safari for some reason */
-	block-size: 1px;
-	inline-size: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	white-space: nowrap;
-	overflow: hidden;
-	opacity: 0;
-	transition: opacity var(--transition-base);
-
-	&:focus-visible {
-		block-size: unset;
-		inline-size: unset;
-		margin: unset;
-		padding: var(--button-padding-block) var(--button-padding-inline);
-		border: unset;
-		clip: unset;
-		white-space: normal;
-		overflow: auto;
-
-		inset-block-start: calc(
-			var(--focus-ring-width) + var(--focus-ring-offset) +
-				var(--button-padding-block)
-		);
-		opacity: 1;
-		z-index: 1;
-	}
-}
-
-[href='#latest-posts'] ~ * {
-	transition: opacity var(--transition-base);
-}
-
-[href='#latest-posts']:focus-visible ~ * {
-	opacity: 0.1;
-	/* filter: blur(0.5rem); */
-}
-
-.project-showcase {
+.projects-scroll-container {
 	padding-block: var(--space-s);
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
@@ -107,13 +57,18 @@
 		order: 2;
 		flex-grow: 1;
 		block-size: var(--border-thickness-1);
-		background: var(--color-underline);
+		background: var(--color-border-1);
 		align-self: center;
+		transform: scaleX(0.97);
+		transition: transform var(--transition-base);
 	}
 }
 
+.project-item-header:has(.project-link:hover):before {
+	transform: scaleX(1);
+}
+
 .project-link {
-	order: 3;
 	text-decoration-line: none;
 	text-align: end;
 
@@ -130,7 +85,7 @@
 }
 
 .project-index {
-	order: 1;
+	order: 3;
 }
 
 .project-item:has(:hover) {

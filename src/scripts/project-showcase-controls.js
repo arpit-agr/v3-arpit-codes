@@ -2,8 +2,7 @@
 // This script enables smooth horizontal scrolling for a carousel of items with forward and backward navigation buttons. It also respects users' reduced motion preferences and dynamically updates button states based on the scroll position.
 
 // Grab the wrapper and scroller containing the items
-const showcaseWrapper = document.querySelector('.project-showcase-wrapper');
-const showcaseScroller = showcaseWrapper.querySelector('.project-showcase');
+const showcaseScroller = document.querySelector('.projects-scroll-container');
 
 // Get all items and the last item
 const showcaseItems = showcaseScroller.querySelectorAll('li');
@@ -72,7 +71,7 @@ function updateButtonState() {
 	}
 
 	// Disable the next button if the last item is fully visible
-	const lastItemFullyVisible = isFullyVisible(lastItem, showcaseWrapper);
+	const lastItemFullyVisible = isFullyVisible(lastItem, showcaseScroller);
 	if (lastItemFullyVisible) {
 		nextButton.setAttribute('aria-disabled', 'true');
 	} else {
