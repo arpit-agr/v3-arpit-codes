@@ -47,7 +47,6 @@
 	--color-bg-button-hover-secondary: var(--color-bg-5);
 	--color-bird-icon-path: var(--color-text-2);
 	--color-bg-site-header: var(--color-bg-1);
-	--color-border-site-header: var(--gray-5);
 
 	@media (--OSdark) {
 		--color-brand: var(--color-brand-inverted);
@@ -73,7 +72,6 @@
 		--color-bg-button-secondary: var(--gray-8);
 		--color-bg-button-hover-secondary: var(--gray-7);
 		--color-bird-icon-path: var(--color-text-1);
-		--color-border-site-header: var(--gray-7);
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {

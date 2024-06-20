@@ -78,7 +78,7 @@
 }
 
 .site-nav :is([aria-current='page'], [data-state='active']):after {
-	background-color: var(--color-border-site-header);
+	background-color: var(--color-underline);
 
 	@media (--forcedColors) {
 		background-color: canvasText;
