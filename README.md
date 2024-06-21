@@ -1,22 +1,33 @@
-# Astro CUBE CSS Boilerplate
+# Arpit Agrawal's Personal Website
 
-Based on the [CUBE CSS Boilerplate](https://github.com/Set-Creative-Studio/cube-boilerplate).
+Hi, I'm a web designer-developer from India. I design and build beautiful, blazing-fast websites that are accessible to everyone.
 
-The Astro CUBE CSS Boilerplate is a simple, modern, web platform native starting point with sensible defaults. You get the advantages of modern CSS, with the aid of utility classes, and the affordances of design token architecture.
+You can reach me at <hello@arpit.codes>.
 
-Uses:
+## Technologies Used
 
-- [Astro](https://astro.build/), a web framework for content-driven websites
-- [Utopia](https://utopia.fyi/), for responsive typography, spacing, and sizing
-- [Cube CSS](https://cube.fyi/), a pragmatric and simple CSS methodology
-- [Every Layouts](https://every-layout.dev/), better, more resilient CSS
-- [Tailwind CSS](https://tailwindcss.com/), a utility-first CSS framework, used as utility-second
-- [Partytown](https://partytown.builder.io/), for running third-party scripts in a web worker
-- [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/), for generating a sitemap
-- Design tokens
+This website is built using the [Astro CUBE CSS Boilerplate](https://github.com/frankstallone/astro-cube-boilerplate), which itself is derived from the [CUBE CSS Boilerplate](https://github.com/Set-Creative-Studio/cube-boilerplate).
 
-Read more from Andy Bell's [A CSS project boilerplate
-](https://piccalil.li/blog/a-css-project-boilerplate/).
+### Features
+
+- Modern, web-native starting point with sensible defaults
+- Utilizes the power of modern CSS and utility classes
+- Design token architecture for consistent theming
+
+### Uses:
+
+- [Astro](https://astro.build/): a web framework for content-driven websites
+- [Utopia](https://utopia.fyi/): for responsive typography, spacing, and sizing
+- [Open Props](https://open-props.style/): supercharged CSS variables
+- [Every Layout](https://every-layout.dev/): for better, more resilient CSS
+- [CUBE CSS](https://cube.fyi/): a pragmatic and simple CSS methodology
+- [Tailwind CSS](https://tailwindcss.com/): a utility-first CSS framework, used as utility-second
+- [Astro Font](https://github.com/rishi-raj-jain/astro-font): for optimizing my fonts for performance
+- [Astro OG Canvas](https://github.com/delucis/astro-og-canvas): to generate OpenGraph images
+- [Astro RSS](https://docs.astro.build/en/guides/rss/): for generating an RSS feed
+- [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/): for generating a sitemap
+
+For more details, read Andy Bell's [A CSS project boilerplate](https://piccalil.li/blog/a-css-project-boilerplate/).
 
 ## 🧞 Commands
 
