@@ -20,5 +20,9 @@ export default defineConfig({
 			nesting: true
 		}),
 		sitemap()
-	]
+	],
+	prefetch: true,
+	experimental: {
+		clientPrerender: true
+	}
 });

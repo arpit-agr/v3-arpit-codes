@@ -18,6 +18,7 @@ const isActive = href.length > 1 && pathname.indexOf(href) === 0;
 	aria-label={label}
 	aria-current={isCurrent ? 'page' : null}
 	data-state={isActive ? 'active' : null}
+	data-astro-prefetch
 >
 	{label}
 </a>

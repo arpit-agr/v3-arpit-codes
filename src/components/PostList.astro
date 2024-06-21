@@ -23,6 +23,7 @@ const {postsCollection} = Astro.props;
 						class="text-pretty"
 						href={`/blog/${post.slug}/`}
 						{...(post.data.draft && {'data-draft': true})}
+						data-astro-prefetch
 					>
 						{post.data.title}
 					</a>

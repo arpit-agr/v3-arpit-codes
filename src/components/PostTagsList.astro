@@ -17,7 +17,7 @@ const hasManyTags = postTags.length > 3;
 			<ul class="cluster" role="list">
 				{postTags.map(tag => (
 					<li>
-						<a href={`/tags/${tag}/`} rel="tag">
+						<a href={`/tags/${tag}/`} rel="tag" data-astro-prefetch>
 							{tag}
 						</a>
 					</li>
