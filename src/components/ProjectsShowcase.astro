@@ -3,6 +3,8 @@ import projects from '../data/projects.json';
 import ProjectMockup from './ProjectMockup.astro';
 import ChevronRightVector from './ChevronRightVector.astro';
 import ChevronLeftVector from './ChevronLeftVector.astro';
+
+const projectsLength = projects.length;
 ---
 
 <div class="projects-scroll-container">
@@ -17,7 +19,7 @@ import ChevronLeftVector from './ChevronLeftVector.astro';
 								<span class="visually-hidden">project site</span>
 							</a>
 							<span class="project-index" aria-hidden="true">
-								0{index + 1}
+								{index + 1} ⁄ {projectsLength}
 							</span>
 						</div>
 						<ProjectMockup
