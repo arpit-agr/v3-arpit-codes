@@ -1,6 +1,4 @@
 .post {
-	--measure: 55ch;
-
 	h1 {
 		font-size: var(--size-step-3-4);
 		line-height: var(--leading-tight);

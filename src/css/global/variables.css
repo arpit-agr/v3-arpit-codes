@@ -76,12 +76,18 @@
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
 		--color-underline: color-mix(in srgb, currentColor, transparent 20%);
+		--color-underline-inverted: color-mix(
+			in srgb,
+			currentColor,
+			transparent 20%
+		);
 		--color-blockquote: color-mix(in srgb, currentColor, transparent 20%);
 	}
 }
 
 :root {
-	--measure: 53.4ch;
+	--measure: 55ch;
+
 	--content-box-max-width: calc(
 		var(--border-box-max-width, 80rem) - (2 * var(--page-gutter))
 	);
@@ -97,7 +103,7 @@
 	--border-radius-2: var(--space-2xs);
 	--border-radius-round: 100vmin;
 
-	--underline-offset: var(--space-3xs);
+	--underline-offset: var(--space-4xs);
 	--counter-size: var(--space-s);
 
 	--button-padding-block: 0.5em;
