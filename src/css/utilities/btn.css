@@ -26,11 +26,6 @@
 		outline: var(--focus-ring);
 	}
 
-	&[aria-disabled='true'] {
-		opacity: 0.42;
-		cursor: not-allowed;
-	}
-
 	@media (--forcedColors) {
 		-webkit-font-smoothing: auto;
 

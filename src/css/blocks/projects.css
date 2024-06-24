@@ -1,3 +1,7 @@
+project-showcase {
+	display: block;
+}
+
 .projects-scroll-container {
 	padding-block: var(--space-s);
 	overflow-x: scroll;
@@ -135,7 +139,7 @@
 	}
 }
 
-:where(.has-js) .project-showcase-controls button:not([aria-disabled='true']) {
+project-showcase:defined button:not([aria-disabled='true']) {
 	opacity: 1;
 	cursor: pointer;
 }
