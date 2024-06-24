@@ -24,7 +24,7 @@
 	pre {
 		padding: var(--space-xs) var(--space-s);
 		border: var(--border-thickness-1) solid transparent;
-		border-radius: var(--border-radius-2);
+		border-radius: var(--border-radius-1);
 		tab-size: 2;
 		-webkit-font-smoothing: antialiased;
 
@@ -116,6 +116,7 @@
 
 .post-body img {
 	margin-inline: auto;
+	outline: var(--border-thickness-1) solid var(--color-border-1);
 
 	@media (--sm-n-above) {
 		margin-inline: unset;
