@@ -71,22 +71,33 @@ project-showcase {
 	--_iphone-inset: 5.25%;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
-	gap: 1em;
+	gap: var(--space-xs-s);
 	padding-inline-end: var(--_iphone-inset);
 
-	&:before {
+	&:before,
+	&:after {
 		content: '';
-		order: 2;
+		grid-column: 2/3;
+		grid-row: 1/-1;
 		flex-grow: 1;
 		block-size: var(--border-thickness-1);
 		background-color: var(--color-border-1);
 		align-self: center;
 		transition: background-color var(--transition-base);
 	}
+
+	&::after {
+		transform-origin: left;
+		transform: scaleX(0.5);
+		background: transparent;
+		transition:
+			background var(--transition-base),
+			transform var(--transition-base);
+	}
 }
 
 .project-link {
-	text-decoration-line: none;
+	grid-column: 1/2;
 	text-align: end;
 
 	&:after {
@@ -102,14 +113,15 @@ project-showcase {
 }
 
 .project-index {
-	order: 3;
+	grid-column: 3/-1;
 }
 
 .project-item:has(:hover) {
 	color: var(--color-brand);
 
-	.project-item-header:before {
-		background-color: var(--color-underline-hover);
+	.project-item-header:after {
+		background-color: var(--color-brand);
+		transform: scaleX(1);
 	}
 }
 
