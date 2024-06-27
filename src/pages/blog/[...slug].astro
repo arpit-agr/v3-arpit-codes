@@ -5,6 +5,7 @@ import HeroSection from '../../components/HeroSection.astro';
 import PostTagsList from '../../components/PostTagsList.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import PostFeaturedImg from '../../components/PostFeaturedImg.astro';
+import PostReply from '../../components/PostReply.astro';
 
 export async function getStaticPaths() {
 	const blogPosts = publishedBlogPosts;
@@ -42,17 +43,56 @@ const {Content} = await post.render();
 					/>
 				)
 			}
-
-			<div class="region wrapper">
-				<div class="post-body prose flow">
+			<div class="flow region wrapper">
+				<heading-anchors class="post-body prose flow">
 					<Content />
-					<div
-						class="post-tag-list-wrapper small-text leading-snug flow-space-l"
-					>
-						<PostTagsList postTags={post.data.tags} />
-					</div>
-				</div>
+				</heading-anchors>
+				<footer class="post-footer flow flow-space-l">
+					<PostTagsList postTags={post.data.tags} />
+					<PostReply />
+				</footer>
 			</div>
 		</article>
 	</main>
 </Layout>
+
+<script>
+	/* 
+	<heading-anchors>
+	A Web Component to add anchor links to headings with IDs.
+	https://github.com/daviddarnes/heading-anchors
+	*/
+	// @ts-nocheck
+
+	class HeadingAnchors extends HTMLElement {
+		static register(tagName) {
+			if ('customElements' in window) {
+				customElements.define(tagName || 'heading-anchors', HeadingAnchors);
+			}
+		}
+
+		connectedCallback() {
+			this.headings.forEach(heading => {
+				heading.append(this.anchor(heading));
+				heading.setAttribute('tabindex', '-1');
+			});
+		}
+
+		anchor(heading) {
+			let anchor = document.createElement('a');
+			anchor.href = `#${heading.id}`;
+			anchor.innerHTML = '#';
+			anchor.setAttribute(
+				'aria-label',
+				`Jump link to '${heading.textContent}'`
+			);
+			return anchor;
+		}
+
+		get headings() {
+			return this.querySelectorAll('h2[id], h3[id]');
+		}
+	}
+
+	HeadingAnchors.register();
+</script>

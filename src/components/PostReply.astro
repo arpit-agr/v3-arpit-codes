@@ -1,0 +1,19 @@
+---
+import MailVector from './MailVector.astro';
+import MastodonVector from './MastodonVector.astro';
+
+const currentUrl = Astro.url;
+const mailSubjectUrl = currentUrl.toString().slice(8); /* removes https:// */
+---
+
+<p class="reply-methods small-text leading-snug cluster">
+	Reply:
+	<a href=`mailto:hello@arpit.codes?subject=Re: ${mailSubjectUrl}`>
+		<MailVector />
+		Mail
+	</a>
+	<a href="https://indieweb.social/@arpit">
+		<MastodonVector />
+		Mastodon
+	</a>
+</p>

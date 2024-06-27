@@ -11,6 +11,15 @@
 	h2,
 	h3 {
 		line-height: var(--leading-snug);
+
+		a[href^='#'] {
+			margin-inline-start: 0.5ch;
+			font-family: var(--font-monospace);
+		}
+
+		&:target {
+			scroll-margin-block: 1lh;
+		}
 	}
 
 	h2 {
@@ -120,5 +129,33 @@
 
 	@media (--sm-n-above) {
 		margin-inline: unset;
+	}
+}
+
+.post-footer {
+	max-inline-size: var(--measure);
+
+	> * {
+		--flow-space: var(--space-s);
+	}
+}
+
+.reply-methods {
+	--gutter: 0.5ch;
+
+	svg {
+		block-size: 1em;
+		inline-size: auto;
+	}
+
+	a {
+		display: inline-flex;
+		gap: var(--space-3xs);
+		align-items: center;
+		padding: var(--space-3xs);
+
+		&:focus-visible {
+			outline-offset: calc(-1 / 2 * var(--space-3xs));
+		}
 	}
 }
