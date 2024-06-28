@@ -29,7 +29,7 @@ project-showcase {
 .project-item {
 	position: relative;
 	display: grid;
-	gap: var(--space-xs);
+	gap: 1em;
 	max-inline-size: unset;
 	scroll-snap-align: start;
 

@@ -1,10 +1,10 @@
 /* brand color variables */
 :root {
-	--color-brand: #0045d8;
+	--color-brand: #1c22ff;
 	--color-brand-inverted: #99adff;
 
 	@media (--HDcolor) {
-		--color-brand: oklch(46.76% 0.2845 262.81);
+		--color-brand: oklch(47.35% 0.3177 266.4767422167044);
 		--color-brand-inverted: oklch(76.53% 0.13 272.52);
 	}
 }
@@ -50,6 +50,7 @@
 
 	@media (--OSdark) {
 		--color-brand: var(--color-brand-inverted);
+		--color-brand-inverted: gold;
 		--color-bg-1: var(--color-bg-inverted-1);
 		--color-bg-2: var(--color-bg-inverted-2);
 		--color-bg-3: var(--color-bg-inverted-3);
@@ -72,6 +73,10 @@
 		--color-bg-button-secondary: var(--gray-8);
 		--color-bg-button-hover-secondary: var(--gray-7);
 		--color-bird-icon-path: var(--color-text-1);
+
+		@media (--HDcolor) {
+			--color-brand-inverted: oklch(89.11% 0.2105 95.33);
+		}
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {

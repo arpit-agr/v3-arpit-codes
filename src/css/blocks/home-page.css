@@ -56,6 +56,5 @@
 
 	path {
 		stroke: var(--color-underline-inverted);
-		transition: stroke var(--transition-base);
 	}
 }
