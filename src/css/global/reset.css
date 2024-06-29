@@ -122,7 +122,7 @@
 		label[for],
 		select,
 		summary,
-		[tabindex]:not([tabindex*='-'])
+		[tabindex]:not([tabindex*='-'], [tabindex='0'])
 	) {
 	cursor: pointer;
 }
