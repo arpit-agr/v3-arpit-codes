@@ -1,11 +1,11 @@
 ---
 title: 'Inner And Outer Values Of `display`'
-summary: 'Rachel Andrew explains what really happens when we change the value of `display` on an element in light of the two-value syntax.'
+summary: 'Rachel Andrew explains the two-value syntax of the `display` property, clarifying how it affects element layout and child behavior in CSS.'
 pubDate: 2024-05-13
-tags: ['display', 'css', 'rachel-andrew']
+tags: ['display', 'layout', 'css', 'rachel-andrew']
 ---
 
-Recently, [Stefan Judis](https://front-end.social/@stefan/112426743422409016) posted on Mastodon:
+[Stefan Judis's post](https://front-end.social/@stefan/112426743422409016) on Mastodon about multi-keyword display values in CSS caught my attention, as I hadn't encountered this two-value syntax before.
 
 > Hand to the heart: is anyone using multi-keyword display values? Because I haven't seem them anywhere but the MDN docs. 🫣
 
@@ -23,7 +23,7 @@ Recently, [Stefan Judis](https://front-end.social/@stefan/112426743422409016) po
 }
 ```
 
-I hadn't seen this two-value syntax until I saw Stefan's post, and I wanted to know more. Fortunately, [Rachel Andrew](https://rachelandrew.co.uk/) replied to Stefan's post, sharing that they had written about this topic several years ago.
+It prompted me to delve deeper into the topic. Fortunately, [Rachel Andrew](https://rachelandrew.co.uk/) replied to Stefan's post, sharing that they had written about this topic several years ago.
 
 They explain in ["Digging Into The Display Property: The Two Values Of Display"](https://www.smashingmagazine.com/2019/04/display-two-value/):
 
@@ -41,4 +41,4 @@ As per [Can I Use](https://caniuse.com/?search=display%20multi) and [Web Platfor
 
 ## More on the `display` property
 
-In addition to everything mentioned above, [Rachel's article](https://www.smashingmagazine.com/2019/04/display-two-value/) also explains block and inline layout, `flow-root` and `inline-block`. It's an essential read and I'm glad I read it.
+[Rachel's article](https://www.smashingmagazine.com/2019/04/display-two-value/) also explains block and inline layout, `flow-root` and `inline-block`. It's an essential read and worth reading in its entirety.

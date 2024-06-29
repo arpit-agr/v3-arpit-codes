@@ -37,6 +37,7 @@
 		outline: var(--border-thickness-1) solid var(--color-border-pre);
 		tab-size: 2;
 		-webkit-font-smoothing: antialiased;
+		cursor: auto;
 
 		&:focus-visible {
 			--focus-ring-offset: var(--space-4xs);
@@ -51,11 +52,12 @@
 	}
 
 	:not(pre) > code {
-		display: inline-block;
 		padding: 0 var(--space-3xs);
 		border-radius: var(--border-radius-1);
 		background-color: var(--color-bg-3);
 		outline: var(--border-thickness-1) solid var(--color-border-code);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
 	}
 }
 
@@ -120,14 +122,15 @@
 This workaround addresses a Safari bug that rendered the first letter in a serif font
 The following @supports rule targets Chrome only
 https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
-@supports (-webkit-app-region: inherit) and (not (container-type: none)) {
+/* @supports (-webkit-app-region: inherit) and (not (container-type: none)) {
 	.post-body > p:first-child:first-letter {
-		-webkit-initial-letter: 3;
-		initial-letter: 3;
+		-webkit-initial-letter: 2;
+		initial-letter: 2;
 		margin-inline-end: 0.5em;
 		font-weight: var(--font-medium);
+		color: var(--color-text-2);
 	}
-}
+} */
 
 .post-body > p:has(img) {
 	min-inline-size: calc(100% + (2 * var(--page-gutter)));

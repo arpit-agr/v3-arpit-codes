@@ -47,4 +47,4 @@ As [Dave Rupert](https://frontendmasters.com/blog/you-want-border-color-transpar
 
 ## CSS Properties affected by forced-color mode
 
-For a detailed explanation of the CSS properties affected by forced-color mode, refer to [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors#properties_affected_by_forced-color_mode).
+Forced-color mode impacts various CSS properties. For a comprehensive list and detailed explanation, refer to the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors#properties_affected_by_forced-color_mode).
