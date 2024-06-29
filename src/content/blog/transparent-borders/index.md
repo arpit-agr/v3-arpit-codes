@@ -1,6 +1,6 @@
 ---
 title: 'Transparent Borders'
-standfirst: 'Dave Rupert and Brad Frost explain why developers should use `border-color: transparent` instead of `border: none`.'
+summary: 'Dave Rupert and Brad Frost explain why developers should use `border-color: transparent` instead of `border: none`.'
 pubDate: 2024-05-12
 tags:
   ['accessibility', 'high-contrast-mode', 'design-system', 'css', 'dave-rupert']

@@ -1,6 +1,6 @@
 ---
 title: 'Testing in Forced Colors Mode'
-standfirst: 'Testing in forced colors mode improves accessibility for users and reveals design flaws, such as excessive reliance on color cues.'
+summary: 'Testing in forced colors mode improves accessibility for users and reveals design flaws, such as excessive reliance on color cues.'
 pubDate: 2024-05-21
 tags:
   [

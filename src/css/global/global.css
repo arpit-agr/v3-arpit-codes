@@ -23,7 +23,7 @@ body {
 	font-size: var(--size-step-0);
 	font-weight: var(--font-regular);
 	line-height: var(--leading-normal);
-	font-feature-settings: var(--geist-tnum);
+	font-feature-settings: var(--geist-tnum), var(--geist-ss05);
 	-webkit-font-smoothing: auto;
 
 	@media (--OSdark) {

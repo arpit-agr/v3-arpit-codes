@@ -21,7 +21,7 @@ const posts = Object.fromEntries(
 		`blog/${slug}`,
 		{
 			title: data.title,
-			description: data.standfirst
+			description: data.summary
 		}
 	])
 );

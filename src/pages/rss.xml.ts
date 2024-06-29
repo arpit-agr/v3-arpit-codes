@@ -70,7 +70,7 @@ export async function GET(context: AstroGlobal) {
 
 		feed.push({
 			title: post.data.title,
-			description: post.data.standfirst,
+			description: post.data.summary,
 			pubDate: post.data.pubDate,
 			categories: post.data.tags,
 			link: `/blog/${post.slug}`,
