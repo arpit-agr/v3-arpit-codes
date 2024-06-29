@@ -19,7 +19,7 @@
 		max-inline-size: fit-content;
 	}
 
-	a:after {
+	a:before {
 		content: '';
 		position: absolute;
 		inset: 0;
