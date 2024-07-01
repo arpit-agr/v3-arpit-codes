@@ -107,10 +107,6 @@
 }
 
 .post .hero-inner > * {
-	grid-column: 1/3;
-}
-
-.post .hero-inner > hr {
 	grid-column: 1/4;
 }
 
