@@ -16,11 +16,27 @@
 	}
 }
 
-.inverted a {
-	text-decoration-color: var(--color-underline-inverted);
+.inverted {
+	:where(
+			h1,
+			.heading-1,
+			h2,
+			.heading-2,
+			h3,
+			.heading-3,
+			h4,
+			.heading-4,
+			h5,
+			.heading-5
+		) {
+		color: var(--color-text-inverted-2);
+	}
 
-	&:hover {
-		--color-underline-inverted: currentColor;
+	a:hover {
 		color: var(--color-brand-inverted);
+	}
+
+	strong {
+		color: var(--color-text-inverted-2);
 	}
 }

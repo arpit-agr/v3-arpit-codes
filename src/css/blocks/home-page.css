@@ -23,14 +23,6 @@
 	display: inline-block;
 	text-decoration: none;
 	line-height: var(--leading-tight);
-
-	&:hover .circle {
-		--offset: 180px;
-	}
-
-	&:focus-visible .circle {
-		--color-underline-inverted: transparent;
-	}
 }
 
 .circle {
@@ -47,6 +39,10 @@
 	stroke-dasharray: var(--offset, 69px) 278px;
 	stroke-dashoffset: 361px;
 
+	.hero-email:hover & {
+		--offset: 180px;
+	}
+
 	@media (--mouse) {
 		@media (--motionOK) {
 			transition: stroke-dasharray var(--transition-base);
@@ -55,6 +51,10 @@
 	}
 
 	path {
-		stroke: var(--color-underline-inverted);
+		stroke: var(--color-underline);
+
+		.hero-email:focus-visible & {
+			--color-underline: transparent;
+		}
 	}
 }

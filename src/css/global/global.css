@@ -56,10 +56,6 @@ main > *:not(.hero) + * {
 		.heading-5
 	) {
 	color: var(--color-text-2);
-
-	.inverted & {
-		color: var(--color-text-inverted-2);
-	}
 }
 
 h2,
@@ -128,7 +124,6 @@ a {
 
 	&:hover {
 		color: var(--color-brand);
-		text-decoration-color: var(--color-underline-hover);
 	}
 }
 
@@ -188,21 +183,6 @@ blockquote {
 		background-color: var(--color-blockquote);
 		z-index: -1;
 	}
-
-	@media (--forcedColors) {
-		&:before,
-		:after {
-			color: canvasText;
-		}
-
-		&:before {
-			background-color: canvas;
-		}
-
-		&:after {
-			background-color: canvasText;
-		}
-	}
 }
 
 cite {
@@ -212,10 +192,6 @@ cite {
 strong {
 	color: var(--color-text-2);
 	font-weight: var(--font-bold);
-
-	.inverted & {
-		color: var(--color-text-inverted-2);
-	}
 }
 
 hr {
