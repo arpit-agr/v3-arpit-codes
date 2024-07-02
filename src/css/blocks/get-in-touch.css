@@ -12,7 +12,7 @@
 		max-inline-size: min(33vw, 37.5rem);
 		inline-size: 100%;
 
-		@media (--md-n-above) {
+		@media (--lg-n-above) {
 			display: unset;
 		}
 
@@ -30,19 +30,4 @@
 
 #get-in-touch:target .blinking-dot {
 	color: var(--color-brand);
-}
-
-@keyframes --blink {
-	0% {
-		opacity: 1;
-	}
-	10% {
-		opacity: 0.25;
-	}
-	40% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 1;
-	}
 }

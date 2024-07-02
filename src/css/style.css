@@ -46,6 +46,7 @@ Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom
 @import 'utilities/region.css' layer(utilities);
 @import 'utilities/text-styles.css' layer(utilities);
 @import 'utilities/visually-hidden.css' layer(utilities);
+@import 'utilities/keyframes.css' layer(utilities);
 
 /* Exceptions */
 @import 'blocks/home-page.css';
