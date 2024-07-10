@@ -152,7 +152,7 @@ https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
 	max-inline-size: var(--measure);
 
 	> * {
-		--flow-space: var(--space-2xs);
+		--flow-space: var(--space-xs);
 	}
 
 	&:has([open]) > * {
