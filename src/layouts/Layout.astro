@@ -55,8 +55,8 @@ if (isDynamicRoute) {
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:image" content={ogImagePath} />
 		<meta property="og:image:alt" content=`Page image for ${title}` />
-		{description && <meta name="description" content={description} />}
-		{description && <meta property="og:description" content={description} />}
+		{!!description && <meta name="description" content={description} />}
+		{!!description && <meta property="og:description" content={description} />}
 		<meta name="theme-color" content="#0d0f12" />
 		<!-- favicon -->
 		<link rel="icon" href="/favicon.ico" sizes="any" />

@@ -24,7 +24,7 @@ const {Content} = await post.render();
 			<HeroSection>
 				<h1 {...post.data.draft && {'data-draft': true}}>{post.data.title}</h1>
 				{
-					post.data.summary && (
+					!!post.data.summary && (
 						<p class="summary text-step-1 leading-snug">{post.data.summary}</p>
 					)
 				}
@@ -34,7 +34,7 @@ const {Content} = await post.render();
 				</p>
 			</HeroSection>
 			{
-				post.data.featuredImg && (
+				!!post.data.featuredImg && (
 					<PostFeaturedImg
 						imagePath={`/src/content/blog/${post.slug}/${post.data.featuredImg.url}`}
 						caption={post.data.featuredImg.caption}

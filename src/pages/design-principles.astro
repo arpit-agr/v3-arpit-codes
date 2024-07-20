@@ -47,10 +47,10 @@ const allDesignPrinciples = await getCollection(
 								</dt>
 								<dd class="principle-content flow">
 									<Content />
-									{(origin || authorData) && (
+									{(!!origin || !!authorData) && (
 										<cite class="inline-block small-text text-balance">
 											― <span class="visually-hidden">Formulated by</span>
-											{authorData &&
+											{!!authorData &&
 												authorData.map((item, index) => {
 													if (index + 1 < authorData.length) {
 														return `${item}, `;
@@ -58,8 +58,8 @@ const allDesignPrinciples = await getCollection(
 														return `${item}`;
 													}
 												})}
-											{origin && authorData && ' in'}
-											{origin && `'${origin}'`}
+											{!!origin && !!authorData && ' in'}
+											{!!origin && `'${origin}'`}
 										</cite>
 									)}
 								</dd>
