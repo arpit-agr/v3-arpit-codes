@@ -2,6 +2,12 @@ import {defineConfig} from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import rehypeAttrs from 'rehype-attr';
+import {
+	transformerNotationDiff,
+	transformerMetaHighlight,
+	transformerNotationErrorLevel,
+	transformerRemoveLineBreak
+} from '@shikijs/transformers';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +20,15 @@ export default defineConfig({
 	},
 	markdown: {
 		rehypePlugins: [[rehypeAttrs, {properties: 'attr'}]],
-		shikiConfig: {theme: 'material-theme-darker'}
+		shikiConfig: {
+			theme: 'slack-dark',
+			transformers: [
+				transformerNotationDiff(),
+				transformerMetaHighlight(),
+				transformerNotationErrorLevel(),
+				transformerRemoveLineBreak()
+			]
+		}
 	},
 	integrations: [
 		tailwind({
