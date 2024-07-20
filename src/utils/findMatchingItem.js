@@ -4,7 +4,7 @@ export function findMatchingItem(pageUrlPathname, pageData) {
 	}
 
 	for (let item of pageData) {
-		if (item.linkURL && item.linkURL === pageUrlPathname) {
+		if (!!item.linkURL && item.linkURL === pageUrlPathname) {
 			return item;
 		}
 	}
