@@ -3,6 +3,7 @@
 	grid-template-columns: auto 1fr;
 	gap: 0.5ch;
 	align-items: first baseline;
+	text-wrap: pretty;
 
 	&::-webkit-details-marker,
 	&::marker {
@@ -33,11 +34,6 @@
 		inset-block-start: 0;
 		inline-size: var(--border-thickness-1);
 		block-size: 100%;
-		background-image: linear-gradient(
-			to bottom,
-			transparent 1lh,
-			var(--color-border-2) 1lh
-		);
 		z-index: -1;
 		translate: -50% 0;
 	}
@@ -54,4 +50,12 @@
 			outline-offset: calc(-1 / 2 * var(--space-3xs));
 		}
 	}
+}
+
+.post-tag-list[open]:before {
+	background-image: linear-gradient(
+		to bottom,
+		transparent 1lh,
+		var(--color-border-2) 1lh
+	);
 }

@@ -134,7 +134,6 @@ project-showcase {
 		display: inline-grid;
 		place-items: center;
 		aspect-ratio: 1;
-		border-radius: var(--border-radius-round);
 
 		opacity: 0.42;
 		cursor: not-allowed;
