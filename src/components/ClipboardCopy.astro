@@ -30,12 +30,12 @@
 		const notice = data.target.querySelector('.notice');
 		const copyLabel = data.target.querySelector('.copy-label');
 
-		announce.setAttribute('aria-label', 'Copied');
+		announce.textContent = 'Email copied';
 		notice.hidden = false; // Show the "Copied" text
 		copyLabel.hidden = true; // Hide the "Copy" text
 
 		setTimeout(function () {
-			announce.setAttribute('aria-label', '');
+			announce.textContent = '';
 			notice.hidden = true;
 			copyLabel.hidden = false;
 		}, 1500);
