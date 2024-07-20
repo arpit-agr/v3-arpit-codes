@@ -22,7 +22,7 @@ const {Content} = await post.render();
 	<main class="post" id="main">
 		<article>
 			<HeroSection>
-				<h1 {...post.data.draft && {'data-draft': true}}>{post.data.title}</h1>
+				<h1 data-draft={post.data.draft}>{post.data.title}</h1>
 				{
 					!!post.data.summary && (
 						<p class="summary text-step-1 leading-snug">{post.data.summary}</p>

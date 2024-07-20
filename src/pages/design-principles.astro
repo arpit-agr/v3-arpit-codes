@@ -40,7 +40,7 @@ const allDesignPrinciples = await getCollection(
 									<a
 										class="heading-4 text-pretty block"
 										href={entry.data.url}
-										{...(entry.data.draft && {'data-draft': true})}
+										data-draft={entry.data.draft}
 									>
 										{entry.data.title}
 									</a>
