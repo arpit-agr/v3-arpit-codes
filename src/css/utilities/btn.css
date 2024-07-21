@@ -1,13 +1,12 @@
 .btn {
 	padding: var(--button-padding-block) var(--button-padding-inline);
-	background-color: var(--color-bg-button);
 	border: unset;
 	border-radius: var(--border-radius-round);
 	outline: var(--border-thickness-1) solid transparent; /* For a11y in high contrast */
+
+	background-color: var(--color-bg-button);
 	color: var(--color-text-button);
 	line-height: var(--leading-flat);
-	text-decoration-line: none;
-	-webkit-font-smoothing: antialiased;
 
 	transition:
 		opacity var(--transition-base),
@@ -16,31 +15,18 @@
 		outline var(--transition-base),
 		outline-offset var(--transition-base);
 
-	&:hover {
-		background-color: var(--color-bg-button-hover);
-		color: var(--color-text-button-hover);
+	&:hover,
+	&:focus-visible {
+		--focus-ring-width: var(--border-thickness-1);
+		--focus-ring: var(--focus-ring-width) solid var(--color-border-2);
+		--focus-ring-offset: 0px;
+
+		outline: var(--focus-ring);
+		outline-offset: var(--focus-ring-offset);
 	}
 
 	&:focus-visible {
-		--focus-ring-offset: calc(2 * var(--space-5xs));
-		outline: var(--focus-ring);
-	}
-
-	@media (--forcedColors) {
-		-webkit-font-smoothing: auto;
-
-		@media (--OSdark) {
-			-webkit-font-smoothing: antialiased;
-		}
-	}
-}
-
-[data-btn='secondary'] {
-	background-color: var(--color-bg-button-secondary);
-	color: var(--color-text-button-secondary);
-
-	&:hover {
-		background-color: var(--color-bg-button-hover-secondary);
-		color: var(--color-text-button-hover-secondary);
+		--focus-ring-width: var(--border-thickness-2);
+		outline-color: var(--color-brand);
 	}
 }
