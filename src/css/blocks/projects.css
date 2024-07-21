@@ -71,8 +71,9 @@ project-showcase {
 	--_iphone-inset: 5.25%;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
+	align-items: baseline;
 	gap: var(--space-xs-s);
-	padding-inline-end: var(--_iphone-inset);
+	margin-inline-end: var(--_iphone-inset);
 
 	&:before,
 	&:after {

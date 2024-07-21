@@ -14,12 +14,12 @@ const projectsLength = projects.length;
 				projects.map((project, index) => {
 					return (
 						<li class="project-item">
-							<div class="project-item-header tiny-text leading-flat text-uppercase-medium">
+							<div class="project-item-header small-text leading-flat">
 								<a class="project-link" href={project.url}>
 									<span class="project-title">{project.title}</span>
 									<span class="visually-hidden">project site</span>
 								</a>
-								<span class="project-index" aria-hidden="true">
+								<span class="project-index tiny-text" aria-hidden="true">
 									{index + 1} ⁄ {projectsLength}
 								</span>
 							</div>
