@@ -5,7 +5,7 @@ const codePenTemplate = document.createElement('template');
 codePenTemplate.innerHTML = `
 <form action="https://codepen.io/pen/define" method="POST" target="_blank">
   <input type="hidden" name="data">
-  <input type="submit" value="Open on CodePen">
+  <input type="submit" value="Open on CodePen →">
 </form>
 `;
 
