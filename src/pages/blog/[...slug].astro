@@ -16,9 +16,15 @@ export async function getStaticPaths() {
 }
 const {post} = Astro.props;
 const {Content} = await post.render();
+const hasCodePenDemo = post.data.tags.includes('code-pen');
 ---
 
 <Layout title={post.data.title} description={post.data.summary}>
+	{
+		hasCodePenDemo && (
+			<script is:inline type="module" src="/scripts/code-pen.js" />
+		)
+	}
 	<main class="post" id="main">
 		<article>
 			<HeroSection>
@@ -93,9 +99,4 @@ const {Content} = await post.render();
 	}
 
 	HeadingAnchors.register();
-</script>
-
-<script>
-	// https://github.com/daviddarnes/code-pen
-	import '@daviddarnes/code-pen';
 </script>
