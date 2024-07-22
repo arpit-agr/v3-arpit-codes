@@ -35,7 +35,7 @@ As simply put by Rachel:
 
 > When you define layout on a box in CSS, you are defining what happens to this box in terms of how it behaves in relation to all of the other boxes in the layout. You are also defining how the children of that box behave.
 
-## Browser Support
+## Browser support
 
 As per [Can I Use](https://caniuse.com/?search=display%20multi) and [Web Platform Dashboard](https://webstatus.dev/features/two-value-display?q=display), browsers do support the two-value syntax for the display property since 21 July 2023.
 

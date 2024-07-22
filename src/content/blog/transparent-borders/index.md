@@ -16,7 +16,7 @@ tags:
 
 In web development, small design decisions can have a significant impact on accessibility and user experience. One such decision is how we handle borders on interactive elements.
 
-## The Problem with Border: None
+## The problem with `border: none`
 
 When styling interactive elements like buttons, it's common practice to remove default borders using `border: none`. However, this approach can lead to accessibility issues, especially in [high contrast mode](/blog/testing-in-forced-colors-mode/). As demonstrated in the image below, removing the border entirely can cause buttons to appear as floating text on the page, making it difficult for users with low vision to distinguish interactive elements.
 
@@ -26,7 +26,7 @@ When styling interactive elements like buttons, it's common practice to remove d
 
 > In the case of interactive form controls (inputs, textareas, buttons, etc.), those pesky borders were put there because they have an accessibility benefit when using High Contrast Mode, a feature [used by 30.6% of low-vision users](https://webaim.org/projects/lowvisionsurvey2/#at).
 
-## The Transparent Border Solution
+## The transparent border solution
 
 To address this issue, Dave recommends making the border or outline transparent instead of removing it entirely. This can be achieved with the following CSS:
 
@@ -40,7 +40,7 @@ As demonstrated in the image below, this approach is effective for several reaso
 
 ![Side-by-side comparison of the contact form on Slae.app with the transparent border solution applied. The left image shows the contact form with forced colors disabled, displaying the default color scheme. The right image shows the contact form with forced colors enabled. In the right image, the submit button appears as a button.](./slae-before-after-transparent-border.jpg)
 
-## User Experience Benefits
+## User experience benefits
 
 Using transparent borders offers additional benefits for user experience. Consider hover effects, for example.
 
@@ -87,7 +87,7 @@ By setting a transparent border in the default state, we ensure smooth transitio
 
 </code-pen>
 
-## Implications for Design Systems
+## Implications for design systems
 
 Transparent borders are also valuable in the context of themeable design systems. [Brad Frost](https://bradfrost.com/blog/post/transparent-borders/) elaborates:
 
