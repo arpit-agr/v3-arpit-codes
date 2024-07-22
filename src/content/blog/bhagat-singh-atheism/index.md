@@ -30,7 +30,7 @@ Here are some of my favourite passages from Bhagat Singh's essay, which I find n
 >
 > As regards the origin of God, my own idea is that having realised the limitation of man, his weaknesses and shortcoming having been taken into consideration, God was brought into imaginary existence to encourage man to face boldly all the trying circumstances, to meet all dangers manfully and to check and restrain his outbursts in prosperity and affluence. God, both will his private laws and parental generosity, was imagined and painted in greater details. He was to serve as a deterrent factor when his fury and private laws were discussed, so that man may not become a danger to society. He was to serve as a father, mother, sister and brother, friend and helper, when his parental qualifications were to be explained. So that when man be in great distress, having been betrayed and deserted by all friends, he may find consolation in the idea that an ever-true friend, was still there to help him, to support him and that he was almighty and could do anything. Really that was useful to the society in the primitive age. The idea of God is helpful to man in distress.
 
-## Further Reading
+## Learn More
 
 The essay can be accessed in its entirety on [marxists.org](https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm). It was published posthmously on 27 September 1931 in [The People](/docs/why-i-am-an-atheist.pdf).
 

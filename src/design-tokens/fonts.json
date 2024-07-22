@@ -5,7 +5,7 @@
 		{
 			"name": "Monospace",
 			"description": "System fonts for code",
-			"value": ["ui-monospace", "SFMono-Regular", "monospace"]
+			"value": ["monospace"]
 		},
 		{
 			"name": "Serif",

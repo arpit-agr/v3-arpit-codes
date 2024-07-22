@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 const {post} = Astro.props;
 const {Content} = await post.render();
-const hasCodePenDemo = post.data.tags.includes('code-pen');
+const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 ---
 
 <Layout title={post.data.title} description={post.data.summary}>

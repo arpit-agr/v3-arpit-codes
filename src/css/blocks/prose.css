@@ -5,7 +5,9 @@
 	h3,
 	h4,
 	p:has(img),
-	p:has(img) + * {
+	p:has(img) + *,
+	code-pen,
+	code-pen + * {
 		--flow-space: 1lh;
 	}
 }

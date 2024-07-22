@@ -3,7 +3,15 @@ title: 'Transparent Borders'
 summary: 'Using transparent borders instead of removing them entirely offers significant benefits for accessibility, user experience, and design system flexibility.'
 pubDate: 2024-05-12
 tags:
-  ['accessibility', 'high-contrast-mode', 'design-system', 'css', 'dave-rupert']
+  [
+    'accessibility',
+    'high-contrast-mode',
+    'design-systems',
+    'css',
+    'dave-rupert',
+    'brad-frost',
+    'code-pen-demo'
+  ]
 ---
 
 In web development, small design decisions can have a significant impact on accessibility and user experience. One such decision is how we handle borders on interactive elements.
@@ -50,15 +58,34 @@ In such situations, applying a visible border on hover can inadvertently change 
 
 By setting a transparent border in the default state, we ensure smooth transitions and consistent element sizes across different states.
 
+<code-pen>
+
+```html
+<div>
+	<button class="no-border-btn">Button with no border</button>
+	<button class="transparent-border-btn">Button with transparent border</button>
+</div>
+```
+
 ```css
-button {
-	border: 2px solid transparent;
+.no-border-btn {
+	border: none;
+
+	&:hover {
+		border: 2px solid navy;
+	}
 }
 
-button:hover {
-	border-color: navy;
+.transparent-border-btn {
+	border: 2px solid transparent;
+
+	&:hover {
+		border-color: navy;
+	}
 }
 ```
+
+</code-pen>
 
 ## Implications for Design Systems
 
