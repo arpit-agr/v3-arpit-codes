@@ -48,9 +48,9 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 				)
 			}
 			<div class="flow region wrapper">
-				<heading-anchors class="post-body prose flow">
+				<div class="post-body prose flow">
 					<Content />
-				</heading-anchors>
+				</div>
 				<footer class="post-footer flow flow-space-l">
 					<PostTagsList postTags={post.data.tags} />
 					<PostReply />
@@ -59,44 +59,3 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 		</article>
 	</main>
 </Layout>
-
-<script>
-	/* 
-	<heading-anchors>
-	A Web Component to add anchor links to headings with IDs.
-	https://github.com/daviddarnes/heading-anchors
-	*/
-	// @ts-nocheck
-
-	class HeadingAnchors extends HTMLElement {
-		static register(tagName) {
-			if ('customElements' in window) {
-				customElements.define(tagName || 'heading-anchors', HeadingAnchors);
-			}
-		}
-
-		connectedCallback() {
-			this.headings.forEach(heading => {
-				heading.append(this.anchor(heading));
-				heading.setAttribute('tabindex', '-1');
-			});
-		}
-
-		anchor(heading) {
-			let anchor = document.createElement('a');
-			anchor.href = `#${heading.id}`;
-			anchor.innerHTML = '#';
-			anchor.setAttribute(
-				'aria-label',
-				`Jump link to '${heading.textContent}'`
-			);
-			return anchor;
-		}
-
-		get headings() {
-			return this.querySelectorAll('h2[id], h3[id]');
-		}
-	}
-
-	HeadingAnchors.register();
-</script>
