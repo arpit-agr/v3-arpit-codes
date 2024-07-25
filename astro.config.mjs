@@ -21,7 +21,7 @@ export default defineConfig({
 	markdown: {
 		rehypePlugins: [[rehypeAttrs, {properties: 'attr'}]],
 		shikiConfig: {
-			theme: 'slack-dark',
+			theme: 'nord',
 			transformers: [
 				transformerNotationDiff(),
 				transformerMetaHighlight(),
