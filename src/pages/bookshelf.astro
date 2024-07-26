@@ -20,7 +20,7 @@ const bookList = await getCollection('books');
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
 		<div class="flow region wrapper">
-			<Eyebrow>→ Sorted Alphabetically</Eyebrow>
+			<Eyebrow>→ {bookList.length} books sorted alphabetically</Eyebrow>
 			<ul class="book-list grid flow-space-l" role="list">
 				{
 					bookList.map((book, index) => {
