@@ -6,7 +6,7 @@ interface Props {
 const {postTags} = Astro.props;
 ---
 
-<p class="post-tag-list cluster">
+<p class="post-tag-list cluster small-text leading-snug">
 	Tagged:
 	{
 		postTags.map(tag => (
@@ -16,3 +16,9 @@ const {postTags} = Astro.props;
 		))
 	}
 </p>
+
+<style>
+	p {
+		--gutter: var(--space-3xs) var(--space-2xs);
+	}
+</style>

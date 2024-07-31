@@ -169,11 +169,10 @@ https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
 }
 
 .post-footer {
-	--gutter: var(--space-3xs) var(--space-2xs);
 	max-inline-size: var(--measure);
 
 	> * {
-		--flow-space: var(--space-xs);
+		--flow-space: var(--space-s);
 	}
 }
 
