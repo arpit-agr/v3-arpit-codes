@@ -4,34 +4,15 @@ interface Props {
 }
 
 const {postTags} = Astro.props;
-const hasManyTags = postTags.length > 3;
 ---
 
-{
-	hasManyTags ? (
-		<details class="post-tag-list small-text leading-snug flow">
-			<summary>
-				Tagged: {postTags.slice(0, 2).join(', ')} and {postTags.length - 2}{' '}
-				others
-			</summary>
-			<ul class="cluster flow-space-2xs" role="list">
-				{postTags.map(tag => (
-					<li>
-						<a href={`/tags/${tag}/`} rel="tag">
-							{tag}
-						</a>
-					</li>
-				))}
-			</ul>
-		</details>
-	) : (
-		<p class="post-tag-list small-text leading-snug">
-			Tagged:
-			{postTags.map(tag => (
-				<a href={`/tags/${tag}/`} rel="tag">
-					{tag}
-				</a>
-			))}
-		</p>
-	)
-}
+<p class="post-tag-list cluster">
+	Tagged:
+	{
+		postTags.map(tag => (
+			<a href={`/tags/${tag}/`} rel="tag">
+				{tag}
+			</a>
+		))
+	}
+</p>

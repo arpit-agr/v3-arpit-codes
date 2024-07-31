@@ -6,7 +6,7 @@ const currentUrl = Astro.url;
 const mailSubjectUrl = currentUrl.toString().slice(8); /* removes https:// */
 ---
 
-<p class="reply-methods small-text leading-snug cluster">
+<p class="reply-methods cluster">
 	Reply:
 	<a href=`mailto:hello@arpit.codes?subject=Re: ${mailSubjectUrl}`>
 		<MailVector />
