@@ -67,7 +67,20 @@ h4,
 h5,
 .heading-5 {
 	font-weight: var(--font-medium);
+}
+
+h2,
+.heading-2,
+h3,
+.heading-3 {
 	line-height: var(--leading-tight);
+}
+
+h4,
+.heading-4,
+h5,
+.heading-5 {
+	line-height: var(--leading-snug);
 }
 
 h1,

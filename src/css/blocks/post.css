@@ -169,20 +169,15 @@ https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
 }
 
 .post-footer {
+	--gutter: var(--space-3xs) var(--space-2xs);
 	max-inline-size: var(--measure);
 
 	> * {
 		--flow-space: var(--space-xs);
 	}
-
-	&:has([open]) > * {
-		--flow-space: var(--space-s);
-	}
 }
 
 .reply-methods {
-	--gutter: 0.5ch;
-
 	svg {
 		block-size: 1em;
 		inline-size: auto;
@@ -192,10 +187,5 @@ https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
 		display: inline-flex;
 		gap: var(--space-3xs);
 		align-items: center;
-		padding: var(--space-3xs);
-
-		&:focus-visible {
-			outline-offset: calc(-1 / 2 * var(--space-3xs));
-		}
 	}
 }

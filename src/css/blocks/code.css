@@ -29,9 +29,9 @@ code {
 :not(pre) > code {
 	padding: 0px var(--space-3xs);
 	border-radius: var(--border-radius-1);
-	background-color: var(--color-bg-3);
+	background-color: var(--color-bg-4);
 	outline: var(--border-thickness-1) solid var(--color-border-code);
-	/* font-size: 0.875em; */
+	color: var(--color-text-2);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
