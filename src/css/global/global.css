@@ -25,6 +25,8 @@ body {
 	line-height: var(--leading-normal);
 	font-feature-settings: var(--geist-tnum), var(--geist-ss05);
 	-webkit-font-smoothing: auto;
+	/* https://youtube.com/watch?v=uadAfE6cAoM&t=1338 */
+	font-size-adjust: from-font;
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;
@@ -156,7 +158,7 @@ button {
 blockquote {
 	position: relative;
 	display: grid;
-	gap: 0 var(--space-2xs);
+	gap: 0 var(--space-xs);
 	grid-template-columns: auto 1fr;
 
 	> * {
@@ -174,11 +176,11 @@ blockquote {
 		block-size: 1ex;
 
 		background-color: var(--color-bg-1);
-		color: var(--color-blockquote);
-		font-size: 4em;
+		color: currentColor;
+		font-size: var(--size-step-5);
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
-		translate: 0 -39%; /* magic number */
+		translate: 0 -20%; /* magic number */
 		max-block-size: 0.3lh; /* magic number */
 	}
 
@@ -189,7 +191,7 @@ blockquote {
 		grid-column: 1/2;
 		justify-self: center;
 		inline-size: var(--_width);
-		block-size: calc(100% - 1lh - ((var(--leading-normal) - 1) * 0.5lh));
+		block-size: calc(100% - 1lh);
 		align-self: end;
 		inset-block-end: calc((var(--leading-normal) - 1) * 0.25lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));

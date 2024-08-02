@@ -1,7 +1,4 @@
 .post {
-	/* https://youtube.com/watch?v=uadAfE6cAoM&t=1338 */
-	font-size-adjust: from-font;
-
 	h1 {
 		font-size: var(--size-step-3-4);
 		line-height: var(--leading-tight);

@@ -6,6 +6,8 @@
 	h4,
 	p:has(img),
 	p:has(img) + *,
+	pre,
+	pre + *,
 	code-pen,
 	code-pen + * {
 		--flow-space: 1lh;

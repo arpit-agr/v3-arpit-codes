@@ -15,6 +15,10 @@
 	color: var(--color-text-4);
 }
 
+.text-color-inverted-3 {
+	color: var(--color-text-inverted-3);
+}
+
 .text-color-inverted-4 {
 	color: var(--color-text-inverted-4);
 }

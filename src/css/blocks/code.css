@@ -23,6 +23,7 @@ pre {
 }
 
 code {
+	font-size: 0.875em;
 	font-family: var(--font-monospace);
 }
 
@@ -38,7 +39,7 @@ code {
 
 code-pen {
 	outline: var(--border-thickness-1) solid var(--color-border-pre);
-	background: var(--color-bg-inverted-3);
+	background: var(--color-bg-inverted-1);
 	border-radius: var(--border-radius-1);
 	overflow: hidden;
 
@@ -60,7 +61,7 @@ code-pen {
 		padding: var(--space-xs) var(--space-s);
 		border: unset;
 		background-color: transparent;
-		color: var(--color-text-inverted-4);
+		color: var(--color-text-inverted-3);
 		line-height: var(--leading-flat);
 		text-align: start;
 		-webkit-font-smoothing: antialiased;
