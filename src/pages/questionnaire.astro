@@ -13,16 +13,16 @@ const acknowledgment = questions.acknowledgement;
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
-	<main id="main" tabindex="-1">
+	<main class="content-page" id="main" tabindex="-1">
 		<HeroSection>
 			<h1>{pageTitle}</h1>
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
 		<article class="questionnaire-wrapper grid region wrapper">
-			<ul class="question-list flow isolate" role="list">
+			<ul class="flow flow-space-s" role="list">
 				{
 					questionsList.map(question => {
-						return <li>{question}</li>;
+						return <li class="content-entry">{question}</li>;
 					})
 				}
 			</ul>

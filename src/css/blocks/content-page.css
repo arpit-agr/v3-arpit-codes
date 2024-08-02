@@ -1,24 +1,23 @@
-.design-principles-list {
-	--_region-padding: var(--region-space, var(--space-xl));
+:where(.content-page > article) {
 	position: relative;
 
 	&::before {
 		content: '';
 		position: absolute;
 		inset-block-start: 0;
-		inset-inline-start: calc(0.5 * var(--counter-size));
-		block-size: calc(100% + (2 * var(--_region-padding)));
+		inset-inline-start: calc(var(--page-gutter) + 0.5 * var(--counter-size));
+		block-size: 100%;
 		border-inline-start: var(--border-thickness-1) solid
 			var(--color-counter-connector);
-		translate: -50% calc(-1 * var(--_region-padding));
+		translate: -50% 0;
 		z-index: -1;
 	}
 }
 
-.principle-entry {
+.content-entry {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	gap: var(--space-xs);
+	gap: var(--counter-gap);
 	align-items: start;
 
 	> * {
@@ -32,7 +31,8 @@
 		place-items: center;
 		inline-size: var(--counter-size);
 		block-size: var(--counter-size);
-		color: var(--color-counter);
+		color: var(--color-text-2);
+		translate: 0 7.5%;
 	}
 
 	> :not(:first-child) {

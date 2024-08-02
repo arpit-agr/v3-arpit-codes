@@ -10,24 +10,18 @@ const pageTitle = pageInfo.title;
 const pageDesc = pageInfo.description;
 const allDesignPrinciples = await getCollection(
 	'designPrinciples',
-	({data}) => {
-		if (import.meta.env.PROD) {
-			return data.draft !== true;
-		} else {
-			return data;
-		}
-	}
+	data => data
 );
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
-	<main id="main" tabindex="-1">
+	<main class="content-page" id="main" tabindex="-1">
 		<HeroSection>
 			<h1>{pageTitle}</h1>
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
 		<article class="flow region wrapper">
-			<dl class="design-principles-list flow flow-space-xl" role="list">
+			<dl class="flow flow-space-l" role="list">
 				{
 					allDesignPrinciples.map(async entry => {
 						const {Content} = await entry.render();
@@ -35,17 +29,16 @@ const allDesignPrinciples = await getCollection(
 						const authorData = entry.data.author;
 
 						return (
-							<div class="principle-entry">
+							<div class="content-entry">
 								<dt>
 									<a
 										class="heading-4 text-pretty block"
 										href={entry.data.url}
-										data-draft={entry.data.draft}
 									>
 										{entry.data.title}
 									</a>
 								</dt>
-								<dd class="principle-content flow">
+								<dd class="flow">
 									<Content />
 									{(!!origin || !!authorData) && (
 										<cite class="inline-block small-text text-balance">

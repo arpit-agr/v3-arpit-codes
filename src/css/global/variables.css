@@ -103,6 +103,7 @@
 
 	--underline-offset: var(--space-4xs);
 	--counter-size: var(--space-s);
+	--counter-gap: var(--space-xs);
 
 	--button-padding-block: 0.5em;
 	--button-padding-inline: 0.75em;

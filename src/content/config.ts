@@ -35,8 +35,7 @@ const designPrinciplesCollection = defineCollection({
 		title: z.string(),
 		url: z.string(),
 		origin: z.string().optional(),
-		author: z.array(z.string()).optional(),
-		draft: z.boolean().optional()
+		author: z.array(z.string()).optional()
 	})
 });
 
