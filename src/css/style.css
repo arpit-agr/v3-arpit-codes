@@ -23,6 +23,7 @@ Any custom styles you add to the base, components, or utilities layers will only
 Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom-css
 */
 
+@import 'blocks/skip-to-main.css' layer(components);
 @import 'blocks/site-header.css' layer(components);
 @import 'blocks/secondary-nav.css' layer(components);
 @import 'blocks/get-in-touch.css' layer(components);
