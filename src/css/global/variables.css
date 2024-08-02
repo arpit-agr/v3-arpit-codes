@@ -29,14 +29,14 @@
 	--color-bg-inverted-2: var(--gray-10);
 	--color-bg-inverted-3: var(--gray-9);
 	--color-bg-inverted-4: var(--gray-8);
-	--color-text-1: var(--gray-11);
-	--color-text-2: var(--gray-12);
-	--color-text-3: var(--gray-10);
-	--color-text-4: var(--gray-7);
-	--color-text-inverted-1: var(--gray-1);
-	--color-text-inverted-2: var(--gray-0);
-	--color-text-inverted-3: var(--gray-2);
-	--color-text-inverted-4: var(--gray-5);
+	--color-text-1: var(--gray-8);
+	--color-text-2: var(--gray-11);
+	--color-text-3: var(--gray-7);
+	--color-text-4: var(--gray-6);
+	--color-text-inverted-1: var(--gray-4);
+	--color-text-inverted-2: var(--gray-1);
+	--color-text-inverted-3: var(--gray-5);
+	--color-text-inverted-4: var(--gray-6);
 	--color-border-1: var(--gray-3);
 	--color-border-2: var(--gray-8);
 	--color-underline: currentColor;
@@ -45,7 +45,6 @@
 	--color-border-pre: transparent;
 	--color-border-pre-separator: var(--gray-8);
 	--color-blockquote: var(--gray-8);
-	--color-counter: var(--color-text-2);
 	--color-counter-connector: var(--color-border-1);
 	--color-text-button: var(--color-text-2);
 	--color-bg-button: var(--color-bg-4);
@@ -66,14 +65,13 @@
 		--color-border-hero: var(--color-border-1);
 		--color-border-pre: var(--gray-8);
 		--color-blockquote: var(--gray-5);
-		--color-counter: var(--color-text-3);
 		--color-counter-connector: var(--color-border-hero);
 		--color-bird-icon-path: var(--color-text-1);
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
-		--color-underline: color-mix(in srgb, currentColor, transparent 20%);
-		--color-blockquote: color-mix(in srgb, currentColor, transparent 20%);
+		--color-underline: color-mix(in srgb, currentColor, transparent 10%);
+		--color-blockquote: color-mix(in srgb, currentColor, transparent 10%);
 	}
 }
 
@@ -116,15 +114,6 @@
 	--size-step-00-0: clamp(0.9375rem, 0.8333rem + 0.5208vi, 1.25rem);
 	--size-step-3-4: clamp(1.9438rem, 1.5744rem + 1.8469vi, 3.0519rem);
 	--size-step-4-5: clamp(2.3325rem, 1.8383rem + 2.4708vi, 3.815rem);
-}
-
-/* shadow variables */
-:root {
-	/* open-props var(--shadow-2) */
-	--site-header-shadow: 0 -3px 5px -2px
-			hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-		0 -7px 14px -5px
-			hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
 }
 
 /* transitions variables */

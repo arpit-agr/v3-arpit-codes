@@ -25,7 +25,7 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 			<script is:inline type="module" src="/scripts/code-pen.js" />
 		)
 	}
-	<main class="post" id="main">
+	<main class="post" id="main" tabindex="-1">
 		<article>
 			<HeroSection>
 				<h1 data-draft={post.data.draft}>{post.data.title}</h1>
