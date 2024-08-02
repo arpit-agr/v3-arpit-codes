@@ -1,14 +1,13 @@
-.post-list-wrapper {
+.list-wrapper {
 	--measure: 45rem;
 	max-inline-size: var(--measure);
 }
 
-.post-entry {
+.list-entry {
 	--flow-space: var(--space-m-s);
 	--gutter: var(--space-3xs) var(--space-m-l);
 	position: relative;
 	grid-template-columns: 1fr;
-	border-radius: var(--border-radius-1);
 
 	@media (--sm-n-above) {
 		grid-template-columns: minmax(0, var(--measure)) auto;

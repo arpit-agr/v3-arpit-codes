@@ -13,12 +13,12 @@ interface Post {
 const {postsCollection} = Astro.props;
 ---
 
-<div class="post-list-wrapper flow">
+<div class="list-wrapper flow">
 	<slot />
-	<ol class="post-list flow flow-space-l" role="list" reversed>
+	<ol class="flow flow-space-l" role="list" reversed>
 		{
 			postsCollection.map((post: Post) => (
-				<li class="post-entry grid">
+				<li class="list-entry grid">
 					<a
 						class="text-pretty"
 						href={`/blog/${post.slug}/`}
