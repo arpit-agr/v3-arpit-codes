@@ -1,15 +1,15 @@
 ---
 interface Props {
-	postTags: string[];
+	tags: string[];
 }
 
-const {postTags} = Astro.props;
+const {tags} = Astro.props;
 ---
 
-<p class="post-tag-list cluster small-text leading-snug">
+<p class="tag-list cluster small-text leading-snug">
 	Tagged:
 	{
-		postTags.map(tag => (
+		tags.map(tag => (
 			<a href={`/tags/${tag}/`} rel="tag">
 				{tag}
 			</a>
@@ -18,7 +18,7 @@ const {postTags} = Astro.props;
 </p>
 
 <style>
-	p {
+	.tag-list {
 		--gutter: var(--space-3xs) var(--space-2xs);
 	}
 </style>
