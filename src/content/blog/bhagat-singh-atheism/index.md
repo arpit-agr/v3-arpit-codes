@@ -5,7 +5,7 @@ featuredImg:
   url: 'the-people-essay.webp'
   caption: 'Page 195 of the 27 September 1931 edition of The People, provided by Prof. Chaman Lal to marxists.org.'
 pubDate: 2024-01-20
-tags: ['atheism', 'critical-thinking', 'blind-faith', 'india']
+tags: ['atheism', 'critical-thinking', 'blind-faith', 'bhagat-singh', 'india']
 ---
 
 Here are some of my favourite passages from Bhagat Singh's essay, which I find noteworthy. The excerpts are listed in the order they appear.
