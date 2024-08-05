@@ -19,9 +19,7 @@ const displayedPosts = reversedBlogPosts;
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
 		</HeroSection>
 		<article class="region wrapper">
-			<PostList postsCollection={displayedPosts}>
-				<h2 class="heading-3 leading-flat">All Posts</h2>
-			</PostList>
+			<PostList postsCollection={displayedPosts} />
 		</article>
 	</main>
 </Layout>

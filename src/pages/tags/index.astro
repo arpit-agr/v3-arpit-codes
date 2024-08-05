@@ -20,11 +20,13 @@ const sortedTags = uniqueTags.sort();
 		</HeroSection>
 		<div class="flow region wrapper">
 			<Eyebrow>→ Sorted Alphabetically</Eyebrow>
-			<ul class="tags-list grid flow-space-l">
+			<ul class="all-tags grid flow-space-l">
 				{
 					sortedTags.map(tag => (
 						<li>
-							<a href={`/tags/${tag}/`}>{tag}</a>
+							<a class="block" href={`/tags/${tag}/`}>
+								{tag}
+							</a>
 						</li>
 					))
 				}
@@ -34,7 +36,7 @@ const sortedTags = uniqueTags.sort();
 </Layout>
 
 <style is:global>
-	.tags-list {
+	.all-tags {
 		--grid-min-item-size: 12rem;
 		--gutter: var(--space-2xs) var(--space-xl);
 	}

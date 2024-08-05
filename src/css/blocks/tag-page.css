@@ -47,5 +47,7 @@
 }
 
 :where(.tag-page .list-header) h2:target {
-	scroll-margin-block: calc(var(--primary-nav-height) + var(--space-l) - 2px);
+	scroll-margin-block: calc(
+		1ex + (2 * var(--primary-nav-padding-block)) + var(--space-xl)
+	);
 }
