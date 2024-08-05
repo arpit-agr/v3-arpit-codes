@@ -1,0 +1,26 @@
+---
+import ChevronRightVector from './ChevronRightVector.astro';
+
+interface Props {
+	currentPageLinkLabel: string;
+	hasPosts: boolean;
+	hasLinks: boolean;
+}
+
+const {currentPageLinkLabel, hasPosts, hasLinks} = Astro.props;
+---
+
+<nav class="small-text leading-flat wrapper" aria-label="Breadcrumbs">
+	<a href="/tags/">Tag Archive</a>
+	<ChevronRightVector />
+	<a href="#main">{currentPageLinkLabel}</a>
+	{
+		hasPosts && hasLinks && (
+			<>
+				<ChevronRightVector />
+				<a href="#posts">Posts</a>
+				<a href="#links">Links</a>
+			</>
+		)
+	}
+</nav>

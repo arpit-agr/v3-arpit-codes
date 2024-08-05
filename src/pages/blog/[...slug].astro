@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import {publishedBlogPosts} from '../../data/publishedBlogPosts';
 import HeroSection from '../../components/HeroSection.astro';
-import PostTagsList from '../../components/PostTagsList.astro';
+import TagList from '../../components/TagList.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import PostFeaturedImg from '../../components/PostFeaturedImg.astro';
 import PostReply from '../../components/PostReply.astro';
@@ -52,7 +52,7 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 					<Content />
 				</div>
 				<footer class="post-footer flow flow-space-l">
-					<PostTagsList postTags={post.data.tags} />
+					<TagList tags={post.data.tags} />
 					<PostReply />
 				</footer>
 			</div>

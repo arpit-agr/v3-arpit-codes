@@ -1,42 +1,81 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import HeroSection from '../../components/HeroSection.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import PostList from '../../components/PostList.astro';
+import LinkList from '../../components/LinkList.astro';
 import {uniqueTags} from '../../data/uniqueTags.js';
 import {reversedBlogPosts} from '../../data/reversedBlogPosts.js';
+import {reversedLinkItems} from '../../data/reversedLinkItems.js';
 
 export async function getStaticPaths() {
 	return uniqueTags.map(tag => {
 		const filteredPosts = reversedBlogPosts.filter(entry =>
 			entry.data.tags.includes(tag)
 		);
+		const filteredLinks = reversedLinkItems.filter(entry =>
+			entry.data.tags.includes(tag)
+		);
 		return {
 			params: {tag},
-			props: {filteredPosts}
+			props: {filteredPosts, filteredLinks}
 		};
 	});
 }
 
 const {tag} = Astro.params;
-const {filteredPosts} = Astro.props;
-const filteredPostsCount = `${filteredPosts.length} ${filteredPosts.length > 1 ? 'posts' : 'post'}`;
+const {filteredPosts, filteredLinks} = Astro.props;
+
+const filteredPostsCount = filteredPosts.length;
+const filteredlinksCount = filteredLinks.length;
 const pageTitle = `Tag: ${tag}`;
-const pageDesc = `Explore ${filteredPostsCount} tagged '${tag}'`;
+const pageDesc = `Explore all posts and/or links tagged '${tag}'.`;
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
-	<main id="main" tabindex="-1">
+	<main class="tag-page" id="main" tabindex="-1">
 		<HeroSection>
 			<h1>
 				{pageTitle}
 			</h1>
 			<p class="text-balance flow-space-xs">
-				{pageDesc}. Alternatively, you can view all the tags on the
-				<a href="/tags/">Tag Index</a> page.
+				{pageDesc}
 			</p>
 		</HeroSection>
-		<div class="flow flow-space-l region wrapper">
-			<PostList postsCollection={filteredPosts} />
-		</div>
+		<Breadcrumbs
+			currentPageLinkLabel={tag}
+			hasPosts={filteredPosts.length > 0}
+			hasLinks={filteredLinks.length > 0}
+		/>
+		<article class="flow flow-space-xl region wrapper">
+			{
+				filteredPosts.length > 0 && (
+					<PostList postsCollection={filteredPosts}>
+						<div class="list-header cluster">
+							<h2 class="heading-3 leading-flat" id="posts" tabindex="-1">
+								Posts
+							</h2>
+							<span class="text-color-2 font-medium">
+								({filteredPostsCount})
+							</span>
+						</div>
+					</PostList>
+				)
+			}
+			{
+				filteredLinks.length > 0 && (
+					<LinkList linksCollection={filteredLinks}>
+						<div class="list-header cluster">
+							<h2 class="heading-3 leading-flat" id="links" tabindex="-1">
+								Links
+							</h2>
+							<span class="text-color-2 font-medium">
+								({filteredlinksCount})
+							</span>
+						</div>
+					</LinkList>
+				)
+			}
+		</article>
 	</main>
 </Layout>

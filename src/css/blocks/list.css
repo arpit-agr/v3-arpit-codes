@@ -3,6 +3,11 @@
 	max-inline-size: var(--measure);
 }
 
+.list-header {
+	--gutter: var(--space-3xs);
+	--cluster-vertical-alignment: baseline;
+}
+
 .list-entry {
 	--flow-space: var(--space-m-s);
 	--gutter: var(--space-3xs) var(--space-m-l);

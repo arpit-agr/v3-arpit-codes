@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {findMatchingItem} from '../utils/findMatchingItem.js';
+import pageData from '../data/pages.json';
+import HeroSection from '../components/HeroSection.astro';
+import TagList from '../components/TagList.astro';
+import {groupedLinks} from '../data/groupLinksByDate.js';
+
+interface LinkItem {
+	id: string;
+	slug: string;
+	body: string;
+	collection: string;
+	data: {
+		title: string;
+		url: string;
+		pubDate: Date;
+		tags: string[];
+	};
+	render: () => Promise<{Content: any}>;
+}
+
+interface GroupedLinks {
+	month: string;
+	items: LinkItem[];
+}
+
+const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
+const pageTitle = pageInfo.title;
+const pageDesc = pageInfo.description;
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+	<main class="content-page" id="main" tabindex="-1">
+		<HeroSection>
+			<h1>{pageTitle}</h1>
+			<p class="text-balance flow-space-xs">{pageDesc}</p>
+		</HeroSection>
+		<article class="flow flow-space-xl region wrapper">
+			{
+				groupedLinks.map((group: GroupedLinks) => (
+					<section class="flow">
+						<h2 class="month-year-group heading-3">{group.month}</h2>
+						<ul class="flow flow-space-l" role="list">
+							{group.items.map(async (link: LinkItem) => {
+								const {Content} = await link.render();
+								return (
+									<li class="content-entry">
+										<a
+											class="heading-4 text-color-2 text-pretty block"
+											href={link.data.url}
+										>
+											{link.data.title}
+										</a>
+										<div class="flow">
+											<Content />
+											<TagList tags={link.data.tags} />
+										</div>
+									</li>
+								);
+							})}
+						</ul>
+					</section>
+				))
+			}
+		</article>
+	</main>
+</Layout>

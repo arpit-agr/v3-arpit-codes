@@ -1,9 +1,5 @@
-export function findMatchingItem(pageUrlPathname, pageData) {
-	if (!Array.isArray(pageData)) {
-		throw new Error('pageData must be an array');
-	}
-
-	for (let item of pageData) {
+export function findMatchingItem(pageUrlPathname, array) {
+	for (let item of array) {
 		if (!!item.linkURL && item.linkURL === pageUrlPathname) {
 			return item;
 		}

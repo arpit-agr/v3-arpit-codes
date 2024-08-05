@@ -58,5 +58,7 @@ Source: https://tailwindcss.com/docs/adding-custom-styles#removing-unused-custom
 @import 'blocks/code.css';
 @import 'blocks/projects.css';
 @import 'blocks/content-page.css';
-@import 'blocks/questionnaire.css';
+@import 'blocks/links.css';
 @import 'blocks/bookshelf.css';
+@import 'blocks/questionnaire.css';
+@import 'blocks/tag-page.css';
