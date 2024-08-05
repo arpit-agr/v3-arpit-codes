@@ -5,5 +5,5 @@
  */
 
 export function formatMonthYear(date) {
-	return date.toLocaleDateString('en-US', {year: 'numeric', month: 'long'});
+	return date.toLocaleDateString('en-IN', {year: 'numeric', month: 'long'});
 }
