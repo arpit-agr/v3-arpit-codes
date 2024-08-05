@@ -5,7 +5,7 @@ pubDate: 2024-05-21
 tags:
   [
     'forced-colors',
-    'test',
+    'testing',
     'high-contrast-mode',
     'accessibility',
     'css',
