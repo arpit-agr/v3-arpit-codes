@@ -191,7 +191,7 @@ blockquote {
 		grid-column: 1/2;
 		justify-self: center;
 		inline-size: var(--_width);
-		block-size: calc(100% - 1lh);
+		block-size: calc(100% - 1.25lh);
 		align-self: end;
 		inset-block-end: calc((var(--leading-normal) - 1) * 0.25lh);
 		transform: translateY(calc(var(--_width) * -1 / 2));
