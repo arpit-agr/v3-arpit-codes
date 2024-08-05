@@ -1,0 +1,31 @@
+---
+import FormattedDate from './FormattedDate.astro';
+
+interface LinkItem {
+	data: {
+		title: string;
+		url: string;
+		pubDate: Date;
+	};
+}
+
+const {linksCollection} = Astro.props;
+---
+
+<div class="list-wrapper flow">
+	<slot />
+	<ol class="flow flow-space-l" role="list" reversed>
+		{
+			linksCollection.map((link: LinkItem) => (
+				<li class="list-entry grid">
+					<a class="text-pretty" href={link.data.url}>
+						{link.data.title}
+					</a>
+					<div class="small-text">
+						<FormattedDate date={link.data.pubDate} />
+					</div>
+				</li>
+			))
+		}
+	</ol>
+</div>
