@@ -2,7 +2,7 @@
 title: "Why I Am An Atheist: Bhagat Singh's Essay"
 summary: "Indian revolutionary Bhagat Singh's essay 'Why I Am an Atheist', written at 23 from jail, challenges blind faith and advocates for reason and critical thinking."
 featuredImg:
-  url: 'the-people-essay.webp'
+  filename: 'the-people-essay.webp'
   caption: 'Page 195 of the 27 September 1931 edition of The People, provided by Prof. Chaman Lal to marxists.org.'
 pubDate: 2024-01-20
 tags: ['atheism', 'critical-thinking', 'blind-faith', 'bhagat-singh', 'india']

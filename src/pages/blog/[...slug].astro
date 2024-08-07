@@ -42,7 +42,7 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 			{
 				!!post.data.featuredImg && (
 					<PostFeaturedImg
-						imagePath={`/src/content/blog/${post.slug}/${post.data.featuredImg.url}`}
+						imagePath={`/src/content/blog/${post.slug}/${post.data.featuredImg.filename}`}
 						caption={post.data.featuredImg.caption}
 					/>
 				)
