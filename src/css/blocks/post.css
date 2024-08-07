@@ -91,7 +91,7 @@
 
 		@media (--lg-n-above) {
 			padding-block-start: var(--space-2xs);
-			border-block-start: var(--border-thickness-1) solid var(--color-border-1);
+			border-block-start: var(--border-thickness-2) solid var(--color-border-2);
 		}
 	}
 }
