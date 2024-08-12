@@ -1,8 +1,10 @@
 .btn {
+	--focus-ring-offset: 0px;
+
 	padding: var(--button-padding-block) var(--button-padding-inline);
 	border: unset;
 	border-radius: var(--border-radius-round);
-	outline: var(--border-thickness-1) solid transparent; /* For a11y in high contrast */
+	outline: var(--border-thickness-2) solid transparent; /* For a11y in high contrast */
 
 	background-color: var(--color-bg-button);
 	color: var(--color-text-button);
@@ -17,16 +19,11 @@
 
 	&:hover,
 	&:focus-visible {
-		--focus-ring-width: var(--border-thickness-1);
-		--focus-ring: var(--focus-ring-width) solid var(--color-border-2);
-		--focus-ring-offset: 0px;
-
-		outline: var(--focus-ring);
+		outline-color: var(--color-border-2);
 		outline-offset: var(--focus-ring-offset);
 	}
 
 	&:focus-visible {
-		--focus-ring-width: var(--border-thickness-2);
 		outline-color: var(--color-brand);
 	}
 }

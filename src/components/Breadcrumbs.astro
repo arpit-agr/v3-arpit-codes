@@ -13,7 +13,7 @@ const {currentPageLinkLabel, hasPosts, hasLinks} = Astro.props;
 <nav class="small-text leading-flat wrapper" aria-label="Breadcrumbs">
 	<a href="/tags/">Tag Archive</a>
 	<ChevronRightVector />
-	<a href="#main">{currentPageLinkLabel}</a>
+	<a href="#main" aria-current="page">{currentPageLinkLabel}</a>
 	{
 		hasPosts && hasLinks && (
 			<>

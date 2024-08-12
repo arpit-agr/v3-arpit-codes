@@ -24,13 +24,13 @@
 	{
 		"title": "Link Archive",
 		"description": "Discover a curated collection of links to interesting articles, videos and whatnot.",
-		"linkLabel": "Links",
+		"linkLabel": "Link Archive",
 		"linkURL": "/links/"
 	},
 	{
 		"title": "Tag Archive",
 		"description": "Explore a comprehensive list of tags covering a wide range of topics and discover related posts.",
-		"linkLabel": "Tags",
+		"linkLabel": "Tag Archive",
 		"linkURL": "/tags/"
 	},
 	{

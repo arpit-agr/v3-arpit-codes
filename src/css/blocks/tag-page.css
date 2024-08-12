@@ -41,8 +41,12 @@
 	}
 
 	svg {
-		inline-size: 0.8em;
+		inline-size: calc(1em * var(--leading-flat));
 		color: var(--color-underline);
+
+		@supports (inline-size: 1lh) {
+			inline-size: 1lh;
+		}
 	}
 }
 
