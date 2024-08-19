@@ -20,7 +20,7 @@
 	}
 }
 
-.repel {
+:where(.site-footer) .repel {
 	--gutter: 0 var(--space-xs);
 }
 
