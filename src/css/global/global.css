@@ -177,7 +177,7 @@ blockquote {
 
 		background-color: var(--color-bg-1);
 		color: currentColor;
-		font-size: var(--size-step-5);
+		font-size: 3em;
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
 		translate: 0 -20%; /* magic number */
