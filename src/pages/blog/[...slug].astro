@@ -51,10 +51,10 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 				<div class="post-body prose flow">
 					<Content />
 				</div>
-				<footer class="post-footer repel flow-space-l">
-					<TagList tags={post.data.tags} />
-					<PostReply />
-				</footer>
+			</div>
+			<div class="post-footer grid region wrapper">
+				<TagList tags={post.data.tags} />
+				<PostReply />
 			</div>
 		</article>
 	</main>
