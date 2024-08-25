@@ -17,20 +17,18 @@ if (!images[imagePath])
 	);
 ---
 
-<div class="post-featured-img relative">
-	<figure class="wrapper">
-		<Picture
-			src={images[imagePath]()}
-			alt=""
-			formats={['avif', 'webp']}
-			widths={[640, 960, 1120, 1280]}
-			sizes={`(max-width: 80rem) 94vw, 1200px`}
-			loading="eager"
-		/>
-		{
-			!!caption && (
-				<figcaption class="tiny-text leading-snug">{caption}</figcaption>
-			)
-		}
-	</figure>
-</div>
+<figure class="post-featured-img flow">
+	<Picture
+		src={images[imagePath]()}
+		alt=""
+		formats={['avif', 'webp']}
+		widths={[640, 960, 1120, 1280]}
+		sizes={`(max-width: 80rem) 100vw, 1200px`}
+		loading="eager"
+	/>
+	{
+		!!caption && (
+			<figcaption class="tiny-text leading-snug">{caption}</figcaption>
+		)
+	}
+</figure>

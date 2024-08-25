@@ -38,15 +38,15 @@ const hasCodePenDemo = post.data.tags.includes('code-pen-demo');
 					<span class="visually-hidden">Published on</span>
 					<FormattedDate date={post.data.pubDate} />
 				</p>
+				{
+					!!post.data.featuredImg && (
+						<PostFeaturedImg
+							imagePath={`/src/content/blog/${post.slug}/${post.data.featuredImg.filename}`}
+							caption={post.data.featuredImg.caption}
+						/>
+					)
+				}
 			</HeroSection>
-			{
-				!!post.data.featuredImg && (
-					<PostFeaturedImg
-						imagePath={`/src/content/blog/${post.slug}/${post.data.featuredImg.filename}`}
-						caption={post.data.featuredImg.caption}
-					/>
-				)
-			}
 			<div class="flow region wrapper">
 				<div class="post-body prose flow">
 					<Content />

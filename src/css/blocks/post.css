@@ -45,7 +45,6 @@
 }
 
 .post .hero-inner,
-.post-featured-img figure,
 .post-body {
 	display: grid;
 	grid-template-columns:
@@ -61,72 +60,34 @@
 	grid-column: 1/2;
 }
 
-.post-featured-img {
-	figure {
-		grid-template-areas: 'picture picture .';
-	}
+.post-featured-img,
+.post-body > p:has(img) {
+	min-inline-size: calc(100% + (2 * var(--page-gutter)));
+	margin-inline-start: calc(-1 * var(--page-gutter));
 
-	figure:has(figcaption) {
-		grid-template-areas:
-			'picture picture .'
-			'caption caption .';
-		gap: var(--space-2xs) 0px;
-
-		@media (--lg-n-above) {
-			grid-template-areas:
-				'picture picture .'
-				'picture picture caption';
-			gap: 0px var(--space-s);
-		}
-	}
-
-	picture {
-		grid-area: picture;
-	}
-
-	figcaption {
-		grid-area: caption;
-		align-self: end;
-		text-wrap: balance;
-
-		@media (--lg-n-above) {
-			padding-block-start: var(--space-2xs);
-			border-block-start: var(--border-thickness-2) solid var(--color-border-2);
-		}
+	@media (--sm-n-above) {
+		min-inline-size: unset;
+		margin-inline-start: unset;
 	}
 }
 
+.post-featured-img img,
+.post-body img {
+	outline: var(--border-thickness-1) solid var(--color-border-1);
+	border-radius: var(--border-radius-conditional-1);
+}
+
 .post-featured-img {
-	margin-block-start: calc(-1 * var(--space-2xs-xs));
+	--flow-space: var(--space-l);
 
-	&:before,
-	&:after {
-		content: '';
-		position: absolute;
-		inset-block-start: 0;
-		block-size: var(--space-3xl);
-		z-index: -1;
-	}
+	figcaption {
+		--flow-space: var(--space-xs);
+		margin-inline: var(--page-gutter);
+		text-wrap: balance;
 
-	&:before {
-		inset-inline-start: 0;
-		inline-size: 100%;
-		background: var(--color-bg-inverted-1);
-	}
-
-	&:after {
-		inset-inline: calc(var(--dynamic-gutter) - var(--page-gutter));
-		border-block-end: var(--site-header-border-thickness) solid
-			var(--color-border-hero);
-	}
-
-	img {
-		outline: var(--border-thickness-1) solid var(--color-border-1);
-		border-radius: var(--border-radius-1);
-	}
-
-	+ * {
-		--region-start-space: var(--space-l);
+		@media (--sm-n-above) {
+			margin-inline: unset;
+		}
 	}
 }
 
@@ -144,20 +105,8 @@ https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
 	}
 } */
 
-.post-body > p:has(img) {
-	min-inline-size: calc(100% + (2 * var(--page-gutter)));
-	margin-inline-start: calc(-1 * var(--page-gutter));
-
-	@media (--sm-n-above) {
-		min-inline-size: unset;
-		margin-inline-start: unset;
-	}
-}
-
 .post-body img {
 	margin-inline: auto;
-	outline: var(--border-thickness-1) solid var(--color-border-1);
-	border-radius: var(--border-radius-conditional-1);
 
 	@media (--sm-n-above) {
 		margin-inline: unset;

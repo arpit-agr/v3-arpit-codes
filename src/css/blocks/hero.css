@@ -1,8 +1,8 @@
 .hero {
 	--region-start-space: calc(var(--space-xl) + var(--primary-nav-height));
-}
 
-.hero:has(+ *:not(.post-featured-img)) > :first-child {
-	border-block-end: var(--site-header-border-thickness) solid
-		var(--color-border-hero);
+	> :first-child {
+		border-block-end: var(--site-header-border-thickness) solid
+			var(--color-border-hero);
+	}
 }
