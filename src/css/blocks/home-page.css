@@ -39,7 +39,7 @@
 
 	@media (--mouse) {
 		@media (--motionOK) {
-			transition: stroke-dasharray var(--transition-base);
+			transition: stroke-dasharray 500ms ease;
 			pointer-events: none;
 		}
 	}

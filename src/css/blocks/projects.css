@@ -58,9 +58,9 @@ project-showcase {
 	}
 }
 
-.project-item:has(.project-link:hover):before {
+/* .project-item:has(.project-link:hover):before {
 	background-color: var(--color-bg-2);
-}
+} */
 
 .project-item:focus-within::before {
 	outline: var(--focus-ring);
@@ -127,7 +127,7 @@ project-showcase {
 }
 
 .project-showcase-controls {
-	--gutter: var(--space-xs);
+	--gutter: var(--space-2xs);
 	--cluster-horizontal-alignment: end;
 
 	button {

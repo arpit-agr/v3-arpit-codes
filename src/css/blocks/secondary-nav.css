@@ -29,9 +29,9 @@
 		z-index: -1;
 	}
 
-	a:hover:before {
+	/* a:hover:before {
 		background-color: var(--color-bg-2);
-	}
+	} */
 
 	a:focus-visible:before {
 		outline: var(--focus-ring);
