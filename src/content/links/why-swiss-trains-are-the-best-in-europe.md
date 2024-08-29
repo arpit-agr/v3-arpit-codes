@@ -13,9 +13,9 @@ tags:
   ]
 ---
 
-> A developed country is not a place where the poor have cars. It's where the rich use public transportation.
+> An advanced city is not one where even the poor use cars, but rather one where even the rich use public transport.
 >
-> ― <cite>Gustavo Petro, former mayor of Bogotá, Colombia</cite>
+> ― <cite class="small-text"><a href="https://www.youtube.com/watch?v=j3YjeARuilI">Enrique Peñalosa, former mayor of Bogotá, Colombia</a></cite>
 
 But why is it important that the wealthy people take public transportation?
 
