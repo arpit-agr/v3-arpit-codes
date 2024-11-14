@@ -1,6 +1,5 @@
 ---
-import MailVector from './MailVector.astro';
-import MastodonVector from './MastodonVector.astro';
+import {Icon} from 'astro-icon/components';
 
 const currentUrl = Astro.url;
 const mailSubjectUrl = currentUrl.toString().slice(8); /* removes https:// */
@@ -8,13 +7,17 @@ const mailSubjectUrl = currentUrl.toString().slice(8); /* removes https:// */
 
 <p class="reply-methods cluster small-text leading-snug">
 	Reply:
-	<a href=`mailto:hello@arpit.codes?subject=Re: ${mailSubjectUrl}`>
-		<MailVector />
-		Mail
+	<a href="https://bsky.app/profile/arpit.codes">
+		<Icon name="simple-icons:bluesky" aria-hidden="true" />
+		Bluesky
 	</a>
 	<a href="https://indieweb.social/@arpit">
-		<MastodonVector />
+		<Icon name="simple-icons:mastodon" aria-hidden="true" />
 		Mastodon
+	</a>
+	<a href=`mailto:hello@arpit.codes?subject=Re: ${mailSubjectUrl}`>
+		<Icon name="heroicons:envelope-solid" aria-hidden="true" />
+		Mail
 	</a>
 </p>
 

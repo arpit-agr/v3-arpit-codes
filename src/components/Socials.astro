@@ -1,21 +1,23 @@
 ---
 import FooterLink from './FooterLink.astro';
-import MastodonVector from './MastodonVector.astro';
-import GithubVector from './GithubVector.astro';
-import RSSVector from './RSSVector.astro';
+import {Icon} from 'astro-icon/components';
 ---
 
 <div class="socials cluster">
+	<FooterLink href="https://bsky.app/profile/arpit.codes">
+		<Icon name="simple-icons:bluesky" aria-hidden="true" />
+		<span>Bluesky</span>
+	</FooterLink>
 	<FooterLink href="https://indieweb.social/@arpit">
-		<MastodonVector />
+		<Icon name="simple-icons:mastodon" aria-hidden="true" />
 		<span>Mastodon</span>
 	</FooterLink>
 	<FooterLink href="https://github.com/arpit-agr">
-		<GithubVector />
+		<Icon name="simple-icons:github" aria-hidden="true" />
 		<span>Github</span>
 	</FooterLink>
 	<FooterLink href="https://arpit.codes/rss.xml">
-		<RSSVector />
+		<Icon name="simple-icons:rss" aria-hidden="true" />
 		<span>RSS Feed</span>
 	</FooterLink>
 </div>

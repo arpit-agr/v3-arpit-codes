@@ -1,8 +1,7 @@
 ---
 import projects from '../data/projects.json';
 import ProjectMockup from './ProjectMockup.astro';
-import ChevronRightVector from './ChevronRightVector.astro';
-import ChevronLeftVector from './ChevronLeftVector.astro';
+import {Icon} from 'astro-icon/components';
 
 const projectsLength = projects.length;
 ---
@@ -39,7 +38,7 @@ const projectsLength = projects.length;
 			data-btn="secondary"
 			aria-label="Previous"
 		>
-			<ChevronLeftVector />
+			<Icon name="lucide:chevron-left" aria-hidden="true" />
 		</button>
 		<button
 			class="btn"
@@ -47,7 +46,7 @@ const projectsLength = projects.length;
 			data-btn="secondary"
 			aria-label="Next"
 		>
-			<ChevronRightVector />
+			<Icon name="lucide:chevron-right" aria-hidden="true" />
 		</button>
 	</div>
 </project-showcase>

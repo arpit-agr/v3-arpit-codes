@@ -8,6 +8,7 @@ import {
 	transformerNotationErrorLevel,
 	transformerRemoveLineBreak
 } from '@shikijs/transformers';
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +20,14 @@ export default defineConfig({
 		'/notes/bhagat-singh-atheism/': '/blog/bhagat-singh-atheism'
 	},
 	markdown: {
-		rehypePlugins: [[rehypeAttrs, {properties: 'attr'}]],
+		rehypePlugins: [
+			[
+				rehypeAttrs,
+				{
+					properties: 'attr'
+				}
+			]
+		],
 		shikiConfig: {
 			theme: 'nord',
 			transformers: [
@@ -35,6 +43,7 @@ export default defineConfig({
 			applyBaseStyles: false,
 			nesting: true
 		}),
-		sitemap()
+		sitemap(),
+		icon()
 	]
 });
