@@ -29,12 +29,7 @@
 }
 
 .tiny-text {
-	@apply tracking-wider;
-	font-size: var(--size-step-000-00);
-
-	@media (--md-n-above) {
-		@apply tracking-wide;
-	}
+	@apply text-step-000 tracking-wider;
 }
 
 /* other styles*/

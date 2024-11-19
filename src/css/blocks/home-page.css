@@ -4,7 +4,14 @@
 
 	.translations {
 		--gutter: var(--space-3xs);
+
 		order: -1;
+		font-size: var(--size-step-000-00);
+		@apply tracking-wider leading-snug;
+
+		@media (--md-n-above) {
+			@apply tracking-wide;
+		}
 	}
 }
 
