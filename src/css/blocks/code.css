@@ -38,10 +38,12 @@ code {
 }
 
 code-pen {
+	display: block;
 	outline: var(--border-thickness-1) solid var(--color-border-pre);
 	background: var(--color-bg-inverted-1);
 	border-radius: var(--border-radius-1);
 	overflow: hidden;
+	break-inside: avoid;
 
 	> * {
 		border-radius: 0px;
@@ -60,8 +62,8 @@ code-pen {
 		inline-size: 100%;
 		padding: var(--space-xs) var(--space-s);
 		border: unset;
-		background-color: transparent;
-		color: var(--color-text-inverted-3);
+		background-color: var(--color-bg-inverted-3);
+		color: var(--color-text-inverted-1);
 		line-height: var(--leading-flat);
 		text-align: start;
 		-webkit-font-smoothing: antialiased;

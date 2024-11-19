@@ -1,5 +1,5 @@
 .list-wrapper {
-	--measure: 45rem;
+	--measure: 45.75rem;
 	max-inline-size: var(--measure);
 }
 

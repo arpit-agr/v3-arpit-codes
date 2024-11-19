@@ -1,6 +1,6 @@
 #secondary-nav {
 	dl {
-		--gutter: var(--space-m-l);
+		--gutter: var(--space-m-l) var(--space-xl);
 	}
 
 	dd {

@@ -12,4 +12,10 @@
 	code-pen + * {
 		--flow-space: 1lh;
 	}
+
+	h2 + *,
+	h3 + *,
+	h4 + * {
+		--flow-space: 1ex;
+	}
 }

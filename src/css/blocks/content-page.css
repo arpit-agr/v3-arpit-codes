@@ -24,6 +24,10 @@
 		--flow-space: var(--space-xs);
 	}
 
+	blockquote {
+		--flow-space: 1ex;
+	}
+
 	&:before {
 		content: '●';
 		content: '●' / '';
