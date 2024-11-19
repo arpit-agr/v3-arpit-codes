@@ -12,7 +12,7 @@
 		max-inline-size: min(33vw, 37.5rem);
 		inline-size: 100%;
 
-		@media (--lg-n-above) {
+		@media (--xl-n-above) {
 			display: unset;
 		}
 

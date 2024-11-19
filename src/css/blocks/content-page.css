@@ -19,6 +19,8 @@
 	grid-template-columns: auto 1fr;
 	gap: var(--counter-gap);
 	align-items: start;
+	counter-increment: entry;
+	grid-template-rows: auto 1fr;
 
 	> * {
 		--flow-space: var(--space-xs);
@@ -29,14 +31,22 @@
 	}
 
 	&:before {
-		content: '●';
-		content: '●' / '';
+		content: counter(entry, decimal-leading-zero);
+		grid-row: 1 / -1;
+
 		display: grid;
-		place-items: center;
+		place-content: center;
+		border-radius: 100vmin;
 		inline-size: var(--counter-size);
-		block-size: var(--counter-size);
-		color: var(--color-text-2);
-		translate: 0 7.5%;
+		aspect-ratio: 1;
+
+		background: var(--color-bg-1);
+		color: var(--color-text-4);
+		font-size: var(--size-step-3);
+		font-weight: var(--font-regular);
+		line-height: 1;
+		translate: 0 -10%;
+		@apply tracking-wide;
 	}
 
 	> :not(:first-child) {

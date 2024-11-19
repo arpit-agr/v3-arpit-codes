@@ -22,7 +22,11 @@ const acknowledgment = questions.acknowledgement;
 			<ul class="flow flow-space-s" role="list">
 				{
 					questionsList.map(question => {
-						return <li class="content-entry">{question}</li>;
+						return (
+							<li class="content-entry">
+								<span>{question}</span>
+							</li>
+						);
 					})
 				}
 			</ul>

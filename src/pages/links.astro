@@ -31,7 +31,7 @@ const pageDesc = pageInfo.description;
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
-	<main class="content-page" id="main" tabindex="-1">
+	<main class="links-page content-page" id="main" tabindex="-1">
 		<HeroSection>
 			<h1>{pageTitle}</h1>
 			<p class="text-balance flow-space-xs">{pageDesc}</p>
@@ -39,8 +39,10 @@ const pageDesc = pageInfo.description;
 		<article class="flow flow-space-xl region wrapper">
 			{
 				groupedLinks.map((group: GroupedLinks) => (
-					<section class="flow">
-						<h2 class="month-year-group heading-3">{group.month}</h2>
+					<section class="month-year-group">
+						<h2 class="month-year-heading heading-3">
+							<span>{group.month}</span>
+						</h2>
 						<ul class="flow flow-space-l" role="list">
 							{group.items.map(async (link: LinkItem) => {
 								const {Content} = await link.render();

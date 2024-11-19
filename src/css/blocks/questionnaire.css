@@ -2,12 +2,24 @@
 	--gutter: var(--space-l);
 	grid-template-columns: 1fr;
 
-	@media (--lg-n-above) {
+	@media (--xl-n-above) {
 		grid-template-columns: auto 1fr;
 
 		.acknowledgment {
 			place-self: end;
 			text-align: end;
+		}
+	}
+
+	.content-entry {
+		grid-template-rows: unset;
+
+		> span {
+			align-self: center;
+		}
+
+		&::before {
+			translate: 0 0;
 		}
 	}
 }
