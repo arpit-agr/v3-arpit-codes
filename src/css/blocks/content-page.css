@@ -31,7 +31,7 @@
 	}
 
 	&:before {
-		content: counter(entry, decimal-leading-zero);
+		content: counter(entry, decimal-leading-zero) '.';
 		grid-row: 1 / -1;
 
 		display: grid;
@@ -41,8 +41,8 @@
 		aspect-ratio: 1;
 
 		background: var(--color-bg-1);
-		color: var(--color-text-4);
-		font-size: var(--size-step-3);
+		color: var(--color-text-2);
+		font-size: var(--size-step-1);
 		font-weight: var(--font-regular);
 		line-height: 1;
 		translate: 0 -10%;
