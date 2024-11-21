@@ -44,7 +44,8 @@
 	}
 }
 
-.post .hero-inner {
+.post .hero-inner,
+.post-body {
 	display: grid;
 	grid-template-columns:
 		minmax(0, var(--measure))
@@ -53,6 +54,10 @@
 
 .post .hero-inner > * {
 	grid-column: 1/-1;
+}
+
+.post-body > * {
+	grid-column: 1/2;
 }
 
 @media (--xl-n-above) {
@@ -106,26 +111,26 @@
 	}
 }
 
-.post-body {
+/* .post-body {
 	column-width: 33ch;
 	column-gap: var(--space-xl);
-	/* column-rule: var(--border-thickness-1) dashed var(--color-border-1); */
-}
+	column-rule: var(--border-thickness-1) solid var(--color-border-1);
+} */
 
 /* TODO: Remove temporary workaround
 This workaround addresses a Safari bug that rendered the first letter in a serif font
 The following @supports rule targets Chrome only
 https://github.com/argyleink/open-props/blob/main/src/props.supports.css */
-@supports (-webkit-app-region: inherit) and (not (container-type: none)) {
+/* @supports (-webkit-app-region: inherit) and (not (container-type: none)) {
 	.post-body > p:first-child::first-letter {
 		-webkit-initial-letter: 2;
 		initial-letter: 2;
 		margin-inline-end: 0.5em;
 		font-size-adjust: none;
 		font-weight: var(--font-medium);
-		/* color: var(--color-text-2); */
+		color: var(--color-text-2);
 	}
-}
+} */
 
 .post-body img {
 	margin-inline: auto;
