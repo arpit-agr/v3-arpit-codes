@@ -7,7 +7,7 @@
 		inset-block-start: 0;
 		inset-inline-start: calc(var(--page-gutter) + 0.5 * var(--counter-size));
 		block-size: 100%;
-		border-inline-start: var(--border-thickness-1) solid
+		border-inline-start: var(--border-thickness-1) dashed
 			var(--color-counter-connector);
 		translate: -50% 0;
 		z-index: -1;

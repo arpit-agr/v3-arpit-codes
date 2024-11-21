@@ -70,8 +70,8 @@
 	}
 
 	@supports (background: color-mix(in srgb, red 50%, blue)) {
-		--color-underline: color-mix(in srgb, currentColor, transparent 10%);
-		--color-blockquote: color-mix(in srgb, currentColor, transparent 10%);
+		--color-underline: color-mix(in srgb, currentColor, transparent 33%);
+		--color-blockquote: color-mix(in srgb, currentColor, transparent 33%);
 	}
 }
 

@@ -176,7 +176,8 @@ blockquote {
 		block-size: 1ex;
 
 		background-color: var(--color-bg-1);
-		color: currentColor;
+		/* color: currentColor; */
+		color: var(--color-blockquote);
 		font-size: 3em;
 		font-weight: var(--font-ultra-light);
 		line-height: var(--leading-flat);
