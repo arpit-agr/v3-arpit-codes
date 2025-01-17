@@ -33,6 +33,10 @@ project-showcase {
 	max-inline-size: unset;
 	scroll-snap-align: start;
 
+	@media (--touch) {
+		scroll-snap-stop: always;
+	}
+
 	&:last-child {
 		scroll-snap-align: end;
 	}
