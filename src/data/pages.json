@@ -7,7 +7,7 @@
 	},
 	{
 		"title": "Blog Archive",
-		"description": "Explore my blog, a place for me to write and collect what I'm learning across different topics that pique my curiosity.",
+		"description": "A place for me to write about what I'm learning across different topics that pique my curiosity.",
 		"linkLabel": "Blog",
 		"linkURL": "/blog/"
 	},
@@ -23,7 +23,7 @@
 	},
 	{
 		"title": "Link Archive",
-		"description": "Discover a curated collection of links to interesting articles, videos and whatnot.",
+		"description": "A place for me to collect and write about interesting bits from  articles, videos and whatnot.",
 		"linkLabel": "Link Archive",
 		"linkURL": "/links/"
 	},
