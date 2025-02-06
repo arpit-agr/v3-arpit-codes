@@ -146,6 +146,11 @@ button {
 	border-color: transparent;
 }
 
+em {
+	font-weight: var(--font-bold);
+	/* color: var(--color-brand); */
+}
+
 /* Lists with default styling */
 :where(ol, ul):not([role='list']) {
 	padding-inline-start: var(--space-s);
