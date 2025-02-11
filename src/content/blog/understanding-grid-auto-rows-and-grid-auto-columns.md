@@ -13,7 +13,7 @@ Today I learned from the [spec](https://www.w3.org/TR/css-grid-1/#:~:text=form%2
 
 Simply put, the `grid-auto-columns` and `grid-auto-rows` properties specify the size of tracks not assigned a size by `grid-template-rows` or `grid-template-columns`.
 
-Inspect the following demo using Firefox grid inspector which does a great job displaying this behaivour.
+In the following demo, we define an explicit grid with 2 columns and 5 rows using `grid-template-areas`. However, we explicitly size only 4 rows using the `grid-template-rows` property. Since the 5th row is not assigned a size explicitly, the `grid-auto-rows` property specifies the size for this row. Inspect this demo using Firefox grid inspector which does a great job displaying this behaivour.
 
 <code-pen>
 
