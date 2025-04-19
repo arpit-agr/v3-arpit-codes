@@ -1,5 +1,5 @@
 ---
-title: "Why I Am An Atheist: Bhagat Singh's Essay"
+title: "Why I am an atheist: Bhagat Singh's essay"
 summary: "Indian revolutionary Bhagat Singh's essay 'Why I Am an Atheist', written at 23 from jail, challenges blind faith and advocates for reason and critical thinking."
 featuredImg:
   filename: 'the-people-essay.webp'

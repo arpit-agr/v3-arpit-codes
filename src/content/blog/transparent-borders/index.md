@@ -1,5 +1,5 @@
 ---
-title: 'Transparent Borders'
+title: 'Transparent borders'
 summary: 'Using transparent borders instead of removing them entirely offers significant benefits for accessibility, user experience, and design system flexibility.'
 pubDate: 2024-05-12
 tags:

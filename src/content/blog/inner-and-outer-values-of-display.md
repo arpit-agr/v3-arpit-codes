@@ -1,11 +1,11 @@
 ---
-title: 'Inner And Outer Values Of `display`'
+title: 'Inner and outer values of `display`'
 summary: 'Rachel Andrew explains the two-value syntax of the `display` property, clarifying how it affects element layout and child behavior in CSS.'
 pubDate: 2024-05-13
 tags: ['display', 'layout', 'css', 'rachel-andrew']
 ---
 
-[Stefan Judis's post](https://front-end.social/@stefan/112426743422409016) on Mastodon about multi-keyword display values in CSS caught my attention, as I hadn't encountered this two-value syntax before.
+Stefan Judis's [post](https://front-end.social/@stefan/112426743422409016) on Mastodon about multi-keyword display values in CSS caught my attention, as I hadn't encountered this two-value syntax before.
 
 > Hand to the heart: is anyone using multi-keyword display values? Because I haven't seem them anywhere but the MDN docs. 🫣
 
