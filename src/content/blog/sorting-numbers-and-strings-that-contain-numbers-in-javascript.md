@@ -5,7 +5,7 @@ pubDate: 2025-04-18
 tags: ['sort', 'internationalization-api', 'javascript', 'jan-miksovsky']
 ---
 
-As a developer, I often find myself checking out other developers' codebases to learn new patterns or see how they approach common problems. Recently, I was checking out how [Jan Miksovsky](https://jan.miksovsky.com/) built his zero-dependencies basic static site generator.
+Recently, I was reading [Jan Miksovsky's article](https://jan.miksovsky.com/posts/2025/04-17-zero-dependencies) on how he built a basic static site generator using plain JS with zero dependencies.
 
 While exploring the [source code](https://github.com/WebOrigami/pondlife-zero-deps), I noticed the following bit of code:
 
