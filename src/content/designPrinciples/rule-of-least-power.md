@@ -23,4 +23,4 @@ As a general rule, [it’s always worth asking if you can accomplish something w
 - Instead of using JavaScript to do simple client-side form validation, try to use HTML input types and attributes like required.
 - Instead of using ARIA to give a certain role value to a div or span, try to use a more suitable HTML element instead.
 
-It sounds a lot like the KISS principle: Keep It Simple, Stupid. But whereas the KISS principle can be applied _within_ a specific technology—like keeping your CSS manageable—the rule of least power is all about [evaluating technology](evaluating technology); choosing the most appropriate technology for the task at hand.
+It sounds a lot like the KISS principle: Keep It Simple, Stupid. But whereas the KISS principle can be applied _within_ a specific technology—like keeping your CSS manageable—the rule of least power is all about [evaluating technology](https://adactio.com/articles/12839); choosing the most appropriate technology for the task at hand.
