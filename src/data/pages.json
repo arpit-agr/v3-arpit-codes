@@ -9,7 +9,7 @@
 		"title": "Blog Archive",
 		"description": "A place for me to write about what I'm learning across different topics that pique my curiosity.",
 		"linkLabel": "Blog",
-		"linkURL": "https://blog.arpit.codes/"
+		"linkURL": "/blog/"
 	},
 	{
 		"title": "More",
