@@ -10,10 +10,12 @@
 
 	@media (--OSdark) {
 		--color-brand: var(--color-brand-inverted);
-		--color-brand-inverted: gold;
+		/*--color-brand-inverted: gold;*/
+		--color-brand-inverted: rgb(194, 227, 0);
 
 		@media (--HDcolor) {
 			--color-brand-inverted: oklch(89.11% 0.2105 95.33);
+			--color-brand-inverted: oklch(0.8584 0.2344 119.13);
 		}
 	}
 }

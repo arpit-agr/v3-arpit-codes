@@ -1,7 +1,7 @@
-/* 
-  Global styles 
+/*
+  Global styles
 
-  Low-specificity, global styles that apply to the whole 
+  Low-specificity, global styles that apply to the whole
   project: https://cube.fyi/css.html
 */
 
@@ -19,6 +19,8 @@ body {
 	position: relative;
 
 	background: var(--color-bg-1);
+	/*background: linear-gradient(to bottom, var(--color-bg-1), var(--color-bg-1)),
+		var(--color-bg-inverted-1);*/
 	color: var(--color-text-1);
 	font-size: var(--size-step-0);
 	font-weight: var(--font-regular);
@@ -26,7 +28,7 @@ body {
 	font-feature-settings: var(--geist-tnum), var(--geist-ss05);
 	-webkit-font-smoothing: auto;
 	/* https://youtube.com/watch?v=uadAfE6cAoM&t=1338 */
-	font-size-adjust: from-font;
+	/*font-size-adjust: from-font;*/
 
 	@media (--OSdark) {
 		-webkit-font-smoothing: antialiased;

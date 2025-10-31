@@ -1,6 +1,23 @@
 ---
-import pageData from '../data/pages.json';
-const primaryNavItems = pageData.slice(0, 4);
+const navItems = [
+	{
+		linkLabel: 'Home',
+		linkURL: '/'
+	},
+	{
+		linkLabel: 'Projects',
+		linkURL: '/#projects'
+	},
+	{
+		linkLabel: 'Blog',
+		linkURL: 'https://arpit.blog/'
+	},
+	{
+		title: 'Contact',
+		linkLabel: 'Contact',
+		linkURL: '#get-in-touch'
+	}
+];
 import NavLink from './NavLink.astro';
 ---
 
@@ -8,7 +25,7 @@ import NavLink from './NavLink.astro';
 	<nav class="site-nav wrapper" aria-label="Primary">
 		<ul class="cluster" role="list">
 			{
-				primaryNavItems.map(item => {
+				navItems.map(item => {
 					return (
 						<li>
 							<NavLink href={item.linkURL} label={item.linkLabel} />

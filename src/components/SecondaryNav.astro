@@ -1,6 +1,18 @@
 ---
-import pageData from '../data/pages.json';
-const secondaryNavItems = pageData.slice(4);
+const secondaryNavItems = [
+	{
+		description:
+			'A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process.',
+		linkLabel: 'Project Questionnaire',
+		linkURL: '/questionnaire/'
+	},
+	{
+		description:
+			'Explore a compilation of principles crafted by experts that shape my approach to web design and development.',
+		linkLabel: 'Design Principles',
+		linkURL: '/design-principles/'
+	}
+];
 ---
 
 <div id="secondary-nav" tabindex="-1">

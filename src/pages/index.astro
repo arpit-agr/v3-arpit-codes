@@ -1,22 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {findMatchingItem} from '../utils/findMatchingItem.js';
-import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import CircleVector from '../components/CircleVector.astro';
 import ProjectsShowcase from '../components/ProjectsShowcase.astro';
-import PostList from '../components/PostList.astro';
-import {reversedBlogPosts} from '../data/reversedBlogPosts.js';
 
-const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
-const pageTitle = pageInfo.title;
-const pageDesc = pageInfo.description;
+const pageTitle = 'Arpit Agrawal';
+const pageDesc =
+	"Hi, I'm a web designer-developer from India. I design and build websites that are fast, user-friendly and beautiful.";
 const hindiTranslation = 'अर्पित अग्रवाल';
 const urduTranslation = 'اَرپِت اگروال';
 const projectsTitle = 'Projects';
 const projectsDescription =
 	'Browse a selection of my past projects, showcasing my web design and development capabilities';
-const displayedPosts = reversedBlogPosts.slice(0, 4);
 ---
 
 <Layout title={pageTitle} description={pageDesc}>
@@ -41,6 +36,31 @@ const displayedPosts = reversedBlogPosts.slice(0, 4);
 				</a>.
 			</p>
 		</HeroSection>
+		<article id="about-me" class="flow region" tabindex="-1">
+			<div
+				class="flow wrapper"
+				style="column-width: 35ch; column-gap: var(--space-l)"
+			>
+				<h2
+					class="heading-3 leading-flat"
+					style="column-span: all; margin-block-end: 1rem;"
+				>
+					About Me
+				</h2>
+				<p class="text-balance flow-space-xs" style="--flow-space: 0px;">
+					I'm a self-taught web designer-developer. I believe the web is for
+					everyone. So, I strive to make websites that are inclusive and
+					accessible to everyone, regardless of their ability, device or
+					connection speed.
+				</p>
+				<p>
+					I started out in 2019 after watching my cousin build a website. He'd
+					type out these strange incantations and the computer would obey. It
+					felt magical. I love that I get to design and build, that’s where I
+					feel most at home.
+				</p>
+			</div>
+		</article>
 		<article id="projects" class="flow region" tabindex="-1">
 			<div class="flow relative wrapper">
 				<h2 class="heading-3 leading-flat">{projectsTitle}</h2>
@@ -50,7 +70,7 @@ const displayedPosts = reversedBlogPosts.slice(0, 4);
 			</div>
 			<ProjectsShowcase />
 		</article>
-		<article id="latest-posts" class="region wrapper" tabindex="-1">
+		<!-- <article id="latest-posts" class="region wrapper" tabindex="-1">
 			<PostList postsCollection={displayedPosts}>
 				<div class="list-header cluster">
 					<h2 class="heading-3 leading-flat">Latest Posts</h2>
@@ -59,6 +79,6 @@ const displayedPosts = reversedBlogPosts.slice(0, 4);
 					</a>
 				</div>
 			</PostList>
-		</article>
+		</article> -->
 	</main>
 </Layout>

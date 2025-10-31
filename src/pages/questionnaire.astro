@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {findMatchingItem} from '../utils/findMatchingItem.js';
-import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import questions from '../data/questionnaire.json';
 
-const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
-const pageTitle = pageInfo.title;
-const pageDesc = pageInfo.description;
+const pageTitle = 'Questionnaire';
+const pageDesc =
+	'A questionnaire designed to help me understand your requirements, ensuring a smooth and tailored process.';
 const questionsList = questions.list;
 const acknowledgment = questions.acknowledgement;
 ---

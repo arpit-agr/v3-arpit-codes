@@ -1,13 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {findMatchingItem} from '../utils/findMatchingItem.js';
-import pageData from '../data/pages.json';
 import HeroSection from '../components/HeroSection.astro';
 import {getCollection} from 'astro:content';
 
-const pageInfo = findMatchingItem(Astro.url.pathname, pageData);
-const pageTitle = pageInfo.title;
-const pageDesc = pageInfo.description;
+const pageTitle = 'Design Principles';
+const pageDesc =
+	'Explore a compilation of principles crafted by experts that shape my approach to web design and development.';
 const allDesignPrinciples = await getCollection(
 	'designPrinciples',
 	data => data

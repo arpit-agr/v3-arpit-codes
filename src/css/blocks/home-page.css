@@ -1,6 +1,6 @@
 .homepage-heading {
 	--gutter: var(--space-5xs);
-	font-size-adjust: cap-height from-font;
+	/*font-size-adjust: cap-height from-font;*/
 
 	.translations {
 		--gutter: var(--space-3xs);

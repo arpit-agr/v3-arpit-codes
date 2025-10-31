@@ -74,7 +74,7 @@ project-showcase {
 	--_iPad-bezel: 3%;
 	--_iphone-inset: 5.25%;
 	display: grid;
-	grid-template-columns: auto 1fr auto;
+	grid-template-columns: auto 1fr 4ch;
 	grid-template-areas: 'title separator index';
 	align-items: baseline;
 	gap: var(--space-xs-s);

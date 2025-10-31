@@ -7,9 +7,9 @@
 	z-index: 1;
 }
 
-.site-header.site-header {
+/*.site-header.site-header {
 	background: transparent;
-}
+}*/
 
 .site-nav {
 	border-block-end: var(--site-header-border-thickness) solid
