@@ -24,7 +24,6 @@ This website is built using the [Astro CUBE CSS Boilerplate](https://github.com/
 - [Tailwind CSS](https://tailwindcss.com/): a utility-first CSS framework, used as utility-second
 - [Astro Font](https://github.com/rishi-raj-jain/astro-font): for optimizing my fonts for performance
 - [Astro OG Canvas](https://github.com/delucis/astro-og-canvas): to generate OpenGraph images
-- [Astro RSS](https://docs.astro.build/en/guides/rss/): for generating an RSS feed
 - [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/): for generating a sitemap
 
 For more details, read Andy Bell's [A CSS project boilerplate](https://piccalil.li/blog/a-css-project-boilerplate/).
