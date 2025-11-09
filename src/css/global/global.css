@@ -236,7 +236,7 @@ hr {
 }
 
 :target {
-	scroll-margin-block: 0;
+	scroll-margin-block: var(--primary-nav-height);
 }
 
 #main:target {

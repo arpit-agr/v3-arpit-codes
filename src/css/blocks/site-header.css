@@ -1,10 +1,10 @@
 .site-header {
-	position: absolute;
+	position: fixed;
 	inset-block-start: 0;
 	inset-inline: 0;
 	overflow-x: auto;
 	transition: background var(--transition-base);
-	z-index: 1;
+	z-index: 999;
 }
 
 /*.site-header.site-header {
@@ -39,7 +39,7 @@
 		}
 
 		&:after {
-			--text-decoration-size: var(--border-thickness-2);
+			--text-decoration-size: var(--border-thickness-8);
 			content: '';
 			position: absolute;
 			inset-inline: auto var(--primary-nav-padding-inline);
